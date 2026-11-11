@@ -1,0 +1,457 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>商城</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 商城</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">商城 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin-top: 8px; line-height: 1.85;">玩家用积分、活跃度、幸运值、余额兑换各类商品，把积累的资产变现成多样奖励。</p>
+<div style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 18px 0px 26px;"><strong style="color: #9a5005;">目录</strong><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s1">一、功能概述</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s2">二、新增商品</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s3">三、商品类型</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s4">四、兑换价格</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s5">五、公共配置</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s6">六、商品管理</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s7">七、兑换审核与记录</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s8">八、实物订单</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s9c">九、客户端展示</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s9">十、运营建议</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s10">十一、常见问题</a></div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是什么</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商城让玩家用积分、活跃度、幸运值、余额兑换各类商品；商品在后台上架管理，兑换可配是否审核，实物商品走实物订单发货。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">解决什么</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">把玩家在各模块积累的积分、活跃度、幸运值变现成可兑换的奖励出口，既消耗资产又拉动活跃。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">兑换类型</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">玩家用什么换：消耗 积分 / 活跃度 / 幸运值 / 余额（一个商品可设多种，玩家用任意一种即可兑）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">商品状态</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">出售中、待上架、已售罄、已删除、全部商品。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">兑换状态</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">待审核、已兑换、被拒绝；是否审核由商品的【是否需要后台审核】决定。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、新增商品</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">在商品列表右上点【新增商品】打开弹窗，如下图。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="1c88fd350e58aea9a414c242.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 65.9583px;"><col style="width: 241.875px;"><col style="width: 791.635px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">序号</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">字段</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">说明</th>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">1</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">品牌 / 币种</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品适用的品牌与币种；多品牌站点配置共用，勾选哪些品牌就对哪些开启。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">2</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">排序权重</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">数字越大客户端越靠前展示。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">3</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品类型</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">五选一，决定兑换后给玩家什么（见第三节）。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">4</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品规则限制</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">按所选商品类型展开对应配置（见第三节）。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">5</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品名称</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">支持多语言。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">6</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">展示分类</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">只有 1 个分类时客户端不展示分类页签，&ge;2 个才按页签展示。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">7</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">兑换价格</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">可统一价或按 VIP 等级分档（见第四节）。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">8</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品缩略图</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">全部通用或按语言分别上传；尺寸 220&times;220，可上传多张、展示只选 1 张。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">9</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">库存数量</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">无限量或固定（固定可设 1-12 位整数）；库存为 0 时兑换按钮置灰、状态转已售罄。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">10</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">初始兑换次数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">纯营造热度的客户端展示值，不减库存、无逻辑计算；客户端展示兑换数 = 初始兑换次数 + 实际兑换数。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">11</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日兑换次数上限</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">一个玩家一天该商品最多兑换次数，超过置灰。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">12</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">上下架方式 / 时间</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">自动（按上下架时间自动执行）或手动（自行操作、忽略时间，手动优先级更高）；选自动时设上架与下架时间，只能选当天及以后、精确到时分。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">13</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商品标签</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">热门 / 推荐 / 新，客户端角标展示；当前单选、不可新增。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">14</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">是否需要后台审核</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">不需要=兑换后直接到账；需要=兑换后进待审核，人工通过才到账。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">15</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">是否需要简介</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">无简介则玩家点商品直接兑换；图文介绍则点商品先弹详情。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、商品类型</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">商品类型决定兑换后给玩家什么，共五种。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 219.885px;"><col style="width: 879.583px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">商品类型</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">规则配置</th>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">折扣券</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">选择已配置的折扣券。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">砍一刀抽奖次数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">选择活动 + 设免费抽奖次数；发放的是新砍一刀的次数。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">盲盒抽奖次数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">选盲盒类型（小 / 大 / 超级）+ 免费抽奖次数 + 有效天数。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">实物</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">兑换后产生实物订单，后台跟进发货（见第八节）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">自定义</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">名称 + 图片，可用于虚拟服务（如某地一日游等），内容可自由定义；兑换成功即扣消耗、状态为已兑换，无需后续履约，对玩家就是一条兑换成功记录。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、兑换价格</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">兑换价格支持按 VIP 等级设置：</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">关闭</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">全等级统一价，所有 VIP 用同一兑换价。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">开启</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">按 VIP 等级（可多选）分别设消耗积分、消耗活跃度、消耗幸运值、消耗金额，可配多档；至少设一种类型价格，若同时设多种，则玩家用任意一种方式都可兑换。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、公共配置</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">公共配置是商城统一规则，在商品列表右上点【公共配置】打开。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 549.073px;"><col style="width: 550.396px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="8deca10705628528694d488a.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="4d82ec985303ff7d87417229.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 263.865px;"><col style="width: 835.604px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">可兑换层级 / VIP</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">限定哪些会员层级、VIP 等级可参与兑换。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">可兑换终端</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">限定可兑换的客户端终端。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">更多兑换限制</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">短信、邮箱、生日、银行卡、虚拟货币、三方钱包、收款方式、真实姓名、生物识别、KYC、首充等门槛；同类型活动只能申领 1 次、充值后且未投注才能领、仅注册设备号领取、同 IP / 同姓名次数等；玩家不满足时兑换会弹提示。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是否展示库存 / 兑换次数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">控制客户端是否展示商品库存、兑换次数。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">商品标签</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">维护热门 / 新 / 推荐标签。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">商品分类</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">维护客户端展示分类，支持多语言、可新增删除；未新增分类则不展示分类、为系统默认。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">规则说明</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">自定义或系统自带。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">六、商品管理</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">商品列表按状态分页签，可按时间、品牌、币种、商品类型、兑换类型、展示分类等筛选。客户端只展示出售中的商品。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">行操作</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">修改、详情（可看最近 30 次操作历史）、下架、删除。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">批量操作</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">批量下架、批量设置分类、批量设置标签、批量删除；排序支持拖动、置顶、批量权重值排序（权重越大越靠前）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">上下架流转</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">自动且未到上架时间为待上架、到点转出售中；后台手动上下架后该商品转为手动方式、不再走计划任务（手动优先级更高）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">已售罄</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">库存为 0 即已售罄，可重新上架；创建时库存填 0 直接置已售罄。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">商城开关</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商城总开关，关闭后客户端不展示商城。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">七、兑换审核与记录</h2>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">7.1 兑换用户</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">参与过商品兑换的玩家都进该列表，一个玩家一条，展示剩余积分、活跃度、幸运值，以及已兑换、待审核、被拒绝数量和最后兑换时间。</p>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">7.2 兑换记录与审核</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">兑换记录按状态分待审核、已兑换、被拒绝、全部兑换记录，记录玩家、商品、兑换类型、兑换价格、登录 IP / 设备 / 指纹、兑换时间等。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="a55cdaf1ac5d8e7128d389d8.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是否需审核</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">由商品的【是否需要后台审核】决定：不需要则兑换后直接到账；需要则进待审核，人工通过后才到账。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">通过 / 拒绝</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">待审核记录可通过或拒绝，弹窗会显示选中玩家数据供二次确认，可填前台 / 后台备注；支持批量通过、批量拒绝。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">审核失败返还</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">审核未通过需返还玩家兑换消耗的积分、活跃度、幸运值、余额；余额返还记账变（兑换成功扣余额、失败返余额）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s8" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">八、实物订单</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">实物商品兑换后产生实物订单，需后台跟进发货。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">订单内容</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">玩家、商品、兑换时间、收货姓名、收货地址、邮编、联系电话、订单状态、快递单号、快递公司、发货时间、前后台备注。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">订单状态</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">待发货 &rarr; 已发货 &rarr; 已签收；玩家可签收或后台强制签收，异常可强制取消。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">收货信息</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">收货地址与联系电话加密存储，按前 2 位 + 4 个星号 + 后 2 位展示；有默认地址则兑换后自动带入，可改。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">发货处理</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">后台核对收货信息后填快递单号、快递公司发货；查看完整收货地址、电话需输入安全码。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s9c" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">九、客户端展示</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">商城入口</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">商城入口可配在多处：首页（中部导航、侧边栏、底部菜单、页脚）、营销广告位、我的页面（顶部、列表）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">玩家使用</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">玩家进入商城浏览并兑换商品；积分、活跃度、幸运值不足时，可去对应模块赚取后再来兑换。</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 226.26px;"><col style="width: 293.667px;"><col style="width: 290.146px;"><col style="width: 289.396px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="d748f97f734e24201c171fd4.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="25510bb9732c2aa193d35fa3.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="ea5969a1fae8f1e0ede55945.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="0cb334b6de35307883b750d0.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s9" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">十、运营建议</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 175.906px;"><col style="width: 505.75px;"><col style="width: 417.812px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">场景</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">建议</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">提示</th>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">养成逛商城</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">折扣券、抽奖次数设低消耗，让玩家用积分、活跃度轻松兑到，培养逛商城习惯。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">低门槛走量，先把玩家引进来。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">拉高吸引力</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">用实物或高价值商品做橱窗，提升商城整体诱惑力。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">实物要算清发货成本，库存别铺太大。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">控制兑出成本</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">用兑换价格按 VIP 分档、配多种消耗资产，把高价值商品价格抬到合理水位。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">至少设一种价格，设多种则任意一种可兑。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">制造稀缺</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">热门商品设固定库存 + 每日兑换上限，配合初始兑换次数营造热销感。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">初始兑换次数只影响展示、不减真实库存。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">配合活动节奏</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">限时商品用自动上下架按计划上线下线；临时调整用手动及时上下架。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">手动优先级高于计划任务。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">风控</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">高价值商品开后台审核，叠加多重兑换限制（KYC、绑卡、同设备同 IP 等）防多号薅。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">审核失败会自动返还玩家消耗。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">效果监控</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">关注兑换量、各资产消耗、库存周转、审核拒绝率，按数据调商品与价格。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">某商品兑换异常高，回查价格是否偏低或被薅。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s10" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">十一、常见问题</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：兑换后多久到账？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：取决于商品的【是否需要后台审核】：不需要则兑换后直接到账；需要则进待审核，后台通过后才到账。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：同一商品能对不同 VIP 等级设不同价格吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：可以。把兑换价格的【按 VIP 等级设置价格】开启，即可按等级分档设消耗积分、活跃度、幸运值、金额。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：初始兑换次数会占用真实库存吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不会。初始兑换次数只用于客户端展示、营造热销感，不减库存、不参与任何计算。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：审核没通过，玩家扣的积分/余额会退吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：会。审核未通过自动返还玩家兑换消耗的积分、活跃度、幸运值、余额。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：自定义商品兑换后怎么处理？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：自定义商品兑换成功即扣消耗、记为已兑换，对玩家就是一条兑换成功记录，具体使用线下处理。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_720122.html">← 加倍奖励</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_35.html">银商充值 →</a></div></body></html>

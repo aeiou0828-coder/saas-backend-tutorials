@@ -1,0 +1,150 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>代理报表</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 代理 / 代理报表</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3 style="line-height: 2;"><span style="font-size: 20px;">1、代理总结算</span></h3>
+<p style="line-height: 2;"><span style="font-size: 16px;">该页面为当前已启用的代理模式的结算的总佣金。 举例说明(如下图所示)：该站点启用了两种代理模式，则显示两种代理模式结算的总佣金。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">代理人数：即当前代理模式下产生佣金的总人数；点击结算佣金，则跳转到代理总明细，展示具体的详细人数。</span></p>
+<p style="line-height: 2;"><img style="max-width: 100%;" src="6d5101545307b7706ff9320c.png"></p>
+<h3 style="line-height: 2;"><span style="font-size: 20px;">2、代理总明细</span></h3>
+<p style="line-height: 2;"><span style="font-size: 16px;">当前模块为每个代理产生佣金的详细数据。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">代理账号：点击可查看当前账号的会员数据；</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">直属人数：即当前代理总共有多少直属人数；</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">直属贡献数：即在该结算周期中，多少个直属会员贡献了佣金，点击可跳转直属会员明细中。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">其他人数：直属人数:当前代理的所有直属人数；</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">其他贡献数：即在结算周期中，多少个其他下级贡献的人数，点击可跳转到会员其他明细中。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">本期业绩：在无限极差中，本期业绩=直属业绩+其他业绩，其他的代理模式中，本期业绩=直属业绩。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">直属业绩：即本结算周期，直属会员产生了多少的业绩。点击可查看详情，详情会根据佣金计算依据来进行展示不同的内容。 </span></p>
+<ul>
+<li style="line-height: 2;"><span style="font-size: 16px;">有效投注：显示每个游戏类型的直属业绩</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">净盈利：按照配置的净盈利公式，会展示当前所有直属会员的会员输赢、领取奖励、三方游戏统一成本、充值手续费、提现手续费、上期结余的总计</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">多奖励裂变：根据多奖励的配置，会展示对应的首充人数、总充值金额、总有效投注和总净盈利。</span></li>
+</ul>
+<p style="line-height: 2;"><span style="font-size: 16px;">其他业绩：即展示其他下级的业绩。目前展示的数据为：无限极差 和多奖励模式。</span></p>
+<ul>
+<li style="line-height: 2;"><span style="font-size: 16px;">无限极差：展示每个游戏类型的其他下级的总计；</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">多奖励模式：展示二级和三级的充值金额、有效投注、净盈利的业绩。</span></li>
+</ul>
+<p style="line-height: 2;"><span style="font-size: 16px;">上期结余：只有净盈利模式中才会展示，其他的模式则显示为-。点击可查看详情。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">直属佣金：点击可查看直属佣金的总明细。点击可查看详情，详情会根据佣金计算依据来进行展示不同的内容</span></p>
+<ul>
+<li style="line-height: 2;"><span style="font-size: 16px;">有效投注：点击可查看每个游戏类型的业绩以及对应返佣比例；</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">净盈利：显示直属会员的会员输赢、领取奖励、三方游戏统一成本、充值手续费、提现手续费、上期结余的总计&nbsp; 和 对应的返佣比例；</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">多奖励模式：会按照多奖励的配置显示终极大奖、首充佣金、充值金额、有效投注、净盈利的业绩以及返佣比例和佣金；</span></li>
+</ul>
+<p style="line-height: 2;"><span style="font-size: 16px;">其他佣金：点击可查看其他下级的佣金的总明细</span></p>
+<ul>
+<li style="line-height: 2;"><span style="font-size: 16px;">净盈利：显示二级和三级的佣金业绩， 返佣比例和奖励的比例（如果自定义超过三级，则显示三级以下的总佣金 用返佣比例和奖励返佣）</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">多奖励模式：展示二级三级充值总计、总有效投注、总净盈利的以及对应的返佣比例和返佣</span></li>
+</ul>
+<p style="line-height: 2;"><span style="font-size: 16px;">结算佣金：即在结算周期中应结算的佣金。</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">实发佣金：即在审核之后，实际发放给代理的佣金，点击之后跳转到佣金管理中。</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p><img style="max-width: 100%;" src="8184b17fae4958b1e5d96831.png"></p>
+<p style="line-height: 2;"><strong><span style="font-size: 20px;">3、会员直属明细</span></strong></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">该模块展示的为代理的直属会员贡献的佣金明细</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">返佣类型：即直属会员给上级贡献的返佣类型，会根据不同的代理模式展示不同的数据。</span></p>
+<ul>
+<li style="line-height: 2;"><span style="font-size: 16px;">有效投注类：展示每个游戏平台直属会员给上级贡献的业绩、佣金和返佣比例</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">净盈利类：直属会员给上级贡献的净盈利以及对应的返佣比例和佣金</span></li>
+<li style="line-height: 2;"><span style="font-size: 16px;">多奖励：会根据业主在多奖励模式配置的返佣类型，显示对应的首充、净盈利、有效投注、充值对应的返佣。</span></li>
+</ul>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><span style="font-size: 16px;"><img style="max-width: 100%;" src="3cd285791e86433a2c1fad72.png"></span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><span style="font-size: 20px;"><strong>4、会员其他明细</strong></span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">该模块展示的代理的其他会员贡献的佣金明细</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">返佣比例：详见会员直属明细中的返佣比例</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px;">极差/返佣比例：因无限极差模式中没有返佣比例，只有极差，故而该字段中会显示极差；其他的模式对应的返佣比例</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><span style="font-size: 16px;"><img style="max-width: 100%;" src="4ce71cf11e0c98a71f2580e7.png"></span></p>
+        </article><div class="bottom-nav"><a href="turoial_480119.html">← 代理模式</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_510114.html">佣金管理 →</a></div></body></html>

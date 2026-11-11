@@ -1,0 +1,135 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>账号权限</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 系统 / 账号权限</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"></p>
+<h3 style="margin-top: 20px; margin-bottom: 10px; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-weight: bold; line-height: 1.1; font-size: 16px;"><span style="font-size: 24px;">一、后台账号</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;">&nbsp; &nbsp; 1、搜索说明：</span>可通过选项或文字搜索出对应账号<span style="font-weight: bold;">（支持模糊搜索）</span><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">根据部门与状态筛选，登陆时间范围查询</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;">&nbsp; &nbsp; 2、新增说明：</span><span style="font-weight: bold;">请移至【账号权限】页面进行创建权限后，才进行新增后台账号操作</span>；若已完成账号权限，可参考下图新建后台权限：</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;">&nbsp; &nbsp; 3、</span><strong>额度设置说明<span style="font-weight: bold;">：</span></strong>按会员币种设置额度</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-family: &#x27;Segoe UI&#x27;;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1)补单额度：</strong>后台手动创建充值补单时的额度限制。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>涉及充值补单范围：</strong>全部充值、转账充值、在线充值、客服代充、人工拉回加款。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>额度扣减方式：</strong>创建补单就扣补单额度余额。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>总额度：</strong>该账号一共可以补单的总额度，且不可以重置，如果达到额度只能调整额度 向上调整 例如10000改为100000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>每日/每周/每月补单额度:</strong> &nbsp;设置对应条件，补单额度的上限，达到上限无法补单 &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>&nbsp;单笔额度:</strong> 单笔最大可以补单的金额，且包含赠送金额。<strong><span style="background-color: #ffd600;"><br></span></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>所有额度设置的上限:</strong> &nbsp;最大可以设置的额度为99999999999 &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2)上分额度：</strong>后台手动创建充值订单时的额度限制。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>申请订单时：</strong>先扣除上分额度。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>审核通过时：</strong>无需处理，申请订单时已扣上分额度。<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;审核失败时：</strong>返回预扣上分额度。<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;涉及上分范围：</strong>转账充值、在线充值、客服代充。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>总额度：</strong>该账号一共可以上分的总额度，且不可以重置，如果达到额度只能调整额度 向上调整 例如10000改为100000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>每日/每周/每月上分额度:</strong> 设置对应条件，上分额度的上限，达到上限无法上分<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>单笔额度:</strong> 单笔最大可以补单的金额，且包含赠送金额。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>所有额度设置的上限:</strong> &nbsp;最大可以设置的额度为99999999999 &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3)提现额度：</strong>后台手动创建提现订单、审核出款/重新代付的额度限制<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>额度扣减方式：</strong>创建提现订单就扣提现额度余额。(非人工扣款) &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>总额度：</strong>该账号一共可以提现的总额度，且不可以重置，如果达到额度只能调整额度 向上调整 例如10000改为100000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>每日/每周/每月补单额度:</strong> &nbsp;设置对应条件，提现额度的上限，达到上限无法上分<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>单笔额度:</strong> 单笔最大可以提现的金额<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>所有额度设置的上限:</strong> &nbsp;最大可以设置的额度为99999999999 &nbsp; <br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;其他说明：</strong>已人工出款操作无需额度 &nbsp; &nbsp; <br>&nbsp;<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4)风控审核额度：</strong><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a、交互选项与&ldquo;提现额度&ldquo;完全一致，所有站点的初始化设置均为&ldquo;不限制&ldquo;。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b、额度权限校验：单个或批量风控审核通过时，系统将自动校验额度权限。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c、报错提示：额度不足，系统将弹出错误提示。<br></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="323c5c97256253f400ec629e.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;">&nbsp;4、页面操作说明：</span>可直接修改后台账号/重置密码/冻结/解冻账号和启停谷歌验证码，具体说明如下：</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="b9ab3cc2e32e146fbf2e2a95.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: bold;">列表调整：</span><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">对管理员进行编辑对应站点，与对应权限调整</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: bold;">修改后台账号：</span>对管理员进行编辑，修改是允许编辑权限和登录的站点以及备注。在进行编辑时，则站点权限和选择站点则为该登录管理员的权限</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: bold;">重置密码：</span><span style="font-weight: bold;">默认重置的密码为6-12位随机字母+字符+数字组合密码</span>，登录时需要强制修改密码</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: bold;">冻结账号：</span>默认超过系统设定风控值，如登录错误5次，账号被冻结或人工手动冻结，账号冻结后将不能登录</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong style="font-weight: bold;">解冻账号：</strong><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">可对已冻结账号进行解冻，恢复正常登录</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">&nbsp;重置谷歌验证：</span>重置后，需要重新绑定手机才能登录。</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<h3 style="margin-top: 20px; margin-bottom: 10px; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-weight: bold; line-height: 1.1; font-size: 16px;"><span style="font-size: 24px;">二、账号权限</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp;1、搜索说明：可通过选项或文字搜索出对应账号（支持模糊搜索），不同层级后台可根据权限类型筛选</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><img style="max-width: 100%;" src="6eea87632c248d42a6f086ce.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp;2、新增说明：管理员可以创建同名的权限名称</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="max-width: 100%;" src="0783d0842c7e43a848f7c8b7.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp;3、页面操作说明：可直接解除账号/删除/修改和查看权限，具体说明如下：</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="26a6ead277a60416fdb94331.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp;添加账号：</span><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">主要是为了快速添加该权限关联的账号</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">移除账号：</span>主要是为了变更账号的权限组方便删除账号（当只有一个账号权限时，并且角色是自己时，无法进行解除）</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">删除：</span>后台账号数为0时，才能删除权限，系统默认权限无法进行删除</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<strong style="font-weight: bold;">修改</strong><span style="font-weight: bold;">：</span>对该角色权限进行修改</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">查看权限：</span>即查看该权限的详情</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><strong>登录WG群发系统</strong></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: border-box; font-weight: bold;">1.使用WG群发系统，必须持有人账号或超级管理员首次跳转至群发系统时，可选择创建公司、加入公司。后续管理员才可以登录WG群发系统</strong></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: border-box; font-weight: bold;">2.非持有人、非超级管理员首次跳转至群发系统时只展示加入公司</strong></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: border-box; font-weight: bold;">3.持有人账号或超级管理员可以给管理员开启登录 WG群发系统权限，开启后才可以登录，不开启无法登录</strong></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><img style="max-width: 100%;" src="ffa57c83c01e069058aec2da.png"></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_300104.html">← 刷子监控</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_14.html">IP白名单 →</a></div></body></html>

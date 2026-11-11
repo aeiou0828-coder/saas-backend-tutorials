@@ -1,0 +1,725 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>提现管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 财务 / 提现管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <div class="doc">
+<h2 class="title">提现管理</h2>
+<h2><strong>一、风控审核</strong></h2>
+<h4><img style="max-width: 100%;" src="77dbc2761d83ebc92a33f52b.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>开启风控审核配置后，会员的提现订单将多出审核步骤，操作员在本页进行审核，通过审核后的提现订单将进入下个步骤。</p>
+<h4><strong>2、字段说明</strong></h4>
+<p><strong>(1) 订单号：</strong>点击订单号弹出提现详情窗口。</p>
+<p>　● 弹窗底部新增历史操作记录。</p>
+<p>　● 可根据操作行为、操作人、操作时间、操作结果进行搜索。</p>
+<p><span style="box-sizing: border-box; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="5ae7b49817c467db95ca271f.png"></span></p>
+<p><strong>(2) 会员ID：</strong>点击弹出会员概览窗口，可查看会员相关信息。</p>
+<p><strong>(3) 会员账号：</strong>会员注册时填写的帐号，点击后弹出会员概览窗口，同会员ID，此栏位包含VIP等级、会员层级、提现次数标签。</p>
+<p>　　A. 未提现会员: &nbsp; 该会员已有0笔成功提现订单。</p>
+<p>　　B. 已首次提现: &nbsp; 该会员已有1笔成功提现订单。&nbsp;</p>
+<p><strong>(4) 申请时间：</strong>该提现订单创建时间。同时记录后台操作解锁、强制拒绝、审核等时间。</p>
+<p><strong>(5) 会员币种：</strong>该会员注册时选择的币种，即该会员余额、上下分、游戏投注的币种。</p>
+<p><span style="color: #6d9eeb;">比例：越南盾1：1000、印尼盾1：1000等少数币种存在比例。例如：某越南盾会员提现1000越南盾，则按1：1000比例换算，1000除以1000=1.00。</span></p>
+<p><strong>(6) 提现金额：</strong>即提现多少金额至银行或三方钱包账号。订单金额、赠送金额、实际金额、总账变金额的币种，同会员币种。</p>
+<p><strong>(7) 到账币种：</strong>会员提现时选择的到账币种。例如：人民币会员使用USDT提现，到账币种为USDT。</p>
+<p><span style="color: #6d9eeb;">汇率：当会员币种与使用的充值通道币种不一致时，则会显示出汇率。例如：某人民币会员使用USDT通道充值，则显示出CNY ：USDT的汇率。</span></p>
+<p><strong>(8) 预计到账：</strong>预计到账金额，显示的金额、手续费、扣除手续费的实际到账金额皆为到账币种。点击稽核详情、投注记录后新开页签跳转至稽核管理、投注记录页面。&nbsp;</p>
+<p><strong>(9) 充提次数：</strong>充值/提现次数记录。同时显示累计充提差额、重复IP人数。</p>
+<p>　　A. 重复IP人数：与该会员账号提现相同IP重复人数。</p>
+<p><strong>(10) 收款方式：</strong>该笔提现订单对应的详细会员收款账户信息。</p>
+<p><strong>(11) 后台备注：</strong>记录未自动风控审核的原因。</p>
+<h4><strong>3、操作</strong></h4>
+<h4>&nbsp;</h4>
+<h4><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="d9003e9de4bfc1aeabcb3d27.png"></span></span></h4>
+<h4><strong>(1) 锁定：</strong>锁定操作后，该订单由当前操作人进行审核，可在"由我风控"看到自己锁定的订单。</h4>
+<h4><strong>(2) 解锁：</strong>将锁定的订单解锁后，可便于其他操作人员对订单进行操作。</h4>
+<h4><strong>(3) 风控审核：</strong>订单通过风控审核后，订单将从风控审核页移至财务出款及全部提现页。</h4>
+<p>　　A. 顶部显示币种、会员账号、会员ID。</p>
+<p>　　B. 内嵌集成调用其他模块的现有页面；操作帐号无该页签权限时，不显示该页签。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="0427aa32a2af42b3dd259573.png" width="599" height="129"></span></span></p>
+<h4><strong>(4) 强制拒绝</strong>分3个选项<strong>：</strong></h4>
+<p>是否风控处罚：</p>
+<p>　　A. 不处罚：直接取消订单退还提现金额。　　</p>
+<p>　　B. 增加稽核任务：取消订单退还提现金额，增加稽核任务。&nbsp;&nbsp;</p>
+<p>　　C. 扣除余额：取消订单且不退还提现金额。</p>
+<p><strong>(5) 强制取消：</strong>取消后，冻结金额将返还给玩家。</p>
+<p><strong>　　</strong>A. <strong>可设置前/后台取消原因:</strong> 取消原因备注。</p>
+<p><strong>　　</strong>B.<strong> 当该会员币种的提现稽核模式为:</strong> "充值可直接提现"。</p>
+<p>　　　<strong><strong>&middot;　</strong></strong>可为玩家<strong>设置提现条件</strong> : "无限制可直接提现"(默认)&nbsp; 或是 "必须有效投注一次"。</p>
+<p><strong>　　</strong>C.<strong> 当该会员币种的提现稽核模式为:</strong>"必须完成所有稽核"。</p>
+<p>　　　<strong><strong>&middot;　</strong></strong>可为玩家<strong>设置提现条件</strong> : 请填写稽核值(默认为0)。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="9fab9ab9b3eb1b38c4392c12.png"></span></span></p>
+<p><strong>(6) 备注：</strong>可输入前台备注与后台备注内容。</p>
+<p><strong>(7) 特殊场景说明：</strong>当三方回调失败时，会有以下选项：</p>
+<p><strong>　　</strong>A.<strong> 付款失败：</strong>当业主确认出款失败且无法正常出款时点击使用（用于三方已经出了结果，但是未成功回调，需要手动进行处理的订单）。</p>
+<p><strong>　　</strong>B. <strong>强制出款：</strong>当业主确认出款成功后，状态仍未更改时，可使用该功能（用于三方已经出了结果，但是未成功回调，需要手动进行处理的订单）。</p>
+<p><strong>　　</strong>C.<strong> 重新审核：</strong>付款失败后需重新审核该笔订单。</p>
+<h4><strong>4、条件筛选</strong></h4>
+<p><strong>4.1 顶部</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="b5afb52668996a431a3dc0a0.png"></span></span></p>
+<p><strong>(1) 搜索/高级搜索：</strong>能通过相关字段进行数据检索。</p>
+<p><strong>会员提现次数:</strong></p>
+<p>　　A. 未提现会员：该会员已有0笔成功提现订单。</p>
+<p>　　B. 已首次提现：该会员已有1笔成功提现订单。</p>
+<p>　　C. 已多次提现：该会员已有2笔及以上成功提现订单。</p>
+<p><strong>(2) 订单状态</strong>：可根据状态勾选未锁定及已锁定的订单状态，可与其他筛选条件交集使用。</p>
+<p><strong>(3) 自己锁定的：</strong>勾上后仅显示自己锁定的订单，和其他筛选条件可取交集。</p>
+<p><strong>(4) 刷新设置：</strong>设置订单页自动刷新周期。</p>
+<p><strong>(5) 导出报表：</strong>针对会员的订单信息记录导出excel。&nbsp;</p>
+<p><strong>4.2 底部</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="705449d2be6a63bc3724ac8f.png"></span></span></p>
+<p><strong>(1) 全选当前页：</strong>全选当前页面所有订单进行批量操作。</p>
+<p><strong>(2) 批量操作：</strong>对选择的订单进行批量操作(锁定、解锁、备注、强制取消、强制拒绝、审核通过)。</p>
+<p><strong>(3) 显示已选择数据：</strong>设置订单页自动刷新周期。</p>
+<p><strong>(4) 总笔数：</strong>共__条(显示该页共有多少条数据。100条/页)。</p>
+<p><strong>&nbsp;</strong></p>
+<h2><strong>二、由我风控</strong></h2>
+<h4><img style="max-width: 100%;" src="eeef3e1fd68d90beb4467cf9.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>当开启风控审核配置后，在风控审核点击锁定订单则会同步进入由我风控页签，操作审核人员可在由我风控页签进行审核，通过审核后的提现订单将进入下个步骤。 (气泡数为全部待自己处理的订单数)</p>
+<h4><strong>2、字段说明</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<h4><strong>3、操作</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 263px; height: 207px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="f13ec6c9445e90727f6d41c4.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 標誌 的圖片
+
+AI 產生的內容可能不正確。" width="263" height="207"></span></span>&nbsp;</span></p>
+<h4><strong>4、条件筛选</strong></h4>
+<p><strong>4.1 顶部</strong>(除无自己锁定的筛选项外，其他同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="a5a30243e734d17542ef1cb5.png"></span></p>
+<p><strong>4.2 底部&nbsp;</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="31f3637dbfdd9024d7656116.png"></span></p>
+<p><strong>&nbsp;</strong></p>
+<h2><strong>三、财务出款</strong></h2>
+<h4><img style="max-width: 100%;" src="70695ba64e40cd4eaf3f1b91.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<h4>已通过风控审核或免审的提现订单将显示在财务出款页面，操作人员可以对待出款及付款失败的订单进行操作出款。</h4>
+<h4><strong>2、字段说明</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<h4><strong>3、操作</strong></h4>
+<h4><img style="max-width: 100%;" src="00cb7b742cb3fe9e2c61c76c.png"></h4>
+<h4><strong>(1) 锁定：</strong>锁定操作后，该订单由当前操作人进行出款，可在"由我出款"看到自己锁定的订单。</h4>
+<h4><strong>(2) 解锁：</strong>将锁定的订单解锁后，可便于其他操作人员对订单进行操作。</h4>
+<h4><strong>(3) 审核出款：</strong>点击审核出款后，将在审核窗口中显示会员账号和提现信息，核对无误后选择三方代付通道出款。出款成功，在全部提现页面【订单状态】将更换为【待三方付款】状态。</h4>
+<p>　　A. 顶部显示币种、会员账号、会员ID。</p>
+<p>　　B. 内嵌集成调用其他模块的现有页面；操作帐号无该页签权限时，不显示该页签。</p>
+<p><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="113900806783ac4e8ac266fc.png" width="600" height="135"></span></p>
+<h4><strong>(4) 已人工出款：</strong>订单状态为【待出款】，人工出款成功后,此订单【订单状态】会更换为【已付款】状态。（请谨慎操作）。</h4>
+<p>　　A. 顶部显示币种、会员账号、会员ID。</p>
+<p>　　B. 内嵌集成调用其他模块的现有页面；操作帐号无该页签权限时，不显示该页签。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><img style="max-width: 100%;" src="c91b83a633f93afa28bec7b6.png" width="599" height="119"></span></p>
+<h4><strong>(5) 强制成功：</strong>订单状态为【付款失败】点击强制出款后,在全部提现页面【订单状态】会更换为【已强制出款】状态。（请谨慎操作）。</h4>
+<h4><strong>(6) 重新代付：</strong>订单状态为【付款失败】点击重新代付后,此订单【订单状态】栏会更换为【待出款】状态。（请谨慎操作）。</h4>
+<p>　　A. 顶部显示币种、会员账号、会员ID。</p>
+<p>　　B. 内嵌集成调用其他模块的现有页面；操作帐号无该页签权限时，不显示该页签。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="c59d33fcbcef220b9e0e9546.png" width="599" height="129"></span></span></p>
+<h4><strong>(7) 强制拒绝</strong>分3个选项<strong>：</strong></h4>
+<p>是否风控处罚：</p>
+<p>　　A. 不处罚：直接取消订单退还提现金额。</p>
+<p>　　B. 增加稽核任务：取消订单退还提现金额，增加稽核任务。&nbsp;&nbsp;&nbsp;</p>
+<p>　　C. 扣除余额：取消订单且不退提现金额。</p>
+<p><strong>(8) 强制取消：</strong>取消后，冻结金额将返还给玩家(同风控审核)。</p>
+<p><strong>(9) 刷新回调：</strong>显示四种刷新结果分别为刷新成功、该三方代付不支持刷新、每1分钟才能刷新一次、刷新失败。</p>
+<p><strong>(10) 备注：</strong>可输入前台备注与后台备注内容。</p>
+<p><strong>(11) 操作对应订单状态表如下：</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 554px; height: 342px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="d7808653adda9964f3197675.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 數字 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="342"></span></span></span></p>
+<h4><strong>4、条件筛选(其他同风控审核规则，此处不再复述) &nbsp; &nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;&nbsp;</strong></h4>
+<p><strong>4.1 顶部</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong>&nbsp;<img style="max-width: 100%;" src="91bac8d89ad93dc68a1b9aa6.png"></strong></span></p>
+<p><strong><strong>4.2 底部 </strong></strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong><img style="max-width: 100%;" src="9be1e6a6c9dfe3eb11c2515d.png"></strong></span></p>
+<h2><strong>四、由我出款 (同财务出款)</strong></h2>
+<h4><img style="max-width: 100%;" src="bfc66efe06c257efece34893.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<h4>已通过风控审核或免审核并被本账号锁定的提现订单将显示在由我出款页面，本账号可对待出款及付款失败的订单进行操作出款。</h4>
+<h4><strong>2、字段说明</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<p><span style="color: #2404fd;">2026.01新增</span></p>
+<p>　(1) <strong>订单</strong><strong>状态：待三方付款<strong>（其他状态操作不受限制）</strong></strong></p>
+<p>　　● <strong>订单创建 3 分钟内：强制失败 / 强制取消 / 强制拒绝 相关强制操作按钮禁止点击，按钮置灰并显示倒计时。</strong></p>
+<p><strong>　　● 批量操作：不到3分钟或不满足条件的订单将被跳过。</strong></p>
+<p><strong>　　● 强制成功：大额提现现金不受此限制。</strong></p>
+<h4><strong>3、操作</strong></h4>
+<h4><img style="max-width: 100%;" src="00cb7b742cb3fe9e2c61c76c.png"></h4>
+<p><strong>(1) 解锁：</strong>将锁定的订单解锁后，可便于其他操作人员对订单进行操作。</p>
+<p><strong>(2) 审核出款：</strong>点击审核出款后，将在审核窗口中显示会员账号和提现信息，核对无误后选择三方代付通道出款。出款成功，在全部提现页面【订单状态】将更换为【待三方付款】状态。</p>
+<p><strong>(3) 已人工出款：</strong>订单状态为【待出款】，人工出款成功后,此订单【订单状态】会更换为【已付款】状态。（请谨慎操作）。</p>
+<p><strong>(4) 强制成功：</strong>订单状态为【付款失败】点击强制出款后,在全部提现页面【订单状态】会更换为【已强制出款】状态。（请谨慎操作）。</p>
+<p><strong>(5) 重新代付：</strong>订单状态为【付款失败】点击重新代付后,此订单【订单状态】栏会更换为【待出款】状态。（请谨慎操作）。</p>
+<p><strong>(6) 强制拒绝</strong>分3个选项<strong>：</strong></p>
+<p>是否风控处罚：</p>
+<p>　　A. 不处罚：直接取消订单退还提现金额。</p>
+<p>　　B. 增加稽核任务：取消订单退还提现金额，增加稽核任务。&nbsp;&nbsp;&nbsp;</p>
+<p>　　C. 扣除余额：取消订单且不退提现金额。</p>
+<p><strong>(7) 强制取消：</strong>取消后，冻结金额将返还给玩家(同风控审核)。</p>
+<p><strong>(8) 刷新回调：</strong>显示四种刷新结果分别为刷新成功、该三方代付不支持刷新、每1分钟才能刷新一次、刷新失败。</p>
+<p><strong>(9) 备注：</strong>可输入前台备注与后台备注内容。</p>
+<p><strong>(10) 操作对应订单状态表如下：</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #ee0000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 477px; height: 294px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="d7808653adda9964f3197675.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 數字 的圖片
+
+AI 產生的內容可能不正確。" width="477" height="294"></span></span></p>
+<h4><strong>4、条件筛选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></h4>
+<p><strong><strong>4.1 顶部</strong><br>(其他同风控审核规则，此处不再复述)</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 554px; height: 127px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="299c48effcb7c8ed9da2e920.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 行 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="127"></span></span></strong></span></p>
+<h2><strong>4.2 底部 </strong></h2>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="398e7edfe8c76347c7d8fa71.png"></span></p>
+<h2><strong>五、重新代付</strong></h2>
+<h4><img style="max-width: 100%;" src="87cac22509abdf8114c47007.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>仅显示付款失败状态的异常订单。</p>
+<h4><strong>2、字段说明</strong></h4>
+<p>除了无回掉异常类型选项，其他字段同风控审核规则，此处不再复述。</p>
+<h4><strong>3、操作</strong></h4>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="09d32e5349872ee6dc07f343.png"></span></span></p>
+<p><strong>(1) 锁定：</strong>锁定操作后，该订单由当前操作人进行审核。</p>
+<p><strong>(2) 解锁：</strong>将锁定的订单解锁后，可便于其他操作人员对订单进行操作。</p>
+<p><strong>(3) 重新代付：</strong>若订单状态显示&ldquo;付款失败&rdquo;，点击此按钮，可重新选择代付，状态恢复为&ldquo;已锁定&rdquo;。</p>
+<p><strong>(4) 强制成功：</strong>订单状态为【付款失败】点击强制出款后,在全部提现页面【订单状态】会更换为【已强制出款】状态。（请谨慎操作）。</p>
+<p><strong>(5) 刷新回调： </strong>显示四种刷新结果分别为刷新成功、该三方代付不支持刷新、每1分钟才能刷新一次、刷新失败。</p>
+<p><strong>(6) 已人工出款：</strong>订单状态为【待出款】，人工出款成功后,此订单【订单状态】会更换为【已付款】状态。（请谨慎操作）。</p>
+<p><strong>(7) 强制取消：</strong>取消后，冻结金额将返还给玩家。</p>
+<p><strong>　　</strong>A. <strong>可设置前/后台取消原因:</strong> 取消原因备注。</p>
+<p><strong>　　</strong>B. <strong>当该会员币种的提现稽核模式为:</strong> "充值可直接提现"。</p>
+<p>　　　<strong><strong>&middot;　</strong></strong>可为玩家<strong>设置提现条件</strong> : "无限制可直接提现"(默认)&nbsp; 或是 "必须有效投注一次"。</p>
+<p><strong>　　</strong>C. <strong>当该会员币种的提现稽核模式为:</strong>"必须完成所有稽核"。</p>
+<p>　　　<strong><strong>&middot;　</strong></strong>可为玩家<strong>设置提现条件</strong> : 请填写稽核值(默认为0)。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="ca1591d6e92d2bc2780c20b2.png"></span></span></p>
+<p><strong>(8) 强制拒绝 ：是否风控处罚</strong>分以下3个选项</p>
+<p>　　A. 不处罚：直接取消订单退还提现金额。</p>
+<p>　　B. 增加稽核任务：取消订单退还提现金额，增加稽核任务。&nbsp;&nbsp;&nbsp;</p>
+<p>　　C. 扣除余额：取消订单且不退还提现金额。</p>
+<h4><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="5cc3cf550a060ce015a03730.png"></span></h4>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="e1660bd3da19abb547c8f7b5.png"></span></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="66c7713752522ae9c6c91e54.png"></span></p>
+<h4><strong>4、条件筛选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></h4>
+<p><strong>4.1 顶部：</strong>重新代付功能现已取消&rdquo;订单状态&rdquo;搜索项（默认显示所有&ldquo;付款失败&rdquo;状态）。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="7353aea9e3094f30cafd0dea.png"></span></span></p>
+<p><strong>4.2 底部 </strong>(其他同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="0f622ca25f08021c529b5da2.png"></span></p>
+<p><strong>六、回调异常订单</strong></p>
+<h4><img style="max-width: 100%;" src="13a46db4c62be6493b454d34.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>存在第三方未响应或出现异常响应的提现订单，将显示再回调异常订单标签页内。操作人员可根据反馈的异常详情，查阅三方通道的异常情况进行再次确认出款；"订单状态"、"回调异常类型"删除待出款、直接失败选项。</p>
+<h4><strong>2、字段说明</strong></h4>
+<p><strong>(1) 回调异常类型：</strong></p>
+<p><strong>　　</strong>A. <strong>创建代付超时</strong>：创建代付订单，与三方的数据交互出现超时的情况。三方渠道无法进行正常代付。</p>
+<p><strong>　　</strong>B. <strong>回调超时</strong>：已创建代付订单，三方数据未返回。此时可进行刷新回调获取最新的三方返回数据。</p>
+<p><strong>　　</strong>C. <strong>失败后再成功</strong>：三方先返回支付失败的状态，而后再返回支付成功的状态。</p>
+<p><strong>　　</strong>D. <strong>成功后再失败</strong>：三方先返回支付成功的状态，而后再返回支付失败的状态。</p>
+<p>(其他字段同风控审核规则，此处不再复述)</p>
+<h4><strong>3、操作</strong></h4>
+<h4>(同风控审核规则，此处不再复述)</h4>
+<h4><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="4640329754af46a95843f65e.png"></span></h4>
+<h4><strong>4、条件筛选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></h4>
+<p><strong>4.1 顶部/4.2 底部 </strong><strong><br></strong>(其他同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 554px; height: 133px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="648ad2c9cdf4196c97c97958.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 行 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="133"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 554px; height: 324px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="277e41b3a2d69ac0ada634e5.png" alt="一張含有 文字, 螢幕擷取畫面, 軟體, 電腦圖示 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="324"></span></span>&nbsp;</span></p>
+<h2>&nbsp;</h2>
+<h2><strong>七、免审出款</strong></h2>
+<p>&nbsp;</p>
+<h4><img style="max-width: 100%;" src="548e596bc11e1a56c8dd9030.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>满足预先配置免审核条件的提现订单将出现在免审出款页中，操作员可在本页面直接核实提现信息后出款。</p>
+<p><strong>特别说明：数字人民币类型不支持免审核出款。</strong></p>
+<h4><strong>2、字段说明</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<h4><strong>3、操作</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="8f3d8c9e3ee55a5e6fbe36d5.png"></span></span></p>
+<p><strong>4、条件筛选&nbsp;&nbsp; </strong></p>
+<p><strong>4.1 顶部/4.2 底部 </strong><strong><br></strong>(其他同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 554px; height: 143px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="c801c7a52523c0a9d94c3c92.png" alt="一張含有 文字, 字型, 行, 螢幕擷取畫面 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="143"></span></span><strong>&nbsp;&nbsp;&nbsp;</strong><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 448px; height: 462px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="29b4517dae43502b448231a7.png" width="448" height="462"></span></span></span></p>
+<h2>&nbsp;</h2>
+<h2><strong>八、提现转充值</strong></h2>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="76a80056fadb4e7fdd853fef.png"></span></p>
+<h4><strong>1、功能说明：</strong>允许会员在申请提现时，直接将提现金额转存为平台余额，简化用户充值步骤，同时可配置&ldquo;充值比例赠送&rdquo;和&ldquo;充值活动赠送&rdquo;来激励会员留存资金。</h4>
+<p>　(1) 提现设置开启【提现转充值】，才显示出此页签。</p>
+<p>　(2) 会员申请提现时，提现金额作为充值本金，会加上本金部分的稽核倍数；提现订单正常进入风控审核流程，同时自动生成一笔充值订单，并且发放通道赠送和活动赠送。</p>
+<p>　(3) 可单个也可批量审核，通过后提现订单出款成功。</p>
+<p>　(4) 出款成功后，可在【全部充值】、【全部提现】 查询订单记录。</p>
+<p>　(5)&nbsp;算正式充值：</p>
+<p>　　A.&nbsp;计入以下报表：日运营报表、会员报表</p>
+<p>　　B. 次数统计：提现、充值次数各+1</p>
+<p>　　C. 金额统计：提现、充值总额皆增加。（增加金额 = 提交且成功的转充值金额）</p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="49f7990c42d36bc3458f1f85.png"></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>2、设定：</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><strong><span style="color: #24292f; font-size: 16px;"><img style="max-width: 100%;" src="2820bec52e63307e0cd7fc85.png"></span></strong></span></p>
+<p><img style="max-width: 100%;" src="fa29d992af88aad2d75308a3.png"></p>
+<p><strong>　(1)&nbsp;</strong><strong>提现管理－提现设置页签</strong>，新增【提现转充值】按钮</p>
+<p><span style="color: #3598db;"><strong>开关设置</strong></span></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><strong>　(2)&nbsp;<span style="color: #24292f; font-size: 16px;"><span style="color: #313c52; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><strong>默认关闭：</strong>隐藏下面所有选项<img style="max-width: 100%;" src="e9948b20e68bc887d31ebdae.png"></span></span></strong></span></p>
+<p><strong>　<strong>(3) 默认选中：</strong>全部品牌（多品牌站点才有此选项）、全部层级、无需审核自动完成（提现订单无需审核直接成功并自动上分）</strong></p>
+<p><strong>　<strong>(4) 本金稽核倍数：</strong>默认1倍。<br><br><span style="color: #3598db;">充值通道比例赠送</span><br></strong></p>
+<p><strong>　<strong>(5) 充值比例赠送：</strong>默认参与赠送</strong></p>
+<p><strong>　　● 分会员币种设置通道赠送比例</strong></p>
+<p><strong>　　● 提现转充值则按通道比例进行赠送</strong></p>
+<p><strong>　<strong>(6) 提现页展示充值优惠：</strong>默认展示。<br><br><strong>通道充值赠送稽核指定游戏平台</strong><br></strong></p>
+<p><img style="max-width: 100%;" src="de771ef8181cdf9f58c25f5a.png"></p>
+<p>　<strong>(7) <strong style="color: rgb(51, 51, 51) !important;">通道充值赠送稽核指定游戏平台：</strong></strong></p>
+<p><strong>　　●&nbsp;</strong>此项为非必填：系统默认不指定稽核平台。</p>
+<p><strong>　　●&nbsp;同步到其他币种：点击后弹出弹窗，默认全选，支持手动勾选对应币种。</strong></p>
+<p>　</p>
+<p><strong><span style="color: #3598db;">提现单笔限额</span></strong></p>
+<p><strong><strong style="color: rgb(51, 51, 51) !important;">　(8)&nbsp;提现单笔限额：</strong></strong>可依会员层级分别配置提现单笔限额；第一行为默认全部层级。</p>
+<p><img style="max-width: 100%;" src="ad3d8b42731c7b8ac567026f.png"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><strong>九、大额提现金</strong></h2>
+<p><img style="max-width: 100%;" src="49c36bd227d5372731c8876a.png"></p>
+<h4><strong>1、功能说明：</strong>针对大额提现需求，新增线下交割模式，提供更私密的提现通道。</h4>
+<p><strong>2、字段说明：</strong></p>
+<p>(1) 收款人信息-该笔提现订单对应的详细会员信息，包含：联系手机、交割地点、时间、交割凭证。</p>
+<p>(2)&nbsp;没有代付相关功能和字段。</p>
+<p>(3) 大额提现金的审核出款/批量审核出款，强制成功/批量强制成功弹窗和普通订单不一样。</p>
+<p>　● 审核出款弹窗</p>
+<p><span style="box-sizing: border-box; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="a3226c2c1e812bec0468c055.png"></span></p>
+<p>　● 强制出款弹窗</p>
+<p><span style="box-sizing: border-box; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="092027ed6f3d4d45656dcb94.png"></span></p>
+<h2><strong>十、全部提现</strong></h2>
+<h4><img style="max-width: 100%;" src="1b3b4959604dcce1bd75a78a.png"></h4>
+<h4><strong>1、功能说明：</strong></h4>
+<p>可查看包括<strong>待出款、待三方付款、付款失败、已拒绝、已取消、已付款、已强制出款、<strong>已部分付款</strong></strong>等状态的提现订单均会出现该页面。</p>
+<p><strong>2、字段说明：</strong></p>
+<p>(1) 订单状态：</p>
+<p>　● 已部份付款：部分三方回调时会同时返回&ldquo;成功金额&rdquo;与&ldquo;失败金额&rdquo;。若出款金额未全部成功，系统将把该订单状态更新为「已部分付款」。该状态为最终完结态。</p>
+<p>(2) 成功金额(失败金额)：此字段为分数单位，列表默认隐藏此列，需手动在自定义列中开启；未收到回调时显示为空。</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="bf39642926c4004c46d60860.png"></span></p>
+<h4><strong>3、操作</strong></h4>
+<p>(同风控审核规则，此处不再复述)</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="b27467771778aa1423fed21c.png"></span></p>
+<p><strong>操作对应订单状态表如下：</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 498px; height: 308px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="33c00f053ac9c128f08d2d38.png" alt="一張含有 文字, 螢幕擷取畫面, 字型, 數字 的圖片
+
+AI 產生的內容可能不正確。" width="498" height="308"></span></span></span></p>
+<h4><strong>4、条件筛选&nbsp;&nbsp; </strong></h4>
+<p><strong>4.1 顶部/4.2 底部 </strong><strong><br></strong>(其他同风控审核规则，此处不再复述)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 554px; height: 175px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="b61b922cb8394afb6cf24507.png" alt="一張含有 文字, 字型, 螢幕擷取畫面, 行 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="175"></span></span><br><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 462px; height: 464px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="775948b2b5831cae77103c88.png" width="462" height="464"></span></span></span></p>
+<p><strong>4.3 新增提现</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="1930ca1833b63e9582eb2094.png"></span></p>
+<p>由后台操作人员发起，主动给会员新增提现订单。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: 1pt solid #000000; display: inline-block; overflow: hidden; width: 554px; height: 445px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="05b36c3dcb2cb1c0fb04eefb.png" alt="一張含有 文字, 螢幕擷取畫面, 數字, 字型 的圖片
+
+AI 產生的內容可能不正確。" width="554" height="445"></span></span><strong><br></strong><strong><br></strong><strong>(1) 搜索：</strong>通过选择会员账号或会员ID进行搜索，若会员存在则可进行下一步的提现订单创建。</span></p>
+<p><strong>(2) 币种：</strong>订单金额、赠送金额为会员币种。</p>
+<p><strong>(3) 额度说明：</strong>有设置上分额度才会在右上角显示,未设置则不限制额度，页面上也不显示额度相关内容。</p>
+<p><strong>(4) 额度扣减说明：</strong>有额度限制，额度先扣，最终订单完结且未出款则额度返还。</p>
+<p><strong>(5) <strong>重复创建限制：近30秒内，同会员创建同金额提现订单，则弹出限制弹窗，可点击继续创建。</strong></strong></p>
+<p><img style="max-width: 100%;" src="0320ffb625c40f84049adb8c.png"></p>
+<h4><strong>4.4 导出报表</strong></h4>
+<h4><strong>(1) "</strong><strong>最后锁定时间"、&ldquo;首次代付时间&rdquo;、&ldquo;最后代付时间"：</strong>这3个字段仅在【全部提现】页签导出的报表中出现，导出若无数据则留空。</h4>
+<h4><strong>2、字段说明</strong></h4>
+<h4><strong>(1) 后台备注：</strong>平台将记录未自动风控审核的原因。</h4>
+<h4><strong>(2) 三方代付次数：</strong>可查询各个三方渠道支付的时间及次数，点击可查看详情。</h4>
+<p>&nbsp;(其他字段同风控审核规则，此处不再复述)&nbsp;<strong>&nbsp;</strong></p>
+<h4><strong>(３) 注册来源</strong><strong>：</strong>默认不显示，需自行在自定义列中勾选开启，仅在全部提现页。</h4>
+<p><img style="max-width: 100%;" src="bdb36fc6fc2fc44a4742556e.png"></p>
+<p>&nbsp;</p>
+<h2><strong>十一、提现设置 </strong></h2>
+<h4><img style="max-width: 100%;" src="8663bd18ba3465b9efc00043.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>根据站点的需要，进行提现配置，并支持按特定字段搜索相关资料。</p>
+<h4><strong>2、字段说明</strong></h4>
+<p><strong>(1) 提现大类：</strong>会员大厅收款账户页对应提现大类，提现大类可进行排序，排序同步至前台大厅。</p>
+<p><strong>(2) 提现方式：</strong>提现的具体方式由后台配置，三方钱包可进行排序，设置排序可同步到会员大厅管理收款账户的添加三方钱包选项。</p>
+<p><strong>(3) 是否允许绑定：</strong>开启后，此提现方式在会员用户端可看到/添加此类型提现账户。</p>
+<p><strong>(4) 是否允许会员删除：</strong>开启后，会员用户可在绑定提现账户页面删除已绑定的提现账户。</p>
+<p><strong>(5) 是否支持普通提现：</strong>开启后，允许会员用户将账户余额提取到绑定的银行账户或支付工具。</p>
+<p><strong>(6) 是否支持数字货币提现：</strong>开启后，允许会员用户将账户中的数字货币余额提取到外部数字货币地址。</p>
+<p><strong>(7) 允许绑定账号数量：</strong>允许该提现方式绑定多个提现账号，可根据所需设置。</p>
+<p><strong>(8) 到账币种：</strong>该提现方式的出款币种。</p>
+<p><strong>(9) 单笔限额：</strong>可根据会员层级配置多个，配置多个会员的限额后，需在更多中查看具体限额。</p>
+<p><strong>(10) 手续费：</strong>若配置了多个，则显示出&ldquo;更多&rdquo;鼠标hover显示完整tips。</p>
+<h4><strong>3、操作</strong></h4>
+<p>操作菜单：<strong>修改（修改提现方式）：</strong></p>
+<p><strong>(1) 会员层级：</strong>该提现方式所支持的会员层级，支持多选，默认全选。</p>
+<p><strong>(2) 允许绑定PIX类型：</strong>仅PIX大类才有此设置。</p>
+<p><strong>(3) 允许绑定账号数量：</strong>允许该提现方式绑定多个提现账号，可根据所需设置。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="7bf27ffcf0c738ad224cba18.png"></span></span></p>
+<p><strong>(4) 提现大类提示引导角标：</strong>前台大厅提现大类的展示角标，支持多语言配置，用户可根据站点风格个性化调整。</p>
+<p><strong>(5) 单笔限额：</strong>支持按会员层级设定最低和最高提现额度，以便更好地管理不同会员的提现权限。</p>
+<p><strong>(6) 提现手续费：</strong>支持设定不同手续费区间，并提供按比例、按固定金额的收费方式；</p>
+<p><strong>(7) 规则配置项</strong>：平台相应文字类规则支持富文本编辑，并支持配置多语言。站点可自定义修改【提现手续费规则】、【申请提现页面温馨提示】，以及【添加账号温馨提示】</p>
+<p><strong>(8) 多品牌站点：</strong>仅在多品牌站点中可用。&nbsp;</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="7820913d61d7f0682c2293f5.png"></span></span></p>
+<p><strong>(9) 品牌名称(ID)</strong>：必填，默认选中全部品牌，可多选。未指定开放的品牌站点，则该提现方式将不可用。</p>
+<p><strong><br>4、条件设置</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="429e25cd99f475e8bab227de.png"></span></p>
+<p><strong>4.1 提现设置：</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="4724baf8f0c19392c729a89c.png"></span></p>
+<p><strong><strong>通知与展示设置</strong></strong></p>
+<p><strong>(1) 提现成功极光推送开关：</strong>必填，默认&rdquo;关闭&rdquo;。开启极光推送前，需要提前购买极光推送的相应服务，并设置好推送模板。</p>
+<p><strong>(2) 前台投注任务展示开关：</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="3a9ac086c50f17f5132d9970.png"></span></p>
+<p>　　A. 关闭时，不会显示投注提示、顶部投注认物、提现任务页签。</p>
+<p>　　B. 玩家有必打稽核未打时点击提现按钮，则弹出弹窗(投注任务列表)，分为输光和系统解除两种情况。</p>
+<p>　　C. 以下为前台大厅展示投注任务界面。</p>
+<p><strong>(3) 提现审核语音通知：</strong>控制「提现待出款、提现待风控审核」的语音通知，影响同站点所有后台人员。</p>
+<p>注：后台右上角的【消息】、【出款】按钮里的喇叭开关仅影响当前用户关闭，换浏览器还是会有声音。</p>
+<p><strong>(4) 提现页签排序 :</strong> 可针对大厅的页签排序做调整。&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><strong><strong>(5) </strong>查看完整提现账号</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="bae681789981e0fa416a781f.png"></span></p>
+<p>　　A. <strong>允许会员查看：</strong>为默认开启，无需输入密码且无&ldquo;眼睛&rdquo;切换按钮。</p>
+<p>　　B. <strong>允许验证提现密码查看：</strong>开启此选项，则收款账户仅显示后4位，需点选&ldquo;眼睛&rdquo;切换按钮后输入提现密码验证后才可查看完整收款账户。</p>
+<p>　　C. <strong>不允许会员查看：</strong>关闭后则收款账户只显示后4位，且无&ldquo;眼睛&rdquo;切换按钮。</p>
+<p><span style="text-align: right;"><strong>(6) </strong><strong>提现方式页签显示模式</strong>：默认「换行平铺展示」，可切换为「一行左右滑动」。<strong>展示效果如下：</strong></span></p>
+<p><span style="text-align: right;"><strong><span style="text-align: right;">　　A. 换行平铺展示</span></strong></span><span style="color: #000000; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: right; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;"><img style="max-width: 100%;" src="cbaba4e9308b00b347e995ce.png"></span></p>
+<p><span style="color: #000000; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: right; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">　　B.<span style="text-align: right;">一行左右滑动</span> <img style="max-width: 100%;" src="c53acf24285f6081e20687ce.png"></span></p>
+<p><span style="color: #3598db; text-align: right;"><strong><br>会员添加提现账号设置</strong></span></p>
+<p><strong><strong>(7) 添加提现账号限制：</strong>默认不勾选(表示不限制)。可设定限制会员绑定账号的条件，限制条件为&rdquo;且&rdquo;的关系，即都需要满足。</strong></p>
+<p><strong><strong>(8) 提现CPF规则校验：</strong>是否对玩家进行提现CPF规则校验。</strong></p>
+<p><strong><br><strong>出款设置</strong><br><strong>(9) 代付有效时间：</strong>可自定义，单位：小时。<br><strong>(10) 提现手续费：</strong>默认向下取整。&nbsp;&nbsp;&nbsp;<br></strong></p>
+<p><strong>(11) 提现黑名单：</strong>选择指定的会员层级来做限制提现的申请。非必填，可多选，指定会员层级的会员不能发起提现申请。</p>
+<p><strong><strong>(12) </strong>选择三方代付排序：</strong></p>
+<p>　　A. 默认排序：取三方代付后台配置的排序。</p>
+<p><strong>　　</strong>B. 也可选按成功率高排序<strong><br></strong></p>
+<p><strong>(13) 会员可同时进行提现笔数：</strong>可同时进行的提现数量，输入正整数进行配置，表示单个会员玩家可并行发起提现订单的最大原始数量。</p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #3598db;">提现身份验证</span></strong><strong><br></strong></p>
+<p><strong>(1) 提现身份验证方式：</strong>选择会员提现的验证方式。</p>
+<p>　　A. 开启【生物识别验证】，<span style="color: #292a2e;">必须同时满足以下条件，会员申请提现时才会弹出验证弹窗：</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>配置开启生物识别验证总开关：站点后台-会员-注册和验证-安全中心配置-生物识别二次登录- 生物识别开关。</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>开启提现设置中生物识别验证：站点后台-财务-提现管理-提现设置-提现设置弹窗-提现身份验证方式-生物识别验证开关。</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>会员需要在安全中心事先绑定自己的生物识别验证。</span></p>
+<p>　　B. 开启【KYC验证】，<span style="color: #292a2e;">必须同时满足以下条件，会员申请提现时才会弹出验证弹窗：</span><br style="color: #292a2e;"><span style="color: #292a2e;">　　　● KYC厂商配置：站点后台-注册和验证-KYC验证配置，配置KYC厂商等配置。</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>开启KYC验证总开关：站点后台-会员-注册和验证-会员基本信息设置-个人信息-KYC认证开关）。</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>开启提现设置中KYC验证：站点后台-财务-提现管理-提现设置-提现设置弹窗-提现身份验证方式-KYC验证开关）</span><br style="color: #292a2e;"><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span>会员需要事先绑定自己的KYC人脸验证。</span></p>
+<p><strong>(2) 同设备免验证：默认关闭；启用时才显示下方配置项。</strong></p>
+<p>　　A. 优先级规则：</p>
+<p><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span></span>开启免验证机制后，直接跳过验证频率检查。</p>
+<p><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span></span>只有不符合免审条件时，才执行验证频率的判断。</p>
+<p>　　B. 自定义参数最小-最大值</p>
+<p><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span></span>小时配置：1-720。</p>
+<p><span style="color: #292a2e;"><span style="color: #292a2e;">　　　● </span></span>天配置：1-365 。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="b9e115eca934f61f9b02a933.png"></span></span></p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #3598db;">申请提现页弹窗提示</span></strong></p>
+<p><strong><strong>(1) </strong>弹窗提示：</strong></p>
+<p>　　● 弹窗提示：<strong>默认【不弹窗】，不开启，则隐藏以下其他输入项</strong></p>
+<p>　　● 弹出场景：默认选中【进入提现页面时】，大厅点选&rdquo;提现&rdquo;跳提示弹窗；<strong>选中【点击确定提现按钮时】，大厅点选"确定提现&rdquo;后跳提示弹窗，点击弹窗中的&ldquo;确定&rdquo;按钮再跳转拉单</strong></p>
+<p>　　● 弹窗标题：<strong>可选内建标题-温馨提示、重要提醒、防骗提示，也可自定义标题。</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="ee6474ab3c3465df191db7df.png"></span></strong></span></span></span></span></span></span></p>
+<p>　　● 提示内容：内容可富文本，多语言站点，才有多语言提示。</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #313c52; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="39100503357d5923b53419c4.png"></span></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong>未首充会员盈利上限</strong></span></p>
+<p><strong>(1) 未首充会员盈利上限：</strong>非必填，可分别按不同会员币种</p>
+<p>　　● 会员首次充值时，若盈利超过此上限，则系统自动从余额中扣除超出部分；(为空无数据时为无设置盈利上限，若为0 则为设置盈利上限金额为0)。</p>
+<h5>　　● 会员首次发起提现时，若有超出盈利上限金额，提现订单会显示提醒。</h5>
+<p>　　● 会员盈利 = 游戏盈利 +&nbsp; 领取平台赠送。</p>
+<p>　　● 盈利扣除触发时机：</p>
+<p>　　　ａ. 默认选中：首次充值时扣除。</p>
+<p>　　　ｂ.&nbsp;从游戏返回大厅扣除：会员每次从游戏返回大厅时自动扣除超额部分。</p>
+<p>　　● <span style="text-align: right;">盈利超限是否自动扣除未领取奖励：</span><span style="color: #081222; background-color: #fcfdff;">当未首充会员达到盈利上限时，是否扣除未领取的奖励</span></p>
+<p>　　　ａ. 扣除时，未首充会员达到盈利上限后，所有未领取奖励均失效，不可领取。</p>
+<p>　　　ｂ.&nbsp;对于无法前置限制的活动场景（如签到），是允许会员继续完成活动并领取奖励。</p>
+<p>　　　ｃ.&nbsp;若奖励是待审核或者待申请状态，不执行扣除，需前往优惠-领取与审核中进行审批处理。</p>
+<p><img style="max-width: 100%;" src="70f3f32db3acece5d72dc4e5.png"></p>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong><strong>首次提现限制</strong></strong></span></p>
+<p><strong>(1) 提现稽核模式：</strong>点选会员币种即可对应展示当前该会员币种的提现稽核模式。</p>
+<p>　　● 点选"前往修改"会跳置站点管理的提现稽核模式设置，可进行提现稽核模式修改与规则查看。</p>
+<p><strong>(2) 首次提现限制：</strong>满足设置条件的会员，才能进行首次提现。</p>
+<p>　　● 第一行为默认，不可删除，非必填。</p>
+<p>　　● 可增加/删除行。</p>
+<p>　　● 会员层级下拉框可多选。</p>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong>会员币种可转的数字货币<br></strong></span></p>
+<p><strong>(1)</strong><span style="color: #666666;"> </span><strong>是否允许会员法币(按汇率)转为数字货币提现:</strong>是否允许会员币种，按汇率转为数字货币提现。 (不推荐开启允许转数字货币，防止刷钱/洗钱)</p>
+<p>　　● 按会员币种对应可转的数字货币做勾选允许，该会员币种就可根据勾选的数字货币做提现。</p>
+<p>　　● 点击蓝色"汇率管理"，可跳转到汇率管理页面。</p>
+<p><span style="color: #3598db;"><strong>&nbsp;</strong></span></p>
+<p><strong>4.2 免人工审核自动出款</strong><strong>：</strong>由业主根据站点的需求设置安全且免去人工审核的出款条件，开启后，若订单符合免人工审核的条件，三方将自动出款。无需人工干预。</p>
+<p><strong>多品牌设置：</strong></p>
+<p><img style="max-width: 100%;" src="fb302ff737ea496c25889635.png"></p>
+<p><strong>(1) 默认展示&ldquo;品牌默认配置&rdquo;标签。</strong></p>
+<p><strong><strong>(2) </strong>通过【新建】品牌组来独立设置相关配置，支持定义品牌组名称、和多选品牌。</strong></p>
+<p><strong><strong>(3) </strong></strong>删除品牌组后，次品牌组的站点自动按照默认配置。</p>
+<p><strong><strong>(4) 整个楼层含多品牌配置。</strong></strong></p>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong>开关设置：</strong></span></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="59af8a25faf364fa6aacd221.png"></span></span></p>
+<p><strong>(1) 免审出款开关：</strong>开启后，每笔提现订单将核对是否符合免审自动出款的条件。若关闭窗口以下全部内容全部隐藏。默认&ldquo;关闭。</p>
+<p><strong>(2) 不免审原因备注开关：</strong>默认&rdquo;开启&rdquo;，要求用户在提现申请时提供不免审的原因备注。必审核的情形（必审的级别高于免审，只要触发以下任意一条规则就必须审核）。</p>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong><strong>必须审核设置：</strong></strong></span></p>
+<p><img style="max-width: 100%;" src="a3497ad9669b789e2e943424.png"></p>
+<p><strong>(3) 必审会员层级：</strong>非必填，无默认选中，层级可多选。</p>
+<p><strong>(4) 必审会员标签：</strong>非必填，无默认选中，标签可多选。</p>
+<p><strong>(5) 必审会员的注册时长：</strong>必填，单选，默认选中&ldquo;关闭此条件&rdquo;。</p>
+<p><strong>(6) 账号提现次数必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(7) </strong><strong>充值和提现手机号不同必审：</strong></p>
+<p><strong>　　A. </strong>如充值或提现没有相关手机号数据时，该配置开启不生效。</p>
+<p>　　B. <strong>三方不支持回传手机号时：不进入人工/风控审核。</strong></p>
+<p><strong>　　C. 开启该配置后，会员提现方式没有手机号数据时，也要进入人工/风控审核。</strong></p>
+<p>　　D. <strong>默认关闭。</strong></p>
+<p><strong>(8) 打码和充提差额必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(9) PIX必须人工审核类型：</strong>仅巴西站点有此选项。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="7dd5924827e4f318ebc4b6ca.png"></span></span></p>
+<p><strong>(10) 风控类型必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(11) 领取过优惠必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(12) 投注过以下游戏必审</strong>：非必填，无默认选中，条件可多选。</p>
+<p><strong>(13) 其他必审条件：先选择会员币种，再填写</strong><strong>近24小时</strong>累计领取优惠、免审核金额、单笔提现金额超过一定额度，必须审核。</p>
+<p><strong>　　A. 优惠累计领取上限，当会员累计领取的优惠金额达到或超过此数值时，则必审。</strong></p>
+<p>　　B. 免审核金额总额上限，当会员累计的免审金额达到或超过此上限时，则必审。</p>
+<p>　　C. 单笔提现金额上限，当金额超过设定数值，则必审。</p>
+<p>　　D. 指定银行提现：当会员选择特定银行进行提现时，则必审。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="ac142b3882aa36cd262f66d8.png"></span></span></span></p>
+<p><strong><span style="color: #3598db;">免审核设置</span>（同时满足以下设置条件的会员都自动免审，不填或填0表示不限制）：</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="d47800222c65af1a47dcf58a.png"></span></span></p>
+<p><strong><strong>(13) </strong>免审会员层级：</strong>非必填，无默认选中，层级可多选。</p>
+<p><strong><strong>(14) </strong>免审会员标签：</strong>非必填，无默认选中，标签可多选。</p>
+<p><strong><strong>(15) </strong>免审会员注册时长：</strong>必填，单选，默认选中&ldquo;关闭此条件&rdquo;。</p>
+<p><strong><strong>(16) </strong>免审提现方式与次数</strong>：非必填，无默认选中，可多选。</p>
+<p><strong><strong>(17) </strong>其他免审条件：</strong>非必填，先选择会员币种，再填写<strong>近24小时(可编辑，限定整数)</strong>累计领取、免审核、单笔提现金额未超过一定额度，则免审。</p>
+<p>　　A. 累计领取金额小于此数值时，则免审，默认填充0。(非必填)</p>
+<p>　　B. 单笔免审核金额 ：必填项，当单笔免审金额不等于0时，将触发此项免审检查，默认填充0。</p>
+<p>　　　<strong><strong>&middot;　</strong></strong>近24小时免审核金额 &gt; 已成功金额（免审出款成功）+进行中的金额（仅算免审的进行中和当前提交的这一笔）。</p>
+<p>　　C. 单笔提现金额上限，当金额未超过设定数值，则免审。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="f33e871b1cfb1358f673447b.png"></span></span></p>
+<p><strong>(18) 三方代付设置：</strong></p>
+<p>　　A. 代付模式：必填，默认选中"按成功率高自动匹配三方代付"。</p>
+<p>　　B. 选中人工指定，才显示出&ldquo;指定三方代付&rdquo;字段。</p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="d9fa6481027d2803ca8b1615.png"></p>
+<p><strong><strong>(19) </strong></strong><strong>不必审会员白名单<strong>：</strong></strong>选中会员标签不受必审条件限制，只要满足免审条件即可。若必审和不必审会员标签同时勾选，则提交时报错提示： 必审会员标签与不必审会员白名单重叠!</p>
+<p><strong><strong>(20)</strong></strong> <strong>体育滚球盘单笔盈利&ge;XUSDT 必审条件</strong><strong><strong>：</strong></strong>不能输入负数、0，最小为1，默认100.00。</p>
+<p><span style="color: #424242; text-align: right;"><strong><strong>(21)</strong></strong> <strong>打码和充提差额必审条件 ：</strong></span></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #313c52; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #424242; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: right; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><strong><img style="max-width: 100%;" src="0427c588358e35bca5cb338d.png"></strong></span></span></p>
+<p><span style="color: #424242; text-align: right;"><strong><strong>(22)</strong></strong> </span><strong>必审提现方式：</strong>默认不勾选，不起作用；可多选，选项包含改站点所有的提现方式；指定的提现方式的提现订单直接必审。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>4.3 风控自动审核出款<strong>：</strong>由业主根据站点的需求设自动审核出款条件，开启后，若订单符合预设置的条件自动进入审核。</strong></p>
+<p><span style="color: #3598db;"><strong>开关设置</strong></span></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="3d939c458e453c52ba3f04d7.png"></span></span></p>
+<p><strong>(1) 是否需要风控审核：</strong>默认<span style="color: #ee0000;">&ldquo;开启&rdquo;</span>，当关闭后，以下全部内容全部隐藏。<strong> </strong>开启风控自动审核，则选择对应条件自动进入风控审核。</p>
+<p><strong><strong>(2) 不免审原因备注开关：</strong></strong>开启或关闭不免风控原因订单备注功能。</p>
+<p>&nbsp;</p>
+<p><strong><strong>必须审核设置</strong>（必审的级别高于免审，只要触发以下任意一条规则就必须审核）：</strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="2a93091ff4afe4f9175f3a3b.png"></span></span></span></p>
+<p><strong>(3) 必审会员层级：</strong>非必填，无默认选中，层级可多选。</p>
+<p><strong>(4) 必审会员标签：</strong>非必填，无默认选中，标签可多选。</p>
+<p><strong>(5) 免审会员注册时长：</strong>必填，单选，默认选中&ldquo;关闭此条件&rdquo;。&nbsp;</p>
+<p><strong>(6) 账号提现次数必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong><strong>(7) </strong>充值和提现手机号不同必审：</strong></p>
+<p><strong>　　A. </strong>如充值或提现没有相关手机号数据时，该配置开启不生效。</p>
+<p><strong>　　B. 三方不支持回传手机号时：不进入人工/风控审核。</strong></p>
+<p><strong>　　C. 开启该配置后，会员提现方式没有手机号数据时，也要进入人工/风控审核。</strong></p>
+<p><strong>　　D. 默认关闭。</strong></p>
+<p><strong>(8) 打码和充提差额必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(9) PIX必须人工审核类型：</strong>仅巴西站点有此选项。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="2989f90108f815ab82ad16bf.png"></span></span></p>
+<p><strong>(10) 风控类型必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(11) 领取过优惠必审条件：</strong>非必填，无默认选中，条件可多选。</p>
+<p><strong>(12) 投注过以下游戏必审</strong>：非必填，无默认选中，条件可多选。</p>
+<p><strong>(13) 其他必审条件：</strong><strong>先选择会员币种，再填写</strong><strong>近24小时(可编辑，限定整数)</strong>累计领取优惠、免审核金额、单笔提现金额超过一定额度，必须审核。</p>
+<p><strong>　　A. 优惠累计领取上限，当会员累计领取的优惠金额达到或超过此数值时，则必审。</strong></p>
+<p>　　B. 免审核金额总额上限，当会员累计的免审金额达到或超过此上限时，则必审。</p>
+<p>　　C. 单笔提现金额上限，当金额超过设定数值，则必审。</p>
+<p>　　D. 指定银行提现：当会员选择特定银行进行提现时，则必审。</p>
+<p>&nbsp;</p>
+<p><strong>免审核设置</strong>(满足以下任何一个条件的会员都自动免风控审核，不填或填0表示不限制)</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; color: #000000;"><span style="background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="cdea95d7d506b609d4077f01.png"></span></span></p>
+<p><strong><strong>(13) </strong>免审会员层级：</strong>非必填，无默认选中，层级可多选。</p>
+<p><strong><strong>(14) </strong>免审会员标签：</strong>非必填，无默认选中，标签可多选。</p>
+<p><strong><strong>(15) </strong>免审会员注册时长：</strong>必填，单选，默认选中&ldquo;关闭此条件&rdquo;。</p>
+<p><strong><strong>(16) </strong>免审提现方式与次数</strong>：非必填，无默认选中，可多选。</p>
+<p><strong><strong>(17) </strong>其他免审条件：</strong>非必填，先选择会员币种，再填写<strong>近24小时(可编辑，限定整数)</strong>累计领取、免审核、单笔提现金额未超过一定额度，则免审。</p>
+<p>　　A. 累计领取金额小于此数值时，则免审，默认填充0。(非必填)</p>
+<p>　　B. 单笔免审核金额 ：必填项，当单笔免审金额不等于0时，将触发此项免审检查，默认填充0。&middot;&middot;&middot;<br><strong><strong>　　　&middot;　</strong></strong>近24小时免审核金额 &gt; 已成功金额（免审出款成功）+进行中的金额（仅算免审的进行中和当前提交的这一笔）。</p>
+<p>　　C. 单笔提现金额上限，当金额未超过设定数值，则免审。</p>
+<p><img style="max-width: 100%;" src="e5eeb38bf09c1ca344f70db7.png"></p>
+<p><strong><strong>(18) </strong><strong>不必审会员白名单<strong>：</strong></strong>选中会员标签不受必审条件限制，只要满足免审条件即可。若必审和不必审会员标签同时勾选，则提交时报错提示： 必审会员标签与不必审会员白名单重叠!</strong></p>
+<p><strong><strong>(19) </strong></strong><strong>体育滚球盘单笔盈利&ge;XUSDT 必审条件</strong><strong><strong>：</strong></strong>不能输入负数、0，最小为1，默认100.00。</p>
+<p><span style="text-align: right;"><strong><strong>(20) </strong></strong><strong>打码和充提差额必审条件 ：</strong></span></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: right; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; float: none; display: inline !important;"><strong><img style="max-width: 100%;" src="0427c588358e35bca5cb338d.png"></strong></span></span></p>
+<p><span style="text-align: right;"><strong><strong>(21)</strong></strong> </span><strong>必审提现方式：</strong>默认不勾选，不起作用；可多选，选项包含改站点所有的提现方式；指定的提现方式的提现订单直接必审。</p>
+<p>&nbsp;</p>
+<p><strong><strong>4.4 提现转充值：</strong></strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="font-size: 16px; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="8f83a7d6587ce508d6e0463a.png"></span></span></p>
+<p><strong><strong>(1) 提现转充值功能：默认关闭此功能。</strong></strong></p>
+<p><strong><strong>(2) <strong>对哪些品牌开启：默认选中全部品牌（多品牌站点才有此选项）。</strong></strong></strong></p>
+<p><strong><strong>(3) <strong>对哪些层级开启：默认选中全部层级。</strong></strong></strong></p>
+<p><strong><strong>(4) 是否需要人工审核：默认选中无需审核自动完成（提现订单无需审核直接成功并自动上分）。</strong></strong></p>
+<p><strong><strong>(5) </strong><strong>本金稽核倍数：</strong>默认1倍。</strong></p>
+<p><strong><strong>(6)</strong></strong> <strong>充值比例赠送：</strong>默认参与赠送。</p>
+<p>　　A. 分会员币种设置通道赠送比例。</p>
+<p>　　B. 提现转充值则按通道比例进行赠送。</p>
+<p><strong><strong>(5)</strong></strong> <strong>充值活动赠送：</strong>默认展示。</p>
+<p>&nbsp;</p>
+<p><strong>4.5 关闭提现通道：</strong></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="a58cb5ef6f12faf8db8caff1.png"></span></p>
+<p>关闭提现通道：</p>
+<p>由业主根据站点的需求进行提现通道的关闭，关闭后的通道用户将不能再申请提现，已申请且未付款的订单不受影响。</p>
+<p><strong>(1) 提现通道开关：</strong></p>
+<p>　　A. 开启通道需注意通道的配置是否正常。</p>
+<p>　　B. 关闭后，前台的提现通道将显示提现通道已关闭。</p>
+<p><strong>(2) 关闭方式：</strong></p>
+<p><strong>　　</strong>A.<strong> 定时关闭：</strong>平台将根据您设置定时关闭的时间，停止通道的提现申请。</p>
+<p><strong>　　</strong>B.<strong> 手动关闭：</strong>直接操作控制。</p>
+<p><strong>(3) 每日循环(定时关闭说明)</strong></p>
+<p><strong>　　</strong>A. <strong>仅关闭一次：</strong>设定一次性关闭提现通道的时间区段，即具体的关闭开始时间和结束时间。</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="cae5b7fb97721e9b6bcb142f.png"></span></span></p>
+<p><strong>　　</strong>B.<strong> 每日定时关闭/开启通道：</strong>设置每日定时关闭和开启提现通道。</p>
+<p><strong>　　　<strong>&middot;　</strong>【提现关闭】开始时间</strong>：提现关闭。</p>
+<p><strong>　　　<strong>&middot;　</strong>【提现关闭】结束时间</strong>：提现开启。</p>
+<p><strong>(4) 公告内容：</strong>可在关闭期间发布公告，通知会员关于提现通道关闭的相关信息。</p>
+<p>&nbsp;</p>
+<p><strong>4.6 </strong><span style="color: #081222; background-color: #fcfdff;"><span style="color: #081222; background-color: #fcfdff;"><strong><strong>历史纪录：直接通过&ldquo;历史配置详情&rdquo;查看设置的当前版本、历史版本的对应内容。存在多个设置项，点击不同设置项，即可分别查看各自的历史版本。</strong></strong></span></span></p>
+<p><strong>4.7 操作-修改弹窗：</strong></p>
+<p><img style="max-width: 100%;" src="16b02f2258822e3a22e09d09.png"></p>
+<p><strong>(1) &nbsp;<strong>限制会员绑定邮箱类型：</strong></strong></p>
+<p><strong><strong>　　</strong>A. 非必填，可多选，默认不选中。</strong></p>
+<p><strong><strong>　　B</strong>. </strong>选择指定邮箱类型后，会员绑定提现邮箱时仅允许使用该类型，其他类型邮箱将无法提交。</p>
+<p><strong><strong>　　C</strong>. </strong>后台限制最大添加200个邮箱，仅提现方式的账号类型是邮箱的， 才显示此字段。</p>
+<p><strong><strong><strong>(2) </strong>新增&ldquo;会员输入提现金额&rdquo;配置：</strong></strong></p>
+<p><strong><strong>　　</strong>A. 任意金额输入框（默认）：</strong> 会员手动填写金额。</p>
+<p><strong><strong>　　B</strong>. 只能提现固定金额：</strong> 会员<strong>不能</strong>填写金额，只能点击设置好的金额按钮。</p>
+<p><strong><strong>　　C</strong>. <strong> 任意金额输入框+推荐金额</strong>：</strong> 会员既能手动输入，也可以点击按钮选择金额。</p>
+<p><strong><strong>　　D</strong>. 快捷设置：</strong> 点击 <strong>&ldquo;+&ldquo;</strong> 可增加金额档位（最多16个）。</p>
+<p><img style="max-width: 100%;" src="cbf72e89953df59556143844.png"></p>
+<p><span style="color: #ee0000;">&nbsp;</span></p>
+<h2><strong>十二、三方代付 </strong></h2>
+<h4><img style="max-width: 100%;" src="c383234148f404db23e6317b.png"></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>根据站点自身的需要，对每个三方代付通道进行启用/停用等相关设置，核验三方通道相关参数字段是否配置正确。</p>
+<h4><strong>2、字段说明</strong></h4>
+<h4><strong>(1) 排序：</strong>可自定义所有三方代付平台的排列顺序。</h4>
+<h4><strong>(2) <strong>三方代付平台名：</strong>自定义的三方代付平台名称。</strong></h4>
+<h4><strong>(3) 三方代付：</strong>根据选中的代付币种，会自动显示出该币种对应的三方代付；选择三方代付后，已配置的三方将自动填充相关信息。</h4>
+<h4><strong>(4) <strong>三方商户号：</strong>需请三方提供，平台手动配置。</strong></h4>
+<h4><strong>(5) 三方商户余额：</strong>该三方代付商户所剩余额，点击&ldquo;刷新本页&rdquo;可一键刷新当前页面的所有可支持刷新余额的三方。</h4>
+<h4><strong>(6) <strong>提现方式：</strong>根据选中的三方显示出该三方对应的提现方式。</strong></h4>
+<h4><strong>(7) <strong>代付币种：</strong>该代付三方所支持的支付币种。</strong></h4>
+<h4><strong>(8) 最小限额/最大限额：</strong>该三方代付平台所能支付之最小与最大额度。</h4>
+<h4><strong>(9) 备注：</strong>显示新增代付商户时所输入的备注内容。</h4>
+<h4><strong>(10) 操作人：</strong>显示最后一位操作人员账号。</h4>
+<h4><strong>(11) 操作时间：</strong>显示最后一位操作人员修改此三方代付平台时间。</h4>
+<h4><strong>(12) <strong>停/启用：</strong>新增商户后默认开启，配置的时候请注意，若配置后不想开启，请选择【关闭】。</strong></h4>
+<p><strong>(13) 权重：新增/修改三方代付弹窗、</strong>三方代付列表上可直接编辑权重，失去焦点提交。<strong>必须正整数，最小1，最大10000。</strong><strong><br></strong></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; color: #000000;"><span style="background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="b002aab4fae52afae5536a02.png"></span></span></p>
+<h4>(14) 操作：</h4>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="font-size: 16px;"><img style="max-width: 100%;" src="529d3abd02e8ff56587d3069.png"></span></span></span></p>
+<p><strong>　　A. 操作齿轮：自定义列，勾选以上需要显示字段，并可拖动排列顺序。</strong></p>
+<p><strong>　　B. 修改：可编辑修改商户信息。<br></strong><strong><strong>　　　&middot;　三方商户号：</strong>需请三方提供，平台手动配置。<br><strong>　　　&middot;　</strong>三方商户秘钥：</strong>填入三方支付管理后台对应的普通密钥信息。点击「查看」可查看密钥。</p>
+<p><strong><strong><strong>　　　&middot;　</strong>修改：</strong></strong>密钥修改操作独立拆分，支持单独修改；相关操作日志亦将独立记录。</p>
+<p><img style="max-width: 100%;" src="3219a373301a29b244e4f460.png"></p>
+<p><strong><strong>　　　&middot;　</strong>三方成功标识：</strong>请输入三方代付的回调成功标识。<br><strong><strong>　　　&middot;　</strong>三方下单地址：</strong>三方支付所提供的下单地址。<br><strong><strong>　　　&middot;　</strong>订单</strong><strong>查询地址：</strong>三方支付所提供的查询地址。<br><strong><strong>　　　&middot;　</strong>余额查询地址：</strong>三方支付所提供的余额查询地址。<br><strong><strong>　　　&middot;　</strong>三方回调IP：</strong>三方支付所提供的回调IP。<br><strong><strong><strong>　　　&middot;　</strong>提现方式：</strong>根据选中的三方显示出该三方对应的提现方式。</strong><br><strong><strong>　　　&middot;　<strong>提现方式&amp;限额</strong></strong>：</strong>三方代付可按提现方式分别设置单笔限额，已勾选的提现方式必须填写，未勾选的可不填。<br><strong><strong>　　　&middot;　</strong>备注：</strong>可输入备注内容。<br><strong><strong><strong>　　　&middot;　</strong>停/启用：</strong>新增商户后默认开启，配置的时候请注意，若配置后不想开启，请选择【关闭】。</strong><br><img style="max-width: 100%;" src="84b48cfc74f281bc4a52cdde.png"></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="font-size: 16px;"><span style="font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　C. 支持银行：支持代付银行信息-支持银行、银行编码、三方银行<strong>编码。</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="cd67a491c14be9500d107b5f.png"></span></span></span></span></span></p>
+<p>&nbsp;</p>
+<h4><strong>3、</strong>新增代付商户：</h4>
+<p>以下字段请参照字段说明填写，三方代付的设置更大程度依托于三方代付渠道所提供的参数，请一一对应后填写。</p>
+<p><img style="max-width: 100%;" src="d9e468b004d26b2d31bd3e31.png"></p>
+<p>&nbsp;</p>
+<h2><strong>十三、代付统计</strong></h2>
+<h4><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="273754dd1bc4a4dcab2804b3.png"></span></h4>
+<h4><strong>1、功能说明</strong></h4>
+<p>代付统计记录三方代付具体的统计数据，包含提现人数、总订单量、成功订单量、成功总金额等字段。业主可根据时间等条件筛选查询。</p>
+<h4><strong>2、字段说明</strong></h4>
+<p><strong>(1) 三方代付：</strong>三方代付的渠道名称。</p>
+<p><strong>(2) 提现人数：</strong>总提现的人数，提现人数按去重后数据记录。</p>
+<p><strong>(3) 总订单量：</strong>总提交多少提现申请订单，包含所有状态的订单。</p>
+<p><strong>(4) 成功订单量</strong>：提现申请订单中，已付款成功的订单总数。</p>
+<p><strong>(5) 成功总金额：</strong>提现申请订单中，已付款成功的订单总金额。</p>
+<p><strong>(6) 成功率：</strong>提现申请订单中，去除成功订单数在总订单数中的占比。</p>
+<p>&nbsp;</p>
+</div>
+        </article><div class="bottom-nav"><a href="turoial_60.html">← 全部充值</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_62.html">在线充值 →</a></div></body></html>

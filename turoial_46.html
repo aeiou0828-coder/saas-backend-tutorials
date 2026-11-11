@@ -1,0 +1,170 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时返水</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 实时返水</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3></h3>
+<h3><span style="font-size: 24px;">一、返水设置</span></h3>
+<p><img style="max-width: 100%;" src="49d65d9aca5215018b666c6d.png"></p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px;">【返水开关】</span></p>
+<p><span style="font-size: 18px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">开启：客户端显示返水，用户可领取返水奖励，返水统计时间为今日00:00:00开始；</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">例如：今日10点开启了返水功能，则打码统计今日00点以后的数据。</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px;">关闭：客户端不显示返水，用户不可领取返水奖励，未领取的返水奖励可在领取与审核列表查看，再次开启后，用户可领取待领取页面未过期的奖励。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">【强制结算周期】</span></p>
+<p><span style="font-size: 18px;">不强制（可无限累计）：更新的返水奖励可一直累计，随时领取，奖励不会过期，领取后，重新累计打码计算返水；</span></p>
+<p><span style="font-size: 18px;">每日x、每周x、每月x 强制结算：到了结算时间点，之前有更新的奖励不再更新，并重新累计打码产生新的返水奖励，所有奖励领取与审核页面可查看；</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">【派发方式】</span></p>
+<p><span style="font-size: 18px;">玩家自领-过期自动派发：返水奖励会员可手动领取，到过期时间，则未领取的奖励自动派发到账</span></p>
+<p><span style="font-size: 18px;">玩家自领-过期作废：返水奖励会员可手动领取，到过期时间，则未领取奖励作废</span></p>
+<p><span style="font-size: 18px;">系统派发：客户端不展示返水领取按钮，用户不可领取，到达结算周期时间点，自动派发已更新的返水奖励</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">【领取时间】</span></p>
+<p><span style="font-size: 18px;">次日领取：表示今日更新的奖励，次日才可领取</span></p>
+<p><span style="font-size: 18px;">实时领取（影响留存）：表示今日更新的奖励，今日可领取</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">【过期时间】</span></p>
+<p><span style="font-size: 18px;">设置0：表示到强制结算时间点，奖励过期</span></p>
+<p><span style="font-size: 18px;">设置大于0：表示更新奖励时间点后+x天的23点59分59秒过期</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">举例说明：</span></p>
+<p><span style="font-size: 18px;">例子一：</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">结算周期：不强制</span></p>
+<p><span style="font-size: 18px;">用户打码10分钟后，用户进入客户端返水详情页面，返水奖励自动更新，如果用户未进入返水详情页面，则后台会定时更新，更新后客户端及待领取表可查看</span></p>
+<p><span style="font-size: 18px;">①用户手动领取，则重新累计返水</span></p>
+<p><span style="font-size: 18px;">②用户不领取，则返水一直累计</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">例子二：</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">结算周期：每日0时 强制结算</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">派发方式：玩家自领-过期自动派发</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">领取时间：次日领取</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">过期时间：3天</span></p>
+<p><span style="font-size: 18px;">用户打码10分钟后，用户进入客户端返水详情页面，返水奖励自动更新，如果用户未进入返水详情页面，则后台会定时更新，更新后客户端及待领取表可查看</span></p>
+<p><span style="font-size: 18px;">返水奖励更新时，领取时间、过期时间同步更新</span></p>
+<p><span style="font-size: 18px;">①用户1月1日 00:00:00后有打码，返水奖励当天更新后，该返水奖励开始领取时间为：1月2日00:00:00，过期时间为：更新时间+过期时间，即：1月4日 23:59:59；过期后还未领取则自动派发到账</span></p>
+<p><span style="font-size: 18px;">②每日0时过后，用户累计的打码重新统计</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">例子三：</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">结算周期：每周一10时 强制结算</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">派发方式：玩家自领-过期作废</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">领取时间：实时领取</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">过期时间：3天</span></p>
+<p><span style="font-size: 18px;">用户打码10分钟后，用户进入客户端返水详情页面，返水奖励自动更新，如果用户未进入返水详情页面，则后台会定时更新，更新后客户端及待领取表可查看</span></p>
+<p><span style="font-size: 18px;">返水奖励更新时，领取时间、过期时间同步更新</span></p>
+<p><span style="font-size: 18px;">①用户1月1日 00:00:00后有打码，返水奖励当天更新后，该返水奖励开始领取时间为：1月1日00:00:00，过期时间为：更新时间+过期时间，即：1月4日 23:59:59；过期后还未领取则作废</span></p>
+<p><span style="font-size: 18px;">②每周一10时过后，用户累计的打码重新统计</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">例子四：</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">结算周期：每日10时 强制结算</span></p>
+<p><span style="font-size: 18px; color: #ff0000;">派发方式：自动到账</span></p>
+<p><span style="font-size: 18px;">用户打码10分钟后，用户进入客户端返水详情页面，返水奖励自动更新，如果用户未进入返水详情页面，则后台会定时更新，更新后客户端及待领取表可查看</span></p>
+<p><span style="font-size: 18px;">返水奖励更新时，领取时间、过期时间同步更新</span></p>
+<p><span style="font-size: 18px;">①用户1月1日 00:00:00后有打码，返水奖励当天更新后，该返水奖励开始领取时间为：1月1日10:00:00，过期时间为：1月1日10:00:00，即领取时间和过期时间一致，用户不可手动领取，奖励过期自动派发到账</span></p>
+<p><span style="font-size: 18px;">②每日10时过后，用户累计的打码重新统计</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">备注：</span></p>
+<p><span style="font-size: 18px;">1、如果中途修改配置，未领取且未强制结算的奖励，并且用户有更新打码，则下次奖励更新会按照最新配置，会同步领取时间和过期时间</span></p>
+<p><span style="font-size: 18px;">2、在执行过期奖励派发的时候，会读取返水配置，配置是自动派发，则会过期派发到账；配置是过期作废，则过期奖励作废</span></p>
+<h3><span style="font-size: 24px;">二、新增返水</span></h3>
+<p><span style="font-size: 18px;">1、参与会员层级：当前币种下勾选的层级才可参与返水，领取返水奖励；未勾选的层级客户端不展示返水</span></p>
+<p><span style="font-size: 18px;">2、新增返水可按照币种、层级进行创建，一个币种同一个层级只能创建一次，多个币种已创建的层级不可再次创建</span></p>
+<p><span style="font-size: 18px;">3、稽核倍数：设置返水金额需打码多少倍流水才可提现</span></p>
+<p><span style="font-size: 18px;">4、稽核平台：打码只统计勾选的平台打码</span></p>
+<p><span style="font-size: 18px;">5、返水设定：</span></p>
+<p><span style="font-size: 18px;">①可新增返水阶梯，设置对应返水比例，返水比例按照平台设置</span></p>
+<p><span style="font-size: 18px;">②可按照VIP等级，设置对应返水比例，返水比例按照平台设置</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;"><strong>备注：</strong>所有已结算的返水奖励，需要在客户端【待领取】页面进行领取，返水详情页面仅展示未结算的返水洗码数据</span></p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_45.html">← 任务中心</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_47.html">利息宝 →</a></div></body></html>

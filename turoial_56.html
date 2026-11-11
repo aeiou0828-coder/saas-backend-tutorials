@@ -1,0 +1,142 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APP包管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 运营 / APP包管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-size: 24px;">APP包管理</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<h3 style="margin-top: 20px; margin-bottom: 10px; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-weight: bold; line-height: 1.1; font-size: 16px;"><span style="font-size: 18px;">一、打包APP</span></h3>
+<p style="margin: 0px;"><span style="font-size: 18px;">简要说明：展示已创建的APP包包含安卓和iOS包 &nbsp;</span></p>
+<p style="margin: 0px;"><img style="max-width: 100%;" src="48298563317cd17ebc6687f2.png" width="1790" height="474"></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="color: #000000;"><strong>【公共配置】</strong></span></span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="color: #e03e2d;"><span style="color: #000000;">&nbsp; 简要说明：APP类型开关控制前台是否展示该APP类型和打包时是否打包该类型&nbsp; </span>注：完整资源和轻量资源功能没有区别，仅包体大小区别，<span style="font-family: &#x27;Segoe UI&#x27;;">轻量包将部分资源放到服务器。</span></span></span></p>
+<p style="margin: 0px;">&nbsp;</p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><img style="max-width: 100%;" src="f6c690f04fa5d9f394242641.png" width="1787" height="638">列表操作说明</span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="font-weight: bold;">1、图标：</span>数据取品牌设置中的APP设置APP图标</span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="font-weight: bold;">2、系统：</span>Android和iOS</span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="font-weight: bold;">3、应用地址：</span>对应包的下载地址</span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="font-weight: bold;">4、版本号：</span>当前包对应的版本号</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 18px;"><span style="font-weight: bold;">5、状态：</span>分3种状态（打包中/打包失败/打包成功）</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><strong>【生成iOS包/Android包】</strong></span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;">点击右上角一键生成IOS与一键生成Android应用,可选择不同版的APP包生成，前提条件需<span style="font-weight: bold;">APP包配置--配置APP相关参数信息</span>；<span style="color: #ff0000;"><span style="font-weight: bold;">若持续出现打包失败情况，请马上与我们联系</span></span></span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="color: #ff0000;"><span style="font-weight: bold;">注：强制所有用户重新安装APP：玩家APP版本需要低于当前版本号</span></span></span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><span style="color: #ff0000;"><span style="font-weight: bold;"><picture><img style="max-width: 100%;" src="8ae66d3d23f95cd184f00775.png"></picture></span></span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 18px;"><strong>【证书密钥】</strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 18px;"><img style="max-width: 100%;" src="1fa212af8e9ac86f06b0a15b.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify; color: #ff0000;">设置android 签名密码 会影响谷歌快捷登录&nbsp; ，只需要把打包成功重新生成的证书指纹，去谷歌开发者平台更换成最新的证书指纹&nbsp; 谷歌快捷登录其他配置不需要更改 只换SHA-1证书指纹</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify; color: #ff0000;"><img style="max-width: 100%;" src="03150cf3286c7a379df93b98.png" width="1052" height="743"></span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify; color: #ff0000;">设置android 签名密码&nbsp; &nbsp;，异常问题解决方案</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px; color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">1、修改apk签名后，站点打包使用的签名就和其他站点不同，以免默认签名被标记，安装时提示不安全</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px; color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">2、修改apk签名也有副作用，修改后，三方登录的配置需要修改（sha-1证书指纹）</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px; color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">3、apk签名可以默认，不是必须要改，只建议安装有报毒的apk修改</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px; color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">4、apk签名修改后，新打的站点包、渠道包都会使用新签名，老包也能正常使用</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 18px; color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">5、清空apk签名，则使用默认签名 6、修改apk签名后，只针对新打的包生效，老包还是老签名</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<h3 style="margin-top: 20px; margin-bottom: 10px; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-weight: bold; line-height: 1.1; font-size: 16px;"><span style="font-size: 18px;">二、原生马甲包</span></h3>
+<p style="margin: 0px;"><span style="font-size: 18px;">简要说明：展示已创建的马甲包（aab、apk）</span></p>
+<p style="margin: 0px;"><picture><img style="max-width: 100%;" src="66b3c5e703321ac49a6df1fd.png"></picture></p>
+<p style="margin: 0px;"><span style="font-size: 18px;">&nbsp; &nbsp;&nbsp;</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="margin: 0px;"><span style="font-size: 18px;"><strong>【新增】</strong></span></p>
+<p style="margin: 0px;"><span style="font-size: 18px;">点击右上角新增不同品牌的渠道对应不同马甲包</span></p>
+<p style="margin: 0px;"><picture><img style="max-width: 100%;" src="c0e2b9b20f69be43847be379.png"></picture></p>
+<p style="margin: 0px;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold; font-size: 20px;">各类型APP优劣势：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 24px;"><span style="font-family: &#x27;Segoe UI&#x27;;">PWA：基于Chrome浏览器的一种渐近式Web应用，可以安装到桌面，使用感受接近APP<br>优点：快速安装，无需下载包，如果无需特殊原生能力，体验和极速APP相当<br>缺点：体验没有安装类APP</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 24px;"><span style="font-family: &#x27;Segoe UI&#x27;;">原生：基于APP原生代码开发的APP<br>优点：兼容更好，性能更好，可以支持的能力和可能性更多<br>缺点：包体积较大<br><br>极速：基于H5+Webview封装成的APP<br>优点：兼容性较好，包体积更小<br>缺点：整体体验不如原生APP，但是差距不会很大</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 24px;"><span style="font-family: &#x27;Segoe UI&#x27;;">桌面快捷方式：浏览器的基本功能，类似于浏览器快捷链接<br>优点：增加一个桌面的快捷入口，方便查找和打开。免安装<br>缺点：和H5体验完全相同</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_55.html">← 有奖反馈</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_59.html">品牌设置 →</a></div></body></html>

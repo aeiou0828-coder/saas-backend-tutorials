@@ -1,0 +1,690 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>任务中心</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 任务中心</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">任务中心 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin-top: 8px; line-height: 1.85;">会员做任务领奖励、攒活跃度，用新人引导、每日每周、三日连续、活跃度宝箱多层任务串起留存与活跃。</p>
+<div style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 18px 0px 26px;"><strong style="color: #9a5005;">目录</strong><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s1">一、功能概述</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s2">二、新人福利</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s3">三、每日 / 每周任务</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s4">四、三日神秘任务</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s5">五、活跃度宝箱</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s6">六、活跃度记录与剩余活跃度</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s7">七、客户端展示</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s8">八、运营建议</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s9">九、常见问题</a></div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">任务中心让会员做任务领奖励，同时积累活跃度。由 7 个页签组成，覆盖新会员引导、日常/周期活跃、活跃度经济三大目标。先看整体：</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.92px;"><col style="width: 901.652px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是什么</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员做任务领奖励、同时攒活跃度；活跃度可开活跃度宝箱抽奖或跨模块消耗。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">七个页签</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">新人福利、每日任务、每周任务、三日神秘任务、活跃度宝箱、活跃度记录、剩余活跃度。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">奖励到账</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">任务奖励走【领取与审核】待领取逻辑；领取入口/更多领取限制/稽核倍数等走站点优惠通用配置。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务活动日期</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日/每周/三日新增任务时可设活动日期（开始-结束时间）。<strong>必须在日期内，任务才在客户端展示、才产生奖励、才能领取；不在日期内该任务客户端隐藏不可见。</strong>活动日期只控制生效窗口与展示，不改变会员行为数据的统计口径。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、新人福利</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">新人福利是<strong>新注册会员的一次性引导任务</strong>：完成注册、绑定、设置等动作即可领奖，帮助新会员快速上手并留存。任务清单固定不可增删，后台只改奖励与开关。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">新人福利列表如下图。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="196c708fd2fb6b4029f6b57b.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务清单</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">固定内置、不可新增删除，会员去站点各页面完成，后台只能改每条奖励与开关。完整清单见下 2.1。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">总开关</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">新人福利开关=总开关，开启后优惠模块或其他入口才展示；客户端只读总开关，总开关开着但任务全关时入口仍展示、点进去为空。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">单任务开关</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">列表每条开关控制该任务显示隐藏；会员层级/币种/品牌不符则不展示对应入口。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">按顺序领取</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开启后须按后台从上到下排序依次领取（先完成靠后的也要先领完前面的）；关闭则任意顺序领。注意：领取方式选【系统立即自动派发】时不受按顺序领取限制。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">提示气泡</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开启后客户端对应做任务的页面展示气泡引导，并联动 个人中心-个人资料、安全中心，气泡显示奖励数值。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">2.1 新人福利任务清单与完成条件</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;"><strong>怎样才能领取奖励：</strong>会员完成任务后，奖励进入待领取。按后台【领取方式】&mdash;&mdash;选「手动领取」时，会员需在任务入口点「领取」（开启按顺序领取时须按排序依次领）；选「系统立即自动派发」时，完成即自动到账、不受按顺序领取限制。大额奖励需审核通过才到账。未领取的奖励按站点公共【派发方式】处理&mdash;&mdash;玩家自领&middot;过期作废 / 玩家自领&middot;过期自动派发 / 系统立即自动派发；配合【领取时间】（次日 / 当天实时）与【奖励领取过期天数】统一控制。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 65.9732px;"><col style="width: 219.911px;"><col style="width: 362.857px;"><col style="width: 450.83px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">#</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">任务</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">完成条件</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">专属条件 / 备注</th>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">1</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>注册账号</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">完成账号注册即算完成。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">2</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>新人注册惊喜</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">注册成功后系统赠送的新人惊喜奖励。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">可设「注册 X 天内(1-30) 且 X 分钟内(0-2880，0=注册后立即赠送)没有充值」才发；从注册开始计时，期间一旦充值即不发，面向观望、尚未充值的新用户引导体验。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">3</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>注册首存</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">注册后完成首次充值。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">4</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>余额宝首存</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">首次将资金转入余额宝。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">5</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>首次下载并登录APP</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">按勾选的安装类型下载 APP 并登录（详见备注）。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>安装类型（下载 APP）：</strong>选 原生/极速/马甲包/PWA/iOS描述签，勾选哪些客户端下载即按该方式提供；一个都不勾选则无法完成；下载 APP 默认读取下载站配置。<br><strong>是否完成首存（独立开关）：</strong>开启则须完成首存后才发奖，关闭则无需首存。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">6</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>首次提现</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">完成首次提现。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">7</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>首次绑定银行卡</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定银行卡。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">8</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>首次绑定数字货币</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定数字货币地址。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">9</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>首次绑定三方钱包</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定第三方钱包。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">10</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>绑定NO钱包</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定 NO 钱包。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">与「绑定第三方快捷登录」「添加提现账户」联动：用户优先完成绑定NO钱包，即视为同步完成其余两项并可领奖。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">11</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>绑定第三方快捷登录</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定第三方快捷登录方式。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">与绑定NO钱包联动：用户完成绑定NO钱包即视为同步完成本任务。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">12</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>添加提现账户</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">添加提现账户。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">与绑定NO钱包联动：用户完成绑定NO钱包即视为同步完成本任务。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">13</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>添加手机号(无需验证)</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">填写手机号即可，无需短信验证。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">14</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>手机短信验证</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">完成手机短信验证。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">15</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>保存官方邮箱</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">保存官方邮箱。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">16</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>邮箱验证</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">邮箱验证。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">17</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>保存网址</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">保存官方网址。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">18</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>保存桌面快捷方式</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">保存桌面快捷方式。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">19</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>添加任意社交账号</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定后台勾选的联系方式之一。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">需勾选允许的联系方式（微信/Telegram/Facebook/WhatsApp/Zalo/LINE/X）；用户绑定所勾选的方式才能完成并领取奖励。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">20</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>开启系统通知</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开启系统通知（极光推送）。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">21</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>绑定生物识别</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定生物识别（指纹/面容）。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">22</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>完成KYC认证</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">完成 KYC 实名认证。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">23</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>设置Google验证器</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">绑定 Google 验证器。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">24</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>设置提现密码</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">设置提现密码。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">25</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>设置密保</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">设置密保问题。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">26</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>设置头像</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">设置头像。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">27</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;"><strong>设置生日</strong></td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">设置生日。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">&mdash;</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fdeee2; border-left: 4px solid rgb(217, 83, 79); padding: 10px 14px; margin: 10px 0px; line-height: 1.85; color: #8a3b30;">⚠️ 特别说明：任务是否完成的判定看的是「是否已领取奖励」，不是用户的真实状态。举例：「绑定手机号」任务如果在用户早已绑定手机号之后才开启，客户端仍会展示【前往】，用户只要再修改一次手机号（重新绑定）就会触发完成并领取奖励。这对运营方（老用户重复发奖、易被薅）和用户（明明已完成还要再操作一遍）都不够友好，目前未做优化。</div>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">2.2 完成任务引导方式设置</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">在【领取与审核】页面选择页签「全部记录」，点「领取设置」按钮，在设置项「完成任务引导方式」选择引导方式，点「确认」提交后立即生效（全站统一）。两种方式：</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 307.875px;"><col style="width: 791.696px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">跳转到对应页面完成</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">点「立即完成任务」按钮，跳转对应页面完成任务。如：跳转到个人中心页面完成个人资料填写。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">直接弹窗快捷完成</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">点「立即完成任务」按钮，显示快捷弹窗当场完成任务。如：显示弹窗完成资料填写。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">2.3 新人福利设置（公共配置）</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">新人福利设置是<strong>公共配置</strong>（多币种/多品牌统一），点新人福利顶部「新人福利设置」按钮进入。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="814a6933d8b76dc62f335e6d.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 263.893px;"><col style="width: 835.679px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">选择币种 / 参与会员</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">选择生效币种（全选/勾选）与参与会员层级（全选+层级）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务时长</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">长期 / 限时；限时填天数、从注册当天算、可展示倒计时，超期不再展示新人福利。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">领取方式</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">手动领取 / 系统立即自动派发。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">领取时间</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">次日 / 当天实时（当天实时影响留存）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">领取入口</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">配置奖励在客户端的领取入口（走站点公共配置）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">更多领取限制</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">防刷/资格限制（KYC、绑卡、同IP/同设备、累计充值/打码等，走站点公共配置）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">稽核倍数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">奖金需完成稽核倍数才能提现（走站点公共配置）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">弹框样式</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">五种样式；多品牌可全品牌统一或按品牌分别设，多币种只选样式。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">规则说明</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">填写展示给会员的活动规则文案。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">2.3.1 登录前后弹窗方式（新人福利 / 每日 / 每周 / 三日 通用）</h3>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">不弹窗</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">首页不展示该弹窗。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">高频弹窗</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每次进入首页就弹窗。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">每日一次</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日登录后首页弹窗 1 次。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">只弹一次</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">针对会员当前设备/浏览器，总共只弹窗 1 次。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">每次登录</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每次登录时进入首页弹窗 1 次。</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fdeee2; border-left: 4px solid rgb(217, 83, 79); padding: 10px 14px; margin: 10px 0px; line-height: 1.85; color: #8a3b30;">多品牌说明：多品牌站点只有勾选的品牌才算开启对应任务，所有品牌共用当前配置。</div>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">2.4 单任务修改弹窗</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">点任务列表某条的「修改」进入单任务修改弹窗，配置该任务的开关与奖励。绝大多数任务字段一致，个别任务有专属条件（见 2.1 清单备注列）。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="7102db6424ae5c53550f20d1.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">品牌名称(ID)</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">全选 / 勾选（多品牌时只有勾选的品牌算开启，所有品牌共用配置）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务条件</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">只读，展示该任务的完成动作（如「注册账号」「首次下载安装并登录APP」）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是否开启</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">控制该任务的显示/隐藏。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">提示气泡</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开关 + 气泡内容（系统自带 / 自定义）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">奖励类型</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">固定：各币种直接填奖励金额；随机：各币种设 奖励金额区间 + 期望奖金(0=完全随机) + 展示金额区间。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">加倍奖励</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开关，开启后选择一个加倍奖励方案。加倍奖励为<strong>独立模块</strong>统一配置（赠送/充值金额倍数、固定/随机/按充值阶梯倍数、单笔充值领取门槛、倍数 0.01-1000.00）、供各模块调用；主奖励金额为 0 时无法生成加倍奖励。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">额外奖励</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开关，类型 5 种：活跃度 / 幸运值 / 积分 / 盲盒抽奖次数 / 折扣券；配奖励数量 + 有效天数（活跃度默认每日有效期 1 天，按设置天数计）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">专属条件</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">个别任务有专属项（新人注册惊喜、首次下载安装并登录APP、添加任意社交账号），详见 2.1 清单备注列。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、每日 / 每周任务</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">每日 / 每周任务用<strong>可循环的日常目标</strong>让会员每天、每周都有事做、有奖领，稳住活跃。两者结构一致，只是结算周期不同。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">新增任务弹窗如下图。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="b71af3b113041ff13aa9a08e.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">3.1 任务重置</h3>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">每日任务</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日 00:00 重置。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">每周任务</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">周一 00:00 重置。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">三日任务</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每天从列表随机抽取任务（同币种用户相同）；若有一天任务未完成，则从第 1 天重新开始；连续 3 天完成可领最终奖励并重新开始。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">3.2 新增任务与奖励</h3>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务活动日期</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">设开始-结束时间。<strong>必须在日期内任务才展示、才产生奖励、才能领取，不在日期内客户端隐藏不可见。</strong></td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">任务目标</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">可选一个任务目标新增：累计充值、单笔充值、累计有效投注、单笔有效投注、单笔盈利、单笔亏损、累计盈利、累计亏损、邀请好友（共 9 种）。可新增多个不同任务。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">邀请好友口径</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">任务目标选「邀请好友」时，需选有效判定：<strong>完成注册登录</strong>&nbsp;或&nbsp;<strong>完成首充</strong>；统计的是<strong>周期内新增的下级好友</strong>（每日=当天新增，每周=当周新增）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">阶梯奖励</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">满足的所有阶梯奖励都可领取，每个阶梯奖励只能领 1 次。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">额外奖励</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">活跃度 / 幸运值 / 积分 / 盲盒抽奖 / 折扣券。<strong>主奖励可设为 0、仅赠额外奖励</strong>（如不给现金只送活跃度 88）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">加倍奖励</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">需设主奖励（现金）＞1 才生效；点「详情」可查看。加倍奖励为<strong>独立模块</strong>统一配置、供各模块调用，此处为选择/调用其方案。一次新增的多个阶梯任务共用一个加倍奖励。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、三日神秘任务</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">三日神秘任务用<strong>连续三天完成</strong>的机制拉动会员连续登录：每天随机派任务，连做三天可额外拿最终大奖，中断则重新计天。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">三日神秘任务设置如下图。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 548.884px;"><col style="width: 550.688px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 536.312px;" src="aa28d3283649b1679026fd8d.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 538.116px;" src="80b4db966e6db25f5d7aef3f.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">最终神秘大奖</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">默认开启，配一个金额区间；会员连续三日完成任务即可额外获得区间内的最终神秘大奖，领取后重新开始。若第1天完成、第2天未完成，则第3天又从第1天重新计。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">随机抽取</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每天从任务列表随机抽取任务给用户（同币种用户相同）；建议至少配置 5 条任务以确保任务不重复。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">其余配置</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">任务活动日期、参与会员、领取入口、更多领取限制、派发方式、领取时间、稽核倍数等走站点优惠通用配置。</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fdeee2; border-left: 4px solid rgb(217, 83, 79); padding: 10px 14px; margin: 10px 0px; line-height: 1.85; color: #8a3b30;">以上每日/每周/三日任务均可设奖金为 0、只赠活跃度；会员可用活跃度开宝箱抽奖。</div>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、活跃度宝箱</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">活跃度是会员做任务攒下的<strong>通用积分</strong>，可用来开活跃度宝箱抽奖。本章讲宝箱配置与活跃度设置。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="bda26aaa2494ff9fc9775e3d.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="39aca68fcdb97acc49d098c4.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">宝箱开关</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开启后前端任务界面才展示宝箱奖励，否则隐藏。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">宝箱</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">目前 4 个、仍在开发（后续支持最多 20 个）；每个宝箱设所需活跃度、奖励类型（固定/随机）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">重复循环开宝箱</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">允许：活跃度足够可开完一轮后再从第一个继续开（再花对应活跃度）；不允许：一轮只能开一遍，等重置后再开。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">宝箱重置</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日重置 / 每周重置。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">稽核提现</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">开宝箱所得奖金需完成稽核倍数才能提现，且只能用指定提现方式。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">六、活跃度记录与剩余活跃度</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">本章讲活跃度的<strong>流水记录、剩余查询与后台手动新增</strong>。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.902px;"><col style="width: 857.67px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">活跃度记录</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">记录会员活跃度变动明细；变动类型：已获得、系统添加、活跃度宝箱消耗、过期、商城兑换消耗、兑换失败(已退回)。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">剩余活跃度</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">按会员维度查剩余，一个会员一条，展示总获得、总消耗、总过期、剩余活跃度。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">新增活跃度</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">后台可手动新增：多条添加或批量导入；账号类型 会员账号 / 会员ID（最多 200 个、逗号拼接）；新增活跃度数量 1-999,999,999 正整数；活跃度有效天数 1-31 天（默认每日有效期 1 天，按设置天数计）；填前后台备注。<strong>多品牌时按所选品牌新增，一次只能给单个品牌新增。</strong></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 515.17px;"><col style="width: 584.402px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 502.598px;" src="432f45ceb73fd04e6ea7b7b7.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 571.83px;" src="ccd4e44047ab2ab5160866ab.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">七、客户端展示</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">下面是会员端任务中心的<strong>实际展示效果</strong>，供对照后台配置理解前端呈现。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 377.348px;"><col style="width: 379.58px;"><col style="width: 342.643px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 364.777px;" src="65e4c1602a0a761106a66c34.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 367.009px;" src="3ec855adb922dbaaf39aa49a.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; width: 330.071px;" src="aa9b4f32ad14e39119217b31.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s8" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">八、运营建议</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.9; margin: 12px 0px 6px; color: #555555;">按<strong>拉新、日常活跃、周期黏性、邀请裂变、活跃度闭环、风控</strong>等场景给出配置建议。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 175.929px;"><col style="width: 505.795px;"><col style="width: 417.848px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">场景</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">建议</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">提示</th>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">拉新留存</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">新人福利配小额易得任务（绑定/设置类），限时设 3-7 天营造紧迫感，引导新会员完成注册引导链路。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">限时从注册当天算，超期不再展示。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">日常活跃</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每日任务用累计充值/有效投注设低阶梯，让会员每天有事做、有奖领，稳住日活。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">阶梯别太高，重在养成习惯。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">周期黏性</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">每周任务放稍高门槛、三日神秘任务用最终大奖拉连续登录；三日任务至少配 5 条防重复。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">最终大奖门槛与金额匹配连续 3 日成本。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">邀请裂变</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">邀请好友任务按目标选口径：拉新走完成注册登录，重质量走下级完成首充。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">防刷建议用完成首充口径。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">活跃度闭环</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">用额外奖励发活跃度（可主奖励设 0 只送活跃度），再用活跃度宝箱消耗，形成【做任务&rarr;攒活跃度&rarr;开宝箱】闭环。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">允许循环开宝箱可提升消耗，但要算清成本。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">加倍提转化</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">主力任务挂加倍奖励，按赠送/充值倍数或充值阶梯加倍，刺激会员完成更高阶梯。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">主奖励现金须＞1、并可设单笔充值门槛才可领。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">成本风控</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">配更多领取限制（KYC/绑卡/同IP同设备）防薅；新人注册惊喜可设注册后X天且X分钟无充值才发，避免薅完就走。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">大额走审核，避免刷子套利。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">效果监控</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">看各任务完成率、活跃度发放与消耗、宝箱开启率，据数据调阶梯与奖励。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">完成率过低说明门槛偏高。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s9" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">九、常见问题</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：新人注册惊喜的奖励条件怎么设？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：可设「注册 X 天内(1-30) 且 X 分钟内(0-2880，0=注册后立即赠送)没有充值」才发；从注册计时，期间一旦充值即不发，面向观望未充值用户。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：任务活动日期外还能领奖吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不能。必须在任务活动日期内任务才展示、才产生奖励、才能领取，不在日期内该任务客户端隐藏不可见。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：未领取的奖励怎么处理？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：按站点公共派发方式&mdash;&mdash;过期作废 / 过期自动派发 / 系统立即自动派发，配合领取时间与过期天数统一控制。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：邀请好友任务怎样算有效？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：新增时选口径&mdash;&mdash;完成注册登录 或 下级完成首充；统计周期内新增的下级好友。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：加倍奖励怎么算？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：加倍奖励是独立模块统一配置、各模块调用；主奖励现金须＞1，规则可按赠送/充值倍数、固定/随机/充值阶梯，可设单笔充值门槛，倍数 0.01-1000.00。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：用户之前已完成动作，任务后开启还能领奖吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：能。完成判定看的是是否已领奖、非真实状态，用户再操作一次即可完成领奖，目前未优化。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：允许循环开宝箱是什么意思？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：会员活跃度足够时，开完一轮所有宝箱后可再从第一个继续开；不允许则一轮只开一遍，等宝箱重置后再开。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_44.html">← 活动中心</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_46.html">实时返水 →</a></div></body></html>

@@ -1,0 +1,629 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>信用借款</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 信用借款</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">信用借款 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin: 8px 0px 0px; line-height: 1.85;">给玩家提供信用借款额度&mdash;&mdash;先借后还，平台靠额度/审核/逾期管控风险</p>
+<div style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 20px 0px;"><strong style="color: #b45f06;">目录</strong>
+<ul style="list-style: none; margin: 8px 0px 0px; padding-left: 8px;">
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s1">一、功能概述</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s2">二、娱乐城模式</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s3">三、俱乐部模式</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s4">四、站点后台账号可设置借款限额</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s5">五、运营建议</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s6">六、常见问题 FAQ</a></li>
+</ul>
+</div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">一、功能概述</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">信用借款为玩家提供【信用借款额度】，玩家先借款、后续还款，平台通过额度管理、审核、逾期管控来控制风险。入口在 优惠 &rarr; 信用借款。信用借款分&nbsp;<strong>娱乐城&nbsp;</strong>和&nbsp;<strong>俱乐部&nbsp;</strong>两种模式，按品牌组二选一，本教程先讲娱乐城、再讲俱乐部。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 249.625px;"><col style="width: 655.277px;"><col style="width: 655.295px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">对比项</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">娱乐城模式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">俱乐部模式</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">客户端入口</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">展示，玩家自助申请</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">不展示（纯后台 / 找客服）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">放款方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家申请 &rarr; 后台审核 &rarr; 到账</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台手动放款 / 调额度</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度来源</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按 VIP/SVIP/累计充值/打码/亏损 多维自动算</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台逐人手动配</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台子页</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">9 个（含借款审核、借款会员列表等）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">5 个</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">适用场景</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">规模化大众玩家自助借款</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">高净值 / 线下信任客户</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">配置维度（多币种 / 多品牌）</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">借款公共配置按站点形态分两种，均在【借款设置】弹窗内配置：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 280.83px;"><col style="width: 1279.37px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">站点形态</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">配置方式</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">多币种站点</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">直接按币种配置借款详情。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">多品牌站点</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">① 品牌默认配置：全品牌默认套用的配置；② 品牌组：可&nbsp;<strong>新增多个&nbsp;</strong>，每个品牌组选不同品牌、单独开关、单独设置借款配置详情，&nbsp;<strong>不同品牌组可用不同模式 / 参数&nbsp;</strong>。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">二、娱乐城模式</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">2.1 借款设置（配置）</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">在 优惠 &rarr; 信用借款 页，点击右上方【借款设置】按钮打开配置弹窗，【借款模式】选择&nbsp;<strong>娱乐城模式&nbsp;</strong>。多品牌站点按品牌组配置、多币种站点按币种配置。按下表逐项填写：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 93.6071px;"><col style="width: 312.036px;"><col style="width: 1154.55px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">序号</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">填写说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">1</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款模式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">选【娱乐城模式】。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">2</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">选择币种</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">多币种站点选择适用币种。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">3</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款是否需要人工审核</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">需人工审核 / 自动立即到账。玩家申请后是否需后台审核。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">4</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">默认借款天数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">单笔借款的可借天数，到期需还款。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">5</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">还款金额</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">不限制（可分次任意还）/ 必须一次性还清。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">6</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是否允许二次借款</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">允许（随时可借）/ 不允许（先还清才能再借）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">7</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">周期内借款次数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">每日 / 每周 / 每月 可借款次数上限（0 为不限制）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">8</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款期间优惠限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">4 选 1，详见下方说明。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">9</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款期间是否可提现</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">禁止提现 / 可提现。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">10</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">强制自动还款</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">3 选 1，详见下方说明。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">11</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期次数限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">设置 X 次，会员逾期累计达 X 次后禁用借款功能。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">12</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期前弹窗提示</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期前 X 天 + 弹窗方式（每次进入首页 / 每次登录 / 每日一次 / 不弹窗）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">13</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期后弹窗提示</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">弹窗方式（每次进入首页 / 每次登录 / 每日一次 / 不弹窗）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">14</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">可借款层级</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">勾选允许借款的 VIP 层级，用于圈定人群。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">15</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">更多借款限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">4 项可独立勾选，详见下方说明。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">16</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按 VIP 等级获得额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开关；按币种为各 VIP 等级（VIP0~VIP23）逐级配额度，可【应用到其他币种】批量复制。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">17</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按 SVIP 等级获得额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开关；按币种为各 SVIP 等级逐级配额度。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">18</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按累计充值获得额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开关 + 充值方式 + 奖励类型（固定金额 / 按比例），详见下方说明。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">19</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按累计打码获得额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开关 + 有效打码平台（不限制 / 仅限 / 排除）+ 奖励类型。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">20</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按累计亏损获得额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开关 + 有效打码平台 + 奖励类型；按累计亏损金额分档。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">21</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款金额稽核倍数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款后需完成的流水倍数（提现门槛）+ 稽核指定平台（不限制 / 仅限 / 排除）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">22</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">规则说明</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">自定义 / 系统自带。展示在客户端的借款规则文案。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">借款期间优惠限制说明（4 选 1）</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 468.054px;"><col style="width: 1092.14px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">选项</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">含义</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">可领取优惠</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款期间一直可领取奖励（含逾期后）；领取后到余额，可用余额还款。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">可领取优惠（逾期后不可领取）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款期间可领，一旦逾期即停止领取。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">禁止领取优惠（还款后可领取）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">未还清不能领取，还清后才可领。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">优惠自动作废</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款期间产生的奖励直接作废、不可领取。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">强制自动还款说明（3 选 1）</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 499.259px;"><col style="width: 1060.94px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">选项</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">含义</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开启但不追缴（逾期定时扣款）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期触发时自动还款一次，扣一次为止、不持续；可设扣款时间。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开启且追缴（逾期实时扣款）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期后实时扣款，持续直到还清。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">关闭</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">不自动还款，由会员主动还或后台手动还。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">额度获取说明（累计充值 / 打码 / 亏损 维度）</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">VIP / SVIP / 累计充值 / 累计打码 / 累计亏损 五个维度各自独立开关，&nbsp;<strong>开启的维度额度累加求和 ＝ 该会员系统自动总额度&nbsp;</strong>。额度&nbsp;<strong>每日自动更新，且玩家访问借款页面时实时更新&nbsp;</strong>。其中累计充值 / 打码 / 亏损 的奖励类型二选一：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 312.036px;"><col style="width: 1248.16px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">奖励类型</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">固定金额</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按累计区间（&ge;X）配【可借款金额】，可多行阶梯，新增 / 删除。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按比例</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按累计区间（&ge;X）配【可借款比例（%）+ 借款上限】，可多行阶梯。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">更多借款限制说明（4 项，可独立勾选）</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">限制项</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">同登录设备号只能 N 个用户借款</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">同浏览器指纹只能 N 个用户借款</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">最近 X 天内充值次数 &ge; Y 次才能借款</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">最近 X 天内充值金额 &ge; Y 才能借款</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">2.2 借款审核与管理</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">开启人工审核后，后台在【借款审核】页对申请单进行通过 / 拒绝。点击【通过】弹窗可查看会员基本信息，并可修改【实际借款金额】（默认等于申请金额）。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); text-align: left;">
+<p style="margin: 0px;"><img style="max-width: 100%; height: auto;" src="1dafe13ec25cefbb612d0656.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 280.83px;"><col style="width: 1279.37px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">操作 / 子页</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款审核</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">通过（可改实际借款金额）/ 拒绝；支持批量通过 / 批量拒绝。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款中 / 已逾期</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">行操作＝详情 / 强制还款（娱乐城系统自动额度，后台不手动放款，只能强制还款）；批量强制还款 / 批量取消追缴。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款会员列表</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按会员维度管理；行操作＝修改额度 / 禁用；顶部【新增】可手动给会员配信用额度（少量 / 批量添加）；批量支持修改 / 上调 / 下调 / 归零额度、强制还款、禁用 / 取消禁用。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">2.3 查看记录</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">娱乐城共 9 个子页：借款审核 / 借款中 / 已逾期 / 已还清 / 拒绝或取消 / 全部记录 / 借款会员列表 / 额度调整记录 / 借还记录。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); text-align: left;">
+<p style="margin: 0px;"><img style="max-width: 100%; height: auto;" src="75bcfa5510d5e3c6dd1d6764.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); text-align: left;">
+<p style="margin: 0px;"><img style="max-width: 100%; height: auto;" src="839ffac069b28fb0aaddf19e.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 436.848px;"><col style="width: 1123.35px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款中 / 已逾期 / 已还清 / 拒绝或取消 / 全部记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按订单维度展示借款单：单号 / 借款金额 / 已还 / 待还 / 状态 / 追缴状态 等，按状态分页查看。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度调整记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度变动留痕：调整前 / 调整金额 / 调整后 / 额度类型 / 调整动作 / 操作人。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借还记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">每笔借 / 还流水：借还类型（借款 / 还款）、借还方式（后台手动借款 / 系统自动借款 / 申请借款 / 主动还款 / 到期系统自动扣款 / 强制还款 / 追缴扣款）。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">2.4 玩家端效果</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">娱乐城模式在客户端展示借款入口（优惠 &rarr; 信用借款）。顶部显示账户余额与利息宝；主卡片左侧为【可解额度 / 总额度】与【信用借款】按钮，右侧为【待还金额】与【我要还款】按钮。&nbsp;<strong>借款流程：&nbsp;</strong>玩家点【信用借款】&rarr; 输入借款金额（不超过可解额度）&rarr; 提交；需人工审核则进入【审核中】，自动立即到账则直接发放至余额。&nbsp;<strong>还款流程：&nbsp;</strong>点【我要还款】&rarr; 选借款单 / 输入还款金额 &rarr; 用余额或利息宝还款（每笔需全额还，无利息）。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 312.036px;"><col style="width: 1248.16px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">客户端 Tab</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家看到什么</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款和还款规则</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款规则、还款规则、条款细则（即后台【规则说明】配置的展示），帮玩家了解额度、审核、限制、逾期后果。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度来源</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">展示总额度由哪些维度构成（VIP 等级 / 累计充值 / 有效投注 / 后台固定额度 等）、各维度 + 多少额度及更新时间。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家自己的借款单及状态（审核中 / 使用中 / 已逾期 / 已拒绝 / 已取消 / 已还清 / 逾期还清），可按时间 / 状态筛选。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">还款记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家的还款流水及方式（主动还款 / 到期扣款 / 强制还款 / 追缴扣款）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">三、俱乐部模式</h2>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">3.1 借款设置（配置）</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">同样在【借款设置】弹窗，【借款模式】选择&nbsp;<strong>俱乐部模式&nbsp;</strong>。俱乐部为纯后台手动放款，额度由后台逐人配置，因此&nbsp;<strong>不依赖娱乐城的"按 VIP/累计充值/打码/亏损 自动算额度"&nbsp;</strong>；天数、还款金额、借款期间优惠限制、逾期次数、弹窗提示、稽核倍数等基础项与娱乐城一致（见 2.1）。俱乐部特有一项开关：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 436.848px;"><col style="width: 1123.35px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">配置项</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是否允许会员在额度范围内任意使用</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;"><strong>是&nbsp;</strong>＝无需找客服，玩家玩游戏时在额度内自动借款；&nbsp;<strong>否&nbsp;</strong>＝只能找客服上分（纯后台手动放款，客户端无入口）。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">3.2 后台管理操作</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">俱乐部在【借款中 / 未借款】子页对会员行操作，全部由后台手动完成。已有欠款会员显示：上调额度 / 下调额度 / 手动加款 / 手动扣款 / 备注；未借款会员显示：上调额度 / 手动加款 / 手动扣款 / 备注。每笔资金操作均需验证登录密码。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); text-align: left;">
+<p style="margin: 0px;"><img style="max-width: 100%; height: auto;" src="1fc16874d9806dbd3499356d.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 312.036px;"><col style="width: 1248.16px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">操作</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">上调 / 下调额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">上调＝抬高总额度上限并自动把可借部分全部借出到玩家可用余额；下调＝压低总额度上限，必要时直接从玩家可用余额扣回欠款作为还款（无独立还款按钮，还款由下调自动触发）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">手动加款 / 手动扣款</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">调用财务模块弹窗，给会员加余额 / 扣余额（属财务功能）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">备注</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">登记会员前台 / 后台备注。</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fff5e6; border-left: 4px solid rgb(180, 95, 6); border-radius: 0px 8px 8px 0px; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; color: #3a3a3a;"><strong style="color: #b45f06;">下调金额最大值是怎么算的？</strong><br>看两块加起来：<strong>① 没借出去的额度</strong>（总额度还没用完的部分，可以直接砍）+&nbsp;<strong>② 玩家钱包里能还回来的钱</strong>（取玩家当前可用余额和欠款两者中较小的那个&mdash;&mdash;能还多少看玩家钱包够不够还、最多也只能还掉已借的部分）。两者之和就是这次下调能填的最大值。<br><strong>什么时候触发还款？</strong>下调金额超过【没借出去的额度】时，超出的部分系统直接从玩家可用余额扣回作为还款；不超过则只是降额度上限，玩家钱包不动。<br><strong>例：</strong>玩家总额度 5000、当前借款 2000、可用余额 1500。没借出去的部分是 3000；玩家钱包能还回来的部分，可用余额 1500 比欠款 2000 少，所以取 1500；两块加起来，本次最多下调 4500。若下调 4500，超出没借出去的 3000 的部分（1500）走还款扣玩家余额；若下调 2000（没超过 3000），玩家余额不动，只压总额度上限。</div>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">底部【批量操作】：借款中页支持 批量上调 / 下调总额度、批量开启 / 关闭追缴；未借款页支持 批量上调 / 下调总额度。批量操作需选择会员并验证登录密码。批量上调＝逐人按各自总额度自动借出；批量下调＝逐人按各自下调金额最大值校验，超限拦截整批。</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 16px 0px 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">3.3 查看记录</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">俱乐部共 5 个子页：借款中 / 未借款 / 全部记录 / 额度调整记录 / 借还记录。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 1560.2px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); text-align: left;">
+<p style="margin: 0px;"><img style="max-width: 100%; height: auto;" src="e9aa6ad2dea4463ee5ea9528.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 343.241px;"><col style="width: 1216.96px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借款中 / 未借款</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按会员维度展示：当前欠款 / 总信用额度 / 是否追缴 / 历史借款&middot;还款总额&middot;次数 等。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">全部记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">未借款 + 借款中汇总，支持按借款状态 / 追缴状态筛选。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度调整记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度变动留痕：调整前 / 调整金额 / 调整后 / 额度类型 / 调整动作 / 操作人。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">借还记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">每笔借 / 还流水：借还类型 + 借还方式（后台手动借款 / 系统自动借款 / 强制还款 / 追缴扣款）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">四、站点后台账号可设置借款限额</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">站点后台支持给各运营账号配置信用借款上调/下调操作的限额，按【账号 &times; 币种】维度独立管控。</p>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.1 配置位置</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">站点后台 &rarr; 账号管理 &rarr; 新增账号 / 编辑账号 &rarr; 限额管理 &rarr; 批量设置限额，找到【信用借款上调限额】和【信用借款下调限额】两项，按币种 tab（CNY / USDT 等）独立配置。</p>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.2 字段说明</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px; margin: 8px 0px;" border="1"><colgroup><col style="width: 93.6071px;"><col style="width: 374.446px;"><col style="width: 1092.14px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">序</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">1</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">额度限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">不限制 / 每日 / 每周 / 每月。选不限制时右侧三个金额输入框置灰；选每日/每周/每月时输入框激活</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">2</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">每日/每周/每月限额</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">该周期内可累计操作的金额上限，超出当周期不可继续操作。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">3</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">总额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">从配置生效起累计上限；可空，空=不设总上限</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">4</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">单笔最大额度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">单次操作金额上限，超出直接拦截。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.3 校验逻辑与重置</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">运营账号在【信用借款】发起单次/批量上调或下调时，按以下顺序校验：① 单笔最大额度 &rarr; ② 周期累计限额 &rarr; ③ 总额度 &rarr; ④ 币种匹配。任一项超限即拦截，提示具体超限项。批量按合计金额参与累计，任一会员超限整批拦截。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;"><strong>上调/下调独立计数</strong>：按【运营账号 &times; 币种 &times; 限制项（上调/下调）】维度独立累计，上调累计不影响下调额度，反之亦然。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;"><strong>币种匹配规则</strong>：校验时按操作会员的币种取对应币种的限额配置；该币种未配限额则按【不限制】处理。混币种批量操作按各自币种限额分别校验。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;"><strong>周期重置</strong>：每日 00:00 / 每周一 00:00 / 每月 1 日 00:00（站点统一时区）；总额度永不重置，达上限后需管理员手动调整配置。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;"><strong>修改影响</strong>：调整限额配置后，已发生的操作不回滚仍计入累计；新限额对此后操作生效；调低后当前周期已超 &rarr; 当周期不可继续操作（直到下个周期重置）。</p>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">五、运营建议</h2>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1560.77px;" border="1"><colgroup><col style="width: 249.625px;"><col style="width: 1310.57px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">维度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">运营建议</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">额度策略</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">娱乐城额度建议"基础 + 浮动"组合&mdash;&mdash;用 VIP / SVIP 等级给基础额度（身份激励），用累计充值 / 打码 / 亏损 给浮动额度（贡献激励）。高价值维度用【按比例 + 借款上限】随贡献增长又封顶控险；低活跃维度用小额【固定金额】托底。配合【可借款层级】把额度只开放给目标人群。额度每日自动更新、访问页面实时刷新。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">转化技巧</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">追求转化率时【借款是否人工审核】选【自动立即到账】，减少等待、提高成功率；风险敏感站点保留【需人工审核】把关大额。借款期间【可领取优惠】让借款玩家继续领奖、领奖到余额又能还款，形成"借款&mdash;活跃&mdash;还款"循环。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">风控与成本</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">用【借款金额稽核倍数】设提现流水门槛防套现；用【逾期次数限制 + 强制自动还款（追缴）】控坏账；用【更多借款限制】（同设备 / 指纹 / 近期充值门槛）防多账号薅借款。保守站点可叠加【禁止领取优惠 + 借款期间禁止提现】。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">逾期管理</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">配置逾期前 / 逾期后弹窗提示提高主动还款率；按坏账容忍度选强制还款力度&mdash;&mdash;"开启不追缴"较轻、"开启且追缴"较重。定期在借款会员列表按"已逾期 / 累计逾期次数"排查高风险会员。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">效果怎么看</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">① 规模：借款渗透率、人均借款额、借款拉动的流水增量；② 风险：逾期率、坏账率、追缴回收率；③ 数据源：借还记录看资金流转，借款会员列表看渗透与风险，全部记录看整体借 / 还规模。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">六、常见问题 FAQ</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：俱乐部模式和娱乐城模式最大的区别？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：俱乐部纯后台手动放款、客户端无入口；娱乐城客户端有入口、玩家自助申请、额度系统自动算。子页和操作也不同（娱乐城多审核态、订单维度，9 子页；俱乐部会员维度，5 子页）。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：会员的借款额度是怎么算出来的？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：娱乐城模式下，开启的各维度（VIP/SVIP/累计充值/打码/亏损）额度相加＝总额度，每日自动更新、玩家访问借款页面时实时更新；俱乐部模式由后台逐人手动配置。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：借款期间玩家还能领优惠、提现吗？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：取决于【借款期间优惠限制】（4 选 1）与【借款期间是否可提现】配置，可按风控需要设为可领 / 逾期后不可领 / 禁止领 / 自动作废，以及禁止 / 允许提现。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：玩家逾期不还怎么办？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：可开启强制自动还款（不追缴＝逾期扣一次 / 追缴＝实时扣到还清）；逾期累计达【逾期次数限制】会自动禁用借款功能；后台也可手动强制还款。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：为什么客户端看不到借款入口？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：借款入口仅娱乐城模式展示。俱乐部模式客户端无入口，借款由后台或客服操作。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：审核通过时可以改借款金额吗？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：可以。娱乐城借款审核【通过】弹窗的【实际借款金额】可编辑，默认等于玩家申请金额，后台可调整实际放款额。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_720111.html">← 幸运转盘</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_720119.html">折扣券 →</a></div></body></html>

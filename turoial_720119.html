@@ -1,0 +1,351 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>折扣券</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 折扣券</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">折扣券 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; line-height: 1.8;">充值打折券：会员充值时用券按折扣少付，差额作为优惠到账。</p>
+<div style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 14px 0px;"><strong style="color: #9a5005;">目录</strong>
+<ul style="list-style: none; margin: 8px 0px 0px; padding-left: 8px; line-height: 1.9;">
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s1">功能概述</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s2">新增折扣券（配置步骤）</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s3">管理操作（开关&middot;修改&middot;删除&middot;发放）</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s4">查看记录</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s5">玩家端效果</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s6">运营建议</a></li>
+<li><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s7">常见问题</a></li>
+</ul>
+</div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">折扣券是一种【充值打折券】。会员充值时勾选可用的折扣券，即可按折扣少付：例如【充值 100 减 9】，会员实际支付 91 元，账户仍到账 100 元&mdash;&mdash;其中 91 元为本金到账、9 元为优惠到账。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 474.911px;"><col style="width: 1108.15px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">能解决什么</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">用【充值立减】刺激充值与提升客单价；可注册自动发放拉新、也可手动发放给指定会员。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">奖励方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">固定金额（满 X 减 Y）/ 比例金额（满 X 按比例减、可设上限）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">到账与提现</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">实付部分为本金、折扣差额为优惠到账；优惠按【稽核倍数】打满有效投注后方可提现，并受【奖金提现方式】限制。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">展示前提</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">折扣券总开关开启，且会员满足 会员层级 / VIP 等级 / 渠道或代理 / 使用条件，客户端才展示入口与可用券。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、新增折扣券（配置步骤）</h2>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">在【折扣券列表】页点击右上方【+ 新增折扣券】按钮，弹出配置弹窗，如下图。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1583.06px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="b4eda68ef387a014b8617f08.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 126.643px;"><col style="width: 379.929px;"><col style="width: 158.304px;"><col style="width: 918.188px;"></colgroup>
+<thead>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">序号</td>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">必填</td>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">填写说明</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">1</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">选择币种</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">勾选该券适用币种，可全选。多品牌站点此处改为【品牌名称(ID)】，按品牌发券。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">2</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是否启用</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">&mdash;</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">开关；关闭则该券不生效。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">3</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">使用有效天数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">0～31 天，0 表示不过期。自会员获得时间起 + 天数的 23:59:59 过期。修改天数：未使用券过期时间会更新，已失效券不更新。券过期后，后台仍保留 60 天可查、客户端【已失效】内 60 天可见，超期清除。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">4</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">充值方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">勾选的充值方式才能使用本券（如 PIX、数字币 app 等），可全选。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">5</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">稽核方式 / 稽核倍数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">只稽核奖金 / 稽核奖金+本金；倍数即需打满的有效投注倍数（如 1.00）。达标后优惠方可提现。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">6</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">奖金稽核指定平台</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">&mdash;</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">不限制 / 仅限勾选平台 / 排除勾选平台（计入打码的游戏平台范围）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">7</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">奖金提现方式限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">&mdash;</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">不限制 / 仅限勾选方式（如只能用 USDT、NO 钱包提现）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">8</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">参与渠道或代理</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">开关；指定渠道 ID / 指定代理账号 / 排除渠道 ID / 排除代理账号，并选择对应项。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">9</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">注册后立即自动发放</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">&mdash;</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">开关（推荐开启）。开启后所有会员注册即自动到账折扣券、不区分层级，后台有发放记录；实际使用时才读取参与层级、渠道、币种、品牌等通用条件，满足才在客户端展示。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">10</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">奖励类型 + 奖励设置</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">是</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">见下【奖励设置说明】，可配多档（折扣券名称 + 新增/删除）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">11</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">前台备注 / 后台备注</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; text-align: center; vertical-align: middle;">&mdash;</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">前台备注在玩家端【详情】展示；后台备注仅内部可见。各 0～1000 字。</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8; font-weight: bold; color: #9a5005; margin-top: 18px;">奖励设置说明</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 316.607px;"><col style="width: 1266.46px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">固定金额</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">填【充值金额&ge;、折扣金额】，系统显示【实际支付】。例：充值金额 100、折扣金额 9 &rarr; 实际支付 91。会员充满 100 即少付 9。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">比例金额</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">填【充值金额范围、折扣比例、折扣上限】，系统显示【实际支付】。例：充值 100～10000 减 20%。〔优惠=充值&times;比例、最高不超过折扣上限&mdash;&mdash;具体口径待与开发确认〕</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1583.06px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="6b66c09c95e1d8c481470101.png"></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8; font-weight: bold; color: #9a5005; margin-top: 18px;">公共配置（通用，所有优惠模块一致）</p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">点顶部【公共配置】设置领取与使用门槛：领取终端、更多使用限制、指定会员层级、指定 VIP、过期提醒、折扣券样式（客户端展示样式 1～6）。层级或 VIP 不符的会员，客户端不展示折扣券入口。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1583.06px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="bcb0103edb40eddf13b1df0e.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、管理操作</h2>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 348.268px;"><col style="width: 1234.79px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">折扣券总开关</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">顶部开关，关闭后客户端不展示折扣券入口。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">修改</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">修改券配置；对【未使用】的券实时生效（有效天数、配置在使用时实时读取），已使用/已过期券数据已固化、不受影响。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">删除</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">删除后后台不再保留、无法查看；会员客户端在【已失效】里最长保留 60 天仍可查看，超 60 天清除。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; white-space: nowrap; vertical-align: middle;">发放</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">手动发放给指定会员。单次发放：输入会员账号/会员 ID，多个用逗号拼接（&le;200）；批量发放：数据上传（每文档&le;100 万、&le;50M，可下载模板）。新增的折扣券需发放后会员才能看见使用&mdash;&mdash;可开启注册后立即自动发放、或在此手动发放给指定会员。</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 763.661px;"><col style="width: 819.402px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="6d0530924480e9fa59ddc9fe.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="1bb7c9d12dfea59115bb5ae8.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、查看记录</h2>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">列表区共 5 个页签：【折扣券列表】为券配置列表（每行一个券，含币种、有效天数、充值金额范围、奖励类型、折扣金额/比例、稽核倍数、未使用/已使用/已过期统计（点击统计数字可跳转对应记录页）、操作）；【未使用 / 已使用 / 已过期 / 全部记录】为会员领取记录，可按时间、品牌、币种、会员、券、奖励来源等搜索；【全部记录】额外含 状态、充值金额、充值订单、使用时间、赠送金额，并可导出报表。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1583.06px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="c637408af09f518f74ae9799.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、玩家端效果</h2>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">折扣券入口位置不固定，可配在大厅首页 banner、营销广告入口、悬浮图、侧边栏、中部导航、我的页面等多处，进入后即【我的折扣券】；此外充值页选好支付方式与金额后会展示【充值折扣券】区，会员勾选即在本笔充值使用（推荐项默认勾选）。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 814.482px;"><col style="width: 768.58px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="3e16b00fb5559f9a5069dda0.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="9ca767664beb2e3f8738a0af.png"></td>
+</tr>
+</tbody>
+</table>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.8;">【我的折扣券】分 未使用 / 已使用 / 已失效。已使用页展示累计折扣与每张【实际充值 X、为您节省 Y】；已失效页保留已过期或后台已删除的券，客户端最长保留 60 天。会员领到折扣券时会弹出获得折扣券弹窗：在线时后台派发，客户端直接弹出；不在线则下次登录后弹出。若同时存在快过期折扣券弹窗，则优先只弹快过期弹窗，始终只保持弹出 1 个。</p>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 792.634px;"><col style="width: 790.429px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="732183c74d2bfc243a352a93.png"></td>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src="7a22b11b0a6f50418cb571df.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">六、运营建议</h2>
+<table style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1583.63px; margin: 8px 0px;" border="1"><colgroup><col style="width: 348.268px;"><col style="width: 791.536px;"><col style="width: 443.259px;"></colgroup>
+<thead>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">场景</td>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">建议</td>
+<td style="border: 1px solid rgb(227, 196, 168); background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 6px 10px; text-align: center; vertical-align: middle;">提示</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; vertical-align: middle;">拉新促首充</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">开启【注册后立即自动发放】，配小门槛固定金额券（如充 100 减 9），降低首充门槛。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">有效天数设短（如 1～3 天）制造紧迫感。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; vertical-align: middle;">提客单价</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">用比例金额 + 折扣上限、或抬高充值门槛（如满 1000 减 10%），引导大额充值。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">多档配置，门槛越高优惠越大。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; vertical-align: middle;">精准触达</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">用【发放】给指定会员（流失召回、VIP 专享）；按层级/VIP/渠道限定人群。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">批量发放走数据上传，单文档&le;100 万。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; vertical-align: middle;">成本与防薅</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">设置稽核倍数与奖金提现方式限制，避免领券即提；用层级/VIP/同设备同 IP 限制防多号薅。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">折扣差额为优惠，需打满稽核才可提现。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; vertical-align: middle;">效果复盘</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">看券配置的【未使用/已使用/已过期】与【全部记录】充值金额、赠送金额、使用率，导出报表分析。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px 10px; line-height: 1.8; vertical-align: middle;">使用率低&rarr;调门槛/有效期/触达人群。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">七、常见问题</h2>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：折扣券有哪些状态？过期了还能用吗？</strong></p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：分 未使用 / 已使用 / 已过期，后台可实时查看。券一旦过期，客户端展示为【已过期】且不可再使用。</p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：折扣券的优惠到账后能直接提现吗？</strong></p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不能直接提。折扣差额是优惠，需打满【稽核倍数】对应的有效投注、且按【奖金提现方式限制】用指定方式提现。</p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：会员领了券为什么客户端看不到？</strong></p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：检查折扣券总开关是否开启，以及该会员是否满足公共配置的会员层级、VIP 等级、渠道或代理及使用条件&mdash;&mdash;任一不符都不展示。</p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：改了有效天数，已发出去的券会变吗？</strong></p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：未使用的券过期时间会按新天数更新；已失效（已过期）的券不更新。已使用券数据固化。</p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：充值有手续费，会影响满减门槛吗？</strong></p>
+<p style="color: #1f2933; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：取决于【领取设置】里的【充值奖励计算是否包含被扣手续费】：包含则按原充值额判断门槛、不包含则按实际到账额判断。例如充 100、手续费扣 5%、到账 95，不包含时按 95 计。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, system-ui, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_720112.html">← 信用借款</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_720122.html">加倍奖励 →</a></div></body></html>

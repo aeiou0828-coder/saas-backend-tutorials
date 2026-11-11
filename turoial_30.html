@@ -1,0 +1,128 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>派奖监控</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 风控 / 派奖监控</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 24px;">一、派奖监测</span></h3>
+<p><span style="font-weight: bold;">（1）功能说明：</span></p>
+<p>&nbsp; &nbsp;1. 业主可以根据自身运营需求对触发&ldquo;派奖监测&rdquo;规则的用户；</p>
+<p>&nbsp; &nbsp;2. 进行控制处理(忽略、冻结、禁止领取优惠、黑名单)；</p>
+<p>&nbsp; &nbsp;3. 可查看该条记录的牌局详情信息与游戏结果；</p>
+<p><img style="max-width: 100%;" src="fbc4ee8c9fd743cda6b587a5.png"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">（2）搜索说明：</span></p>
+<p>&nbsp; &nbsp;1. 可根据时间、<span style="font-family: &#x27;Segoe UI&#x27;;">品牌(多品牌站点才会有此搜索条件)、</span>币种、会员账号、登录IP、注册来源、类型、状态组合查询对应的触发信息<span style="font-weight: bold;">（</span><span style="font-weight: bold;">会员账号支持模糊搜索；登录IP仅支持精准搜索）</span></p>
+<p>&nbsp; &nbsp;2. 可以导出触发派奖监控的所有会员账号信息；</p>
+<p>&nbsp; &nbsp;3. 监控参数，可以查看触发对应阈值并且可以设置风控提醒时间；</p>
+<p>&nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="1e8a8e69a7dc0d9966b61625.png"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">（3）监控参数：</span></p>
+<p>&nbsp; &nbsp;1. 事件开启并且触发参数阈值时，进行风控提醒播报</p>
+<p>&nbsp; &nbsp;2.&nbsp;派奖监控设置：&nbsp;<img style="max-width: 100%;" src="40688e13efc3cb882ce3ecc0.png"></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">高倍爆奖：</span>单局派奖/单局投注 = 倍数（含本金）</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">高倍爆奖中奖金额：</span>派奖的金额（不含本金）<br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;备注:高倍爆奖：</strong>同时满足倍数&amp;金额才触发</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">大额中奖：</span>单局：大额中奖 = 派奖(不含本金)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">会员获利比：</span>统计会员当天数据，（会员游戏盈亏/会员有效投注）*100% = 会员获利比</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">获利比触发有效投注值：</span>有效投注达到此配置值时才会触发会员获利比</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; 3.&nbsp;<span style="font-weight: bold;">风控提醒：</span>点击修改即可对【风控提示】和【间隔时间(s)】做相关调整，再点击【保存】即可&nbsp;&nbsp;<img style="max-width: 100%;" src="8a18a12bccd2045d7d13de34.png"></p>
+<p>&nbsp; &nbsp;</p>
+<p><span style="font-weight: bold;">（4）</span><span style="font-weight: bold;">页面功能说明：</span>&nbsp;<img style="max-width: 100%;" src="7c5995e4bb86cf3223dbb6b4.png"></p>
+<p>&nbsp; &nbsp; &nbsp;1. 会员账号：默认置灰且不可编辑</p>
+<p>&nbsp; &nbsp; &nbsp;2. 处理类型：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 忽略：忽略该笔订单监测</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 冻结：即直接冻结对应的会员账号（即会员账号无法登录）</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 禁止领取优惠：该会员账号无法再领取优惠</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 黑名单：加入黑名单，该用户限制一切操作</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">（5）详情：</span>具体详情可参考下图</p>
+<p><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="c21124a1fde93c4ba4adb17d.png"></span></p>
+        </article><div class="bottom-nav"><a href="turoial_29.html">← 黑名单</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_95.html">对赌监控 →</a></div></body></html>

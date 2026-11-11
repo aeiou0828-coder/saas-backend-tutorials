@@ -1,0 +1,152 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>优惠明细</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 优惠明细</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">优惠明细 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin-top: 8px; line-height: 1.85;">汇集所有用户从各模块领到的奖励，按来源、账号、时间等条件查询核对并导出。</p>
+<div style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 18px 0px 26px;"><strong style="color: #9a5005;">目录</strong><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s1">一、功能概述</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s2">二、查询与筛选</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s3">三、列表说明</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s4">四、优惠来源与来源类型</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s5">五、常见问题</a></div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">是什么</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">把所有用户从各模块领到的奖励汇集到一处的查询页，用于查询、核对、导出。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">两个页签</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员优惠明细；主播号优惠明细&mdash;&mdash;主播号是用于直播演示的账号类型，不能充值提现但有账变记录，单独成表展示。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">只读</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">纯记录与查询，只新增数据、不编辑不修改，也不在此发奖或审核。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、查询与筛选</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="72dc6d219fea959546882f27.png"></td>
+</tr>
+</tbody>
+</table>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">顶部按条件组合后点【搜索】查询、【导出报表】导出。常用条件：时间、币种、单号、会员账号/ID、VIP 等级、层级、优惠来源、来源类型、活动ID、领取方式、奖励类型。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.875px;"><col style="width: 857.594px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">时间筛选</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">列表默认按【日】查询，可切换日 / 周 / 月，或自定义起止时间。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">高级搜索</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">点【高级搜索】可批量输入会员账号或ID（最多 1000 个，逗号拼接），再组合币种、单号、等级、层级、优惠来源、赠送金额区间、领取方式、获取时间、奖励类型等条件精确查询。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">查询范围</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">按单个会员查询、或按单个活动查询时，支持不限时间、可查全部；若不加任何筛选直接查全部，单次最多查询 1 个月范围的数据，需要更早的可按时间段分批查询。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、列表说明</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">列表每行是一笔奖励记录，含单号、优惠ID与名称、会员信息、优惠来源、来源类型、领取方式、奖励类型、赠送奖励、获取时间，底部有赠送奖励合计。其中【领取时等级】【领取时层级】是会员领取该奖励当时的快照，记录后不随会员后续升降级变化，便于事后核对当时资格。</p>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、优惠来源与来源类型</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;"><strong>优惠来源（奖励来自哪个模块，共 17 类）：</strong>活动、任务、返水、返佣、VIP奖励、利息宝、幸运转盘、公积金、盲盒抽奖、充值优惠、银商结算、SVIP奖励、积分抽奖、折扣券、意外惊喜、商城、特邀奖励。其中返佣是代理佣金、银商结算是代理给下级的转账金额、特邀奖励是代理推荐好友奖励，其余对应各优惠模块。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;"><strong>来源类型（优惠来源为活动时的活动子类）：</strong>充值活动、打码活动、救援金活动、新手救援金、红包活动、签到活动、幸运转盘活动、幸运注单活动、推广活动、投资活动、投资扣款、代理活动、集字活动、自定义活动、有奖反馈、竞猜活动、抽奖助力活动、砍一刀、新砍一刀、新人彩金、排行榜活动、回归彩金、渠道奖励、提现活动、留存活动。</p>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、常见问题</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：优惠明细能在这里发奖或审核吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不能。这里只做查询、核对和导出，发奖在各对应模块或【领取与审核】处完成。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：不加筛选能一次查全部吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不加任何筛选直接查全部时，单次最多查 1 个月数据，可按时间段分批查询；查单个会员或单个活动则可全量查。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：主播号优惠明细和会员优惠明细有什么区别？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：主播号是用于直播演示的账号类型，不能充值提现但有账变记录；它的奖励明细单独放在主播号优惠明细页签，结构与会员一致。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_47.html">← 利息宝</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_49.html">VIP奖励 →</a></div></body></html>

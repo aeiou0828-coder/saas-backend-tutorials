@@ -1,0 +1,124 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>账单管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 报表 / 账单管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 24px;">一、账单管理</span></h3>
+<p><span style="font-size: 16px;"><strong>（1）功能说明：</strong>用于了解整个直营站点的详细明细，其中包含了服务费等相关的信息结算<strong>（</strong><strong>游戏抽成设置的每次改动，则下次账单生效，已经生效的则不影响</strong><strong>）</strong></span></p>
+<p><span style="font-size: 16px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color: #ff0000;">温馨提示：</span></strong>每个月固定的账单生成于每个月的2号生成，为月结账单</span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="a5f53db1b77fea23d2f2f8d7.png"></span>&nbsp; &nbsp;&nbsp;</p>
+<p><span style="font-size: 16px;"><strong>（2）汇率查看：</strong>显示各币种兑换USDT币种</span></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="080b7c6f7adf61ea7a7def49.png"></p>
+<p><span style="font-size: 16px;"><strong>（3）账单费用：</strong>共分两种，每月账单与一次性费用。</span></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="234265175c0934cc71ca9853.png"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; a. 每月账单：每个月固定生成的实时账单，<strong>于下个月6号00:00之后方可进行账单确认</strong>，确认后才可支付。</span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; b. 一次性费用：一次性费用没有状态，仅作为明细提供参照，也无详情可查看。目前开站费用&amp;马甲包费用为一次性收费。</span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; <img style="max-width: 100%;" src="b8320c2d8b6b41c6ea339b25.png"></span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; <img style="max-width: 100%;" src="5a78eb4f830c9ab52e89c220.png"></span></p>
+<p><span style="font-size: 16px;"><span style="font-size: 16px;"><strong>（4）账单状态：</strong>共分七种状态，待下发、待核对、待支付、存在异议、已逾期、已支付、已坏账</span></span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; a. 待下发：每月月初实时生成数据，于下个月月初后台自动下发账单，状态变更为待核对。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; b. 待核对：上月账单下发后，当前版本于每月6号0:00之后，方可进行核对，点击确认无误之后账单状态会自动变更。核对状态倒计时为15天，15天之后会自动变更状态为待支付。</span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="57fbdb19f8cf1d29c7966f8e.png"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; c. 待支付：账单核对完成之后，可以进行支付，当支付完成后账单状态变更为已支付。支付状态倒计时为30天，若超过时间未支付账单则自动变更状态为已逾期，并且逾期无法享有折扣。</span></p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="c4839b6a09a5d285a9b38b9b.png"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; d. 存在异议：由财务手动变更的状态，相关问题可咨询财务</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; e. 已逾期：已逾期账单无法享有折扣。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; f. 已支付：支付成功的账单会到已支付状态，并且无限期保留记录</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; g. 已坏账：已逾期的账单，由财务手动调整之后的状态。</span></p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_42.html">← 留存统计</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_720121.html">活动数据分析教程 →</a></div></body></html>

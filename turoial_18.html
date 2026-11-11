@@ -1,0 +1,359 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>站点管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 系统 / 站点管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">一、站点信息</span></h3>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明</span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">站点信息主要显示对应所在集团或公司的直属站点信息，查阅站点基础为主。</span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、搜索说明</span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; white-space-collapse: preserve;">搜索主要针对多品牌多站点的情况下使用，可根据时间、站点ID、站点名称及状态进行查询，目前仅支持精准搜索。</span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><img style="max-width: 100%;" src="3f361a61edbe6c5da7a099a5.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong id="docs-internal-guid-6d9318ab-7fff-8507-0476-8b1466067fd3" style="font-weight: normal;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、页面说明</span></strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong id="docs-internal-guid-a944d942-7fff-758e-aa15-b71387997259" style="font-weight: normal;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">除站点基础信息外，较为重要的信息如下：</span></strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><img style="max-width: 100%;" src="a1b337c3e659fbc012858576.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2; font-weight: bold;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong><span style="color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(1) 站点状态：暂分5种</span><span style="color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">，以下是状态说明&nbsp;</span></strong></span></p>
+<ul>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">正常：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即正常操作，可以访问后台、前台</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">维护：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即</span><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">前台不允许登录，后台可登录</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">冻结：即前台可以登录， 后台账号登录则提示&ldquo;该站点已被冻结&rdquo; </span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该状态为上级进行操作</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">注销待集团审：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该状态 </span><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">平台是正常运营，前台和后台都可以登录</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">注销：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即</span><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">前台和后台都不可以登录，注销之后，不可以恢复，请谨慎处理</span></span></li>
+</ul>
+<p style="line-height: 2.4;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(2) 操作说明：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">请仔细阅读以下操作说明简述</span></span></p>
+<ul>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">修改：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">编辑站点的信息（目前只支持 客户端皮肤，语言设置，后台登录地址、IP白名单和备注编辑，其他的信息不允许编辑）</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">访问后台：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即跳转到对应的后台登录地址</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">详情：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即可以查看站点信息</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">注销：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">申请注销流程为：下级提交申请---上级集团审核</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">维护：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">开启和关闭维护，对应的站点状态的维护中和正常</span></span></li>
+<li dir="ltr" style="line-height: 2.4; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;" role="presentation"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">修改安全码：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该安全码只能在个该站点的所属管理员登录，且没有设置的时候可见，在设置完成之后，安全码则不显示</span></span></li>
+</ul>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(3) 维护说明：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">对站点进行开启/停止维护。</span></span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="ad2b9831614c8074f31b229d.png"></span></span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="e9ad0c9538f7c8370569d126.png" width="424" height="106"></span></span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-4da41534-7fff-2d59-ee35-fdbfc7416441" style="font-weight: normal;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(4) 提现稽核模式设置：</span></strong></span></span></p>
+<p dir="ltr" style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong style="font-weight: normal;"><img style="max-width: 100%;" src="169b92359fd3fd1399c929fb.png"></strong></span></span></p>
+<ol style="list-style-type: upper-alpha;">
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">提现稽核模式：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">分为单钱包及多钱包模式</span></span>
+<ul>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">单钱包：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即余额钱包，</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">充值的金额的进入余额钱包，当前余额即可提现余额；</span></span></li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">多钱包：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即余额钱包与奖励钱包同时独立存在，任务及活动相关额奖励金额进入奖励钱包，充值金额进入余额钱包；</span></span></li>
+</ul>
+</li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">上分后的提现要求：</span>
+<ul>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">有效投注一次即可提现(默认)：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">充值稽核倍数依然有效，但充值产生的是"奖励"投注任务，不影响会员提现。要求自最后一次充值后必须进行一次有效投注。</span></span></li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">必须完成充值设置中的稽核倍数才能提现：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">按充值设置中的稽核倍数生成&ldquo;必须稽核&rdquo;类型的投注任务，必须打完要求的流水，余额钱包中金额才能提现。</span></span></li>
+</ul>
+</li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">强制提现奖励清零：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若有投注任务未完成，则客户端的按钮是强制提现，提现成功会放弃所有未领取奖励。</span></span></li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">奖励转入余额规则：</span></span>
+<ul>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">逐条完成逐条转入：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">完成一条奖励任务，即可转出此条相对应奖金。</span></span></li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">一次性完成后才能转入：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">必须完成所有的稽核任务，才能将对应的奖金转入到可提现余额。</span></span></li>
+</ul>
+</li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">奖励投注任务有效时长：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可对奖励投注任务设置有效时长（单位/小时），会员必须在有效时长内完成投注要求，才能将对应奖励金额转入到可提现余额，否则将视为放弃，奖励将在超时后自动清零。</span></span></li>
+<li dir="ltr" style="line-height: 2.4;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-2934aec1-7fff-b54c-a673-dea199a867d8" style="font-weight: normal;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">奖励转入余额阶梯：</span><span style="color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&ldquo;逐条完成逐条转入&rdquo;规则下可将领取奖励的投注任务设置为多个阶梯，会员完成该阶梯的投注要求，即可将该阶梯对应的奖金转入到可提现余额。</span></strong></span></span></li>
+</ol>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">二、站点审核</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）功能说明：</span>该模块显示的站点审核状态显示用于管理员审核站点变动</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）搜索说明：</span>可通过选项或文字搜索出对应账号（仅支持精准搜索）</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（3）页面说明：</span>由于站点状态不同，具体操作对应不同，请看下图便于区分</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="2e32e1ad3a92538460d93840.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（4）站点状态&amp;操作：</span>均可点击查看对应站点详情</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">站点建立中：</span>仅能查看对应详情</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">正常/冻结：</span>对该站点进行冻结/解冻操作</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">注销待集团审核：</span>可对下级公司进行审核通过/拒绝</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">注销：</span>可查看对应记录</span></p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">三、开始审核</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）开站说明：</span>集团/公司申请开通站点直接通知我方技术支持进行审核</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）新增站点：</span>若需要为下级新增站点，可参考下图进行填写操作</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="fab8bea3868a7d1b526942be.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color: #ff0000;">&nbsp;温馨提示：</span>保存提交后，耐心等待审核，通过后即可获得对应站点的管理后台进行配置，可在站点信息页面查看开站进度!</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（3）页面说明：</span>可参考<span style="font-weight: bold;">【站点审核】 - 【站点状态&amp;操作</span><span style="font-weight: bold;">】</span>说明即可</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">四、站点开站</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>1、模块说明：站点可以额外新增主站点或子品牌</strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; &nbsp;前提条件 :&nbsp;<br></span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp;&nbsp; &nbsp;(1)、业主拥有自己的集团后台及公司后台且集团后台余额满足开站需求</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; (2)、主站为单币种站点<br>&nbsp; &nbsp; 识别方式：通过域名识别，访问不同域名时，品牌还是一样，即通过访问的域名入口就能知晓所在站点，尽量实现无痛合并<br></span></p>
+<p><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="fc154521179fb84338e1ae25.png"></span></p>
+<p>&nbsp; &nbsp; 新增完毕后，会进入付款阶段。<br>&nbsp; &nbsp; 您可以选择 :<br>&nbsp; &nbsp; (1) 立即充币支付 : 页面会引导至支付页面，依照页面支付资讯付款即可。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;( 立即充币可以多笔充值，充多的金额会直接加在主站余额里，这些充值的钱都会享受充值优惠。)<br>&nbsp; &nbsp; (2) 从主站点扣款 : 若主站余额充足，可直接从主站站点扣款支付。<br>&nbsp; &nbsp; 正确付款完成后，系统将会开始建站<br><img style="max-width: 100%;" src="58cdee90b3ab9a03eac40ed7.png"><br>点击进度，可以查看目前品牌的开站进度</p>
+<p><img style="max-width: 100%;" src="a84413c055e7e17d3a42c2e7.png"></p>
+<p>站点状态为配置中，代表已经建立完毕，等待运营同意即可</p>
+<p><img style="max-width: 100%;" src="2beffc1feef3b67d44e20267.png"></p>
+<p>&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>2、子站介绍</strong></span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>：</strong></span></p>
+<p>&nbsp; &nbsp; &nbsp;(1）子站入口 : 子站点作为一个单独的站点没有单独的后台，与主站点公用一个后台（权限配置公用）</p>
+<p>&nbsp; &nbsp;（2）子站维护冻结 : 子站有单独的维护和冻结功能，互不影响</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ①子站维护，主站不维护</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;主站维护，子站不维护</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②主站冻结，子站冻结</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;子站冻结，主站不冻结</p>
+<p>&nbsp; &nbsp;（3）系统 : 后台账号、账号权限、IP白名单、后台日志、非经营性访问限制、币种管理都与主站公用配置</p>
+<p>&nbsp; &nbsp;（4）会员 : 主站会员与子站会员单独存在，所以可以存在相同的会员账号</p>
+<p>&nbsp; &nbsp; &nbsp;(5)&nbsp; 域名、app : 子站点作为单独站点，存在单独的大厅、app、下载站</p>
+<p>&nbsp; &nbsp; &nbsp;(6) &nbsp;同一个会员信息可以分别存在于站点中两个不同的品牌，且信息不共用</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>3、于站点中新增子站时，可独立部份设置或搜寻子站功能</strong></span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>：<br>&nbsp; &nbsp; &nbsp;</strong>例如 : 会员管理中，可直接搜寻子品牌内容。新增会员时，也可以选择将会员新增于子品牌中。<br><strong>&nbsp; &nbsp; &nbsp;</strong>** 其他子品牌功能设置，请参考其他模块的教程</span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong><img style="max-width: 100%;" src="49934f5dc9c97258cbeb35ee.png"><br></strong></span></p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong><img style="max-width: 100%;" src="91811ad75ecb749503800105.png"></strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">五</span><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">、站点账单</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>1、模块说明：</strong>罗列展示每月账单，并将站点历史数据一并展示，无时间限制。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; (1)、每月账单：每月产生的账单</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; (2)、一次性费用：当月若有一次性费用产生，则筛选后罗列于此</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">上述这两种类型无法同窗展示，须各自搜索</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><img style="max-width: 100%;" src="14b0d6b759e4a9a6330946e5.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">&nbsp; &nbsp; (3)、汇率查看：当前各币别换算成USDT的比例</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="c97567f49a36e87a16027564.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>2、账单状态说明：</strong>账单共有7个状态，待下发、待核对、待支付、存在异议、已逾期、已坏帐、已支付</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><img style="max-width: 100%;" src="a57add14d8a02342cf5edaad.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">待下发：账单为本月账单，或上月账单于本月月初6号00:00:00之前，状态皆为待下发，因三方有部份数据待结算，故状态仍在待下发时数据仍会存在较多的异动</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">待核对：账单下发完成后，于每月月初6号00:00:00之后，则状态自动变更为待核对，此时站点可确认月账单是否正确，若正确可点击直接确认无误，则账单状态可变更为待支付。账单将由15天后自动变更状态为待支付。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">待支付：账单为待支付时，点击支付后可支付该月账单。当站点余额充足时，确认支付按钮是可以点击的。当站点余额不足时，则展示 "主站余额不足，请先充值" ，并且确认支付按钮置灰，无法点击，须先充值后才能支付账单。账单将由30天后自动变更状态为已逾期。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">V6.1更新：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1. 新增充币功能与实时刷新按钮：本次新增将站点余额实时刷新的按钮，以及可直接在支付站点账单页面充币</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2. 支付页面排版更新：将支付页面排版更加直观，明确了解实际需要支付的账单总额</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3. 支付逻辑新增：添加支付时判断站点余额是否充足，若不足够时会直接跳转充值页面，便利站长充值站点余额并支付账单</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="4413db855e2ffe4c1eb0389d.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">V6.5更新：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><strong><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">新增滞纳金字段。<span style="color: #313c52; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">当月账单超过次月月底视为逾期，逾期每多1天则加收账单总额0.05%/天，上不封顶。</span></span></strong></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="7a72adb5b8971a2823b1f0db.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">存在异议：当站点状态为存在异议时，状态变更是由站点已和财务沟通过后，确认有部份争议，由财务手动调整的。待线下沟通完成后由财务手动重新下发账单，或是审核后账单状态变更为待支付。账单将由15天后自动变更回待支付。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">已逾期：当站点状态为已逾期时，则不享有任何优惠。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">已支付：已支付完成的账单数据</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">已坏账：由财务变更的状态</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><strong><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3、详情页面简介：</span></strong></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">顶部：为站点各个费用详情说明并展示</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">CDN流量费：该字段为CDN纯流量费用，CDN上限值=当月游戏账单*10%，超出自动免除；解析数/节点等级等资源名额不参予封顶。如未达上限值则以当前CDN流量费计算。</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">其他费用：CDN（解析数+节点+IP）、埋点归因费用、极光费用、CPF验证费、KYC验证费</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">费用调整：数据来源:由财务每月5号前人工导入模板生成<br>账单合计：游戏账单+CDN流量费+线路维护费+其他费用+费用调整<br>推荐折扣：按总计的金额计算推荐折扣<br>实际需支付总额U：账单合计 + 推荐折扣<br></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="083b3ddff9ecd82c575faef9.png"></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">表格字段说明：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">品牌名称(ID)：包含当前品牌的名称以及ID涵盖子品牌的名称与ID（<span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">如有子品牌的话，账单数据会一同展示于此）</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">账单月份：该站点账单历史的月份</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;">币种：该站点所有的币种</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">游戏类型：三方游戏平台的类型</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">厂商名称(ID)：三方游戏平台与ID</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">投注金额：用户的投注金额汇总</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">有效投注：用户的有效投注汇总</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">盈亏金额：用户的输赢金额汇总</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">抽佣比例：可参照站点收费标准（原厂商收费比例）---V6.1修改</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">账单金额：盈亏金额*抽佣比例</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">厂商专属优惠：特殊的优惠，目前暂未使用，字段保留（原厂商优惠）---V6.1修改</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">优惠后比例：抽佣比例-厂商专属优惠</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">抽佣金额：账单金额*厂商专属优惠---V6.1新增</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">折算汇率：请参考前面的查看汇率</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">游戏帐单U：抽佣金额*折算汇率</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">状态：正常 / 异常（由财务手动变更）</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong>4、其他补充更新：</strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px;"><strong>a. 站点账单操作项，添加自定义按钮，可自行调整界面字段展示。</strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong><img style="max-width: 100%;" src="ce1ccd4c522bce1c534bcf45.png"></strong></span></p>
+<div style="box-sizing: inherit; font-size: 12px; line-height: 2; margin: 0px; padding: 0px; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-v-c00ac81e="">
+<h3>&nbsp;</h3>
+<p>&nbsp;</p>
+</div>
+<div style="box-sizing: inherit; font-size: 12px; line-height: 2; margin: 0px; padding: 0px; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-v-c00ac81e=""><s><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong style="box-sizing: inherit; font-weight: bolder; line-height: 18px; margin: 0px; padding: 0px;" data-v-c00ac81e="">账单规则说明</strong></span></s></div>
+<div style="box-sizing: inherit; font-size: 12px; line-height: 2; margin: 0px; padding: 0px; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-v-c00ac81e=""><s><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong style="box-sizing: inherit; font-weight: bolder;">1、账单结算</strong>：站点账单为实时结算的方式，系统允许站点透支，但按站点额度规则执行，请记得实时充币，以便补充额度。</span></s></div>
+<div style="box-sizing: inherit; font-size: 12px; line-height: 2; margin: 0px; padding: 0px; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-v-c00ac81e=""><s><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong style="box-sizing: inherit; font-weight: bolder;">2、账单核对</strong>：每月初自动产生和下发上个月的账单总金额，站长需在30天内主动核对，否则视为无任何异议，直接生效，后期不再补差额。</span></s></div>
+<div style="box-sizing: inherit; font-size: 12px; line-height: 2; margin: 0px; padding: 0px; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-v-c00ac81e=""><s><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><strong style="box-sizing: inherit; font-weight: bolder;">3、账单异议</strong>：账单核对过程中，若发现三方活动返利、金额误差、派奖问题等异常的，需由站长主动标记异议和填写金额，由WG工作人员最终审核通过后，直接补偿或扣除相关差额。</span></s></div>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">六、余额账变</span></h3>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）功能说明：</span>主要用于记录站点余额的账变记录</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）搜索说明：</span>可根据单一条件或组合查询对应的帐变记录<span style="font-weight: bold;">（仅支持精准搜索）</span></span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（3）账变时间：</span>默认查询时间范围24小时，可根据需求自定义查询时间</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（4）编号：</span>输入账变记录的编号进行查询</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（5）账变类型：</span>选择对应的类型进行查询，默认为全部类型</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（6）账变细项：</span>选择对应的细项进行查询，默认为全部细项</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（7）交易对象：</span>选择对应的对象进行查询，默认为全部对象</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（8）导出报表：</span>针对会员的全部账变记录导出excel</span></p>
+<p style="line-height: 2;"><img style="max-width: 100%;" src="749faeb126389516c671c54b.png"></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><span style="font-weight: bold; font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">字段说明：</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1、编号：每笔账变记录系统自动生成的19位数唯一验证编号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2、账变时间：账变记录产生的时间记录</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3、所属集团(ID)：当前站长所属的集团</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">4、所属公司(ID)：当前站长所属的公司</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">5、品牌名称(ID)</span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">：当前站长所属的主站点</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">6、账变类型：账变记录的大类型，共计4大类（账单、集团管理、公司管理、站点管理）</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">7、账变细项：账变记录大类中包含的小类，共计7个小类（人工增加、人工扣除、充币、转入、转出、站点账单、马甲包账单）</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">8、交易对象：账变发生所对应的对象，共4个（系统、集团、公司、站点）</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">9、变动前余额：该条账变记录产生之前的站点账户余额</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">10、变动金额：该条账变记录产生时，变动的金额数</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">11、变动后余额：该条账变记录产生之后的站点账户余额</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">12、操作人：后台管理员操作之后的日志记录操作人账号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">13、前台备注：后台页面操作的备注信息</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">七</span><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">、站点额度</span></h3>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）功能说明：</span>该模块为站点额度页面，展示当前站点所属集团/公司以及站点可用额度、站点余额、最大透支额、未结账单、站点状态信息；</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）</span><span style="font-weight: bold;">页面说明：</span>可简单对我们站点额度进行观察和操作</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（3）</span><span style="font-weight: bold;">站点额度状态：暂分5种，</span>以下是状态说明&nbsp;</span></p>
+<ul style="box-sizing: inherit; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; list-style: none; line-height: 2; color: #444444; margin-top: 20px;">
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1、站点额度和概念说明</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（1）站点余额：</span>即当前站点的USDT余额，金额&ge;0，充币多少即为多少；购买马甲包、开通极光等，都将直接扣除站点余额；记得及时充币哦，以免影响站点使用，甚至被冻结。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（2）授信额度：</span>即WG授权给贵站点的授信额度，默认实际透支额度2倍，显示为正数，用于预支本月账单，具体额度一般为站点上月账单的金额，且最小值为10,000USDT；例如：10,000USDT，代表您最大可以透支20,000USDT。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（3）未结账单：</span>是指本月三方游戏已消费但未到月底结算期（即未生成月度账单），以及上月已生成账单但未全额缴纳。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（4）可用额度：</span>由站点余额、授信额度和未结账单组成，可为负数，直接影响站点状态，非常重要；&nbsp;<span style="box-sizing: inherit; font-weight: bolder;">计算公式：可用额度 = 站点余额 + 授信额度 -未结账单。</span></span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（5）透支比例：</span>即未结账单减去站点余额后，再除以授信额度的百分比；&nbsp;<span style="box-sizing: inherit; font-weight: bolder;">计算公式为：透支比例 =（未结账单-站点余额）&divide; 授信额度 x 100%。</span></span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2、站点状态说明</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（1）正常：</span>透支比例&le;50%时，站点状态为正常，无任何功能限制和提醒，进度条为绿色；只有超级管理员和持有人每次登录都将收到充币的弹窗提醒。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（2）预警：</span>50%＜透支比例&le;100%时，站点状态为预警，无任何功能限制，所有后台账号每次登录时都将收到充币的弹窗提醒，进度条为橙色。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（3）限制导出：</span>100%＜透支比例&le;150%时，站点状态为限制导出，后台将无法导出会员资料，所有后台账号每间隔10分钟都将收到一次充币的弹窗提醒，进度条为红色。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（4）限制游戏：</span>150%＜透支比例&le;200%时，站点状态为限制游戏，新会员都无法进入三方游戏，后台无法导出会员资料，所有后台账号每间隔5分钟都将收到一次充币的弹窗提醒，进度条为深红色。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder;">（5）禁止游戏：</span>透支比例＞200%时，所有会员都无法进入游戏，已进入的将强制踢回到大厅，后台无法导出会员资料，进度条为深红色。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: inherit; font-weight: bolder; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3、额度调整：根据您站点日充值金额，请联系主动联系商务人员上调。</span></li>
+</ul>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">八、充币订单</span></h3>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）功能说明：</span>主要用于记录站点的充币记录</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）搜索说明：</span>可根据单一条件或组合查询对应的充币记录</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><img style="max-width: 100%;" src="fe556e240f6f4d5fcf09b6af.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;"><img style="max-width: 100%;" src="560022efc32425d0fef68943.png"></p>
+<p style="line-height: 2;"><span style="font-weight: bold; font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">字段说明：</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1、订单号：每笔充币订单系统自动生成的19位数唯一验证编号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2、钱包订单号：每笔充币订单在钱包系统中生成的20位数唯一验证编号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3、充币时间：充币订单产生的时间记录</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">4、所属集团：当前业主所属的集团</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">5、所属公司：当前业主所属的公司</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">6、所属站点：当前业主所属的站点</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">7、充币订单金额：展示当前订单的金额</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">8、实际到账金额：展示当前充币实际到账金额</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">9、赠送金额：展示当前充币订单所赠送的金额</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">10、申请人：进行充币操作的后台账号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">11、公链协议：展示当前充币交易所对应的公链协议</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">12、充币地址：展示当前充币订单对应的充币地址，点击后可跳转至当前充币订单详情页</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">13、区块链ID：展示当前充币订单对应的区块链ID，点击后可跳转至区块浏览器查看当前交易详情</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">14、状态：展示当前充币订单的状态，共4种（待支付、支付成功、支付失败、支付超时）</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">15、审核人：对当前充币订单进行审核的后台账号</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">16、审核时间：审核当前充币订单的时间</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">17、后台备注：后台页面操作的备注信息</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;">&nbsp;</p>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">九、金额和三方额度</span></h3>
+<ul style="box-sizing: inherit; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; list-style: none; line-height: 2; color: #444444; margin-top: 20px; font-size: 14px;" data-v-527a739f="">
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;" data-v-527a739f="">金额和三方额度限制说明：</strong></span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;">1、充值单笔最大：</strong>是指您站点会员单笔充值的最大限额和后台充值补单、创建补单的单笔最大限额，若存在大额充值请分笔处理；</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;">2、手动加款单笔最大：</strong>是指您通过站点后台给会员手动加款的单笔最大限额，请不要一次性加太多金额，否则不仅会触发风控，也可能产生不必要的账单；</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong>3、会员优惠赠送单笔最大：</strong>是指用户手动领取的单笔金额、后台手动派发的单笔金额不超过单笔最大限额；</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;">4、会员带入第三方游戏上限：</strong>是指前端单个会员进入三方游戏时，可以带入三方的最大金额限制，超出限额部分将自动留在大厅；以免恶意带入三方套刷账单。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong>5、会员大额带入三方预警：</strong>是指前端单个会员进入三方游戏时，超过会员带入第三方游戏上限的80%，将以讯息推播的方式至站点后台，提示站长关注大额会员；（V7.6新功能）</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;">6、配置中说明：</strong>当前站点状态为配置中，则进入第三方游戏会单笔限制约20U（即非正式上线仅限小量测试），通知商务或技术支持申请正式上线后，将自动上调为单笔约10万U（已满足大部分玩家需求）。</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><strong style="box-sizing: inherit; font-weight: bolder;">7、申请大额上调（即单笔超10万人民币）：</strong>为防止恶意、自伤、跑单现象，只有站点日在线充值超过10万USDT或缴纳50000USDT押金才能申请上调（一般不建议上调，以免操作失误或内鬼盗取造成重大损失），若符合以上条件才能找商务或技术支持申请大额上调！</span></li>
+<li style="box-sizing: inherit; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;" data-v-527a739f=""><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000;"><img style="max-width: 100%;" src="ec867d8c9361c6e510b240b8.png"></span></li>
+</ul>
+<h3 style="line-height: 2;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">十</span><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">、站点收费标准</span></h3>
+<p style="line-height: 2;"><span style="font-weight: bold; font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">字段说明：</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1、游戏类型：对应游戏平台的类型。当前类型包含有：（棋牌、捕鱼、电子、真人、体育、斗鸡、电竞、彩票、区块链、房间局）</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2、平台名称：游戏平台的名称</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3、币种：游戏平台的币别</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">4、官网费率：公开透明固定的费率</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">5、三方固定优惠：固定的优惠</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">6、本月三方阶梯优惠：按上个月账单，等比例计算的优惠，账单越多优惠越多</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">7、本月三方生效优惠：将三方固定优惠与本月三方阶梯优惠取最大值</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">8、您的费率(%)：官网费率 - 本月三方生效优惠</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><strong><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">V6.1更新：</span></strong></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1. 新增主站点补充说明</span></p>
+<p style="line-height: 2;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2. 新增站点收费标准导出字段</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><img style="max-width: 100%;" src="2276a54b6b95f22026fe9c80.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; line-height: 2;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_15.html">← 后台日志</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_78.html">Chrome浏览器安装WG加速器教程 →</a></div></body></html>

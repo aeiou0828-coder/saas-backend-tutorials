@@ -1,0 +1,101 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>登陆设备管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 会员 / 登陆设备管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p><span style="font-size: 18px; font-family: 宋体;">1，加入信任设备：&nbsp; &nbsp;操作以后该设备就是会员的信任设备&nbsp; &nbsp;</span></p>
+<p><span style="font-family: &#x27;Segoe UI&#x27;;"><span style="font-size: 18px; font-family: 宋体;">2，移除设备/批量移除设备：将会员从当前设备踢出，并清除当前设备的登录记录，下次登录需要手动输入账密登录；</span><br><span style="font-size: 18px; font-family: 宋体;">3，加入黑名单/批量加入黑名单：将会员从当前设备踢出，并将当前设备号拉入黑名单。</span><br></span></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><span style="box-sizing: border-box; font-size: 18px; font-family: 宋体;"><strong style="box-sizing: border-box; font-weight: bold;">拉入黑名单注意事项：</strong></span></p>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><span style="box-sizing: border-box; font-size: 18px; font-family: 宋体;">设备管理界面拉黑设备的时候默认同时限制注册和登录；<br style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;如果拉黑的某个设备不存在设备黑名单则拉黑后直接限制登录和注册；<br style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;如果拉黑的某个设备在设备黑名单的限制类型是注册/登录，则拉黑后同时限制注册和登录<br style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;如果拉黑的某个设备在设备黑名单的限制类型是同时限制注册和登录，则拉黑的时候提示记录已存在</span></p>
+<p><span style="font-family: &#x27;Segoe UI&#x27;;"><span style="font-size: 18px; font-family: 宋体;">4，登设备管理展示的数据：登录以后没有手动退出的都会显示（即会员在线登录设备管理）</span><br><span style="font-size: 18px; font-family: 宋体;">5，是否属于信任设备条件：根据<strong>安全中心配置设备信任开关</strong>或者操作<strong>加入信任设备</strong></span><br></span></p>
+<p><span style="font-family: &#x27;Segoe UI&#x27;;"><span style="font-size: 18px; font-family: 宋体;">6<strong>，</strong>设备累计登录次数：登录一次手动退出一次才算一次</span></span></p>
+<p><img style="max-width: 100%;" src="41801d6402052152247ced2a.png"></p>
+        </article><div class="bottom-nav"><a href="turoial_690105.html">← TG消息群发</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_690113.html">待删除会员 →</a></div></body></html>

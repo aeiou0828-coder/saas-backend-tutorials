@@ -1,0 +1,289 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>房间游戏</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 游戏 / 房间游戏</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间游戏</span></h1>
+<h3><span style="font-family: &#x27;Microsoft YaHei&#x27;;">概述：当皮肤版式选择俱乐部版时, 可以透过房间游戏相关页面配置对应的房间游戏开关及创建游戏房间等功能</span></h3>
+<h3><span style="font-family: &#x27;Microsoft YaHei&#x27;;">页面说明</span></h3>
+<p style="font-weight: 400;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（1）游戏管理：</span>对所有房间游戏进行管理，包括设置游戏的排序、维护、游戏开关、有效投注、模版设置、创建房间、房间公共设置等</span></p>
+<ul>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">icon缩略图： 后台当前使用中文语系时取中文版图片展示, 使用非中文语系时, 统一使用英文版图片</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">维护开关：设置游戏维护状态的控制操作。</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">游戏开关：设置游戏开启/关闭状态的控制操作。</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">算有效投注开关：设置游戏是否计算有效投注。</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间数量: 展示该游戏「待开始」以及「进行中」的房间总数, 点击可跳转至<strong>全部房间</strong>页面查看。</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">修改：支持修改抽水比例(限制2~10%, 默认2%)及备注, 多品牌站点只有主站可以操作, 子站为置灰禁用状态</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">创建房间：</span>
+<ul>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">游戏维护时不可创建房间, 创建房间按钮隐藏</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">支持主子品牌分别设置</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">选择房间底分后自动带入对应的底分模版数据, 支持修改</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">创建房间数量 - 必填, 默认1, 不得低于1, 根据设置的数量创建对应配置的房间总数</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">支持新增、删除, 可同时创建多个底分的房间</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">准入金额字段: 选中底分后, 自动计算出该房间的准入金额</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><strong style="box-sizing: border-box; font-weight: bold;"><span style="box-sizing: border-box; color: #e03e2d;">房间密码限制必须为4位数字(经典十三为5位数字)</span></strong></span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间数量限制: 50/每个游戏, 超出限制即在创建房间弹窗内展示红字体提示语内容:「该游戏当前房间数为 xx，最多可创建 50 个，本次新增已超出上限。」</span></li>
+</ul>
+</li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间公共设置：</span>
+<ul>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">结束自动补房间：设置所有房间自动补房开启/关闭状态</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间最低数量：设置所有房间最低数量</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间自动扩容：设置所有房间自动扩容开启/关闭状态</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">开房权限设置：设置是否允许成员创建房间，且同步校验会员本身是否具有创建房间权限，二者均有权限时，成员才能创建房间</span></li>
+</ul>
+</li>
+</ul>
+<p style="box-sizing: border-box;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="bed59c71eac3a01104d2a526.png"></span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="3007b82195c195d584516546.png" width="994" height="728"></span></p>
+<p style="box-sizing: border-box;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><img style="max-width: 100%;" src="1d763c8604dc1914b7150564.png"></span></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（2）待开始：</span>列出所有「待开始」状态的房间数据</span></p>
+<ul>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">icon缩略图： 后台当前使用中文语系时取中文版图片展示, 使用非中文语系时, 统一使用英文版图片</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间密码： 如果为开启状态时需展示出<strong style="box-sizing: border-box; font-weight: bold;">明文密码</strong>及<strong style="box-sizing: border-box; font-weight: bold;">复制按钮</strong></span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">没选择游戏时, 列表仅展示通用字段, 选中游戏才展示对应的字段内容</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">修改：支持主子品牌分别设置</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">关闭：操作关闭后直接关闭该房间</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">批量修改／批量关闭房间：<strong><span style="color: #e03e2d;">单次限制操作20笔数据</span></strong></span></li>
+</ul>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="d9fbbc20f9c7b994e5d1106a.png"></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（3）进行中：</span>列出所有「进行中」状态的房间数据</span></p>
+<ul>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">icon缩略图：当前使用中文语系时取中文版图片展示, 使用非中文语系时, 统一使用英文版图片</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">没选择游戏时, 列表仅展示通用字段, 选中游戏才展示对应的字段内容</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间密码：如果为开启状态时需展示出<strong style="box-sizing: border-box; font-weight: bold;">明文密码</strong>及<strong style="box-sizing: border-box; font-weight: bold;">复制按钮</strong></span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">剩余时长(小时)：展示当前房间剩余时间</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间最大人数：需展示当前房间人数及最大人数, 如: 3/5</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">已抽水：展示当前房间已抽水金额</span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">强制关闭：<strong><span style="color: #e03e2d;">操作强制关闭后将于下一轮结束后关闭房间</span></strong></span></li>
+<li style="font-weight: 400; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">批量强制关闭房间：<strong><span style="color: #e03e2d;">单次限制操作20笔数据</span></strong></span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">强制关闭/批量强制关闭弹窗：勾选项「自动禁用该账号创建房间权限」，即可控制创建房间的该账号是否有权限创建房间，此处禁用账号创建房间权限后，可在会员管理-详情页面中再次开启</span></li>
+</ul>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（4）已结束、已关闭：</span>分别列出所有「已结束」状态及「已关闭」状态的房间数据, 「已关闭」为手动关闭/强制关闭的房间</span></p>
+<ul>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">icon缩略图：当前使用中文语系时取中文版图片展示, 使用非中文语系时, 统一使用英文版图片</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">没选择游戏时, 列表仅展示通用字段, 选中游戏才展示对应的字段内容</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: border-box; color: #e03e2d; font-family: &#x27;Microsoft YaHei&#x27;;">日期搜索 - 默认选中本周, 可查询六个月前数据, 单次查询限最多30天</span></li>
+</ul>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（5）全部房间：</span>列出所有状态的房间数据</span></p>
+<ul>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">icon缩略图：当前使用中文语系时取中文版图片展示, 使用非中文语系时, 统一使用英文版图片</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">没选择游戏时, 列表仅展示通用字段, 选中游戏才展示对应的字段内容</span></li>
+<li style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="box-sizing: border-box; color: #e03e2d; font-family: &#x27;Microsoft YaHei&#x27;;">日期搜索：默认选中本周, 可查询六个月前数据, 单次查询限最多30天</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">房间最大人数：待开始及进行中房间需展示当前房间人数及最大人数, 如: 3/5, 已关闭及已结束房间只需展示房间最大人数</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">状态 - 待开始(蓝色)、进行中(橘色)、已结束(灰色)、已关闭(红色)</span></li>
+</ul>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-weight: bold;">（6）房间模版管理：</span>维护所有房间模版数据, 包含新增、修改、删除, 列表仅展示通用字段, 其余内容在详情里面</span></p>
+<ul>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">新增模版：</span>
+<ul>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">支持多品牌同时设置, 品牌下拉选单改为多选并增加全部品牌选项</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">支持自定义模版名称, 字数限制50, 支持中文、英、数字、符号</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">模版配置项内容根据选中的子游戏做对应展示，子游戏默认选中第一个</span></li>
+</ul>
+</li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">详情：根据不同的游戏展示对应的模版配置项内容</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">修改：根据不同的游戏展示对应的模版配置项内容, 支持修改模版配置</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">删除：删除指定模版</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">批量删除：批量删除选中模版</span></li>
+<li style="box-sizing: border-box; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Microsoft YaHei&#x27;;">批量修改：仅支持修改相同游戏模版,且根据不同的游戏展示对应的模版配置项内容, 一次最多修改20个模版</span></li>
+</ul>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="091cf41ba221f28f1ae83b0f.png"></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-weight: bold; font-family: &#x27;Microsoft YaHei&#x27;;">（7）其他(游戏相关配置项说明):</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<table dir="ltr" style="table-layout: fixed; font-size: 10pt; font-family: Arial; width: 1628px; border-collapse: collapse; border-image: initial; height: 1055.83px; border: medium none currentcolor;" border="1" cellspacing="0" cellpadding="0" data-sheets-root="1" data-sheets-baot="1"><colgroup><col style="width: 349px;" width="352"><col style="width: 1278px;" width="773"></colgroup>
+<tbody>
+<tr style="height: 38.5938px;">
+<td style="overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: #4a86e8; font-size: 12pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; color: #ffffff; text-align: center; border: 1px solid rgb(12, 52, 61);" colspan="2"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;;">德州扑克</span></td>
+</tr>
+<tr style="height: 39px;">
+<td style="overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #4a86e8; font-size: 12pt; font-weight: bold; wrap-strategy: 4; white-space: normal; word-wrap: break-word; color: #ffffff; text-align: center; border: 1px solid #0c343d;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">配置项</span></td>
+<td style="border-top: 1px solid #0c343d; border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #4a86e8; font-size: 12pt; font-weight: bold; wrap-strategy: 4; white-space: normal; word-wrap: break-word; color: #ffffff; text-align: center;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">说明</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">最小带入筹码</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">设置房间大盲注（BB）的倍数为入座牌桌最小带入筹码金额。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">最大带入筹码</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">设置房间大盲注（BB）的倍数为入座牌桌最大带入筹码金额。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">补码上限(大盲倍数)</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">房间累计可买入筹码上限。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">强制补码</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">开启时：玩家筹码低于设定值时必须补齐最小带入筹码，否则系统将限制其参与下一手牌。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">关闭时：玩家筹码低于大盲金额时，才会触发强制补码功能。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">强制补码大盲倍数</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #d9ead3; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">设定触发强制补码的筹码临界值，以当前房间大盲注（BB）的倍数作为计算值。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">经典保险</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">开启时：在翻牌和转牌阶段玩家全部亮牌且满足触发保险条件，领先玩家可以购买对应底池反超保险。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">关闭时：房间不触发保险玩法。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">多池购保</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">开启时：可购买多个领先底池的保险。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">关闭时：购买领先的最大底池的保险。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">River保险可买平分Outs</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">开启时：转牌圈购买River(河牌)保险后，有平分Outs时可购买平分保险。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">关闭时：不能购买平分保险。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">强制购买River保险</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">开启时：转牌阶段触发保险，强制购买River(河牌)保险。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">关闭时：转牌阶段非背回时可以选择放弃购买River(河牌)保险。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">强制购买金额*赔率占底池比例</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">用于计算强制购买购买River(河牌)保险的最低投保金额。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">最低金额 = 底池 * 配置值 / 保险倍率</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">Flop购买Turn保险最低值</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">购买Turn(转牌)保险最小投保jine ，Turn(转牌)保险非必须购买。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">最低金额 = 底池 * 配置值 / 保险倍率</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">保险触发下限(大盲倍数)</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">底池金额 &ge; 设置下限时，才能触发该底池的保险。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">单底池参与人数上限</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">单底池参与人数（非弃牌）&le; 设置上限时，才能触发该底池的保险。</span></td>
+</tr>
+<tr style="height: 49.7812px;">
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #0c343d; border-left: 1px solid #236fa1; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">单底池领先人数上限</span></td>
+<td style="border-right: 1px solid #236fa1; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #fbeeb8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">单底池领先人数 &le; 设置上限时，才能触发该底池的保险。例：配置为3，当底池2个人同时领先，则此底池可触发保险；当底池4个人同时领先，此底池不触发保险</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">延时收费设置</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">德州扑克分为保险延时和下注延时两种收费设置，对应参数和设置方式相同。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">下注单次行动延时次数</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">玩家在每次下注行动时，可以选择延时服务的最大次数。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">保险单次行动延时次数</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">玩家在每次购买保险行动时，可以选择延时服务的最大次数。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">收费方式：固定金额收费</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">按设置的固定金额进行每次延时服务收费。</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">收费方式：盲注倍数收费</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">按设置大盲倍数的对应金额进行每次延时服务收费。</span></td>
+</tr>
+<tr style="height: 251.297px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">收费方式：单次行动指数递增收费</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">1.可选择固定金额递增、大盲倍数递增和小盲倍数递增三种方式。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">2.起始值：递增收费初始金额，根据金额类型（固定金额、大盲倍数和小盲倍数）确定起始收费金额。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">3.递增倍数：每个阶段多次延时操作时，每次延时收费增长的倍数。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">4.上限金额：当递增倍数高于设置上限金额时，当前行动后续延时费用固定为上限金额。</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">例如：</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">配置单次行动指数递增收费，大盲金额为10，延时次数4次，起始金额选择2倍大盲倍数，递增倍数3，上限金额为100，首次免费开启；</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">第1次延时免费</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">第2次开始计算延时金额为20</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">第3次递增3倍延时金额为 60</span><br><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">第4次递增到180大于上限值，使用上限金额100为延时费用；</span></td>
+</tr>
+<tr style="height: 27.3906px;">
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; border-left: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">首次免费</span></td>
+<td style="border-right: 1px solid #0c343d; border-bottom: 1px solid #0c343d; overflow: hidden; padding: 2px 3px 2px 3px; vertical-align: middle; background-color: #c9daf8; wrap-strategy: 4; white-space: normal; word-wrap: break-word;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">选择单次行动指数递增收费后，才可设置每次延时服务首次是否免费。</span></td>
+</tr>
+</tbody>
+</table>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_690112.html">← 中奖记录轮播</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_32.html">所有代理 →</a></div></body></html>

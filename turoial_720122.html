@@ -1,0 +1,520 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>加倍奖励</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 加倍奖励</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="color: #b45f06; border-bottom: 3px solid #b45f06; padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">加倍奖励 &middot; 操作与运营教程</h1>
+<p style="text-align: center; color: #8a6a4a; font-size: 15px; margin: 8px 0 0; line-height: 1.85;">一个可被其他活动重复调用的"奖励模板"&mdash;&mdash;用奖励翻倍撬动玩家充值</p>
+<div style="background: #fbf3ea; border: 1px solid #ecd9c6; border-radius: 10px; padding: 14px 20px; margin: 20px 0;"><strong style="color: #b45f06;"> 目录 </strong>
+<ol style="margin: 8px 0 0; padding-left: 22px;">
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s1"> 功能概述 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s2"> 新增加倍奖励 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s3"> 管理已配置的加倍奖励 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s4"> 查看玩家领取情况 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s5"> 玩家端展示效果 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s6"> 运营建议 </a></li>
+<li style="line-height: 2;"><a style="color: #9a5005; outline: none; -webkit-tap-highlight-color: transparent;" href="#s7"> 常见问题 FAQ </a></li>
+</ol>
+</div>
+<h2 id="s1" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">一、功能概述</h2>
+<p style="line-height: 1.85; margin: 8px 0;">加倍奖励是一个 <strong> 奖励模板 </strong> ：配置一次，可被其他活动（如任务中心）重复调用。玩家在活动中拿到奖励后，系统弹窗提示「还可再领一份加倍奖励」，引导玩家充值；玩家充值并满足条件后即可领取（奖金设有上限、不会无限增大）。一句话： <strong> 它是一把"用奖励翻倍来撬动充值"的运营杠杆 </strong> 。</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 22%;"> <col style="width: 78%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">维度</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">奖金算法</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖金 ＝ 赠送金额 &times; 倍数，或 充值金额 &times; 倍数（二选一）</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">领取前提</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家必须先完成一次充值才能领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">能解决什么</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">促充值转化、提升客单价（ARPU）、挽回流失、新客首充激励、为主活动加码</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">目前接入</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台手动派发、任务中心（其他活动后续接入）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">二、新增加倍奖励</h2>
+<p style="line-height: 1.85; margin: 8px 0;">在「加倍奖励列表」页，点击右上方的「新增加倍奖励」按钮，弹出配置弹窗（如下图）。按下方字段说明表逐项填写，带 * 为必填项，填写完成后点击「确认」保存。</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 100%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; text-align: left;">
+<p style="margin: 0;"><img style="max-width: 100%; height: auto;" src="7f35a3b133e4ec905508a6cb.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">字段说明表</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 7%;"> <col style="width: 22%;"> <col style="width: 8%;"> <col style="width: 63%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">序号</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">必填</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">填写说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">1</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖励名称</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">便于识别的名称，例如「任务中心－充值加倍」</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">2</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖励规则</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">奖金算法二选一，详见下方规则说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">3</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充值方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">勾选生效的充值渠道（银联、银行、虚拟币、PayPal 等），默认全选；玩家须用勾选渠道充值才触发</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">4</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">倍数规则三选一，详见下方加倍方式说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">5</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">领取条件／加倍奖金上限</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">随第 2 项联动出现，详见下方规则说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">6</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖金稽核平台</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">否</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">流水统计范围：不限制／仅算勾选平台／排除勾选平台</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">7</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充值前是否展示稽核倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">否</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">开＝玩家充值前不展示流水提示；关＝展示</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">8</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">派发方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">发放方式三选一，详见下方派发方式说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">9</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">有效期</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">奖励有效天数，范围 1～31 天</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">10</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">弹窗样式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">是</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家端弹窗外观：红包／宝箱／福袋，可点预览</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">11</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台备注</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">否</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">内部说明，选填</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">规则说明</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 22%;"> <col style="width: 28%;"> <col style="width: 50%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">规则</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">奖金算法</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">联动出现的设置</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">赠送金额的倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">主活动赠送金额 &times; 倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">领取条件（单笔充值满 X 元才可领，填 0 ＝ 任意金额）</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充值金额的倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">本次充值金额 &times; 倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖金上限（最多发放金额，填 0 ＝ 不封顶）</td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 1.85; margin: 8px 0;">下图为选择「充值金额的倍数」时的页面：可见多出「加倍奖金上限」一项，且不再显示「领取条件」。</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 100%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; text-align: left;">
+<p style="margin: 0;"><img style="max-width: 100%; height: auto;" src="a51ca25935294181e4b95d40.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">加倍方式说明</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 24%;"> <col style="width: 46%;"> <col style="width: 30%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">需填写</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">适用场景</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">固定倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖金倍数 ＋ 稽核倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">所有玩家同一倍数</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">随机倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">最小、最大、期望（平均）倍数 ＋ 稽核倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">制造惊喜感，按期望值控成本</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按充值金额阶梯加倍</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">每档：充值金额&ge; ＋ 倍数 ＋ 稽核倍数（可加减档）</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充得越多、倍数越高</td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 1.85; margin: 8px 0;">选择「随机倍数」时填写最小、最大与期望倍数，如下图：</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 100%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; text-align: left;">
+<p style="margin: 0;"><img style="max-width: 100%; height: auto;" src="658d011d86ffa54d3d71c23c.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 1.85; margin: 8px 0;">选择「按充值金额阶梯加倍」时按档位填写，可点 ＋／－ 增减档位，如下图：</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 100%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; text-align: left;">
+<p style="margin: 0;"><img style="max-width: 100%; height: auto;" src="7cc9b974d9913b032c4ad042.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">派发方式说明</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 30%;"> <col style="width: 70%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家自领 &mdash; 过期作废</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家自行点击领取，过期未领即作废</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家自领 &mdash; 过期自动派发</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">过期后系统自动发放（仅限已充值达标的奖励）</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">直接到账</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">满足条件后直接到账，无需手动领取</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">三、管理已配置的加倍奖励</h2>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 14%;"> <col style="width: 86%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">操作</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">修改</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">与新增同一张填写表，可调整内容；修改仅对之后新生成的奖励生效，已产生的保持原配置不变</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">详情</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">只读查看全部字段，并可查看该奖励最近 30 次修改记录</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">删除</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">若该奖励正被某活动引用，则无法删除，需先取消引用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">四、查看玩家领取情况</h2>
+<p style="line-height: 1.85; margin: 8px 0;">在「领取记录」中，按玩家所处状态分页签查看，如下图：</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 100%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; text-align: left;">
+<p style="margin: 0;"><img style="max-width: 100%; height: auto;" src="251c739b8d5f1686d05b16bc.png"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 16%;"> <col style="width: 84%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">状态</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">含义</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">未完成</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家已获得奖励，但尚未充值</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">已完成</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家已充值，但尚未点击领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">已领取</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家已充值并成功领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">已过期</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">超时作废的奖励</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">被拒绝</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">后台手动拒绝或取消的奖励</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">全部记录</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">汇总全部状态，可按状态筛选</td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 1.85; margin: 8px 0;">列表支持按时间、金额排序，并可点「导出报表」导出。</p>
+<h2 id="s5" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">五、玩家端展示效果</h2>
+<p style="line-height: 1.85; margin: 8px 0;">玩家在活动中领取奖励时弹出领取窗；若该奖励配置了加倍，则弹出加倍窗：玩家可选「直接领取」（放弃加倍、仅拿原奖励），或点「超级加倍」去翻倍。点「超级加倍」后进入去充值流程，引导玩家完成充值；玩家充值并满足条件后，加倍奖金到账。</p>
+<div style="background: #fff6ee; border-left: 4px solid #b45f06; padding: 10px 14px; border-radius: 0 6px 6px 0; line-height: 1.85; margin: 10px 0;">玩家端弹窗样式（红包 / 宝箱 / 福袋）与"直接领取 / 超级加倍"按钮，由配置时的「弹窗样式」决定。</div>
+<h2 id="s6" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">六、运营建议</h2>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">1. 什么场景用加倍奖励</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 24%;"> <col style="width: 76%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">运营场景</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">怎么用</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">节日／大促冲充值</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">挂在主活动上加码，用较高倍数 ＋ 短有效期制造紧迫感</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">新客首充转化</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">低门槛（领取条件填 0 或小额）＋ 固定倍数，降低决策负担</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">流失玩家召回</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">对回流玩家发较高加倍，配合弹窗钩子刺激回归充值</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">拉高客单价（大 R）</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">用「阶梯加倍」，充得越多倍数越高，引导大额充值</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">2. 三种加倍方式怎么选</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 18%;"> <col style="width: 52%;"> <col style="width: 30%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">运营效果</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">建议场景</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">固定倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">预期明确、成本最可控，玩家一眼看懂</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">新客转化、稳健促充值</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">随机倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">制造惊喜与博彩心理、刺激性强；用"期望倍数"控大盘成本</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">活跃老玩家、节日造势</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">阶梯加倍</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">用倍数阶梯诱导更大额充值，拉高客单价</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">大 R 维护、冲业绩</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">3. 参数配置技巧（提转化）</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 26%;"> <col style="width: 74%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">参数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">技巧</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">有效期</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">想快速冲量就设短（1～3 天）制造紧迫感；想覆盖更广人群可设长一些</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">领取条件／门槛</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">新客拉新填 0 降低门槛；控成本时设最低充值额过滤薅羊毛</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">弹窗样式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">按活动主题选红包／宝箱／福袋，贴合氛围能提升点击与领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充值前是否展示稽核倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">关闭可弱化"流水门槛"的劝退感、提升点击转化；但要权衡玩家提现体验与口碑</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">充值方式</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">只勾选优质／低成本渠道，既引导玩家用好渠道，也便于成本核算</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">4. 成本与风控</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 28%;"> <col style="width: 72%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">风控点</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">稽核倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">设合理流水要求，防止"领了就提"套利；新客可适当低、老玩家可适当高</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">加倍奖金上限（充值倍数模式）</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">务必设上限封顶，防止大额充值爆奖、成本失控</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">随机倍数</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">靠"期望（平均）倍数"控大盘成本，上线后对照实际平均值监控</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 16px 0 4px; font-size: 17px; color: #b45f06; font-weight: bold; line-height: 1.85;">5. 怎么看效果</p>
+<p style="line-height: 1.85; margin: 8px 0;">在「领取记录」按状态读数，快速判断活动健康度：</p>
+<table style="border-collapse: collapse; width: 100.013%;" border="1"><colgroup> <col style="width: 24%;"> <col style="width: 76%;"> </colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">看什么</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明 / 动作</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">未完成占比高</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">钩子有吸引力但充值转化不足 &rarr; 可降门槛、缩短有效期、加大倍数</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">已领取 / 已完成</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">成功转化的量，结合充值金额评估 ROI</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">已过期占比高</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">玩家无感或门槛偏高 &rarr; 调整倍数、样式或人群</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">导出报表</td>
+<td style="border: 1px solid #e3c4a8; padding: 8px 12px; vertical-align: middle; line-height: 1.85; font-size: 15px;">结合充值单号、金额做 ARPU／转化率分析</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid #b45f06; padding-left: 10px; line-height: 1.85;">七、常见问题 FAQ</h2>
+<p style="margin: 14px 0 2px; line-height: 1.85;"><strong> Q：玩家充值了，为什么没领到加倍奖励？ </strong></p>
+<p style="margin: 2px 0 0; line-height: 1.85;">A：玩家须点击弹窗内的充值按钮去充值才会计入；从其他入口充值可能不计。且第 1 笔充值需满足条件、产生奖金不低于 0.01，否则奖励作废。</p>
+<p style="margin: 14px 0 2px; line-height: 1.85;"><strong> Q：为什么某个加倍奖励删不掉？ </strong></p>
+<p style="margin: 2px 0 0; line-height: 1.85;">A：该奖励正被某活动引用，删除前需先在对应活动中取消引用。</p>
+<p style="margin: 14px 0 2px; line-height: 1.85;"><strong> Q：修改加倍奖励，会影响已经产生的奖励吗？ </strong></p>
+<p style="margin: 2px 0 0; line-height: 1.85;">A：不会。修改只对之后新生成的奖励生效，历史已产生的奖励仍保持原配置不变。</p>
+<p><a id="backtop" style="position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #fff; border-radius: 22px; font-size: 14px; line-height: 1; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; box-shadow: 0 2px 8px rgba(0,0,0,0.25);" href="#top"> 置顶 </a></p>
+        </article><div class="bottom-nav"><a href="turoial_720119.html">← 折扣券</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_720123.html">商城 →</a></div></body></html>

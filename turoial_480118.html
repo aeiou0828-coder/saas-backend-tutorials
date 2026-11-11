@@ -1,0 +1,426 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>公积金</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 公积金</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">公积金 &middot; 操作与运营教程</h1>
+<p style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin-top: 8px; line-height: 1.85;">会员每笔充值按比例赠送公积金长期累积，取出需完成打码要求，用资产感与门槛持续激励充值。</p>
+<div style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 18px 0px 26px;"><strong style="app-region: no-drag !important; color: #9a5005;">目录</strong><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s1">一、功能概述</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s2">二、公积金设置</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s3">三、打码与领取逻辑</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s4">四、后台操作</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s5">五、查看记录</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s6">六、玩家端效果</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s7">七、运营建议</a><a style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s8">八、常见问题</a></div>
+<h2 id="s1" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 81.6042px;"><col style="app-region: no-drag !important; width: 371.781px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">玩法</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">会员每笔充值按比例赠送公积金存进账户长期累积；取出需先完成打码要求，取出到余额后提现还需再完成稽核打码。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">解决什么</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">用越充越多、看得到的公积金资产，持续激励会员充值；通过较高的取出打码倍数制造黏性。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">前提</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">公积金开关默认关闭，开启后客户端才展示该页签，且只统计开启后的充值：开启前的充值不计入，不产生公积金、不新增打码要求。例如今日 10 点开启，则会员 10 点以后的充值才计入公积金。需先在公积金设置里勾选币种并设置充值门槛与比例。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">后台位置</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">优惠 &rarr; 公积金。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、公积金设置</h2>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">在公积金明细页右上点【公积金设置】打开弹窗，如下图。币种与品牌统一在此勾选，勾选即开启。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 226.688px;"><col style="app-region: no-drag !important; width: 226.698px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block; margin: 0px auto;" src="547b297eb7aac51d12a6d1bb.png"></td>
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block; margin: 0px auto;" src="e21d80add27b1fc2fbe8cd05.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 43.4375px;"><col style="app-region: no-drag !important; width: 103.76px;"><col style="app-region: no-drag !important; width: 40.6667px;"><col style="app-region: no-drag !important; width: 265.521px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">序号</th>
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">字段</th>
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">必填</th>
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">说明</th>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">1</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">公积金名称</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">系统自带或自定义文案。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">2</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">选择币种</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">复选勾选；勾选=对该币种开启，不勾=隐藏不开启。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">3</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">获得公积金充值要求</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">每个勾选币种分别设【单笔充值 &ge; X】，达到才发公积金。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">4</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">赠送方式</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">每笔充值按设定比例赠送公积金。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">5</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">累计赠送封顶</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">赠送公积金累计金额上限；填 0 表示不限制，最高 12 位整数。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">6</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">赠送次数</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">充值赠送公积金次数上限；填 0 表示不限制，最高 8 位整数。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">7</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">取出条件</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">两个倍数：【有赠送公积金的充值要求投注倍数】每次充值需完成充值本金&times;该倍数有效投注才能取出；【超封顶无赠送的新充值打码要求】超过赠送次数或封顶后的充值按此倍数计打码。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">8</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">打码限定平台</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">不限制／指定平台／排除勾选平台。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">9</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">重置周期</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">不限制／每月／每季度／每半年／每年；设周期后到期清零公积金与打码进度，进入新周期。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">10</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">同周期能否多次参与</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">只能参与一次／完成后可再次参与。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">11</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">派发方式</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">玩家自领-过期自动派发／玩家自领-过期作废。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">12</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">过期时间</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">选非不限制周期才显示；周期结束后 X 天内公积金奖金过期。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">13</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">充值成功后直接弹窗</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">开启后会员充值成功直接弹出公积金提示。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">14</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">领取入口</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">站点接入哪些终端就有哪些；可加同设备号、同浏览器指纹次数限制。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">15</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">更多领取限制</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">手机短信、邮箱、生日、银行卡、虚拟币、三方钱包、收款方式、真实姓名、生物识别、KYC、三方快捷登录、首充；同 IP；同姓名；最近 X 天累计充值次数／金额／天数／打码金额；最近 X 天打码是期间充值的 Y 倍。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">16</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">领取层级</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">站点公共参与层级。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">17</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">取出公积金稽核倍数</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">公积金取出到余额后，提现需再完成取出额&times;该倍数的有效投注。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">18</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">奖金稽核指定平台</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">不限制／仅限以下勾选／排除勾选。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">19</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">规则说明</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">系统自带或自定义。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、打码与领取逻辑</h2>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">公积金的取出难度由打码量控制，系统用两个字段跟踪进度。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 108.812px;"><col style="app-region: no-drag !important; width: 344.573px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">已累计打码量</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">会员已完成的有效打码总量；每日零点更新为【当日打码＋已累计打码】。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">总要求打码量</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">取出公积金需达到的打码门槛；会员充值时更新为【max（已累计打码量，原总要求打码量）＋充值本金&times;取出条件投注倍数】。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">能否取出</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">会员进活动页时判断：当日累计打码＋已累计打码量 &ge; 总要求打码量，即可取出公积金。</td>
+</tr>
+</tbody>
+</table>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 14px 0px 6px;"><strong style="app-region: no-drag !important;">总要求打码量更新的三种情景：</strong></p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 81.6042px;"><col style="app-region: no-drag !important; width: 371.781px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">情景一</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">已投注 &le; 总要求投注，且会员未再充值：总要求投注=历次新增投注量累加，保持不变。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">情景二</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">已投注 &le; 总要求投注，且会员又充值：新的总要求投注=原总要求投注＋本次充值金额&times;投注倍数。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">情景三</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">已投注 ＞ 总要求投注（超额未领取），且会员又充值：新的总要求投注=当前已打码量＋本次充值金额&times;投注倍数。</td>
+</tr>
+</tbody>
+</table>
+<div style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-left: 4px solid rgb(46, 155, 91); background: #eef8ee; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; border-radius: 6px;"><strong style="app-region: no-drag !important; color: #2e9b5b;">举例（情景三）：</strong>会员原本总要求投注 1000，但已打码 1500（超额且未领取），此时再充值，新的总要求投注=1500＋本次充值金额&times;投注倍数。</div>
+<div style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-left: 4px solid rgb(180, 95, 6); background: #fdf3ea; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; border-radius: 6px;"><strong style="app-region: no-drag !important; color: #b45f06;">注意：</strong>打码量不是实时刷新的，系统每隔几小时或在会员充值时才更新；如需查看会员当前真实打码量，在投注要求页点【更新】拉取。</div>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 14px 0px 6px;"><strong style="app-region: no-drag !important;">取出与提现是两道门槛：</strong></p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 81.6042px;"><col style="app-region: no-drag !important; width: 371.781px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">第一道&middot;取出</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">完成【充值本金&times;取出条件投注倍数】的有效投注，公积金从账户取出到余额，表示奖励到账。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">第二道&middot;提现</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">到余额的钱要提现，还需再完成【取出额&times;取出公积金稽核倍数】的打码。例：取出 100、稽核 1 倍，到余额的 100 需再打码 100 才能提现。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、后台操作</h2>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">投注要求页签按同一周期一个会员一条汇总，展示是否达成投注要求，提供三个操作。</p>
+<div style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-left: 4px solid rgb(58, 109, 181); background: #eef4fb; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; border-radius: 6px;"><strong style="app-region: no-drag !important; color: #3a6db5;">安全验证：</strong>【修改】【强制解除】等需要身份校验的操作，是否要输入登录密码或 Google 验证码，统一由【系统管理 &rarr; 账号权限 &rarr; 安全设置 &rarr; 优惠审核验证】控制（仅持有者可见）；两项都设为无需验证时，提交后直接通过。</div>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 72.5417px;"><col style="app-region: no-drag !important; width: 380.844px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">更新</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">拉取该会员当前实际打码量，用于核对最新进度。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">修改</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">调整【总要求投注】和【赠送公积金】金额；用于纠错或个案调整（是否需身份校验见上方安全验证说明）。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">强制解除</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">把投注状态直接改为已完成，会员无需再投注即可取出公积金，相当于后台人工放行；但若会员之后再次充值，仍需完成该次充值对应的投注要求。</td>
+</tr>
+</tbody>
+</table>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 14px 0px;"><strong style="app-region: no-drag !important;">投注状态：</strong>进行中表示已投注未达总要求投注；已完成表示已投注达标或被人工强制解除，已完成才能取出公积金。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 81.6042px;"><col style="app-region: no-drag !important; width: 371.781px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">创建时间</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员第一次产生公积金的充值时间。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">限制平台</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">投注仅在限制平台才算有效；若中途改了限制平台，则改动当天的投注按最新限制平台计算。</td>
+</tr>
+</tbody>
+</table>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 453.385px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block;" src="86414ef9bc2987f136c49e62.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、查看记录</h2>
+<h3 style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">5.1 公积金明细</h3>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">所有会员每笔充值后的公积金与投注量新增明细，含充值金额、赠送比例、赠送前／赠送／赠送后公积金、已赠送或封顶次数、公积金封顶、投注倍数、新增投注量等；可按时间、币种、账号筛选并导出。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 453.385px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block;" src="7d274ba57c1ac2bfe1eefbc7.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">5.2 取出记录</h3>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">按同一周期一个会员一条记录，展示已完成并已取出公积金的会员，含累计充值、总要求投注、已投注、赠送公积金、稽核倍数、过期时间、取出时间等。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 453.385px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block;" src="4fdc1e842197c2c4192c95b4.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">六、玩家端效果</h2>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">会员充值达门槛后获得公积金并存入账户；开启【充值成功后直接弹窗】时会即时弹出提示。会员在活动页看到累积的公积金、当前打码进度与可领取状态，满足取出条件后取出到余额。</p>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 453.385px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; app-region: no-drag !important; height: auto; display: block;" src="354cedb74fa6d2d729e4b506.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">七、运营建议</h2>
+<table style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 454.052px; margin: 8px 0px;" border="1"><colgroup style="app-region: no-drag !important;"><col style="app-region: no-drag !important; width: 63.4688px;"><col style="app-region: no-drag !important; width: 136.01px;"><col style="app-region: no-drag !important; width: 253.906px;"></colgroup>
+<tbody style="app-region: no-drag !important;">
+<tr style="app-region: no-drag !important;">
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">维度</th>
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">建议</th>
+<th style="app-region: no-drag !important; background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">提示</th>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">充值门槛</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">单笔充值门槛设在主力充值档位附近，让多数充值能触发赠送。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">门槛过高会员够不到，过低赠送成本高。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">赠送比例</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">比例与取出倍数搭配设计：比例可观吸引眼球，取出倍数控制实际成本。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">比例高但倍数也高，营造看得到取不出的黏性。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">取出倍数</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">用取出条件投注倍数控制取出难度；想做长期蓄水可设较高倍数。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">倍数过低公积金沦为直接福利，失去蓄水意义。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">封顶与次数</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">大额充值用户多时设封顶或次数上限，控制单人赠送成本。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">填 0 为不限制，长期活动建议设上限。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">重置周期</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">想做持续资产感设不限制；想制造周期紧迫感设按月或按季度。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">设周期需同时配过期时间，避免会员误以为永久有效。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">人工放行</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">VIP 或争议个案可用【修改】调要求或【强制解除】放行，需谨慎并留备注。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">操作有身份校验把关，避免被滥用导致成本失控。</td>
+</tr>
+<tr style="app-region: no-drag !important;">
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">效果监控</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">关注参与人数、人均赠送公积金、取出率、取出后提现转化。</td>
+<td style="app-region: no-drag !important; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">取出率过高说明门槛偏松，过低说明黏性可能伤体验。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s8" style="app-region: no-drag !important; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">八、常见问题</h2>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong style="app-region: no-drag !important;">Q：公积金和普通充值赠送有什么区别？</strong></p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：公积金是长期累积进专属账户的资产，越充越多，取出有打码门槛；普通充值赠送通常单笔即发即用。公积金的核心是用累积资产感和取出门槛制造黏性。</p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong style="app-region: no-drag !important;">Q：取出到余额就能直接提现吗？</strong></p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不是。取出到余额只代表公积金奖励到账，提现还需再完成取出额&times;取出公积金稽核倍数的打码。</p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong style="app-region: no-drag !important;">Q：会员投注了但打码进度没变怎么回事？</strong></p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：打码量不是实时刷新，系统每隔几小时或在充值时更新；在投注要求页点【更新】可拉取该会员当前实际打码量。</p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong style="app-region: no-drag !important;">Q：想让某个会员直接领取怎么操作？</strong></p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：在投注要求页对该会员点【强制解除】，状态变为已完成后会员即可取出。</p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong style="app-region: no-drag !important;">Q：重置周期到了公积金会怎样？</strong></p>
+<p style="app-region: no-drag !important; color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：到周期节点公积金和打码进度清零，进入新周期；若设了过期时间，周期结束后 X 天内未取出的公积金奖金过期。</p>
+<p><a id="backtop" style="app-region: no-drag !important; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_480112.html">← 领取与审核</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_570109.html">盲盒抽奖 →</a></div></body></html>

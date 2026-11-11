@@ -1,0 +1,360 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>极光推送</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 运营 / 极光推送</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p></p>
+<h3><span style="font-size: 24px;">一、极光推送开通流程步骤和教程</span></h3>
+<p><span style="font-size: 20px;"><span style="font-weight: bold;">（1）全球</span><span style="font-weight: bold;">极光推送配置：</span><span style="box-sizing: border-box;">前往极光官网注册账号，官网：<a style="transition-behavior: normal, normal, normal, normal; transition-duration: 0.4s, 0s, 0s, 0s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1), ease, ease, ease; transition-delay: 0s, 0s, 0s, 0s;" href="https://www.engagelab.com/accounts/signup-bsp?bsptag=wg" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://www.engagelab.com/accounts/signup-bsp?bsptag=wg</a></span></span></p>
+<p><span style="font-size: 20px;"><span style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 18px;"><strong><span style="color: #e03e2d;">特别注意：</span></strong>尽量注册账号，不要使用google等三方注册，因为如果邮箱状态异常后续就无法登录了，但是注册账号可以一直登录</span></span></span></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong style="font-weight: bold; color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="color: #e03e2d;">特别注意：极光推送暂时不支持中国</span></strong></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="e49eb7376108c15e99b1984f.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="56dda4ab0fafe03ddcc614d0.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（2）</span>建立组织如下图，选择自己站点的时区</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">组织名称：app名称即可，<span style="font-size: 20px; color: #000000;"><strong>也可以自定义</strong></span></span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">组织网址：非必填</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">时区选择：自己站点时区即可（和站点时区一致就可以例如：站点UTC+8 极光找到UTC+8就行 ）</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="e52af16c81b920c082d6ab6d.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（3）</span>创建成功后返回控制台</span></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="eabcb1a2053632e7aa2dcbdf.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（4）</span>创建成功，点击开通AppPush&nbsp; （待开通服务，控制台下滑找到，如下图）</span></p>
+<p style="box-sizing: border-box;"><a style="box-sizing: border-box; background: 0px 0px; color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; display: inline-block; position: relative; overflow: hidden; max-height: 892px;" href="https://www.cg.xxx/file-read-377304.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" src="0ec1f2611369e06cd71aad70.png" width="899" height="600"></a></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（4）</span>接入点注意只能选<strong><span style="color: #e03e2d;">新加坡英文是：Singapore</span></strong></span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px; color: #000000;">应用名称：app名称即可，也可以自定义</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px; color: #000000;">服务接入点：只能选新加坡</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px; color: #000000;">应用图标：无需上传</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><picture></picture><picture><img style="max-width: 100%;" src="4bf7565af2c7ef175124b67b.png" width="899" height="600"></picture></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（5）数据中心选择提示，直接确认就好</span></span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="6bc7e85298157e58657e30bd.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（6）</span>创建成功，点击进入，应用信息，查看APPkey以及Master Secret</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="dce5071bf75271e7ce5db90d.png"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（7）</span>将APPkey以及Master Secret复制到WG后台绑定</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">路径：应用信息，appkey，Master Secret 复制到wg后台，运营管理-极光推送-点修改，配置APPkey以及Master Secret</span></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="154d2157ac97a25bc72ab23f.png" width="899" height="600"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（8）</span>将组织ID复制到WG后台绑定</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">路径：右上角，语言切换后面，查看所有组织，将组织ID复制到wg后台，运营管理-极光推送-点修改，配置组织ID</span></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="801270bcdbd50477da7e1480.png"></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（9）</span>wg后台配置了组织ID和APPkey以及Master Secret，就可以选择极光推送开通付费按钮，选择要开通的套餐进行开通并<span style="color: #e03e2d;"><strong>加白</strong></span></span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><img style="max-width: 100%;" src="bd16352a3b7df65896324c89.png"></span></p>
+<div style="font-family: &#x27;Segoe UI&#x27;; font-size: 14px; font-style: normal; font-weight: 400; line-height: 20px;"><span style="color: #e03e2d;"><strong>注意：极光推送的 AppKey 和 Master Secret 属于核心敏感信息，一旦泄露，可能被第三方恶意调用推送接口，导致垃圾消息推送、用户骚扰、业务信誉受损等严重安全风险。为降低安全隐患，建议立即在极光推送后台配置 IP 白名单，仅允许可信服务器访问相关接口，防止未授权调用。</strong></span></div>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">&nbsp;</span></p>
+<div class="zds-block zds-block-paragraph" style="box-sizing: border-box; border: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif; min-height: 1em; color: #000000; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 440; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important 0px 0px 0px;" data-zds-type="Paragraph">
+<div class="zds-block-content" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important; font-size: 14px; line-height: 20px !important; flex-wrap: wrap;"><span class="zds-text" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important; white-space: pre-wrap;" data-zds-type="Text">亚太：8.214.161.29、8.214.162.85</span></div>
+</div>
+<div class="zds-block zds-block-paragraph" style="box-sizing: border-box; border: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif; min-height: 1em; color: #000000; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 440; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important 0px 0px 0px;" data-zds-type="Paragraph">
+<div class="zds-block-content" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important; font-size: 14px; line-height: 20px !important; flex-wrap: wrap;"><span class="zds-text" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important; white-space: pre-wrap;" data-zds-type="Text">北美：</span><span class="zds-bold zds-text" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px; white-space: pre-wrap; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important;" data-zds-type="Text" data-zds-raw="{&quot;attrs&quot;:{&quot;bold&quot;:true}}">34.230.232.12、18.233.51.153</span></div>
+</div>
+<div class="zds-block zds-block-paragraph" style="box-sizing: border-box; border: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif; min-height: 1em; color: #000000; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 440; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important 0px 0px 0px;" data-zds-type="Paragraph">
+<div class="zds-block-content" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px !important; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important; font-size: 14px; line-height: 20px !important; flex-wrap: wrap;"><span class="zds-bold zds-text" style="box-sizing: border-box; border: 0px; margin: 0px; padding: 0px; white-space: pre-wrap; font-family: &#x27;Noto Color Emoji&#x27;, JoyPixels, Emoji, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, &#x27;Noto Sans&#x27;, &#x27;Liberation Sans&#x27;, Arial, sans-serif !important;" data-zds-type="Text" data-zds-raw="{&quot;attrs&quot;:{&quot;bold&quot;:true}}">中东：34.141.65.176、34.185.206.113、34.141.76.74、34.159.54.56、35.198.127.30</span></div>
+</div>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">&nbsp;</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><img style="max-width: 100%;" src="397eda9647d73aa79c87a1f0.png"></span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="font-weight: bold;">（10）</span>开通以后，我们进行推送配置</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box; font-weight: bolder; color: #253044; font-size: 22px; vertical-align: baseline;"><span style="box-sizing: border-box; font-weight: bolder; font-size: 24px;">APP集成生效</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box; font-weight: bold;">Android集成生效</span>：先到WG站点后台》APP包管理》复制Android包名》到海外极光后台》<span style="box-sizing: border-box;">选择AppPush》应用设置》【集成设置】页面》填写包名</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">（<span style="box-sizing: border-box; font-weight: bold;">特别注意：</span><span style="box-sizing: border-box; font-weight: bold;">包名和key是捆绑一体的，一旦填写不能修改，否则要重新创建和开通付费</span>）</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">简单总结：WG后台找到安卓包名，复制配置到极光后台集成设置-Android 设置应用包名，点击保存即可</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">至于下方厂商部分可以不配置。跳过</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><a style="box-sizing: border-box; background: 0px 0px; color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; display: inline-block; position: relative; overflow: hidden; max-height: 892px;" href="https://www.cg.xxx/file-read-388930.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" src="b667cfbc1e297e36053bcbd1.png"><img style="max-width: 100%;" src="5737e9a90d648bd8f717ca7b.png"></a></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;">填写完包名保存，然后开通<strong><span style="color: #e03e2d;">FCM</span> （FCM是为了离线推送+提高送达率，不配置只能打开app收到推送）</strong>&nbsp;</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="font-weight: bold;"><span style="color: #000000;">FCM开通教程</span></span></span></p>
+<p><span style="font-size: 20px;">（1）FireBase 埋点配置：</span></p>
+<p><span style="font-size: 20px;">选填，Firebase(<a style="transition-duration: 0.4s, 0s, 0s, 0s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1), ease, ease, ease; transition-delay: 0s, 0s, 0s, 0s;" href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://firebase.google.com/</a>)</span></p>
+<p><span style="font-size: 20px;">是Google旗下的一款实时数据云服务平台，</span><span style="font-size: 20px;">旨在让APP提供一个实时响应的数据服务，</span><span style="font-size: 20px;">该平台适用在IOS、Android、web前端等各种跨平台上&nbsp;，</span><span style="font-size: 20px;">登录firebase后台添加应用，获取json文件添加后台即可配置完成。</span><br><span style="font-weight: bold; font-size: 20px;">（极光推送只需要配置安卓，IOS不需要配置）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 20px;">具体步骤：</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">a.需要使用gmail邮箱注册一个firebase账号，网站地址：<a style="transition-duration: 0.4s, 0s, 0s, 0s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1), ease, ease, ease; transition-delay: 0s, 0s, 0s, 0s;" href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://firebase.google.com</a></span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">b.firebase注册完成之后，创建项目，填写项目名称，点击继续，完成创建（FCM所有可以下一步的都点击下一步，没有特殊选项，都用默认即可，只有配置安卓包名的时候必须与后台，运营管理-打包app-安卓包名一致，不然不生效）</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">&nbsp;&nbsp;<img style="max-width: 100%;" src="d25ed629d259903ffd25738c.png"></span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">c.完成项目创建，添加应用</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="ca45e0edba7c6eba597dc4df.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="a72b71c01c79b34fa5ef383a.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">其他随意，包名必须准确，是安卓包名（运营管理-打包app-安卓包名一致，不然不生效）</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="50fbfe5cf220f84d2d83076f.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">注册成功，点击下载google-services.json&nbsp;</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="281ea1ca0bf3199d0e67a58a.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">下载成功，用txt打开，复制内容 粘贴到wg后台 ，运营管理-三方埋点-APP埋点-<span style="box-sizing: inherit; color: #303133; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;" data-v-9548ce40="">FireBase</span>，</span><span style="font-size: 20px;">如下图，不用选择默认json，粘贴就好</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="ca8a7549c5c4ba5ade6f86a6.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">保存成功，如果提示格式忽略即可，点击保存</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">e.配置应用私钥</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">回到firebase的项目设置，一定要选java，生成密钥</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="fea46ee7b161c5bf2edec112.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">将下载后的文件配置到极光后台</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="22e1c36fa972630fe0dcab49.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px; color: #000000;">上传完成后，点击保存完成配置&nbsp; &nbsp; 需要重新打包，重新下载，安卓推送才能生效</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><img style="max-width: 100%;" src="99f2f132d6e8b3d397cd4cfa.png"></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-weight: bold;"><span style="font-size: 24px;">打包APP</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;"><span style="font-weight: bold;">打包说明：</span>点击右上角重新生成iOS/Android包,可选择不同版的APP包生成，前提条件需<span style="font-weight: bold;">APP包配置--配置APP相关参数信息</span>；<span style="color: #ff0000;"><span style="font-weight: bold;">若持续出现打包失败情况，可以再次尝试，如果还失败，请马上与我们联系</span></span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; <img style="max-width: 100%;" src="9bc993915292a84d00fd172b.png"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;"><span style="font-weight: bold;">页面操作说明：</span>由于暂时分3种状态（打包中/打包失败/打包成功），以下简述对应操作按钮作用：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp;<span style="font-weight: bold;">极速版与原生版开关：</span>开启/关闭，开启后可进行打包该版本的包，关闭则无法打包且不支持下载</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a1.极速版：是H5套壳（相当于马甲包的B面），类型是app</span><br><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a2.原生版：默认加载大厅相关资源，游戏需进行更新下载资源</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">重新生成：</span>即重新生成对应app包</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">替换：</span>用于APP包报毒，三方处理加固后，包上传下载</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">下载</span><span style="font-weight: bold;">：</span>下载APP应用</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<ul style="box-sizing: border-box; padding-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<li style="box-sizing: border-box;"><span style="box-sizing: border-box; font-weight: bold; color: #485162; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 15px;">高级配置（不推荐）</span><span style="color: #485162; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 15px;">：默认极光已覆盖所有手机厂商80%机型（如下表），但部分机型需要到各厂商单独申请开发者账号，并配置参数，详见教程</span><a style="box-sizing: border-box; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 15px;" href="https://www.engagelab.com/zh_CN/docs/app-push/client-sdk-reference/android-sdk/application-guide-for-manufacturer-channel-parameters" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://www.engagelab.com/zh_CN/docs/app-push/client-sdk-reference/android-sdk/application-guide-for-manufacturer-channel-parameters</a><span style="color: #485162; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 15px;">。</span></li>
+<li style="box-sizing: border-box;">极光国内外用户支持情况概述：</li>
+</ul>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box;">&nbsp;</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><img style="max-width: 100%;" src="332dbaa054e7ebe8aeb3fa9e.png"></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box;">&nbsp;</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px; color: #000000;"><span style="box-sizing: border-box; font-weight: bold;">（<span style="font-size: 20px;">11）<span style="box-sizing: border-box;">iOS集成生效</span></span></span><span style="box-sizing: border-box;">：海外极光后台》选择AppPush》应用设置》集成设置》IOS页面，鉴权方式选择 &ldquo;iOS 证书配置&rdquo;，上传苹果开发者 .p12 证书&nbsp;&nbsp;</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px; color: #000000;"><span style="box-sizing: border-box;">具体步骤</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px; color: #000000;"><span style="box-sizing: border-box;">1）iOS证书可以找技术支持申请</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="color: #000000;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">如果有苹果开发者账号可以提供账号信息，由我司开发代为申请，如果没有苹果开发者账号，可以使用我司资源，但是苹果证书容易风控，风控就要换证书，会存在无法续签要更换包名申请新的证书的情况，请知悉）</span></span><span style="font-size: 20px;"><span style="box-sizing: border-box;">上传密码会和证书一起提供</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="color: #000000;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">2）上传以后回到运营管理-app包管理，打包<br>3）打包完成，下载ipa，去超级签更新版本</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="color: #000000;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">4）重新下载app，注册/登录检测</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box;"><span style="color: #000000;">&nbsp;&nbsp;<span style="font-weight: bold;">特别注意</span></span>：需要和超级签商确认是否支持极光推送，不支持需要更换超级签，如果支持让他们打开推送权限，这个功能默认都是关闭的，需要超级签开启</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box;">上传可以选生产 ，其他都不更改配置用默认，填入密码，保存即可</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p><img style="max-width: 100%;" src="cff1454c4967f4ca66f01b69.png"></p>
+<p><span style="font-size: 20px;">配置完成，IOS需要<span style="font-weight: bold;"><span style="color: #ff0000;">重新打包</span></span>，<span style="font-weight: bold; color: #ff0000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">重新下载</span>，推送才能生效</span></p>
+<p><img style="max-width: 100%;" src="fd413a42fdb22894aad46dba.png"></p>
+<h3 style="box-sizing: border-box; font-weight: bolder; color: #253044; font-size: 18px; margin-left: 0px; vertical-align: baseline;">&nbsp;</h3>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;"><span style="box-sizing: border-box; font-weight: bold;">（12）</span><span style="box-sizing: border-box;">回到控制台</span>继续创建webpush，如果不会返回控制台，点击下图logo</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="3e22f6ffd2b9d09d7e2f4824.png"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">继续下滑，待开通找到web push</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="e92c92ecd742ae9738afdc2c.png"></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">创建成功，点击进入，应用信息，查看Webkey以及Master Secret<br>将Webkey以及Master Secret复制到WG后台绑定<br></span></p>
+<p style="box-sizing: border-box;"><img style="max-width: 100%;" src="ad46ffc85b8e4f4a2d3060c0.png"></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; box-sizing: border-box;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 20px;">开通付费</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 20px;">1，运营管理-极光推送-点击，开通付费（APP和web要分别开通，key和密钥在极光后台获取，组织IDapp和web填写一样的，参考创建app push 和web push的教程）</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; box-sizing: border-box;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium; box-sizing: border-box;"><picture></picture><picture><img style="max-width: 100%;" src="b014693b5eb557b641086967.png"></picture></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<h3 style="box-sizing: border-box; font-weight: bolder; color: #253044; font-size: 18px; margin-left: 0px; vertical-align: baseline;">&nbsp;</h3>
+<p style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 18px;"><span style="box-sizing: border-box; font-weight: bold;">&nbsp;</span></span></p>
+<p style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 20px;"><span style="box-sizing: border-box; font-weight: bold;"><span style="font-size: 20px;">（13）</span>WebPush集成生效</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="box-sizing: border-box; font-weight: bold;">&nbsp; &nbsp;Web 推送集成生效</span><span style="box-sizing: border-box;">：</span><span style="box-sizing: border-box;">WebPush》应用设置》【集成设置】页面》填写网站域名，web 推送只支持 https 协议，域名地址请勿输入首页面地址外的其它地址。</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; font-size: 20px;">&nbsp;（<span style="box-sizing: border-box; font-weight: bold;">特别注意：</span><span style="box-sizing: border-box; font-weight: bold;">域名和key是捆绑一体的，一旦填写不能修改，否则要重新创建和开通付费，域名和WG后台对应KEY配置域名一致</span>）。</span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="font-weight: bold;"><span style="box-sizing: border-box;">&nbsp; &nbsp; web一些浏览器会默认关闭推送功能，测试过程中如果没效果，需要打开推送功能才能收到</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="font-weight: bold;"><span style="box-sizing: border-box;">路径：运营管理-域名管理-web大厅域名，全部都要配置到极光后台</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 20px;"><span style="font-weight: bold;"><span style="box-sizing: border-box;">状态如果是未接入，需要访问该域名以后，回到极光后台刷新即可</span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><img style="max-width: 100%;" src="3fecf990682ac1a1c89a2172.png"></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box;"><span style="font-size: 20px; font-weight: bold;"><span style="font-size: 20px; color: #000000;"><span style="font-weight: bold;">到此步，安卓推送成功，IOS推送成功，WEB成功推送，就配置完了，可以使用</span></span></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">额外配置</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">通知授权配置</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">通知授权一定要配置，选择引导申请，内容以及按钮都是可以自定义</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">例如</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">内容：关注送礼</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; color: #000000;"><span style="font-size: 20px; font-weight: bold;">确认和取消按钮颜色可以设置（小技巧，取消按钮的字体可以设置白色）</span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><picture></picture><picture><img style="max-width: 100%;" src="4fc2417ab777edb966b98d74.png"></picture></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">弹窗时机，等建议默认</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><img style="max-width: 100%;" src="ac260ea03cc71442d0109536.png"></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box;"><img style="max-width: 100%;" src="67c60128f76b0888b027adac.png"><img style="max-width: 100%;" src="45b187d861ecb109035a2a48.png"><img style="max-width: 100%;" src="0d5ba931e5e98436024780da.png"></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; font-size: 14px;"><span style="box-sizing: border-box; font-weight: bold;">其他深度教程</span></span></p>
+<p style="box-sizing: border-box; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box;">（1）其他教程</span><span style="box-sizing: border-box;">：<a style="color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; box-sizing: border-box; background: 0px 0px;" href="https://www.engagelab.com/zh_CN/docs/app-push/quick-access/open-service" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://www.engagelab.com/zh_CN/docs/app-push/quick-access/open-service</a></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 14px;"><span style="box-sizing: border-box;">（2）APP技术集成推送SDK材料说明：</span><span style="box-sizing: border-box;">&nbsp;<a style="color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; box-sizing: border-box; background: 0px 0px;" href="https://go48pg.yuque.com/go48pg/egmmm2/yfsg6r" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://go48pg.yuque.com/go48pg/egmmm2/yfsg6r?#</a></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; font-size: 14px;"><span style="box-sizing: border-box;">（3）Web技术集成推送SDK材料说明：</span><span style="box-sizing: border-box;">&nbsp;<a style="color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; box-sizing: border-box; background: 0px 0px;" href="https://go48pg.yuque.com/go48pg/egmmm2/haw4lcq0stxm5ezd" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://go48pg.yuque.com/go48pg/egmmm2/haw4lcq0stxm5ezd?#</a></span></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="box-sizing: border-box; font-size: 14px;">（4）Push功能名词解析：<a style="color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; box-sizing: border-box; background: 0px 0px;" href="https://docs.jiguang.cn/jpush/intro/concept" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://docs.jiguang.cn/jpush/intro/concept</a></span></p>
+<p style="box-sizing: border-box; font-size: 15px; vertical-align: baseline; color: #485162;"><span style="font-size: 14px;"><span style="box-sizing: border-box;">（5）开通其他功能教程：</span><a style="color: #2e7fff; transition: color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1), background, transform, opacity, -webkit-transform, -o-transform; box-sizing: border-box; background: 0px 0px;" href="https://www.engagelab.com/zh_CN/docs/app-push/product-overview" rel="noreferrer noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://www.engagelab.com/zh_CN/docs/app-push/product-overview</a></span></p>
+<p style="box-sizing: border-box; vertical-align: baseline; color: #485162;">&nbsp;</p>
+<h3><span style="font-size: 24px;">二、IOS以及安卓如何发送图片</span></h3>
+<p>&nbsp;</p>
+<p><span style="font-size: 20px;">1.全球极光后台ios推送图片</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 20px;">（1）注意图片地址要正确</span></p>
+<p><picture><img style="max-width: 100%;" src="88f8acf8928ae9232476094a.png"></picture></p>
+<p>效果：</p>
+<p><picture><img style="max-width: 100%;" src="ee841b496027fabe4c3b3fe0.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 20px;">（2）添加副标题说明：</span></p>
+<p><picture><img style="max-width: 100%;" src="f87214ef2a824cbd84120e59.png"></picture></p>
+<p><picture><img style="max-width: 100%;" src="eaf737158091e3b925219c3a.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 20px;">2，全球极光后台安卓推送图片</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><picture><img style="max-width: 100%;" src="b6081ce5d5eaae7c2fa06a73.png"></picture></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><picture><img style="max-width: 100%;" src="9c6eccbdd05b97a774e349c8.png"></picture></p>
+<p>&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 28px; font-weight: bold; text-wrap: nowrap;">极光推送,大厅无法正常接收常见问题</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">1.为什么用户已经登录了,但是后台无法使用通过regid指定推送?</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">答:用户登录后,从来未刷新过页面,就不会往后台推送它的regid,用户至少需要刷新过一次页面,才会推送regid.</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">2.为什么后台已经配置了Webkey,但是大厅仍无法接收到极光推送?</span></p>
+<p style="box-sizing: border-box;"><span style="font-size: 20px;">答:请检查一下后台配置的Webkey是否错误/已过期/失效等.</span></p>
+<p style="box-sizing: border-box;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">3.如何自行检测页面极光接入是否正常?</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">第一步:打开开发者工具(如下图).</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><picture><img style="max-width: 100%;" src="666eb2317aec88e9fd2a6bb4.png"></picture></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">第二步,控制台输入 webPushLog (如下图).</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><picture><img style="max-width: 100%;" src="a66f39fb305a55bff3130716.png"></picture></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">第三步,如果看到前面括号中的数字为 9 或10 则表示接入成功,如果不是,则接入失败.</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><img style="max-width: 100%;" src="57b1463adf1083a6c1cece96.png"></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 28px;"><span style="font-weight: bold; text-wrap: nowrap;">极光推送常见问题</span></span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<h1 id="anchor0" style="box-sizing: border-box; margin-right: 0px; margin-left: 0px; color: #313c52;"><span style="box-sizing: border-box;">一.ios收不到、安卓正常</span></h1>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="box-sizing: border-box; font-size: 20px;">基本上是超级签问题，可以找超级签客服确认是否支持，不行就更换超级签</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<h1 id="anchor3" style="box-sizing: border-box; margin-right: 0px; margin-left: 0px; color: #313c52;"><span style="box-sizing: border-box;">二.ios正常、安卓收不到</span></h1>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="box-sizing: border-box; font-size: 20px;"><span style="box-sizing: border-box; font-weight: bold;">1.开着游戏，推送广播无法收到</span></span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="box-sizing: border-box; font-size: 20px;">这个问题一般是由于配置不一致导致，检查极光后台配置与站点后台配置是否一致</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">如有不一致的情况，调整后重新打包</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="box-sizing: border-box; font-weight: bold; font-size: 20px;">2.开着游戏推送广播能收到，杀掉游戏进程无法收到</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">这个问题是厂商通道FCM没有配置正确，需要在firebase上注册应用，配置密钥和google-services文件</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="box-sizing: border-box; font-weight: bold; font-size: 20px;">3.指定玩家推送，无法收到</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;"><span style="font-size: 20px;">如果广播推送都正常，推送指定玩家无法收到（一般是玩家使用的app包版本不含极光推送配置信息，配置后打包以后下载的app才能使用极光推送）</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif;">&nbsp;</p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_450115.html">← 合规配置</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_570112.html">TG通知 →</a></div></body></html>

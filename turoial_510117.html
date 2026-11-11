@@ -1,0 +1,615 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>代理数据查询(新)</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 代理 / 代理数据查询(新)</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 18px;">1 、代理模式报表</span></h3>
+<p><span style="font-size: 16px;">该模块为每个代理模式每天产生的数据，包含顶层代理投注的记录。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p>&nbsp;</p>
+<p><picture><img style="max-width: 100%;" src="e038740182cdd71cd46bc556.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">1.2 部分字段说明</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该数据目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">结算周期：该代理模式结算的周期(日结、周结、月结等)</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">总有效投注：当天的总有效投注金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">投注人数：当天的投注人数（账号去重，点击跳转）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">奖励领取：当天的领取奖励的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领取人数：当天的领取奖励的人数（账号去重，点击跳转）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充金额：账号首次充值的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充人数：账号首次充值的人数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值金额：当天的充值金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值人数：当天的充值人数（账号去重，点击跳转）</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现金额：当天的提现金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现人数：当天的提现人数（账号去重，点击跳转）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正补单：当天修正补单的金额（包含手动加款、手动扣除）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正人数：当天修正补单的人数（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">佣金：该代理模式当天产生的佣金</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增代理：当天新增的代理数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增会员：当天新增的会员数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">顶层代理数：产生佣金的代理线数量，每条代理线只计算一次（去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">代理人数：产生佣金的代理人数</span></p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 18px;">2 、代理顶层报表</span></h3>
+<p><span style="font-size: 16px;">该模块查询每条代理线每天产生的相关数据，包含顶层代理投注。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p>&nbsp;</p>
+<p><picture><img style="max-width: 100%;" src="5262413b8bc2b9ee01fe5aaf.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">2.1 部分字段说明</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该代理数据目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">结算周期：该代理模式结算的周期(日结、周结、月结等)</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">有效投注：当天有效投注金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">投注人数：当天的投注人数（账号去重，点击跳转）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">奖励领取：当天的领取奖励的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领取人数：当天的领取奖励的人数（点击跳转下级优惠数据）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充金额：账号首次充值的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充人数：账号首次充值的人数（点击跳转下级财务数据）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值金额：当天的充值金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值人数：当天的充值人数（点击跳转下级财务数据）</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现金额：当天的提现金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现人数：当天的提现人数（点击跳转下级财务数据）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正补单：当天修正补单的金额（包含手动加款、手动扣除）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正人数：当天修正补单的人数（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">佣金：该代理模式当天产生的佣金</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增代理：当天新增的代理数（点击跳转所有代理）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增会员：当天新增的会员数（点击跳转所有会员）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">代理人数：产生佣金的代理人数</span></p>
+<h3>&nbsp;</h3>
+<h3><span style="font-size: 18px;">3、 代理数据报表</span></h3>
+<p><span style="font-size: 16px;">该模块主要是查询代理账号获得佣金、推广、转化率等相关数据，点击ID即可查询下级的信息。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; color: #ff0000;">特别说明：代理模块的时间查询为时间必填，不在支持删除时间查询</span></p>
+<p><span style="color: #ff0000;">注册转化率：注册人数/访问次数&nbsp;（该数值可超过100%）</span></p>
+<p><span style="color: #ff0000;">首充转化率：首充人数/注册人数</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">3.1 代理数据</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p>&nbsp;</p>
+<p><picture><img style="max-width: 100%;" src="360639989cb1864f339f34c2.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">3.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理使用的币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">注册来源：该账号的注册来源</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">有效直属数：该账号的有效的直属数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">总直属数：该账号的总的直属数包括无效</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">业绩：该账号的业绩</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">佣金：该账号的佣金</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">已领取：该账号已领取的佣金</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">待领取：该账号待领取的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">代理链接：该账号的代理链接</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">访问量：该账号的代理链接的访问量</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">注册人数：该账号的代理链接注册人数</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">代理数据查询所有的页面增加顶级代理ID和代理层数展示，增加下级投注留存和下级充值留存页面</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">下级充值留存，下级投注留存：</span><span style="font-size: 16px;">数据不显示当天的数据，默认为当月的数据，</span><span style="font-size: 16px;">支持三个月的数据查询，</span><span style="font-size: 16px;">对应的数据有如果没有则为-</span></p>
+<p><br><span style="font-size: 16px;">2日留存：2人次以上的充值的 &divide; 该时间段之内的充值人次 x 100%</span></p>
+<p><br><span style="font-size: 16px;">3日留存：2人次以上的充值的 &divide; 该时间段之内的充值人次 x 100%</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">首充人数：时间范围内该代理下玩家的首次充值人数</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; color: #ff0000;">注册转化率：注册人数/访问次数&nbsp;（该数值可超过100%）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; color: #ff0000;">首充转化率：首充人数/注册人数</span></p>
+<p><br><span style="font-size: 16px;">投注和留存的规则一样</span></p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 18px;">4 、代理本身报表</span></h3>
+<p><span style="font-size: 16px;">该模块为代理的猪头、充值、提现的相关数据。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p>&nbsp;</p>
+<p><picture><img style="max-width: 100%;" src="e1fa025a7e8e3f14383ed243.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">1.2 部分字段说明</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该数据目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">结算周期：该代理模式结算的周期(日结、周结、月结等)</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">投注次数：当天的投注次数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">输赢金额：该代理当天的游戏输赢金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">奖励领取：该代理当天的领取奖励的金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领取次数：该代理当天的领取奖励的次数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值金额：该代理当天的充值金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值次数：该代理当天的充值次数</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现金额：该代理当天的提现金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现次数：该代理当天的提现次数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正补单：该代理当天修正补单的金额（包含手动加款、手动扣除）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">修正次数：该代理当天修正补单的次数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">佣金：该代理当天产生的佣金</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增代理：该代理当天新增的直属代理数</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">新增会员：该代理当天新增的直属会员数</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">5、下级投注数据</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的投注数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">5.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级投注数据 （投注人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><picture><img style="max-width: 100%;" src="1a63f19cd9f86c750194af03.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">5.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">注册来源：该账号的注册来源</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">总投注：该账号下级总投注金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">投注人次：该账号的下级投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">棋牌投注：该账号下级的棋牌投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">棋牌人次：该账号的下级棋牌投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">电子投注：该账号下级的电子投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">电子人次：该账号的下级的电子投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">真人投注：该账号下级的真人投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">真人人次：该账号的下级真人投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">体育投注：该账号下级的体育投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">体育人次：该账号的下级的体育投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">彩票投注：该账号下级的彩票投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">彩票人次：该账号的下级彩票投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">电竞投注：该账号下级的电竞投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">电竞人次：该账号的下级的电竞投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">捕鱼投注：该账号下级的捕鱼投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">捕鱼人次：该账号的下级捕鱼投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">斗鸡投注：该账号下级的斗鸡投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">斗鸡人次：该账号的下级的斗鸡投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">区块链投注：该账号下级的区块链投注</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">区块链人次：该账号的下级区块链投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">6、 下级盈亏数据</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的盈亏数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">6.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级盈亏数据（盈亏人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><picture><img style="max-width: 100%;" src="3ca3356fa2ea0ea212b26848.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">6.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">注册来源：该账号的注册来源</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">总盈亏：该账号下级的总盈亏</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">盈亏人次：该账号的下级投注人次（账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="MsoNormal">棋牌盈亏：该账号下级的棋牌盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">棋牌人次：该账号的下级棋牌盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">电子盈亏：该账号下级的电子盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">电子人次：该账号的下级的电子盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">真人盈亏：该账号下级的真人盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">真人人次：该账号的下级真人盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">体育盈亏：该账号下级的体育盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">体育人次：该账号的下级的体育盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">彩票盈亏：该账号下级的彩票盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">彩票人次：该账号的下级彩票盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">电竞盈亏：该账号下级的电竞盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">电竞人次：该账号的下级的电竞盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">捕鱼盈亏：该账号下级的捕鱼盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">捕鱼人次：该账号的下级捕鱼盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">斗鸡盈亏：该账号下级的斗鸡盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">斗鸡人次：该账号的下级的斗鸡盈亏人次（账号去重）</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">区块链盈亏：该账号下级的区块链盈亏</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">区块链人次：该账号的下级区块链盈亏人次（账号去重）</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">7、 下级财务数据</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的财务数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">7.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级财务数据（人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><picture><img style="max-width: 100%;" src="a46b1ba231a9a54a95fc9a26.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">7.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">注册来源：该账号的注册来源</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充金额：该账号下级的首充金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">首充人次：该账号的下级首充人次</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p>充值金额：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级充值金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">充值人次：该账号的下级充值人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>提现金额：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级提现金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">提现人次：该账号的下级提现人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>充提差额：充值金额 - 提现金额=充提差额</p>
+<p>&nbsp;</p>
+<p>补单金额：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级修正补单的金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">补单人次：该账号的下级补单人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">8、 下级领取数据</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的领取数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">8.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级优惠数据 &nbsp;（人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><picture><img style="max-width: 100%;" src="d8765dfcc0b5b1ddf67e8297.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">8.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">注册来源：该账号的注册来源</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">活动领取：该账号下级的活动领取金额</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">活动人次：该账号的下级领取活动人次 （账号去重）</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p>任务领取：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级任务领取金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领任务人次：该账号的下级领取任务人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>返水领取：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级任务返水金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领返水人次：该账号的下级领取返水人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>VIP领取：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级VIP领取金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领VIP人次：该账号的下级领取VIP人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>代理佣金：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级任务领取代理佣金金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领佣金人次：该账号的下级领取佣金人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>利息宝：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">该账号的下级利息宝领取金额</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">领利息人次：该账号的下级领取利息宝人次 （账号去重）</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">9、下级充值留存</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的充值留存数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">9.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级充值留存数据 &nbsp;（人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;"><picture><img style="max-width: 100%;" src="a85f542e353d2866e490ed1c.png"></picture></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">9.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">X日留存：<span style="color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">查询日期范围内有过X天充值的人数/该时间段内总的投注人数*100%</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">X日人次：<span style="color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">查询日期范围内有过X天充值的人次</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 16px;"><span style="font-weight: bold;">10、 下级投注留存</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该模块为查询代理账号的直属下级的投注留存数据。 点击当前的代理ID，可依次查看对应的下级代理数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">10.1 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以选择对应的币种，显示当前币种的总计，默认全部币种，搜索时间范围内该代理的下级投注留存数据 &nbsp;（人次按照单日和账号去重）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p><picture><img style="max-width: 100%;" src="4e1a69069f665ae9b9f1f017.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">10.2 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">币种：该代理下级使用币种</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理ID：查询的代理ID</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的会员信息</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">上级代理：该账号的上级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">顶层代理：该账号的顶层代理</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">所处层数：该账号目前的所处层数</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif;"><span style="font-size: 16px;">代理模式：该账号目前的代理模式</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">成为代理时间：该账号成为代理的时间</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">X日留存：<span style="color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">查询日期范围内有过2天投注的人数/该时间段内总的投注人数*100%</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 16px;">X日人次：<span style="color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">查询日期范围内有过2天投注的人次</span></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_510114.html">← 佣金管理</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_570110.html">俱乐部管理 →</a></div></body></html>

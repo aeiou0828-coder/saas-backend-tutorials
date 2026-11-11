@@ -1,0 +1,145 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>彩金池管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 游戏 / 彩金池管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 16px;">一、彩金池列表</span></h3>
+<p><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">说明：展示已创建的所有彩金池，<span style="font-size: 16px;">可根据彩金池ID、币种、展示形式、状态、数据源搜索</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">列表操作：</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">1、搜索：可支持输入彩金池ID、币种、展示形式、状态进行搜索</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">2、新增：点击可新增彩金池</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">3、状态：点击展示、隐藏</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">4、修改：可以修改当条彩金池配置</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">5、详情：可查看当条彩金池配置状态</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">6、删除：可删除当条彩金池</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;">7、批量操作：支持批量删除</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><strong><span style="color: #000000; font-size: 16px;">彩金池配置生效需要10-20分钟，同一展示形式、同一币种彩金池开启状态下最多配置3个</span></strong></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="font-size: 16px;"><strong>二、虚拟彩金池</strong></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">1、<span style="color: #000000; font-size: 16px;">币种：必填，点击可选择对应币种下展示该虚拟彩金池</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">2、展示形式：单选，可勾选独立模块、展示在平台上、多个轮播</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000;"><span style="font-size: 16px;">3、彩金池底图：单选，迷你图(推荐)、大图</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000;"><span style="font-size: 16px;">（1）迷你图指迷你彩金池，配置后客户端会展示在类型文案旁边</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000;"><span style="font-size: 16px;">（2）支持配置的版式才会展示此功能：综合版1、综合版2、综合版3、综合版5、综合版6、综合版7、综合版10、电子版1、体育版2、体育版3</span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000;"><span style="font-size: 16px;"><img style="max-width: 100%;" src="fc107c54d2147960a5f18af3.png" width="545" height="415"></span></span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">4、展示位置：单选，根据展示形式的勾选项展示不同的展示位置</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">5、展示端：区分娱乐城展示、俱乐部展示</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">6、跳转类型：提供多个模块勾选，支持外部链接，选择外部链接可以输入网址和链接打开方式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">7、展示金额范围：支持自定义</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">&nbsp; &nbsp; &nbsp;注意：金额数字样式可配置大小，如金额太大会超出彩金池边框，请按需输入</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">8、小数点位数：选择无小数点、1或2</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">9、金额数字样式：</span><span style="color: #000000; font-size: 16px;">支持默认样式和自定义样式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">&nbsp; &nbsp; &nbsp;默认样式：单选，提供6种样式选择</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">&nbsp; &nbsp; &nbsp;自定义样式：按照提示配置</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">10、彩金池底图：支持默认样式和自定义样式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">11、状态：开启的话点击确认即配置生效</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">12、配置过程中可以查看右边的预览效果</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">注意：</span><span style="color: #000000; font-size: 16px;">部分定制版仅彩金池数字配置生效，取最先创建并开启展示得那条数据，若所有彩金池都关闭则不展示数字金额（详情可在定制群咨询）</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><strong><span style="font-size: 16px;">三、WG真实彩金池</span></strong></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">1、<span style="color: #000000; font-size: 16px;">币种：必填，点击可选择对应币种下展示该真实彩金池</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">2、展示形式：真实彩金池只能单独展示</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">3、展示位置：单选，勾选后展示在客户端对应位置</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">4、展示端：区分娱乐城展示、俱乐部展示</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">5、跳转类型：提供多个模块勾选，支持外部链接，选择外部链接可以输入网址和链接打开方式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">6、</span><span style="color: #000000; font-size: 16px;">金额数字样式：</span><span style="color: #000000; font-size: 16px;">支持默认样式和自定义样式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">&nbsp; &nbsp; &nbsp;默认样式：单选，提供10种样式选择</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">&nbsp; &nbsp; &nbsp;自定义样式：按照提示配置</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">7、爆奖动画：提供3种样式选择</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">8、彩金池底图：支持默认样式和自定义样式</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">9、状态：开启的话点击确认即配置生效</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><span style="color: #000000; font-size: 16px;">10、配置过程中可以查看右边的预览效果</span></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">注意：真实彩金池根据WG大彩金池推送，预计一天更新一次金额，如配置多个真实彩金池，金额都会展示一致</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 真实彩金池支持点击弹窗展示开奖记录、含彩金池游戏，点击游戏图标可直接进入</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 部分版式不支持真实彩金池配置，后台隐藏</p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;"><img style="max-width: 100%;" src="1c29698dc3a38e3f67463d8b.png" width="512" height="694"></p>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: medium;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_66.html">← 游戏管理</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_600109.html">会员投注细目 →</a></div></body></html>

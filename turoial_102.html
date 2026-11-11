@@ -1,0 +1,493 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>客服代充</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 财务 / 客服代充</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 3pt;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">客服代充</span></p>
+<h1 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 20px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">一、代充审核</span></h1>
+<h3 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><img style="max-width: 100%;" src="2609dde6516df4837a332396.png"></h3>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明</span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;人工充值，会员在前台与充值客服沟通后，通过大厅创建支付订单，</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">客服通过检验金额是否到账，若到账则审核通过，则用户账户即入账上分。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、字段说明</span></h2>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="112"><col width="501"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">会员账号</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">未充值会员: 该会员已有0笔成功充值订单</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">已首次充值: 该会员已有1笔成功充值订单</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">已多次充值: 该会员已有2笔及以上成功充值订单</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">VIP等级</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">依据网站设置条件分类，前台展示，会员可见。(会员管理-VIP等级)</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">会员层级</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">依据网站设置条件分类，前台不显示，仅后台可见。(会员管理-层级设置)</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">赠送金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该充值订单赠送金额。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">总上分金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">实际上分金额。根据会员实际充值成功金额换算得到实际上分金额。</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、若存在禁止领取通道赠送，则显示&ldquo;未赠送原型&rdquo;</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、未赠送原因类型如下：会员禁止领取优惠、会员自主放弃优惠、俱乐部成员无赠送金额、理赔中状不能领取赠送、借款状态禁止领取</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">交易状态</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">当前订单状态，仅显示需审核订单，当审核通过/拒绝后，订单会在此页面移除，并显示在全部代充页面。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、操作</span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="de93f34e3e5f94c2461c1029.png"><br>　(1) 审核通过：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">审核通过后即给客户上分。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 审核拒绝：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该订单将支付失败。无法再次确认入款。</span></span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></h2>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4、功能模块</span></h2>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="d7d1c4278bb34ffd4f120771.png"></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 搜索/高级搜索：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">能通过相关字段进行数据检索。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 审核设置：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">网站可自行设置是否开启二次审核功能，开启后，转账充值的订单将有二步审核。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="112"><col width="501"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">审核状态</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">开启后可为不同币种的会员分别设置最低金额限制</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 47px; height: 179px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="1ef005250756ab790838bfd3.png" width="47" height="179"></span></span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">币种符号表示金额</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 41px; height: 32px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="fcef897d50aa8b5d2e35c0c3.png" width="41" height="32"></span></span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">数字符号表示积分</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(4) </span></span><span style="background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="color: #081222; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #fcfdff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #081222; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #fcfdff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="box-sizing: border-box; font-weight: bold; vertical-align: baseline;">历史纪录：<span style="box-sizing: border-box; font-weight: bold; vertical-align: baseline;"><span style="color: #313c52; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">直接通过&ldquo;历史配置详情&rdquo;查看设置的当前版本、历史版本的对应内容。<strong id="docs-internal-guid-67ca056b-7fff-a487-db46-a6763b5d3036" style="font-weight: normal;"><span style="color: #313c52; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">存在多个设置项，点击不同设置项，即可分别查看各自的历史版本。</span></strong></span></span></span></span></span></span></span></span></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(5) <span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">刷新设置：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">设置订单页自动刷新</span></span></span></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(6) 导出报表：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">针对会员的订单信息记录导出excel。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;">&nbsp;</p>
+<h1 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 20px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">二、全部代充</span></h1>
+<h3 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><img style="max-width: 100%;" src="610dc1e600e43ad58d121d4a.png"></h3>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明</span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可查看、管理全部代充充值订单。</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、字段说明</span></h2>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="112"><col width="488"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">会员ID</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">首次充值/第二次充值的会员会标记显示。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">订单金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(1) 订单金额取会员申请金额，当补单或上分成功后去实际金额</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(2) 原订单金额和实际金额合并</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">赠送金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(1) 若存在禁止领取通道赠送，则显示&ldquo;未赠送&rdquo;</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(2) 未赠送原因类型如下：会员禁止领取优惠、会员自主放弃优惠、俱乐部成员无赠送金额、理赔中状不能领取赠送、借款状态禁止领取</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">交易状态</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">根据不同的状态显示，包含待支付、支付成功、支付超时、支付失败、补单审核中、二次审核中状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; padding: 5pt; overflow: hidden; overflow-wrap: break-word; border: 1pt solid rgb(0, 0, 0);">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: Microsoft YaHei;"><span style="white-space-collapse: preserve;">导入订单</span></span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt; overflow: hidden; overflow-wrap: break-word; border: 1pt solid rgb(0, 0, 0);">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(1) 多品牌站点的品牌ID改在 Excel 模板中填写，且为必填，单品牌站点选填。</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(2) 近30秒内通过 Excel 导入生成的订单必须人工审核，并自动写入订单后台备注。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、操作</span></h2>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="2b9e70b929ef3d80ae6da9e8.png"></span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 强制入款：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">单击后若开启二次审核，订单将进入转账审核页面进行二次审核。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 强制取消：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">单击后，该笔订单将被取消入款。</span></span></p>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></h2>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4、功能模块</span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4.1 创建订单</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">后台可灵活单独或批量配置上分操作、手动为用户上分。</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">通过选择会员账号或会员ID进行搜索，搜索成功后展示充值金额、充值方式、赠送金额或赠送比例、设置稽核倍数和代充客服、订单备注，实时为用户上分。</span></p>
+<ol style="margin-top: 0; margin-bottom: 0; padding-inline-start: 48px;">
+<li dir="ltr" style="list-style-type: decimal; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;" aria-level="1">
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若一步审核的订单，则直接扣当前人的额度。</span></p>
+</li>
+<li dir="ltr" style="list-style-type: decimal; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;" aria-level="1">
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若两步审核，则第一步审核的人不扣额度，第二步审核上分的人才扣额度。</span></p>
+</li>
+</ol>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="112"><col width="530"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">币种</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">订单金额、赠送金额为会员币种。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">额度说明</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">有设置上分额度才会在右上角显示,未设置则不限制额度，页面上也不显示额度相关内容。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">额度扣减说明</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">额度扣减说明：有额度限制，额度先扣，最终订单完结且未出款则额度返还。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 602px; height: 136px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="217dbcaab16c512067628056.png" width="602" height="136"></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong id="docs-internal-guid-dc51aa45-7fff-0e31-044a-7ae2876ddec6" style="font-weight: normal;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 602px; height: 489px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="2ef6957ce92e841c96e7d301.png" width="602" height="489"></span></span></strong></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;"><strong id="docs-internal-guid-9a8dff1c-7fff-7a8c-3cf9-8d91b34b808e" style="font-weight: normal;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 602px; height: 240px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="cfde7383d31c885c1eaaaff6.png" width="602" height="240"></span></span></strong></strong></span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4.2 代充补单</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若发生订单失败等其他因素，可后台手动为客户订单进行补单操作，每一笔提交的订单均有记录可查询，通过关联订单错误/失败的订单，创建补单关联数据，为用户补单上分。</span></p>
+<ul style="margin-top: 0; margin-bottom: 0; padding-inline-start: 48px;">
+<li dir="ltr" style="list-style-type: disc; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;" aria-level="1">
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该订单若不是待支付、充值超时、后台取消、充值失败状态不能补单。</span></p>
+</li>
+<li dir="ltr" style="list-style-type: disc; font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;" aria-level="1">
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">输入订单号点击搜索，依据不同补单原因弹出对应补单弹窗。</span></p>
+</li>
+</ul>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 额度说明</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">搜索出具体会员后，有设置上分额度才会在右上角显示，额度是按分数单位，未设置则不限制额度，页面上也不显示额度相关内容。</span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<h3 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 602px; height: 108px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="82f5cdb197625b0ac7b4c1fc.png" width="602" height="108"></span></span></h3>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 575px; height: 448px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="446c1f20d934ddf6d59c2426.png" width="575" height="448"></span></span></p>
+<h3 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></h3>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h1 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 20px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">三、代充配置</span></h1>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><img style="max-width: 100%;" src="a8e7692ae11be82bb24eb8ab.png"></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">对客服代充的渠道进行具体配置的页面</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、字段说明</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="112"><col width="488"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">子通道排序</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">透过上下移动调整通道排列顺序。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">客服名称</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">前台显示客服名称。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">客服类型</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即客服对话软件类型，如: 微信、QQ、支付宝或专属客服聊天视窗。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">联系方式</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该客服联系账号，如: QQ号。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">支持会员币种</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即该代充客服提供的上分会员币种，可复选。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">支持充值方式</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">即该代充客服提供的支付方式，如: 支付宝、微信、银行卡，可复选。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">会员层级</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可见该通道的层级会员。会员层级前台不显示，仅后台可见。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">今日充值金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该代充客服通道日累计充值金额。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">累计充值金额</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">该代充客服通道总累计充值金额。</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">停/启用</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">充值通道开关，关闭则不在前台显示。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、操作</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">须先点击锁定才会进入下一部操作</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 修改：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">单击后弹出修改弹窗。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 删除：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">前台开启的状态下无法删除通道。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 192px; height: 104px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="bdfe8fde653d743d3c8478e6.png" width="192" height="104"></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h2 dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4、功能模块</span></h2>
+<p><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%;" src="281676739ae605ffd6618712.png"></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 新增：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可新增客服代充通道，配置后展示在转账配置处。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　● 客服类型</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　　ａ．若选择类行为QQ、支付宝、微信，即填写对应客服帐号，会员添加该账号与客服联系。</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　　ｂ．</span>专属客服: 配置是自营的客服或者是第三方的客服平台，即表示通过第三方平台的客服链接。同时可设置该客服可以支持的充值类型(可多选):支付宝、微信、银行卡。</span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="border: none; display: inline-block; overflow: hidden; width: 602px; height: 425px;"><img style="max-width: 100%; margin-left: 0px; margin-top: 0px;" src="3604c9a2701eb4a1c884ddc1.png" width="602" height="425"></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 客服代充设置：</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　● </span>客服代充的稽核倍数：</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　　ａ．</span>可按会员层级配置「本金稽核倍数<span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">」、「奖金稽核倍数」。</span></span></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　　ｂ．</span></span><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">第一行默认全部会员，可不分层级设置；可点击「＋」号添加行进行<span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #313c52; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">单独</span></span></span></span></span>设置。</span></span></span></span></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　● </span>订单的有效时间，若设置10分钟，则表示用户发起充值10分钟内正常支付充值，否则订单自动取消。</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><img style="max-width: 100%;" src="71a7178375660227e7007e52.png"></span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(3) </span></span><span style="background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="color: #081222; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #fcfdff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="color: #081222; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #fcfdff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span style="box-sizing: border-box; font-weight: bold; vertical-align: baseline;">历史纪录：<span style="box-sizing: border-box; font-weight: bold; vertical-align: baseline;"><span style="color: #313c52; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">直接通过&ldquo;历史配置详情&rdquo;查看设置的当前版本、历史版本的对应内容。<strong id="docs-internal-guid-67ca056b-7fff-a487-db46-a6763b5d3036" style="font-weight: normal;"><span style="color: #313c52; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">存在多个设置项，点击不同设置项，即可分别查看各自的历史版本</span></strong></span></span></span></span></span></span></span></span></span></span></p>
+<p dir="ltr" style="line-height: 1.6; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_99.html">← 投注任务(稽核)</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_150103.html">汇率和银行管理 →</a></div></body></html>

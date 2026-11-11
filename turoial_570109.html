@@ -1,0 +1,470 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>盲盒抽奖</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 盲盒抽奖</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">盲盒抽奖 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin: 8px 0px 0px; line-height: 1.85;">通过抽盲盒赢奖金与实物的趣味玩法，刺激玩家用余额持续参与、提升活跃与充值；中奖金额直接到余额、无需打码，体验顺畅。</p>
+<div style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 20px 0px;"><strong style="color: #b45f06;">目录</strong>
+<ul style="list-style: none; margin: 8px 0px 0px; padding-left: 8px;">
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s1">一、功能概述</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s2">二、配置盲盒（按币种）</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s3">三、奖项与概率</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s4">四、连抽与限时折扣</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s5">五、免费次数</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s6">六、公共设置</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s7">七、查看记录</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s8">八、运营建议</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; color: #9a5005;" href="#s9">九、常见问题 FAQ</a></li>
+</ul>
+</div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">一、功能概述</h2>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 383.688px;"><col style="width: 1747.92px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">项目</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">解决什么</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">给玩家一个趣味、有惊喜感的消费出口：用余额抽盲盒赢奖金和实物，带动活跃、复充与留存。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">玩法</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">玩家用余额购买盲盒抽奖，或用免费次数抽奖（免费次数优先用）。抽中奖金直接到余额，抽中实物走发货。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">盲盒类型</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">小盲盒、大盲盒、超级盲盒 3 种，每个币种每种各一套独立配置。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">入口</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">后台：优惠 &rarr; 盲盒抽奖；客户端可在首页、我的、营销广告、悬浮图等多处配置入口，弹窗展示。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">奖励形式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">固定奖金、随机奖金、免费盲盒抽奖次数、实物、谢谢参与、0概率奖品（仅展示）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">二、配置盲盒（按币种）</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">在【优惠 &rarr; 盲盒抽奖 &rarr; 盲盒管理】，每个币种下有小/大/超级 3 种盲盒，点对应行【修改】配置。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 2131.6px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px; text-align: center; vertical-align: top; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto; background: #ffffff;" src="be89fa0fd1bc1709024c684a.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 127.896px;"><col style="width: 511.583px;"><col style="width: 1492.12px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">序</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">1</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">盲盒开关</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">控制该类型盲盒是否开启，关闭后客户端不展示。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">2</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">品牌名称</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">多品牌站点展示。勾选品牌即该盲盒对所选品牌开启；目前各品牌共用同一套配置。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">3</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">盲盒名称</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">系统自带或自定义。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">4</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">每日购买次数上限</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">每个玩家每天最多买几次。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">5</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">是否公开概率和成本</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">展示则前台向玩家公开概率与成本，不展示则隐藏。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">6</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">盲盒价格</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">单次抽奖消耗的余额。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">7</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">真实成本</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">实际期望支出，可点【计算真实成本】按奖项自动算。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">8</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">展示成本</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">给玩家看的价值感，通常高于真实成本，可点【计算展示成本】。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">三、奖项与概率</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">每个盲盒配多个奖项，每项设类型、奖励内容、真实中奖概率、展示中奖概率和图标。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 468.948px;"><col style="width: 1662.66px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">奖项类型</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">固定奖金</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">中奖即得一个固定金额。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">随机奖金</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">在设定区间内随机一个金额。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">免费盲盒抽奖次数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">中奖赠送免费抽奖次数，可指定送小、大或超级盲盒的次数，可跨类型（如小盲盒里中超级盲盒 1 次）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">实物</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">中奖赠送实物，玩家填收货地址后由后台在实物订单发货。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">谢谢参与</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">未中奖，奖金为 0。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">0概率奖品（仅展示）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">真实中奖概率固定为 0、不可编辑，玩家永远抽不中，仅用于客户端橱窗展示营造大奖氛围。这里填的金额只是用来算出一个好看的展示中奖概率，纯展示、不实际派奖；也可填文字说明或虚拟奖励名称。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">概率与成本怎么配（两种方式）</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 2131.6px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px; text-align: center; vertical-align: top; background: #ffffff;"><img style="max-width: 100%;" src="7a98325a99b6360e03cd92d8.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 511.583px;"><col style="width: 1620.02px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">操作</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">先定概率（自定义）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">手动填好每个奖项的真实中奖概率（和展示中奖概率），填完点【计算真实成本】【计算展示成本】，系统按你填的概率算出对应成本。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">先定成本（生成概率）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">不手动填概率，填好成本目标后点【生成中奖概率】，系统按成本自动分配各奖项概率。<strong>多次点【生成中奖概率】，各奖项的概率分布会变，但总成本不变</strong>。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">返奖率怎么看（重点）</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">配好后系统会算出<strong>返奖率＝真实成本 &divide; 盲盒价格</strong>，并在页面提示。这是判断盲盒赚不赚钱的核心指标，配置前一定要看。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 468.948px;"><col style="width: 1662.66px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">返奖率</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">含义</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">大于 100%</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">派出去的奖励超过盲盒售价，<strong>站点亏钱</strong>（让利给玩家）。例：盲盒价 110、真实成本 200，返奖率 181.82%，每抽一次平均倒贴。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">等于 100%</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">收支持平，不赚不亏。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">小于 100%</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">派出去的少于售价，<strong>玩家整体是亏的、站点赚钱</strong>。返奖率越低站点利润越高。</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fff5e6; border-left: 4px solid rgb(180, 95, 6); border-radius: 0px 8px 8px 0px; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; color: #3a3a3a;"><strong style="color: #b45f06;">怎么取舍：</strong>拉新、冲活跃、做活动引流时，可短期把返奖率做到接近甚至略高于 100%，让玩家尝到甜头；长期常驻盈利时，把返奖率控制在合理利润区间，但<strong>别压得太低</strong>&mdash;&mdash;返奖率太低中奖体验差，玩家很快不玩。建议结合活动目的定，再配合限时折扣、免费次数调节节奏。</div>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">四、连抽与限时折扣</h2>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 383.688px;"><col style="width: 1747.92px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">项目</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">连抽</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">10 连抽即连续抽 10 次，一次扣 10 次的钱。玩家余额要够整组才能抽（如单价 10、10 连抽需余额至少 100）。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">限时折扣</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">设折扣时间段，对抽 1 次、10 连抽、50 连抽分别配。折扣方式为固定金额立减或打折比例，按单价优惠（如优惠 10 即每次抽奖少花 10），可设每日折扣次数上限。</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 2131.6px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px; text-align: center; vertical-align: top; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto; background: #ffffff;" src="e51d429bc6e6e1fc167af444.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">五、免费次数</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">玩家抽奖时优先消耗免费次数，用完才扣余额。免费次数来源：任务、盲盒抽奖、意外惊喜、商城等奖励赠送，或后台手动发放。每笔免费次数在获得时固定各自的过期时间，到期作废。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">在【会员盲盒记录】顶部点【新增抽奖次数】手动给会员发免费次数：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 2131.6px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 6px; text-align: center; vertical-align: top; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block; margin: 0px auto; background: #ffffff;" src="68b5e56b29d9edf761d6acc2.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 468.948px;"><col style="width: 1662.66px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">添加方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">单次添加：手填账号或会员 ID，多条逗号拼接，最多 200 个。批量添加：上传文档批量发放，一次最多 100 万会员（建议每文档不超过 100 万、文档不超过 50M，超出分批；每会员单次最多加 100 次），可下载模板。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">盲盒类型</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">指定发放的免费次数用于小、大还是超级盲盒。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">免费抽奖次数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">本次发放的次数。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">免费次数有效天数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">0-31 天，0 表示今日过期。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">六、公共设置</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">在盲盒修改弹窗内还有面向整个盲盒活动的公共设置：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 468.948px;"><col style="width: 1662.66px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">项目</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">中奖公告</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">开启后客户端滚动展示中奖播报，营造活动氛围。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">领取入口与限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">设置可参与的终端、设备/IP 限制、绑卡/KYC/首充/最近充值打码等参与条件，按站点实际情况勾选。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">规则说明</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">系统自带或自定义，展示给玩家。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">活动页面样式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">样式一至样式六，下拉选客户端展示风格。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">七、查看记录</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">盲盒抽奖共 4 个 tab，盲盒管理为配置页，另 3 个为查询页。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 511.583px;"><col style="width: 1620.02px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">tab</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">作用</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">会员盲盒记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">查看会员的免费次数、累计抽奖、累计消耗与中奖情况；可手动新增免费次数、查看免费次数明细。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">中奖记录</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">记录每一次抽奖的明细，方便后台查询：会员、盲盒名称、消耗金额、抽奖方式（余额抽奖/免费次数抽奖）、奖励类型、奖励金额、中奖时间等，可按奖励类型、盲盒类型、抽奖方式筛选。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">实物订单</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">管理中奖实物的发货：填收货信息、快递单号发货，并按订单状态做对应操作（详见下方）。</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">实物订单的状态与操作</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;">玩家中实物后订单进入【实物订单】，不同订单状态对应不同操作：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 341.052px;"><col style="width: 980.531px;"><col style="width: 810.021px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">订单状态</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">说明</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">可用操作</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">待发货</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">玩家已填收货地址、等待后台发货。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">修改、详情、强制取消、删除</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">已发货</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">已填快递单号和快递公司发出。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">修改、详情、强制签收、删除</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">已签收</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">玩家已收货（或被强制签收）。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">详情、删除</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">已取消</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">强制取消后的状态，后台和客户端都仍展示。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">修改、详情、删除</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">已删除</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">删除后的状态，客户端不再展示，后台仍可查看。</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">修改、详情</td>
+</tr>
+</tbody>
+</table>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 8px 0px; line-height: 1.85;"><strong>批量操作：</strong>勾选多条订单后可批量发货、批量修改、批量强制签收、批量强制取消、批量删除，提升大量实物订单的处理效率。</p>
+<h2 id="s8" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">八、运营建议</h2>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 2132.27px; margin: 8px 0px;" border="1"><colgroup><col style="width: 426.312px;"><col style="width: 810px;"><col style="width: 895.292px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">维度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">建议</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85;">提示</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">价格梯度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">小盲盒低价拉新尝鲜，大/超级盲盒高价高回报留住大额玩家</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">三档拉开价格和最高奖金差距，给玩家进阶动力。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">成本控制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">先点计算真实成本核对期望支出，再上线</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">真实成本接近或超过盲盒价格会亏，务必先算返奖率。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">免费次数引流</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">用任务/意外惊喜发小盲盒免费次数，让玩家先体验</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">免费次数有有效期，配合活动节奏发放促回流。</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; color: #9a5005; font-weight: bold; white-space: nowrap; line-height: 1.85;">限时折扣</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">大促时段对连抽做立减，刺激批量抽</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85;">设每日折扣次数上限，避免被过度薅。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s9" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px; line-height: 1.85;">九、常见问题 FAQ</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：玩家抽奖优先扣免费次数还是余额？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：优先用免费次数，用完才扣余额。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：连抽为什么点不了？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：连抽要余额够整组才能抽，如单价 10、10 连抽需余额至少 100，不足则按钮不可点。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：真实成本和展示成本有什么区别？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：真实成本是实际期望支出、按真实概率派奖；展示成本是给玩家看的价值感，通常更高。是否对外展示由【是否公开概率和成本】控制。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：0概率奖品有什么用？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：真实中奖概率固定为 0、抽不中，仅在客户端橱窗展示营造大奖氛围吸引参与，填的金额只用来算出好看的展示概率，不实际派奖。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：抽中奖金要打码才能提现吗？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不用。盲盒抽奖直接消耗余额，中奖金额直接到余额，无打码要求，可直接提现。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：强制取消和删除实物订单有什么区别？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：强制取消后订单状态为【已取消】，后台和客户端都还能看到；删除后状态为【已删除】，客户端不再展示，后台仍可查看。两者都可批量操作。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：实物订单太多怎么快速处理？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：勾选多条订单用批量操作：批量发货、批量修改、批量强制签收、批量强制取消、批量删除。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：想查某个会员每次抽奖的明细去哪看？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：在【中奖记录】查，每次抽奖都有记录，含消耗金额、抽奖方式、奖励类型与金额、中奖时间，可按奖励类型/盲盒类型/抽奖方式筛选。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：免费次数会过期吗？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：会。每笔免费次数在获得时就固定了各自的过期时间，到期作废。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_480118.html">← 公积金</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_660109.html">金融SVIP →</a></div></body></html>

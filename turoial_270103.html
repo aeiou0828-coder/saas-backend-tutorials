@@ -1,0 +1,143 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>代理数据查询(旧)</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 代理 / 代理数据查询(旧)</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 18px;">1 代理数据查询教程</span></h3>
+<p><span style="font-size: 16px;">该模块主要是查询当前平台中所有的代理的直属数据、其他数据和个人数据的提现、充值、有效投注、业绩、输赢、优惠等涉及所有的日常行为的数据。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; color: #ff0000;">特别说明：一级净盈利和一级代理没有其他数据</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">1.1 表头展示部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">该部分可针对表头来进行设定，同时可以进行多选。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">选择直属数据，则显示的所有的代理的直属成员的数据；</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">选择其他数据，则显示业主中所有代理的其他成员数据；</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">选择个人数据，则显示该代理个人数据情况；</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">多选是，表头排序为直属数据--其他数据--个人数据依次排序；</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示</span></p>
+<p><span style="font-size: 16px;"><picture><img style="max-width: 100%;" src="040df4fa39f6bbe1baf86856.png" width="1363" height="98"></picture><br></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">1.2 搜索部分</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">搜索部分可以根据选择对应的币种，显示当前币种的总计。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">如下图所示：</span></p>
+<p>&nbsp;</p>
+<p><picture><img style="max-width: 100%;" src="c8e1dc27663ddf452dbace10.png"></picture></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 16px;">1.3 部分字段说明</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">代理账号：可<span style="box-sizing: border-box;">点击，点击查询该代理账号的下级代理</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">上级代理：可点击，点击查询该代理账号的下级代理</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">直属（其他）成员：该代理的直属人数总和</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">直属（其他）代理：该代理下的直属代理总和</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">直属（其他）会员：该代理下的直属会员总和</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #ff0000; font-size: 16px;">其他的字段则为统计时间内的查询数据。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; color: #ff0000;">直属（其他）成员：<span style="box-sizing: border-box;">直属下级人数总和，点击+可展开，点击展开之后，则显示直属额外的字段信息。</span></span></p>
+<p>&nbsp;</p>
+<p><span style="box-sizing: border-box;">特别说明：<span style="color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">仅限搜索当日数据会去重，若查询跨日数据，展示的人次不去重</span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">特别说明：代理模块的时间查询为时间必填，不在支持删除时间查询</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">代理数据查询所有的页面增加顶级代理ID和代理层数展示</span></p>
+        </article><div class="bottom-nav"><a href="turoial_36.html">← 代理设置</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_480119.html">代理模式 →</a></div></body></html>

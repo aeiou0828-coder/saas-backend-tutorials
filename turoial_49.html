@@ -1,0 +1,638 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VIP奖励</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / VIP奖励</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">VIP奖励 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin: 8px 0px 0px; line-height: 1.85;">分层激励高净值玩家，通过晋级、工资、生日礼金分层激励玩家</p>
+<div style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 20px 0px;"><strong style="color: #b45f06;">目录</strong>
+<ul style="list-style: none; margin: 8px 0px 0px; padding-left: 8px;">
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s1">一、功能概述</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s2">二、配置 VIP 等级（按币种）</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s3">三、VIP 公共设置</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s4">四、批量操作与会员等级管理</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s5">五、客户端展示</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s6">六、运营建议</a></li>
+<li style="line-height: 2;"><a style="text-decoration: none; outline: none !important; -webkit-tap-highlight-color: transparent !important; color: #9a5005;" href="#s7">七、常见问题 FAQ</a></li>
+</ul>
+</div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">一、功能概述</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">VIP 是会员分层激励体系。按充值/打码量级把会员划分等级，配套日/周/月工资、晋级奖金、生日礼金、提现特权等差异化奖励。运营通过差异化激励留住高净值玩家。</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">维度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; vertical-align: middle; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">入口</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">优惠 &rarr; VIP奖励（奖励层）；会员 &rarr; VIP等级（特权层 - 提现额度/次数/免手续费）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">配置层级</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">VIP 列表按币种独立配置；多品牌共用一套（不分品牌）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">最大等级</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">最多 100 级 + 默认 VIP0 = 共 101 级</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">奖励种类</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">晋级奖金（一次性）/ 日工资 / 周工资 / 月工资 / 生日礼金（5 类，独立配置）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">奖励到账</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">先入【待领取】，玩家点领取走小额直领 / 大额审核；过期按公共配置自动到账或作废</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">二、配置 VIP 等级（按币种）</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">在【优惠 &rarr; VIP奖励】顶部下拉切换币种，每个币种独立配置一套等级表。如下图：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1404.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="988936245a97e48b7e60ded6.png" alt="VIP 列表（按币种切换）+ 顶部按钮区"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">2.1 顶部按钮</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 84.25px;"><col style="width: 252.75px;"><col style="width: 1067.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">序</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">按钮</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">1</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">币种下拉</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">切换查看不同币种的 VIP 配置</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">2</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">应用到所有币种</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">把当前币种整套配置一键复制到勾选的其他币种（弹窗多选）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">3</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">VIP开关</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">按币种控制（当前币种下生效）。关闭后：①该币种的 VIP 模块在客户端不展示；②该币种玩家的待领取 VIP 奖励也不能领取（领取入口同步关闭）。多币种站点需逐币种切换开关</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">4</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">VIP公共设置</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">所有币种/品牌通用的全局配置（保级/领取时间/派发方式/图标/常见问题等）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">5</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">详情</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">查看最近 30 次修改历史 + 当前配置详情；不受权限控制</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">6</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">当前版本下拉</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">查看历史版本配置，<strong>只读不可回滚</strong></td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">7</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">+ 新增等级</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">列表底部新增空行，可连续点击添加多行后依次填写、点【确认】提交</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">8</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">导入修正</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">按会员维度批量调 VIP 等级（详见 4.2）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; text-align: center; line-height: 1.85; font-size: 15px;">9</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">批量修改</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">列表所有行变为可编辑，可逐行改也可下载 Excel 整体改后导入（详见 4.1）</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">2.2 VIP 等级字段</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 252.75px;"><col style="width: 1151.43px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">VIP 等级</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">VIP0 ~ VIP100；VIP0 为系统默认等级</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">当前人数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">该等级当前会员数（点击可查看会员列表）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">预览图</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">该等级 VIP 图标（按公共设置选的样式合成或自定义上传）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">晋级需再充值</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>相对当前等级再充多少</strong>升级，与历史累计无关；填 0 = 不限制</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">晋级需再打码</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">同上，按再打多少升级；与充值是【且】关系，两项都达成才升级。两项都填 0 = 玩家直接达到最高等级</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">晋级奖金</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">升级时一次性发放的金额；0 = 无该奖励</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">上月充值 / 上月打码</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">保级条件（公共设置开启保级才生效）。上月达不到 &rarr; 下月用户登录时降级。0 = 不限制（不会因此降级）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">月工资段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">当月充值 + 当月打码 = 达标条件；月工资金额 = 单周期可领；月累计封顶 = 单月领取上限。<strong>填 0 = 无门槛</strong>领工资</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">周工资段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">当周充值 + 当周打码 + 周工资 + 周累计封顶（同上）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">日工资段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">当日充值 + 当日打码 + 日工资 + 日累计封顶（同上）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">生日礼金</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">生日当天 00:00 后可领的金额；0 = 无</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold; white-space: nowrap;">操作</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">修改（行内编辑&rarr;取消/确认）</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1404.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="00ea918239329dc03bc840e5.png" alt="VIP 等级行修改 - 行内编辑示例"></td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fff8e6; border-left: 4px solid rgb(180, 95, 6); border-radius: 0px 8px 8px 0px; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; color: #3a3a3a;"><strong style="color: #b45f06;">注意：</strong>各类奖励（晋级奖金、日/周/月工资、生日礼金）金额所有等级都填 0 &rarr; 客户端会隐藏该奖励板块。运营若想精简客户端展示，把不要的奖励类全填 0 即可。</div>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">三、VIP 公共设置</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">点【VIP公共设置】打开弹窗，所有币种与品牌共用这套设置：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 702.089px;"><col style="width: 702.089px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto;" src="1b8f1f252b807c30c42bc3ed.png" alt="VIP 公共设置 - 五段奖励配置"></td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff; vertical-align: top;"><img style="max-width: 100%; height: auto;" src="169fe336be8de33cfc4e8992.png" alt="VIP 公共设置 - 客户端展示设置"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.1 全局开关</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">VIP升级时弹窗提醒</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">玩家升级时是否在客户端弹窗提示</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">保级开关</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">开启 = 不满足上月保级条件自动降级；关闭 = 永不降级</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">晋级奖励限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">① 只可领当前等级对应的晋级奖励（默认）；② 可领取降级前等级已产生的晋级奖励（避免降级丢奖客诉）</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.2 五段奖励独立配置</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">每日工资 / 每周工资 / 每月工资 / 生日礼金 / 晋级奖金 五段，每段都有以下三项配置：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 337px;"><col style="width: 1067.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">配置项</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">选项与说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">领取时间</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">次日 / 实时领取（影响留存） / 每日（每周/每月） / 下周（下月）。<strong>实时领取（影响留存）</strong>= 给运营的提示，建议次日领，实际运营中实时让用户当天领完就跑会拉低留存数据</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">晋级时是否重复领取</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>可重复领取（含跨级部分）</strong>= 跨过的中间等级奖励都补发，玩家可领多份；<strong>只能领最高一档</strong>= 只领最终等级，跨过的不补差但触发补差值（按当前等级金额-已发金额生成新奖励）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">奖励领取过期天数</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">0 = 周期结束直接过期；&gt; 0 = 周期结束 + X 天过期</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.3 派发方式（日/周/月/生日 通用）</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 337px;"><col style="width: 1067.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">派发方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">玩家自领-过期自动到账</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">奖励先入待领取，玩家不点也不丢，过期系统自动发到余额（仍走稽核）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">玩家自领-过期作废</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">过期未领则丢失，玩家需及时领取</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.4 其它设置（沿用站点通用）</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">领取终端、更多申领限制、禁止参与层级（黑名单）、稽核倍数、奖金稽核指定平台、规则说明（自定义/系统自带）。详见站点通用公共配置。</p>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.5 客户端展示设置</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">VIP常见问题</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">开关。开启后客户端 VIP 页底部展示常见问题板块；同时需在【运营&rarr;客服管理&rarr;常见问题】配置【问题类型=VIP】+ 状态【已发布】才会展示</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">VIP展示方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">列表展示 / 卡片展示，决定客户端 VIP 页的展示形态</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">图标样式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">默认图标可按 VIP 颜色、等级样式自由组合配置（卡片展示模式还可叠加 VIP 背景），卡片样式额外提供 1-5 套预设；选自定义上传整图（&le;1MB，240&times;240，最多 100 张）</td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">3.6 领取时间与过期规则详解</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">每日 / 每周 / 每月 俸禄各自可单独配置领取时间与过期天数，组合方式如下：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 196.58px;"><col style="width: 421.25px;"><col style="width: 786.348px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">领取方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">时间设置</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">领取规则</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">次日</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">单时间点（如 10:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，次日设定时间点以后可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">实时领取</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">单时间点（如 10:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，今日设定时间点以后即可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每日</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">时间区间（如 10:00:00-15:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，仅每日设定时间区间内可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">下周</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">星期 + 时间点（如 周二 10:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，下周指定星期的时间点以后可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每周</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">星期 + 时间区间（如 每周二 10:00:00-15:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，仅每周指定星期的时间区间内可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">下月</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">日期 + 时间点（如 下月 2 日 10:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，下月指定日期的时间点以后可领取</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每月</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">日期 + 时间区间（如 每月 2 日 10:00:00-15:00:00）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">今日产生的奖励，仅每月指定日期的时间区间内可领取</td>
+</tr>
+</tbody>
+</table>
+<h4 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 14px 0px 6px; font-size: 15px;">过期规则总结</h4>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;"><strong>过期时间 = 周期结束时间 + 过期天数</strong>。</p>
+<ul style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 6px 0px; padding-left: 24px; line-height: 1.95;">
+<li>过期天数 = 0：周期结束直接过期</li>
+<li>过期天数 = X 天：周期结束后第 X 天的 23:59:59 过期</li>
+<li>日俸禄周期 = 每日；周俸禄周期 = 每周（周日结束）；月俸禄周期 = 每月（月底结束）</li>
+<li>过期后按【派发方式】处理：自动派发到账 / 直接作废</li>
+</ul>
+<h4 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 14px 0px 6px; font-size: 15px;">示例 1：次日领取 + 过期 1 天</h4>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;">配置：领取方式=次日，选择时间=10:00:00，过期天数=1 天</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 196.58px;"><col style="width: 1207.6px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">奖励类型</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">规则</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每日俸禄</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">17 号产生 &rarr; 18 号 10:00:00 后可领 &rarr; 18 号 23:59:59 过期</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每周俸禄</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">本周（12-19 号）任意一天产生 &rarr; 次日 10:00:00 后可领 &rarr; 周期结束（周日 23:59:59）+ 1 天 = 下周一（20 号）23:59:59 过期</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">每月俸禄</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">11 月任意一天产生 &rarr; 次日 10:00:00 后可领 &rarr; 周期结束（11 月 30 日 23:59:59）+ 1 天 = 12 月 1 日 23:59:59 过期</td>
+</tr>
+</tbody>
+</table>
+<h4 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 14px 0px 6px; font-size: 15px;">示例 2：每周领取 + 过期 1 天</h4>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;">配置：领取方式=每周，选择时间=每周二 10:00:00-15:00:00，过期天数=1 天</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;"><strong>每周俸禄</strong>：本周（12-19 号）任意一天产生 &rarr; 仅每周二 10:00:00-15:00:00 可领取 &rarr; 周期结束（周日 23:59:59）+ 1 天 = 下周一（20 号）23:59:59 过期。如本周内的可领时间窗（周二 10-15 时）已过且玩家未领，则只能等下周二再领，但要在过期前。</p>
+<h4 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 14px 0px 6px; font-size: 15px;">示例 3：每月领取 + 过期 7 天</h4>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;">配置：领取方式=每月，选择时间=每月 2 日 10:00:00-15:00:00，过期天数=7 天</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 6px 0px;"><strong>每月俸禄</strong>：11 月任意一天产生 &rarr; 仅每月 2 日 10:00:00-15:00:00 可领取 &rarr; 周期结束（11 月 30 日 23:59:59）+ 7 天 = 12 月 7 日 23:59:59 过期。过期后按派发方式自动到账或作废。</p>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">四、批量操作与会员等级管理</h2>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.1 批量修改 VIP 等级表配置</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">点【批量修改】，列表所有行变成可编辑输入框，顶部按钮变为【下载当前配置】【导入修改】【取消】【确认】。两种用法：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 337px;"><col style="width: 1067.18px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">用法</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">操作步骤</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">列表手动修改</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">逐行修改字段 &rarr; 点【确认】保存提交</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">用 Excel 批量修改</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">点【下载当前配置】拿模板 &rarr; 在 Excel 改完 &rarr; 点【导入修改】预填到列表 &rarr; 检查无误后点【确认】才真正提交</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #eef4fb; border-left: 4px solid rgb(58, 109, 181); border-radius: 0px 8px 8px 0px; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; color: #3a3a3a;"><strong style="color: #3a6db5;">说明：</strong>导入只是前端预填，不会自动提交。无论行内改还是 Excel 改，最终都要点【确认】才生效。</div>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.2 导入修正 - 批量调会员 VIP 等级</h3>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">点顶部【导入修正】，弹窗按提示上传 Excel 即可批量调整指定会员的 VIP 等级。</p>
+<div style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-left: 4px solid rgb(58, 109, 181); background: #eef4fb; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; border-radius: 6px;"><strong style="color: #3a6db5;">安全验证：</strong>【导入修正】等需要身份校验的操作，是否要输入登录密码或 Google 验证码，统一由【系统管理 &rarr; 账号权限 &rarr; 安全设置 &rarr; 优惠审核验证】控制（仅持有者可见）；两项都设为无需验证时，提交后直接通过。</div>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">字段</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">说明</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">导入方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">严格校验（数据格式全部正确才上传）/ 自动跳过错误（不推荐）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">数据上传</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">点击上传 Excel，每文档&le;100 万条，文件&le;50M</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">验证密码</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">需输入登录密码确认操作</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">模板下载</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">下载标准 Excel 模板，按字段顺序填写</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fff8e6; border-left: 4px solid rgb(180, 95, 6); border-radius: 0px 8px 8px 0px; padding: 10px 14px; margin: 14px 0px; line-height: 1.85; color: #3a3a3a;"><strong style="color: #b45f06;">导入修正后的关键约束（防薅羊毛）：</strong><br>1、修改后会员的<strong>晋级累计从 0 开始</strong>重新算<br>2、修改后等级对应的<strong>晋级奖励不发</strong><br>3、周期性日/周/月工资<strong>等下个周期才能领</strong><br>4、会员列表批量新增导入会员遵循同样规则</div>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">4.3 详情 / 历史版本</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">入口</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">用途</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">详情</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">查看最近 30 次修改历史 + 当前配置详情；不受权限控制（任何运营都能查）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">当前版本下拉</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">切换查看历史版本配置；<strong>只读不可回滚</strong>，如需恢复旧配置需手动改回</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">五、客户端展示</h2>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">5.1 两种展示形态</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">展示方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">特点</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">列表展示</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">所有等级垂直列表，每行可展开看奖励详情；适合等级数多（10+）的站点</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">卡片展示</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">大卡片聚焦当前等级 + 横向 tab 切换 + 权益对比区，引导玩家升级；适合等级数少（&le;10）的站点</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 702.089px;"><col style="width: 702.089px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="1f4ec9a4d5942507c8e67b78.png" alt="列表展示"></td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px; text-align: center; background: #ffffff;"><img style="max-width: 100%; height: auto;" src="eaee98e2b7b92ec62419ae11.png" alt="卡片展示"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; margin: 18px 0px 8px; font-size: 17px;">5.2 客户端按钮文案与状态</h3>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 421.25px;"><col style="width: 982.929px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">奖励状态</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">客户端按钮</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">未产生（条件未达）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>充值</strong> / <strong>投注</strong>（按缺哪项条件展示，引导玩家行动）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">已产生（待领取）</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>领取 + 过期倒计时</strong>（已可领）<br><strong>领取置灰 + 可领取倒计时</strong>（还没到可领时间）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">大额审核中</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>审核中</strong>（点击弹"奖励正在审核中"提示）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">审核拒绝</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>被拒绝</strong>（置灰）</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">已取消</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;"><strong>已取消</strong>（置灰）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">六、运营建议</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 8px 0px;">VIP 不只是奖励发放工具，更是会员分层激励与情感连接体系。下表从玩家心理与运营节奏视角给出建议：</p>
+<table style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1404.75px; margin: 8px 0px;" border="1"><colgroup><col style="width: 308.911px;"><col style="width: 1095.27px;"></colgroup>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">维度</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; background: #fbe8d8; color: #9a5005; font-weight: bold; text-align: center; line-height: 1.85; font-size: 15px;">建议</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">新人引导</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">前 2-3 级晋级条件设低，让新玩家快速升级，强化"已是 VIP"身份认同</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">充值促进</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">用【晋级奖金】+【晋级进度条】做"再充 X 元就升级"的钩子，撬动二次充值</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">展示方式</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">等级 &le; 10 选卡片展示，权益对比刺激升级；等级 &gt; 10 选列表展示</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">奖励包成本</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">各等级总奖励占该等级充值额的 5-15%，超出 20% 需审视</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">奖励组合</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">五类奖励选 2-3 类即可，集中预算撬动重点指标，不要的填 0 隐藏</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">大客留存</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">高 VIP 给身份感（专属图标 / 生日礼金大额），不只靠金钱；VIP 充值贡献率重点监控</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">仪式感设计</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">生日礼金做差异化（按等级金额拉开），晋级开启升级弹窗提醒，强化情感连接</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">流失预警</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">保级条件让 80% 玩家能保住；对临界保级玩家定向推活动，避免大面积降级流失</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">晋级奖励限制</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">保级开启时建议配【可领降级前已产生】，避免降级丢奖客诉</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">跨级处理</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">新站点配【可重复领取】激励充值；成熟站点配【只能领最高一档】控成本</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px; color: #9a5005; font-weight: bold;">活动配合</td>
+<td style="border: 1px solid rgb(227, 196, 168); padding: 8px 12px; line-height: 1.85; font-size: 15px;">VIP 体系长期不变，活动短期叠加；月初配合签到/充值送，月末做晋级冲刺活动</td>
+</tr>
+</tbody>
+</table>
+<div style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #eef4fb; border-left: 4px solid rgb(58, 109, 181); border-radius: 0px 8px 8px 0px; padding: 12px 16px; margin: 14px 0px; line-height: 1.95;"><strong style="color: #3a6db5; font-size: 15px; display: block; margin-bottom: 6px;">特别说明（运营请仔细阅读）</strong>
+<ol style="margin: 6px 0px; padding-left: 24px;">
+<li>VIP 默认从 VIP0 开始，新注册会员默认 VIP0；<strong>VIP0 数值不可修改，固定为 0</strong></li>
+<li>日/周/月俸禄奖励：会员充值或打码后，每隔 10 分钟统计更新，奖励可在【领取与审核】页面查看</li>
+<li>VIP 晋级再充值/打码配置的是升级到下个等级的增量值，每一级到下一级都有各自的累计要求，达标就升级；升级后超出的部分不会清空，会接着算进下一级的累计里。举例：VIP1&rarr;VIP2 需要累计充值 100，VIP2&rarr;VIP3 需要累计充值 500。玩家从 VIP0 开始充值 400：先用 100 升到 VIP1，剩下 300 接着算进 VIP2&rarr;VIP3 的累计（此时 300/500）；玩家再充值 200，累计达到 500，升到 VIP3。</li>
+<li>VIP 配置修改可能导致玩家立即升级。例：当前玩家 VIP2，原配置 VIP2&rarr;VIP3 需打码 1000，改成 500 后玩家可能立即升 VIP3。<strong>请谨慎修改运行中的 VIP 配置</strong></li>
+<li>手动调整 VIP 等级后，晋级到下个等级的充值/打码累计从 0 重新开始计算</li>
+<li>VIP 降级时：之前等级未领取的日/周/月俸禄都不可领取；晋级奖金一个等级仅可领 1 次（之前领过不再领，未领过的根据【晋级奖励限制】决定能否领）</li>
+<li>日/周/月俸禄充值/打码条件均配置为 0 时，<strong>玩家必须在周期内登录并进入 VIP 页面才会产生奖励</strong>（无条件奖励懒加载）</li>
+</ol>
+</div>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; margin-top: 34px; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; line-height: 1.85;">七、常见问题 FAQ</h2>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：奖励是定时统计还是实时的？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：有条件奖励（充值/打码&gt;0）每 10 分钟统计一次，仅扫这 10 分钟内有充值或有打码变动的用户（不全量）；无条件奖励（条件全 0）懒加载，玩家访问 VIP 页时触发即时生成。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：多币种 VIP 怎么配置最快？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：先在主币种配好整套 VIP 表，然后点【应用到所有币种】快捷复制到其他币种。但要按各币种汇率/购买力再调整奖励金额，不能简单等值复制。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：列表展示和卡片展示怎么选？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：等级数多（10+）选列表展示更紧凑；等级数少（&le;10）选卡片展示，权益对比区引导玩家升级。两种展示对应的图标样式可分别配置。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：客户端 VIP 页的常见问题怎么不显示？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：三段满足才会展示：① 公共设置开启【VIP常见问题】开关；② 在【运营&rarr;客服管理&rarr;常见问题】配置【问题类型=VIP】；③ 该问题状态是【已发布】。</p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：批量新增会员或批量修改会员 VIP 等级后，会员说各种奖励都不能领取？</strong></p>
+<p style="color: #2b2b2b; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：这是设计如此。批量新增导入会员或导入修正调级后：①晋级累计从 0 重新算；②当级晋级奖金不发；③周期性日/周/月俸禄等下个周期才能领；④生日礼金按新规则需后台审核（针对今年内）。这是为了防多账号薅羊毛与运营误操作。批量操作前请告知玩家或单独配奖励派发。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_48.html">← 优惠明细</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_480112.html">领取与审核 →</a></div></body></html>

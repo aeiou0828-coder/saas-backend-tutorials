@@ -1,0 +1,151 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>投注记录</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 游戏 / 投注记录</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 24px;">一、投注明细</span></h3>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p><img style="max-width: 100%;" src="36493ab54ca1af23a14f0623.png"></p>
+<ol>
+<li><strong><span style="font-weight: bold;">搜索说明：</span>可根据单一条件或组合查询对应的投注明细</strong>
+<ul>
+<li><strong>投注时间：</strong>投注时间为默认选项，也可选结算时间，分别可点选日，周，月为搜索条件</li>
+<li><strong>日期：</strong>与日周月按钮可一起关联使用，选择开始日期到截止日期，为时间的搜索条件，左侧为时间icon，点选后可显示时间，右侧为x icon点击后以日周月按钮为搜索条件。</li>
+<li><strong>品牌: </strong>可选择品牌进行筛选。(多品牌站点才会有此搜索条件)</li>
+<li><strong>会员币种：</strong>可选择全部币种或单一币种为搜索条件</li>
+<li><strong>请选择分类：</strong>可选择单一游戏类别（例如电子）可选择多种和全部类别（默认全部类别）</li>
+<li><strong>请选择平台：</strong>可选择单一平台或全部平台（默认全部平台）</li>
+<li><strong>子游戏名称：</strong>支持搜索模糊子游戏名称及精准子游戏名称</li>
+<li><strong>会员账号</strong>：可用会员账号/游戏方账号/注单编号/牌局编号为条件来进行搜索筛选</li>
+<li><strong>结算状态</strong>：可用已结算/未结算/已撤单为条件来进行搜索筛选</li>
+<li><strong>投注金额</strong>：可用投注金额/有效投注/会员输赢/预扣税为条件来进行搜索筛选，可设置金额的区间</li>
+</ul>
+</li>
+<li><span style="font-weight: bold;">牌局编号：</span>点击快捷搜索同局注单</li>
+<li><span style="font-weight: bold;">会员账号：</span>点击显示【会员概览】</li>
+<li><strong>投注时间：</strong>该笔注单投注时间, 支持排序</li>
+<li><strong>结算时间：</strong>该笔注单结算时间, 支持排序</li>
+<li><strong>投注结算时间差:&nbsp;</strong>结算时间减去投注时间的时间差值, 未结算及异常注单将显示&ldquo;-&rdquo;</li>
+<li><span style="font-weight: bold;">预扣税:&nbsp; </span>预扣税金额, 持有巴西牌照的站点用户才会进行预扣税扣除</li>
+<li><span style="font-weight: bold;">会员输赢：</span>即会员在对应游戏的输赢记录<span style="font-weight: bold;">（会员盈利为红；亏损为绿）</span></li>
+<li><span style="font-weight: bold;">状态：</span>已结算/未结算/已撤单</li>
+<li><span style="font-weight: bold;">详情：</span>即对应注单号在本局游戏的详情记录</li>
+<li><strong>强制撤销</strong><span style="font-weight: bold;">：</span>针对「WG彩票」且状态为「未结算」的注单才支持操作撤销</li>
+<li><span style="font-weight: bold;">点击查看：</span>即对应注单号在本局游戏的具体游戏内容</li>
+<li><strong>自定义列</strong>: 可自行调整列表字段展示顺序</li>
+</ol>
+<h3><span style="font-size: 24px;">二、体育投注明细&nbsp;</span></h3>
+<ol>
+<li style="font-size: 16px;"><span style="font-size: 16px;"><span style="font-weight: bold;">搜索说明：</span>查询某个会员在某时间段里各个平台的体育投注统计数据<span style="font-weight: bold;">&nbsp; &nbsp;</span></span>
+<ul>
+<li><strong>投注时间：</strong>投注时间为默认选项，也可选结算时间，分别可点选日，周，月为搜索条件</li>
+<li><strong>日期：</strong>与日周月按钮可一起关联使用，选择开始日期到截止日期，为时间的搜索条件，左侧为时间icon，点选后可显示时间，右侧为x icon点击后以日周月按钮为搜索条件。</li>
+<li><strong>品牌: </strong>可选择品牌进行筛选。(多品牌站点才会有此搜索条件)</li>
+<li><strong>会员币种：</strong>可选择全部币种或单一币种为搜索条件</li>
+<li><strong>请选择分类：</strong>可选择单一游戏类别（例如电子）可选择多种和全部类别（默认全部类别）</li>
+<li><strong>请选择平台：</strong>可选择单一平台或全部平台（默认全部平台）</li>
+<li><strong>子游戏名称：</strong>支持搜索模糊子游戏名称及精准子游戏名称</li>
+<li><strong>会员账号</strong>：可用会员账号/游戏方账号/注单编号/牌局编号为条件来进行搜索筛选</li>
+<li><strong>结算状态</strong>：可用已结算/未结算/已撤单为条件来进行搜索筛选</li>
+<li><strong>投注金额</strong>：可用投注金额/有效投注/会员输赢/预扣税为条件来进行搜索筛选，可设置金额的区间</li>
+</ul>
+</li>
+</ol>
+<h3><span style="font-size: 24px;">三、投注统计</span></h3>
+<ol>
+<li><span style="font-weight: bold;">搜索说明：</span>查询某个会员在某时间段里各个平台的投注统计数据（仅支持精准搜索）</li>
+<li><span style="font-weight: bold;">占单量：</span>该平台的注单量占所有平台注单量的占比，表现形式为百分比</li>
+<li><span style="font-weight: bold;">获利比：</span>该平台的获利比 = 该平台的损益 /&nbsp; 该平台的有效投注</li>
+<li><span style="font-weight: bold;">预扣税:&nbsp;</span>预扣税: &nbsp;预扣税金额, 持有巴西牌照的站点用户才会进行预扣税扣除</li>
+<li><span style="font-weight: bold;">游戏名称：</span>即会员在该时间段曾玩过的游戏，点击游戏名称后会将相关资讯带回投注明细并且筛选后展示</li>
+<li><span style="font-weight: bold;">详情：</span>显示对应注单号的游戏详情</li>
+</ol>
+        </article><div class="bottom-nav"><a href="turoial_720126.html">← 友盟(CNZZ)</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_66.html">游戏管理 →</a></div></body></html>

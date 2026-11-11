@@ -1,0 +1,252 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>黑名单</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 风控 / 黑名单</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h3><span style="font-size: 26px;">一、会员黑名单</span></h3>
+<ul>
+<li><strong><span style="font-size: 18px;">（1）<span style="font-size: 20px;">功能说明</span></span></strong></li>
+</ul>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 16px;"> &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-size: 18px;">会员黑名单分为五种状态：黑名单，手动冻结，禁止领取优惠，禁止进入游戏，禁止提现。五种状态分别会对会员有不同的操作限制。</span></span><br><span style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 其中，只有黑</span></span><span style="font-size: 16px;"><span style="font-size: 18px;">名单状态的会员无法登录账号 ( 在未登录游戏大厅时，则直接无法登录；在游戏大厅中会被强制踢出；在自营游戏中会被踢出游戏），其余状态皆可登录。<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="392bc5491bf333d0765dcddc.png" width="1200"></span><br><br></span></p>
+<ul>
+<li><strong><span style="font-size: 18px;">（2）<span style="font-size: 20px;">新增会员黑名单<br><br></span></span></strong>
+<ul>
+<li><span style="font-size: 18px;">a. <span style="text-decoration: underline; background-color: #f1c40f;">第一种方式</span>：透过会员概览 &gt; 账户状态 调整<br></span><a style="transition-behavior: normal, normal, normal, normal; transition-duration: 0.4s, 0s, 0s, 0s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1), ease, ease, ease; transition-delay: 0s, 0s, 0s, 0s;" href="https://test-public-1.pubs3static.com/siteadmin/tutorials/file-read-139522.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" title="" src="a97f94a9a9ad056351d47111.png" alt="" width="1200" height="365"></a><br><br></li>
+<li><span style="font-size: 16px;">&nbsp;<span style="font-size: 18px;">b. <span style="text-decoration: underline;"><span style="background-color: #f1c40f;">第二</span></span></span></span><span style="font-size: 18px;"><span style="text-decoration: underline;"><span style="background-color: #f1c40f;">种方式</span></span>：透过会员黑名单页面 &gt; 点击右侧的新增。可新增【单个】或【批量】会员黑名单</span><img style="max-width: 100%;" src="5e7f1c7f3d4276b5d11022d3.png" width="1000"><br><br>
+<ul>
+<li><span style="font-size: 18px;">b-1.新增【单个】会员黑名单：<br>新增方式选择单个。会员账号或会员ID择一填写。选择限制类型(必填)。输入完成后，点击确认。<br></span><img style="max-width: 100%;" src="013f4bdc254b22ad537bbd42.png"></li>
+<li><span style="font-size: 18px;">b-2.新增【批量】会员黑名单：<br>新增方式选择批量。下载模版文件，</span><span style="font-size: 18px;">键入资讯后，储存文件。并点击批量导入 &gt; 点击上传 按钮，上传模版文件。<br>选择限制类型后，点击确认。<br><img style="max-width: 100%;" src="c16e2db92f6a4568fbe67f36.png"></span></li>
+<li><span style="font-size: 18px;">b-3.限制类型说明：</span>
+<ul>
+<li><span style="font-size: 18px;">手动冻结、禁止领取优惠、禁止提现、禁止进入游戏、黑名单：改变会员状态，记录会员日志<br><img style="max-width: 100%;" src="a5705f13108183a6ef892170.png"><br><br></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><span style="font-size: 18px;">（3）<span style="font-size: 20px;">移除会员黑名单<br><br></span></span></strong>
+<p><span style="font-size: 18px;">支持多选以及批量操作移除黑名单<br><img style="max-width: 100%;" title="" src="6d039a044343d9223768f13a.png" alt="" width="1300" height="197"></span></p>
+</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 26px;">二、IP黑名单</span></h3>
+<ul>
+<li><strong><span style="font-size: 18px;">（1）<span style="font-size: 20px;">功能说明</span></span></strong></li>
+</ul>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-size: 18px;">新增IP黑名单后，对应IP地址账号即被限制对应行为<br></span><a style="transition-behavior: normal, normal, normal, normal; transition-duration: 0.4s, 0s, 0s, 0s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1), ease, ease, ease; transition-delay: 0s, 0s, 0s, 0s; font-size: medium;" href="https://test-public-1.pubs3static.com/siteadmin/tutorials/file-read-139524.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="6e9ff27125dd2c9eb96ee441.png" width="1200"></a><br><br></span></p>
+<ul>
+<li><strong><span style="font-size: 18px;">（2）<span style="font-size: 20px;">新增IP黑名单<br><br></span></span></strong>
+<ul>
+<li><span style="font-size: 18px;">a. <span style="font-size: 18px;">新增【单个】IP黑名单：<br>新增方式选择单个。输入黑名单IP，并选择限制类型 注册 与 登录 ( 两者可以分开或合并选择 )，输入完成后点击确认。<br></span></span><img style="max-width: 100%;" src="91ee14feaf6f3a894e7b1e5a.png"></li>
+<li><span style="font-size: 18px;">b. <span style="font-size: 18px;">新增【批量】IP黑名单：<br></span></span><span style="font-size: 18px;">新增方式选择批量。下载模版文件，</span><span style="font-size: 18px;">键入资讯后，储存文件。并点击批量导入 &gt; 点击上传 按钮，上传模版文件。<br>选择限制类型 注册 与 登录 ( 两者可以分开或合并选择 )，输入完成后点击确认。<br><img style="max-width: 100%;" src="f82804a3a657e7c1b03f6303.png"><br><span style="font-family: &#x27;Segoe UI&#x27;;">注意 : 当仅填写到IP地址的前三段（如 2.3.2）时，系统默认将该段下的所有IP地址（即 2.3.2.1 至 2.3.2.254）一并纳入限制范围</span><br><br><br></span></li>
+</ul>
+</li>
+<li><strong><span style="font-size: 18px;">（2）<span style="font-size: 20px;">导出IP黑名单<br><br></span></span></strong><span style="font-size: 18px;">a. 展示导出字段列表弹窗，字段如图（多选），点击确认导出<span style="font-size: 18px;"><br><img style="max-width: 100%;" src="d9a6939f98e230f56eb2c68c.png"><br><br></span></span></li>
+<li><strong><span style="font-size: 18px;">（3）<span style="font-size: 20px;">关联账号数<br><br></span></span></strong><span style="font-size: 18px;">点击后，页面引导至该注册IP的搜索结果：<br></span><img style="max-width: 100%;" src="72abb30bcb0a46046c529686.png" width="1200"></li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="max-width: 100%;" src="c7d0562ddf645a9885ac4eeb.png" width="1200"><br><br></p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 24px;">三、手机与设备黑名单</span></h3>
+<ul>
+<li><strong><span style="font-size: 18px;">（1）<span style="font-size: 20px;">功能说明</span></span></strong></li>
+</ul>
+<p><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-size: 18px;">若该手机与设备注册的账号登录时，则登录该账号时显示登录失败</span></span></p>
+<p><span style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 18px;">注意：<span style="font-family: &#x27;Segoe UI&#x27;;">手机黑名单同时限制登录与注册</span></span><span style="font-family: &#x27;Segoe UI&#x27;;"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="max-width: 100%;" src="3e3fb556c1fc78cf3a448584.png" width="1200"><br></span></span></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong><span style="font-size: 18px;">（2）<span style="font-size: 20px;">新增手机与设备黑名单<br><br></span></span></strong>
+<ul>
+<li><span style="font-size: 18px;">a. <span style="font-size: 18px;">新增【单个】手机黑名单：<br>新增方式选择单个。输入黑名单手机号，输入完成后点击确认。<br></span></span><img style="max-width: 100%;" src="6308d82a840a22f95dde8d1b.png"></li>
+<li><span style="font-size: 18px;">b. 新增【批量】手机黑名单：<br></span><span style="font-size: 18px;">新增方式选择批量。下载模版文件，键入资讯后，储存文件。并点击批量导入 &gt; 点击上传 按钮，上传模版文件。<br>输入完成后点击确认。</span><br><img style="max-width: 100%;" src="e4200838e2d069242f645cb1.png"></li>
+<li><span style="font-size: 18px;">c. 新增【单个】设备黑名单：<br></span><span style="font-size: 18px;">新增方式选择单个。输入设备号，输入完成后点击确认。</span><span style="font-size: 18px;"><br><img style="max-width: 100%;" src="d2907c0d8e377e80e8df0553.png"></span></li>
+<li><span style="font-size: 18px;">d. 新增【批量】设备黑名单：<br><span style="font-size: 18px;">新增方式选择批量。下载模版文件，键入资讯后，储存文件。并点击批量导入 &gt; 点击上传 按钮，上传模版文件。<br>输入完成后点击确认。</span><br><img style="max-width: 100%;" src="bb7b7e058b6c0010eb2bf56f.png"></span><span style="font-size: 18px;"><br></span></li>
+</ul>
+</li>
+<li><strong><span style="font-size: 18px;">（3）<span style="font-size: 20px;">导出手机黑名单<br><br></span></span></strong><span style="font-size: 18px;">a. 展示导出字段列表弹窗，字段如图（多选），点击确认导出<span style="font-size: 18px;"><br><img style="max-width: 100%;" src="51c17fbd1f8045f292a5ae63.png"><br></span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<h3><strong><span style="font-size: 24px;">四、银行卡&amp;支付宝黑名单</span></strong></h3>
+<p>&nbsp;</p>
+<p>（1）功能说明：会员无法绑定黑名单的银行卡&amp;支付宝（已绑定的账户将无法出款）</p>
+<p>（2）操作说明：批量导入时，请严格按照格式上传表格即可</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://test-public-1.pubs3static.com/siteadmin/tutorials/file-read-139542.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" title="" src="280208dd46a723338c643001.png" alt="" width="1200" height="180"></a></p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 24px;">五、充值黑名单</span></h3>
+<p><strong>（1）功能说明：</strong>该黑名单会员将会无法看到对应充值通道，具体操作如下：</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="https://test-public-1.pubs3static.com/siteadmin/tutorials/file-read-139548.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" title="" src="d9ad66867ed283d7d7ac8bd8.png" alt="" width="1200" height="305"></a></p>
+<p><strong>（2）操作说明：</strong>批量导入时，请严格按照格式上传表格即可</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://test-public-1.pubs3static.com/siteadmin/tutorials/file-read-139549.png" rel="noopener" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网"><img style="max-width: 100%;" title="" src="4722471c4f481c309f7550d6.png" alt="" width="1200" height="178"></a></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 24px;">六、<span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">数字货币黑名单</span></span></strong></p>
+<p><span style="font-size: 16px;"><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">（1）功能说明：<span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">加入黑名单的数字货币地址，在大厅前台不能被任何会员添加绑定，</span><span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">已绑定的不能发起提现</span></span></strong></span></p>
+<ul>
+<li style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #2a2e38;"><span style="box-sizing: border-box; color: #2a2e38; font-size: 16px;">数字货币账号是按，币种+协议+地址，算一个账号，来去重。</span><span style="box-sizing: border-box; color: #2a2e38; font-size: 16px;">例如：币种协议不同，地址相同，那么算两个账号，允许添加。</span></li>
+</ul>
+<ul>
+<li style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box; color: #2a2e38; font-size: 16px;">协议选项级联关系</span></li>
+</ul>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding-left: 40px;"><span style="box-sizing: border-box; font-size: 16px;">USDT和USDC 协议选项：</span><span style="box-sizing: border-box; font-size: 16px;">&nbsp; &nbsp; &nbsp;TRC20&nbsp; ERC20&nbsp; BEP20</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding-left: 40px;"><span style="box-sizing: border-box; font-size: 16px;">TRX协议选项： TRC20</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding-left: 40px;"><span style="box-sizing: border-box; font-size: 16px;">ETH协议选项 ： ERC20</span></p>
+<p style="box-sizing: border-box; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding-left: 40px;"><span style="box-sizing: border-box; font-size: 16px;">&nbsp;BTC协议选项：Bitcoin</span></p>
+<p><span style="font-size: 16px;"><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong>（2）操作说明：</strong>批量导入时，请严格按照格式上传表格即可</span></span></strong></span></p>
+<p><span style="font-size: 16px;"><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><img style="max-width: 100%;" src="0b71d44cd4f38e50230f5a48.png"></span></strong></span></p>
+<p><span style="font-size: 16px;"><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="font-size: 24px;">七、<span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">PIX黑名单</span></span></span></strong></span></p>
+<p><strong>（1）功能说明：<span style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #2a2e38;">加入黑名单的PIX账号，在大厅前台不能被任何会员添加绑定，</span><span style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #2a2e38;">已绑定的不能发起提现。</span></strong></p>
+<p><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">（2）操作说明：<span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">批量导入时，请严格按照格式上传表格即可</span></span></span></span></strong></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><img style="max-width: 100%;" src="3dcb573f350d41b4f10e42b6.png"><br></span></p>
+<p><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="font-size: 24px;">八、提现帐号<span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">黑名单</span></span></span></strong></p>
+<p><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="font-size: 24px;"><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><img style="max-width: 100%;" src="2bcdd21dc958efbe21f04dc8.png"></span></span></span></strong></p>
+<p><strong>（1）功能说明：</strong>加入黑名单的提现账号，在所指定品牌的大厅前台不能被任何会员添加绑定，已绑定的不能发起提现；现支持一次指定多个品牌或全部品牌，同一账号在多个品牌被禁用时列表合并为一条记录。</p>
+<p><strong><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><span style="box-sizing: border-box; color: #2a2e38; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">（2）操作说明：</span></span></strong></p>
+<ul>
+<li>新增：<br><img style="max-width: 100%;" src="ecf30a44f1301e9390b6d113.png" width="635" height="458"><br>ａ．在「品牌名称(ID)」中勾选生效品牌，可多选，或选择「全部品牌」。<br>ｂ．若该账号此前已被禁用，系统自动合并品牌范围，不再提示「账号已存在」，也无需先删除再新增。<br>▎ 举例：账号 A 已添加至站点 1、2、4、5，再次添加至站点 3、4、5、6，最终在站点 1、2、3、4、5、6 全部生效。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>批量新增黑名单：<br><img style="max-width: 100%;" src="68a705ca396cff09fd81f60b.png" width="1033" height="312"><br>ａ．录入多个提现账号；<br>ｂ．指定品牌范围（可多选 / 全部品牌）；<br>ｃ．若个别品牌添加失败，系统自动跳过失败项，其余品牌照常生效。<br>▎ 举例：账号 A 添加至站点 1、2、3、4，站点 1 失败时不提示「添加失败」，站点 2、3、4 仍添加成功。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>修改：<br><img style="max-width: 100%;" src="9913421a78f3bb320b5f9c94.png" width="745" height="104"><img style="max-width: 100%;" src="9a45986324d381c1d0b9d02f.png" width="599" height="433"><br>ａ．调整「品牌ID」&mdash;&mdash;可增选、减选，也可改为「全部品牌」。<br>ｂ．保存后按修改后的选项更新生效范围。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>搜索：　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<img style="max-width: 100%;" src="a63e5e9720e5d424f9448abb.png" width="620" height="263"><br>ａ．「品牌ID」搜索条件支持多选；<br>ｂ．搜索结果按账号聚合：即使只按单一品牌查询，「品牌ID」列仍显示该账号被禁用的全部品牌，或显示「全部品牌」。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>导出<br>导出不做合并，一个品牌 + 一个账号 = 一条数据。例：某账号在 6 个品牌被禁用，导出后为 6 行。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>导入<br>品牌ID 直接写在 Excel 表格里，一行即可指定多个品牌。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　ａ．填写规则</li>
+<li>
+<table style="border-collapse: collapse; width: 100.017%; height: 156px;" border="1"><colgroup><col style="width: 29.1528%;"><col style="width: 34.1438%;"><col style="width: 36.7034%;"></colgroup>
+<tbody>
+<tr style="height: 36px;">
+<td>品牌ID</td>
+<td>示例</td>
+<td>生效范围</td>
+</tr>
+<tr style="height: 36px;">
+<td>留空（不填）</td>
+<td>（空白） &nbsp;</td>
+<td>全部品牌，无需把所有品牌ID逐个列出</td>
+</tr>
+<tr style="height: 36px;">
+<td>填单个 &nbsp;</td>
+<td>10001</td>
+<td>仅该品牌</td>
+</tr>
+<tr style="height: 48px;">
+<td>填多个(英文逗号分隔，中间不加空格)</td>
+<td>10001,10002,10005</td>
+<td>这 3 个品牌</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>　　　ｂ．同一账号可在多行出现，系统按合并规则处理，不会报重复。</p>
+<p><strong>（3）注意事项：</strong></p>
+<ul>
+<li>列表已改为合并显示：同一账号在多个品牌被禁用只显示一条记录。</li>
+<li>修改是覆盖，不是追加：保存后以本次勾选的品牌为最终范围，取消勾选的品牌即不再受此条黑名单限制。若只想新增品牌，请确认原有品牌仍在勾选状态。</li>
+<li>导出与导入格式不同属正常：导出按「一个品牌一行」拆开，导入允许「一行多个品牌」。导出文件可直接回导。</li>
+</ul>
+        </article><div class="bottom-nav"><a href="turoial_720121.html">← 活动数据分析教程</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_30.html">派奖监控 →</a></div></body></html>

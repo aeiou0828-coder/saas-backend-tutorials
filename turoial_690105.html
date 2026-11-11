@@ -1,0 +1,145 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TG消息群发</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 会员 / TG消息群发</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="text-align: center;"><span style="color: #000000; font-size: 24px;"><strong>TG消息群发</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 22px;"><strong>一、简介</strong></span></p>
+<ul>
+<li>路径 : 会员 &gt; TG机器人群发消息</li>
+<li>TG机器人群发消息 : 支持按VIP等级、会员层级、上级代理ID、顶层代理ID给不同的会员发送TG消息。</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 22px;">二、功能介绍</span></strong></p>
+<ul>
+<li>消息状态分成 : 待发送、已发送、发送失败、已撤回、全部。用户可以透过分页切换消息状态的信息。</li>
+<li>用户可以藉由品牌、币种、时间、消息ID，搜索筛选出对应的信息。</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="f1f9f57f35e588e9bdb0bbe7.png"></p>
+<p>&nbsp;</p>
+<ul>
+<li>新增群发消息</li>
+<li>配置完成后，点击确认。系统将会依照配置的内容发送信息。</li>
+<li>
+<p style="box-sizing: border-box; margin: 0px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: bold;">TG消息群发 - 支持发起投票/竞猜</strong><br style="box-sizing: border-box;"></span></p>
+<ul style="box-sizing: border-box; padding-left: 20px; margin-top: 0px; margin-bottom: 10px; color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<li style="box-sizing: border-box;">搜索、列表字段、详情、增加投票/竞猜状态；</li>
+<li style="box-sizing: border-box;">新增、修改、支持投票/竞猜编辑；</li>
+<li style="box-sizing: border-box;">对发起投票/竞猜的消息，新增操作项&ldquo;投票/竞猜统计&rdquo;</li>
+</ul>
+</li>
+</ul>
+<p><img style="max-width: 100%;" src="f0499ee1d55797164e752f85.png"></p>
+<p>&nbsp;</p>
+<ul>
+<li>新增TG群组/频道配置
+<ul>
+<li>选择品牌ID、输入群组/频道名称、输入群组/频道ID。可点击加号，新增多组。</li>
+<li>配置完毕后点击确认，即可新增完毕</li>
+</ul>
+</li>
+</ul>
+<p><img style="max-width: 100%;" src="3b3964affd579bc37e30ebbe.png"></p>
+<ul>
+<li>如何查询TG频道或群组名称与ID?
+<ul>
+<li>于TG中，增加机器人 ( @useridinfobot ) 并点击 STAR<br><img style="max-width: 100%;" src="57db4ff09a46f8ba9b5ba001.png" width="600"></li>
+<li>选择菜单中想搜寻的 Channel频道 或 Chat群组，并选择该群后按下Send，即可得到名称与ID。<br><img style="max-width: 100%;" src="6ed5b4daf0f26d23d8690387.png" width="600"><br><br></li>
+</ul>
+</li>
+<li style="font-weight: bold; color: #e03e2d;"><span style="color: #e03e2d;"><strong>特别注意：</strong></span></li>
+<li><span style="font-family: &#x27;Segoe UI&#x27;;">1、TG群组/频道管理员 将机器人拉进群组<br>2、机器人会自动识别群组/频道ID，并发到群管理员工的TG账号上<br>3、将群组/频道ID配置在后台即可<br><br>注意：群组ID前面的 &ldquo;-&rdquo;也别漏掉。</span></li>
+<li><span style="font-family: &#x27;Segoe UI&#x27;;">4、宣传图设置-图片剪裁要全屏剪裁，不然会有空白</span></li>
+</ul>
+<p><span style="font-family: &#x27;Segoe UI&#x27;;"><img style="max-width: 100%;" src="bde418e5378678b3a3f647cc.png"></span></p>
+        </article><div class="bottom-nav"><a href="turoial_600105.html">← 短信排名</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_690111.html">登陆设备管理 →</a></div></body></html>

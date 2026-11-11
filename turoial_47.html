@@ -1,0 +1,363 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>利息宝</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 优惠 / 利息宝</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <h1 id="top" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; border-bottom: 3px solid rgb(180, 95, 6); padding-bottom: 12px; font-size: 26px; text-align: center; line-height: 1.6;">利息宝 &middot; 操作与运营教程</h1>
+<p style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; color: #8a6a4a; font-size: 15px; margin-top: 8px; line-height: 1.85;">会员把余额存入利息宝按年利率分周期产生利息，用收益把资金留在平台、推动定期回访领取。</p>
+<div style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background: #fbf3ea; border: 1px solid rgb(236, 217, 198); border-radius: 10px; padding: 14px 20px; margin: 18px 0px 26px;"><strong style="color: #9a5005;">目录</strong><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s1">一、功能概述</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s2">二、利息宝设置</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s3">三、利息算法与规则</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s4">四、明细与会员</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s5">五、玩家端效果</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s6">六、运营建议</a><a style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; display: block; color: #9a5005; line-height: 2.1;" href="#s7">七、常见问题</a></div>
+<h2 id="s1" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">一、功能概述</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 197.896px;"><col style="width: 901.573px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">玩法</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">会员把大厅余额存入利息宝，按年利率分结算周期持续产生利息，可领取后转出。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">解决什么</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">用利息把闲置资金留在平台、减少提现；高利率吸引存入，利息封顶推动定期回访领取。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">前提</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息宝开关开启后客户端才展示；需先按币种设置年利率、结算周期、最低存入、稽核倍数等。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">功能位置</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">后台：优惠 &rarr; 利息宝。客户端：默认展示在【优惠】里，会员从优惠进入利息宝详情页。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s2" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">二、利息宝设置</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">在利息宝设置页对某币种行点【修改】打开弹窗，如下图。多品牌站点的配置是统一的，不能给各品牌单独设参数，只能通过【品牌名称(ID)】勾选控制对哪些品牌开启或关闭。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="8c37487c1d9b53fefc852204.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 65.9583px;"><col style="width: 241.875px;"><col style="width: 87.9479px;"><col style="width: 703.688px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">序号</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">字段</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">必填</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">说明</th>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">1</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息宝开关</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">关闭后客户端不展示利息宝。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">2</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">提示气泡</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">控制客户端利息相关提示气泡的展示。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">3</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">年利率(%)</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">年化利率，最高可设六个九（999999.99）；越高收益越大、成本也越高。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">4</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">最低存入金额</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">会员单次转入需达到该门槛，转入无上限。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">5</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">稽核方式</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息 / 利息+本金；决定提现时稽核的范围。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">6</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">稽核倍数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">领取的利息需完成该倍数有效投注才能提现。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">7</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">奖金稽核指定平台</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">否</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">不限制／仅限以下勾选／排除勾选，限定稽核打码来源。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">8</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">结算周期</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">5分钟／10分钟／15分钟／30分钟／其他(1-24 小时)；每满一个完整周期结算一次利息。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">9</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">领取时间</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">次日领取 或 当天实时；当天实时会影响留存（可随时领走转出），次日领取留存更好。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">10</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息封顶</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">最多结算 N 个周期，超出不再产生利息，需领取后继续。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">11</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">参与会员</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">按站点公共参与层级勾选。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">12</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">规则说明</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">是</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">系统自带或自定义。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">三、利息算法与规则</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">利息按年利率分摊到每个结算周期计算。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 241.875px;"><col style="width: 857.594px;"></colgroup>
+<tbody>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">计算公式</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息收益 = 存入金额 &times; 年利率 &divide; 结算周期数。即年利率先除 365 天、24 小时、60 分钟得每分钟利率，再乘结算周期分钟数。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">结算条件</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">每满一个完整结算周期产生一次利息；中途提前转出，当前未满的周期不计收益。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">转入门槛</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">每次转入需达最低存入金额，无上限，存越多收益越多。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">利息封顶</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">最多计息设定的周期数，达到封顶后不再产生利息。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">稽核方式</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">分两种：【利息】只对领取的利息稽核（利息&times;稽核倍数），转入转出本金不稽核；【利息+本金】每次结算利息时把当前本金算进去，转出利息 X 时需打满（本金+X）&times;稽核倍数才能提现，即每次领取都带当前本金的稽核。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">最低领取</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息累计需 &ge;0.01 客户端才展示待领取；不足 0.01 暂不可领，从最后转入时间重新计算。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">结算时机</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">利息在会员转入、转出、手动拉回时结算并计入待领取（永不过期）；会员进入详情页看到的是当前实时计算的利息。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">领取</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">实时领取直接进大厅余额；次日领取则次日才可手动领取（今日产生的部分当天不可领）。利息通过【领取与审核】由后台手动派发，金额较大时需走大额审核（状态【大额待申请】）。</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 198.021px;"><col style="width: 902.115px;"></colgroup></table>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 14px 0px 6px;">以下示例统一配置：<strong>年利率 100%、结算周期 5 分钟、次日领取、稽核 1 倍</strong>（封顶在对应场景单独说明）。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 219.885px;"><col style="width: 879.583px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">场景</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">计算与结果</th>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">基础计算（单周期）</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员存入 10000，满 1 个周期（5 分钟）产生利息 = 10000 &times; 100% &divide; 365 &divide; 24 &divide; 60 &times; 5 &asymp; 0.095。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">多周期累计</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员存入 10000 放满 15 分钟（3 个完整周期），利息 &asymp; 0.095 &times; 3 = 0.285，按完整周期持续累计。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">未满周期转出</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员存入 10000、存 9 分钟后转出：只结算 1 个完整周期（5 分钟）&asymp; 0.095，剩余 4 分钟不计；转出后从 0 重新计时。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">利息封顶</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">若封顶设为 3 周期，会员存入 10000 最多累计 3 个周期 &asymp; 0.285，达到封顶后不再产生利息。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">最低领取门槛</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">会员只存入 1000，1 个周期利息 &asymp; 0.0095，不足 0.01 暂不可领，累计到 &ge;0.01 才可领。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">稽核方式&middot;利息</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">领取利息 0.095 时，只需完成 0.095 &times; 1 的有效投注即可提现（只稽核利息）。</td>
+</tr>
+<tr>
+<td style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px 12px; border: 1px solid rgb(227, 196, 168); text-align: center; vertical-align: middle; line-height: 1.85;">稽核方式&middot;利息+本金</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85;">领取利息 0.095 时，需完成（10000+0.095）&times;1 = 10000.095 的有效投注才可提现（连本金一起稽核）；若存入后未产生利息随即转出，则无需稽核。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s4" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">四、明细与会员</h2>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">4.1 利息宝明细</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">记录每次结算与存取的变动流水，变动类型分转入、转出、领取收益、手动拉回，含变动前后利息宝金额与交易时间，可按时间、币种、账号、变动类型筛选并导出。变动金额按类型用不同颜色区分：拉回黑色、转出绿色、领取收益黄色、转入红色。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="6ed6f2de6bc8b360e87975dc.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #9a5005; font-size: 17px; margin-top: 22px;">4.2 利息宝会员</h3>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">记录所有转入过利息宝的会员，含当前存入额、大厅余额、累计利息、待领取、封顶周期、满息率等，可按金额区间等筛选并导出。待领取与满息率进入页面实时计算，满息率＝待领取&divide;封顶&times;100%（保留 2 位小数）。更新时间为利息宝余额或收益变更的时间，操作时间为后台操作时间、未操作显示横杠；操作栏仅在利息宝余额大于 0 时才显示【手动拉回】。<br>【手动拉回】二次确认后把会员利息宝余额转回大厅余额、自动结算利息并放待领取表；底部【批量拉回】会自动剔除利息宝余额为 0 的会员。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="e48f5dfeadb2830b4bde0151.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">五、玩家端效果</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">利息宝默认展示在【优惠】里，会员从这里进入；运营也可按需在其他位置额外配置入口。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">会员进入利息宝详情页后，可看到已存入金额、年利率、结算周期（含封顶周期数）、待领取与已领取金额，以及【转入】【转出】【领取】按钮。会员从大厅余额转入，按周期产生利息，可领取收益、随时转出。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 1.85; margin: 10px 0px;">详情页提供【利息规则】与【记录明细】两个页，记录明细可查看历次转入、转出、领取收益等变动；待领取金额旁有刷新按钮，可实时查看当前利息。开启【提示气泡】后，详情页顶部会展示当前年利率。</p>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 1099.47px;"></colgroup>
+<tbody>
+<tr>
+<td style="padding: 6px; border: 1px solid rgb(227, 196, 168); text-align: left; background: #ffffff;"><img style="max-width: 100%; height: auto; display: block;" src="37afe308489b7d3d25059ae9.png"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="s6" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">六、运营建议</h2>
+<table style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border-collapse: collapse; width: 1100.14px; margin: 8px 0px;" border="1"><colgroup><col style="width: 153.917px;"><col style="width: 329.833px;"><col style="width: 615.719px;"></colgroup>
+<tbody>
+<tr>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">维度</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">建议</th>
+<th style="background: #fbe8d8; color: #9a5005; font-weight: bold; padding: 8px; border: 1px solid rgb(227, 196, 168); text-align: center;">提示</th>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">年利率</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">用偏高的名义年利率吸引存入，配合利息封顶控制实际成本。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">年利率与封顶周期搭配设计，避免无封顶导致成本失控。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">结算周期</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">周期越短到账越快、体感越好；想降频繁结算压力可拉长周期。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">短周期提升存入意愿，但服务端结算压力更大。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">领取时间</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">重留存选次日领取；重活跃体感选当天实时（注意会被随时领走转出）。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">当天实时影响留存，需权衡。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">利息封顶</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">用封顶周期推动会员定期回访领取，制造回访习惯。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">封顶过低会员频繁打扰，过高失去促活意义。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">稽核倍数</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">对领取的利息设稽核倍数，避免领息即提；本金不稽核保证存取自由。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">倍数过高会打击存入意愿。</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: center;">效果监控</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">看利息宝会员的存入总额、累计利息、参与人数与拉回情况评估留存效果。</td>
+<td style="padding: 8px 12px; border: 1px solid rgb(227, 196, 168); line-height: 1.85; text-align: left;">存入额持续走低需回看利率与封顶设置。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s7" style="font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #b45f06; font-size: 21px; border-left: 5px solid rgb(180, 95, 6); padding-left: 10px; margin-top: 34px;">七、常见问题</h2>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：会员提前转出会怎样？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：会员转出时才结算利息，且只结算已满的完整周期，不满一个周期不计利息。例如结算周期 5 分钟，存入 9 分钟后转出，只结算 1 个完整周期（5 分钟）的利息，剩余 4 分钟不计；转出后重新从 0 开始计时。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：利息封顶后还会继续产生利息吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：达到封顶周期后暂停产生利息，会员领取收益后才会继续结算，所以需提醒会员定期领取。</p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 14px 0px 2px; line-height: 1.85;"><strong>Q：手动拉回会损失利息吗？</strong></p>
+<p style="color: #333333; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 2px 0px 0px; line-height: 1.85;">A：不会。手动拉回会把利息宝金额转回大厅余额，并自动结算已产生的利息。</p>
+<p><a id="backtop" style="text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: &#x27;Microsoft YaHei&#x27;, &#x27;PingFang SC&#x27;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; display: block; position: fixed; right: 22px; bottom: 22px; z-index: 99999; padding: 9px 16px; text-align: center; background: #b45f06; color: #ffffff; border-radius: 22px; font-size: 14px; line-height: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;" href="#top">置顶</a></p>
+        </article><div class="bottom-nav"><a href="turoial_46.html">← 实时返水</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_48.html">优惠明细 →</a></div></body></html>

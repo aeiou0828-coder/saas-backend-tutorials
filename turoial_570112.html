@@ -1,0 +1,130 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TG通知</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 运营 / TG通知</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 20px; font-weight: bold;">TG通知教程</span></p>
+<p style="line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-weight: bold;">1、通知设置&nbsp;</span></p>
+<ul>
+<li style="line-height: 1.6; font-size: 16px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">该功能为TG通知消息设置，业主自己提供TG机器人发送消息到提供接收消息的TG账号或群聊中</span></li>
+<li style="line-height: 1.6; font-size: 16px;">Bot Token: 已创建过机器人,可以重复使用Token,也可以单独配置<span style="color: #e03e2d;">(建议单独配置防止TG风控)</span></li>
+<li style="line-height: 1.6; font-size: 16px; color: #000000;"><span style="color: #000000;">推送内容的语言：TG机器人发送内容的语言</span></li>
+<li style="line-height: 1.6; font-size: 16px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">接收消息TG账号/群组ID：需要接收消息的TG账号或群组ID，删除后不再接收TG机器人消息</span></li>
+<li style="line-height: 1.6;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">通知类型：需要发送的消息类型</span></li>
+</ul>
+<p style="line-height: 1.6;"><img style="max-width: 100%;" src="792791cc272337c6023b75ed.png"></p>
+<ul>
+<li style="line-height: 1.6; font-size: 16px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">提现大额待出款：需要配置金额门槛，达到才会发出通知！</span></li>
+<li style="line-height: 1.6; font-size: 16px;">手动加款待审核：<span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">需要配置金额门槛，达到才会发出通知！</span></li>
+<li style="line-height: 1.6; font-size: 16px;">提现待出款再次通知：提现订单每超过此时间周期仍未被锁定处理，则发出通知！</li>
+<li style="line-height: 1.6; font-size: 16px;">提现金额门槛：需要超过金额门槛，才会发出通知！</li>
+<li style="line-height: 1.6; font-size: 16px;">后台大额充值成功：需要超过金额门槛的在线、转账、客服代充、手动加款、补单上分成功后，才会发出通知！</li>
+</ul>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-weight: bold;">2、消息列表</span></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;"><img style="max-width: 100%;" src="44fc597891e6736b68125ccd.png"></p>
+<ul>
+<li style="line-height: 1.6; font-size: 16px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">搜索：支持搜索消息内容<span style="color: #e03e2d;">:符号</span>后的数据</span></li>
+<li style="line-height: 1.6; font-size: 16px;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;">消息内容：鼠标悬浮展示该消息所有内容</span></li>
+</ul>
+<p style="line-height: 1.6; font-size: 16px;">&nbsp;</p>
+<p style="line-height: 1.6; font-size: 16px;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;;">注：如果存在消息量过多导致机器人被封，导致无法接收到消息，可以通过升级TG机器人来缓解(<span style="color: #e03e2d; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">开通 Paid Broadcast，提高 bot 速率</span>)</span></p>
+<p><span style="color: #000000; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">官方说明：https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this。</span></p>
+<p><span style="color: #000000; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;"><span style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; float: none; display: inline !important;">在 @BotFather 开通 Paid Broadcast：</span></span></p>
+<p><img style="max-width: 100%;" src="165b955a73b5d729a65dfbbd.png"></p>
+<p><span style="color: #313c52; font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">开通的前提是账户里要有 100000 stars。可去 @PremiumBot 购买。发送 /stars 命令后，出现购买界面：</span></p>
+<p><img style="max-width: 100%;" src="3736bd0ece0bd95c7836b6eb.png"></p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;">&nbsp;</p>
+<p style="line-height: 2;">&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_480114.html">← 极光推送</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_600106.html">域名检测 →</a></div></body></html>

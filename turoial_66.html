@@ -1,0 +1,1263 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>游戏管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 游戏 / 游戏管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="font-weight: 400;"></p>
+<h1 style="text-align: left;">游戏管理</h1>
+<p><img style="max-width: 100%;" src="ff458bc54ce87db2c750d2ec.png"></p>
+<h4>一、概述：</h4>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（1）平台管理：</span>对所有平台进行管理，包括对平台进行排序</p>
+<ul>
+<li style="font-weight: 400;">热门开关：设置平台加入热门模版展示的操作。</li>
+<li style="font-weight: 400;">特色开关：设置平台加入特色模版展示的操作。</li>
+<li style="font-weight: 400;">维护开关：设置平台维护状态的控制操作。</li>
+<li style="font-weight: 400;">游戏开关：设置平台开启/关闭状态的控制操作。</li>
+<li style="font-weight: 400;">展示给主播开关：设置平台是否展示在主播账号大厅。</li>
+<li style="font-weight: 400;">算有效投注: 设置平台有效投注状态的控制操作。</li>
+<li style="font-weight: 400;">子游戏数量: 展示该平台的子游戏数量, 点击可跳转至子游戏管理页面查看。</li>
+</ul>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（2）子游戏管理：</span>对所有子游戏进行管理，包括设置游戏的排序</p>
+<ul>
+<li style="font-weight: 400;">热门开关：设置子游戏加入热门模版展示的操作。</li>
+<li>特色开关：设置子游戏加入特色模版展示的操作。</li>
+<li style="font-weight: 400;">维护开关：设置子游戏维护状态的控制操作。</li>
+<li style="font-weight: 400;">游戏开关：设置子游戏开启/关闭状态的控制操作。</li>
+<li style="font-weight: 400;">展示给主播开关：设置子游戏是否展示在主播账号大厅。</li>
+<li>算有效投注: 设置子游戏有效投注状态的控制操作。</li>
+</ul>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（3）热门模版一：</span>对加入热门一的平台和子游戏进行管理，包括排序、备注、修改角标及移除操作（热门一和热门二只能同时开启一个）。</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（4）热门模版二：</span>对加入热门二的平台和子游戏进行管理，包括排序、备注、修改角标及移除操作（热门一和热门二只能同时开启一个）。</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5）特色模版一：</span>对加入特色一的平台和子游戏进行管理，包括排序、备注、修改角标及移除操作（特色一和特色二只能同时开启一个或是都不开启）。<br><span style="font-weight: bold;">（6）特色模版二：</span>对加入特色二的平台和子游戏进行管理，包括排序、备注、修改角标及移除操作（热门一和热门二只能同时开启一个或是都不开启）。</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（7）类型管理：</span>对游戏类型进行排序, 并且可以设置方形版式/竖型版式的行数配置，以及配置外部链接的跳转URL。</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（8）游戏全网排名：</span>通过对注单量的汇总，统计出最受欢迎的子游戏排名，并且支持查看子游戏的注单量、总投注、有效投注、损益、杀率等值的具体数值, 并支持将子游戏加入热门。</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（9）游戏公共配置：</span>包含游戏相关设置、强制下载APP设置、WG体育赔率设置等内容。</p>
+<p style="font-weight: 400;"><strong>（10）有效投注配置：</strong>针对游戏类型设置有效投注计入比例。</p>
+<h4>二、用途：</h4>
+<h4>（1）自营游戏+三方游戏：通过对游戏平台、子游戏、热门的操作，使业主可以操纵客户端的游戏状态。</h4>
+<h4>（2）自营游戏+三方游戏：通过平台开关或维护开关，决定客户端游戏的展现状态形式。</h4>
+<h4>三、功能说明：</h4>
+<p><span style="font-weight: bold;">1.平台管理</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（1.1）平台管理功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对不同类型的平台进行排序（若类型选择下拉框选中全部平台，则不可进行排序）</li>
+<li style="font-weight: 400;">对不同类型的平台设置热门状态</li>
+<li>对不同类型的平台设置特色状态</li>
+<li style="font-weight: 400;">对不同类型的平台设置入口开启/关闭状态</li>
+<li style="font-weight: 400;">对不同类型的平台设置是否展示给主播帐号玩家</li>
+<li style="font-weight: 400;">对不同类型的平台设置有效投注状态</li>
+<li style="font-weight: 400;">对不同类型的平台准入金额、宣传图、备注</li>
+<li style="font-weight: 400; color: #000000;"><span style="color: #000000;">对不同类型的平台操作申请风险人工锁解锁或批量解锁</span></li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="0d4194217e91955131f63440.png"></p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="76fca3a6b8be4c1793cf6240.png"></p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 81.6818%; height: 73.5625px;" border="1">
+<tbody>
+<tr style="height: 36.7812px;">
+<td style="width: 21.8818%; text-align: center;"><span style="font-weight: bold; text-align: center;">币种</span></td>
+<td style="width: 41.8673%; text-align: center;"><span style="font-weight: bold; text-align: center;">平台类型筛选</span></td>
+<td style="width: 20.496%; text-align: center;"><span style="font-weight: bold; text-align: center;">平台名称搜索</span></td>
+<td style="width: 15.7549%; text-align: center;"><span style="font-weight: bold; text-align: center;">备注/系统备注</span></td>
+</tr>
+<tr style="height: 36.7812px;">
+<td style="width: 21.8818%; text-align: center;">所有系统支持的币种</td>
+<td style="width: 41.8673%; text-align: center;">棋牌、捕鱼、电子、真人、彩票、体育、斗鸡、电竞、房间局</td>
+<td style="width: 20.496%; text-align: center;"><span style="text-align: center;">支持模糊查询</span></td>
+<td style="width: 15.7549%; text-align: center;"><span style="text-align: center;">支持模糊查询</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="31483d5a82a194cf62eed98c.png"></p>
+<table style="border-collapse: collapse; width: 100%; height: 183.06px;" border="1">
+<tbody>
+<tr style="height: 48.7358px;">
+<td style="width: 14.0463%; text-align: left;"><strong>风险人工锁状态</strong></td>
+<td style="width: 42.9769%; text-align: left;"><span style="font-weight: bold; text-align: center;">操作列显示的按钮</span></td>
+<td style="width: 42.9769%; text-align: left;"><span style="font-weight: bold; text-align: center;">含义与可执行操作</span></td>
+</tr>
+<tr style="height: 44.4318px;">
+<td style="width: 14.0463%; text-align: left;">锁定</td>
+<td style="width: 42.9769%; text-align: left;">「申请解锁」</td>
+<td style="width: 42.9769%; text-align: left;">该平台 / 游戏被人工审核锁锁定。开关禁用，可点击「申请解锁」</td>
+</tr>
+<tr style="height: 45.4403px;">
+<td style="width: 14.0463%; text-align: left;">审核中</td>
+<td style="width: 42.9769%; text-align: left;">「审核详情」</td>
+<td style="width: 42.9769%; text-align: left;">已提交解锁申请、等待技术后台审批。开关仍禁用，可点击「审核详情」查看进度；此时不能再次申请。</td>
+</tr>
+<tr style="height: 44.4517px;">
+<td style="width: 14.0463%; text-align: left;">已解除（曾申请过）</td>
+<td style="width: 42.9769%; text-align: left;">
+<p>「审核详情」（查看历史记录）</p>
+</td>
+<td style="width: 42.9769%; text-align: left;">
+<p>无锁定 / 审批已通过。开关可正常开启。若曾有申请记录，仍可点「审核详情」查看历史。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（1.3）平台管理列表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 76.7006%; height: 888.177px;" border="1">
+<tbody>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 45.5625%; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<th style="width: 11.3906%; text-align: center;">是否超链接</th>
+<td style="width: 11.181%; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 17.8896%; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 58.6806px;">
+<td style="width: 13.9762%; text-align: center;">排序</td>
+<td style="width: 45.5625%; text-align: left;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能按钮</td>
+</tr>
+<tr style="height: 58.6806px;">
+<td style="width: 13.9762%; text-align: center;">平台ID</td>
+<td style="width: 45.5625%; text-align: left;">每个平台ID唯一不可重复，主要用于记录操作日志</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">平台名称</td>
+<td style="width: 45.5625%; text-align: left;">
+<p>平台+分类名，如百胜棋牌，WG电子等</p>
+<p>重复平台名称出现时会在旧线路平台名称下标记「旧线路」文案.</p>
+</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.875px;">
+<td style="width: 13.9762%; text-align: center;">币种</td>
+<td style="width: 45.5625%; text-align: left;">平台支持哪些币种</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">热门一</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台入口将显示在客户端热门类型中</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能开关</td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">热门二</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台入口将显示在客户端热门类型中</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">特色一</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台入口将显示在客户端特色类型中</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能开关</td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">特色二</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台入口将显示在客户端特色类型中</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 58.6806px;">
+<td style="width: 13.9762%; text-align: center;">维护开关</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台标签或入口将在客户端展示，平台维护中，并且会踢出所有在平台游戏中的玩家</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 58.6806px;">
+<td style="width: 13.9762%; text-align: center;">平台开关</td>
+<td style="width: 45.5625%; text-align: left;">关闭后该平台标签或入口将在客户端不展示，并且踢出所有在平台游戏中的玩家</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能开关</td>
+</tr>
+<tr style="height: 58.6806px;">
+<td style="width: 13.9762%; text-align: center;">展示给主播</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台标签或入口将在客户端展示, 仅限主播账号玩家</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能开关</td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">算有效投注</td>
+<td style="width: 45.5625%; text-align: left;">开启后该平台注单皆会计算有效投注</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能开关</td>
+</tr>
+<tr style="height: 81.0764px;">
+<td style="width: 13.9762%; text-align: center;">子游戏数量</td>
+<td style="width: 45.5625%; text-align: left;">该类型下平台所有的子游戏总数，点击管理后跳转到该平台的游戏管理页（目前只有棋牌，电子，捕鱼，彩票类型有子游戏）</td>
+<td style="width: 11.3906%; text-align: center;">是</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">功能按钮</td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">风险人工锁</td>
+<td style="width: 45.5625%; text-align: left;">状态为【锁定】的平台将不对大厅开放，可通过操作列【申请解锁】入口提交解锁信息，审批通过后，该平台状态变为【已解除】，即该平台在大厅可见</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 81.0764px;">
+<td style="width: 13.9762%; text-align: center;">最低准入</td>
+<td style="width: 45.5625%; text-align: left;">该平台的所有游戏进入的余额要求，大于等于设置的金额才可进入子游戏，准入金额必须大于注册赠送防止被套利</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">2位小数</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 104.878px;">
+<td style="width: 13.9762%; text-align: center;">宣传图</td>
+<td style="width: 45.5625%; text-align: left;">宣传图分为【默认/自定义】，业主可自行选择使用哪种版本</td>
+<td style="width: 11.3906%; text-align: center;"><span style="text-align: center;">否</span></td>
+<td style="width: 11.181%; text-align: center;">
+<p style="text-align: center;">根据不同平台卡片样式进行尺寸限制</p>
+</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">平台跳转方式</td>
+<td style="width: 45.5625%; text-align: left;">区分IOS、Android、Web三个端口展示</td>
+<td style="width: 11.3906%; text-align: center;"><span style="text-align: center;">否</span></td>
+<td style="width: 11.181%; text-align: center;">
+<p style="text-align: center;">常规</p>
+</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">故障损失赔付</td>
+<td style="width: 45.5625%; text-align: left;">用于记录及展示平台赔付相关信息, 文案展示: 支持(恶意或不合理除外)、 未知或不支持</td>
+<td style="width: 11.3906%; text-align: center;">
+<p><span style="text-align: center;">否</span></p>
+</td>
+<td style="width: 11.181%; text-align: center;">
+<p style="text-align: center;">常规</p>
+</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 13.9762%; text-align: center;">备注</td>
+<td style="width: 45.5625%; text-align: left;">展示备注内容</td>
+<td style="width: 11.3906%; text-align: center;"><span style="text-align: center;">否</span></td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.875px;">
+<td style="width: 13.9762%; text-align: center;">操作</td>
+<td style="width: 45.5625%; text-align: left;">
+<p>修改: 点击后弹出修改弹窗, 支持修改最低准入金额以及宣传图。</p>
+<p>备注: 点击后弹出修改备注弹窗。</p>
+</td>
+<td style="width: 11.3906%; text-align: center;"><span style="text-align: center;">否</span></td>
+<td style="width: 11.181%; text-align: center;"><span style="text-align: center;">常规</span></td>
+<td style="width: 17.8896%; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">操作人</td>
+<td style="width: 45.5625%; text-align: left;">最后一次进行操作的管理员账号</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.2847px;">
+<td style="width: 13.9762%; text-align: center;">操作时间</td>
+<td style="width: 45.5625%; text-align: left;">最后一次进行操作的时间</td>
+<td style="width: 11.3906%; text-align: center;">否</td>
+<td style="width: 11.181%; text-align: center;">常规</td>
+<td style="width: 17.8896%; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p><strong>（1.5）游戏公共配置</strong></p>
+<p dir="ltr" style="text-align: left;">①「新游戏默认热门位置」「新游戏默认特色位置」，可选「添加至第一位」（默认）或「添加至最后一位」，配置后，所有做「添加至热门 / 特色」的页面都按这个配置执行：热门模版一 / 二、特色模版一 / 二、游戏全网排名、游戏统计</p>
+<p dir="ltr" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 2pt; text-align: left;">②「前端游戏排序规则」，可按投注人数或金额自动生成客户端游戏顺序（<strong id="docs-internal-guid-44764d93-7fff-a41d-946b-38bbba6fc29a" style="font-weight: normal;"><span style="font-size: 10.5pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">修改后 4 小时内不能再次修改</span></strong>）</p>
+<p dir="ltr" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 2pt; text-align: left;">③「已首充才能进入游戏（未充值无法进入）」，开启后，未首充会员进入游戏展示带推荐活动和充值气泡的首充弹窗<strong><span style="color: #000000; background-color: rgba(0, 0, 0, 0); font-family: Arial, sans-serif; font-size: 14px;">（推荐活动和充值气泡取会员-注册和验证-注册成功弹窗配置；若首充弹窗与存款弹窗冲突时，优先展示首充弹窗）</span></strong></p>
+<p style="font-weight: 400;"><span style="font-size: 10.5pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-ddf0aec1-7fff-9ca5-61b8-e340e929e7e8" style="font-weight: normal;"></strong></span></p>
+<p style="font-weight: 400;"><strong id="docs-internal-guid-cf06a82d-7fff-fb32-c63b-53e86236c2b4" style="font-weight: normal;"><span style="font-size: 10.5pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%; border: none;" src="ca6ca3461c204d1ed10f5db7.png" width="2503" height="1243"></span></strong></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p><strong>（1.6）有效投注配置</strong></p>
+<p dir="ltr">有效投注配置弹窗新增「体育和电竞」页签：电竞的开关配置逻辑与内容同体育，电竞开关默认全部关闭（需业主自行开启）</p>
+<p dir="ltr" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 2pt;"><span style="font-size: 10.5pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%; border: none;" src="9b3e1bb21a6868080903d4e1.png" width="2503" height="1242"></span></p>
+<p dir="ltr">②新增「其他」页签：放除体育、电子以外类型的默认比例配置；电竞、体育、其他的默认比例都是必填</p>
+<p dir="ltr" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 2pt;"><span style="font-size: 10.5pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img style="max-width: 100%; border: none;" src="6caef9c081824ae9e93c676e.png" width="2505" height="1243"></span></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">2. 子游戏管理</span></p>
+<p><span style="font-weight: bold;">（2.1）子游戏管理功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对不同类型不同平台下的子游戏进行排序（默认显示棋牌类型）</li>
+<li style="font-weight: 400;">对不同类型不同平台下的子游戏进行热门管理操作</li>
+<li style="font-weight: 400;">对不同类型不同平台下的子游戏进行热门管理操作</li>
+<li style="font-weight: 400;">操作维护开关，可将房间中正在进行游戏的玩家踢出，并且不可维护取消前，不可再次进入该游戏</li>
+<li style="font-weight: 400;">可针对子游戏设置是否展示给主播账号玩家</li>
+<li>对不同类型不同平台下的子游戏设置有效投注状态</li>
+<li style="font-weight: 400;">可以针对子游戏进行备注</li>
+<li style="font-weight: 400;">支持修改子游戏图片</li>
+<li style="font-weight: 400;">支持修改子游戏角标样式, 角标样式包含以下四种: 无、推荐、新、火爆 (部份皮肤版式仅支持开启/关闭角标, 不支持配置角标样式)</li>
+<li style="font-weight: 400;">可以将子游戏设置独立展示到类型, 开启此配置项后, 子游戏在大厅将与平台入口并行展示, 开启独立展示到类型的子游戏可以到平台管理页面调整排序</li>
+<li style="font-weight: 400;">对不同类型不同平台下的子游戏<span style="color: #000000;">操作申请风险人工锁解锁或批量解锁</span></li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="40a4fbc8c978e096cd6aed8d.png"></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（2.2）子游戏管理筛选项说明：</span></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="5e275a5d694c24c2d9e7e2f6.png" width="1510" height="793"></p>
+<table style="border-collapse: collapse; width: 85.699%; height: 58px;" border="1">
+<tbody>
+<tr>
+<td style="width: 19.8249%; text-align: center;"><span style="font-weight: bold; text-align: center;">币种</span></td>
+<td style="width: 30.4565%; text-align: center;"><span style="font-weight: bold; text-align: center;">游戏类型</span></td>
+<td style="width: 18.4473%; text-align: center;"><span style="font-weight: bold; text-align: center;">平台类型</span></td>
+<td style="width: 15.4489%; text-align: center;"><span style="font-weight: bold; text-align: center;">游戏名称搜索</span></td>
+<td style="width: 15.8224%; text-align: center;"><span style="font-weight: bold; text-align: center;">备注/系统备注</span></td>
+</tr>
+<tr>
+<td style="width: 19.8249%; text-align: center;"><span style="text-align: center;">所有系统支持的币种</span></td>
+<td style="width: 30.4565%; text-align: center;"><span style="text-align: center;">棋牌、捕鱼、电子、体育、真人、彩票、房间局</span></td>
+<td style="width: 18.4473%; text-align: center;"><span style="text-align: center;">平台名称+游戏类型</span></td>
+<td style="width: 15.4489%; text-align: center;"><span style="text-align: center;">支持模糊查询</span></td>
+<td style="width: 15.8224%; text-align: center;"><span style="text-align: center;">支持模糊查询</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">（2.3）子游戏管理列表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 75.9507%; height: 876.734px;" border="1">
+<tbody>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 46.5733%; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 14.8208%; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 11.9182%; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 14.337%; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">排序</td>
+<td style="width: 46.5733%;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">平台名称</td>
+<td style="width: 46.5733%;">平台名称展示</td>
+<td style="width: 14.8208%; text-align: center;">&nbsp;</td>
+<td style="width: 11.9182%; text-align: center;">&nbsp;</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">子类别</td>
+<td style="width: 46.5733%;">子类别名称展示</td>
+<td style="width: 14.8208%; text-align: center;">&nbsp;</td>
+<td style="width: 11.9182%; text-align: center;">&nbsp;</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">游戏ID</td>
+<td style="width: 46.5733%;">所有子游戏所有场次的ID唯一，主要用于记录操作日志</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">子游戏名称</td>
+<td style="width: 46.5733%;">子游戏名称展示</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">币种</td>
+<td style="width: 46.5733%;">该子游戏支持哪些币种</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">认证</td>
+<td style="width: 46.5733%;">列出该游戏目前拥有的所有认证资讯, 如GLI, BMM, PAGCOR, GA...等</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">热门一</td>
+<td style="width: 46.5733%;">加入热门一模块的子游戏开关</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">热门二</td>
+<td style="width: 46.5733%;">加入热门二模块的子游戏开关</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">特色一</td>
+<td style="width: 46.5733%; text-align: left;">开启后该平台入口将显示在客户端特色类型中</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;">功能开关</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">特色二</td>
+<td style="width: 46.5733%; text-align: left;">开启后该平台入口将显示在客户端特色类型中</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;"><span style="text-align: center;">角标名称</span></td>
+<td style="width: 46.5733%;">客户端展示角标的样式</td>
+<td style="width: 14.8208%; text-align: center;"><span style="text-align: center;">否</span></td>
+<td style="width: 11.9182%; text-align: center;"><span style="text-align: center;">常规</span></td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">维护开关</td>
+<td style="width: 46.5733%;">子游戏维护开关控制（开启后将无法进入子游戏，房间内的玩家也会被踢出房间）</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">游戏开关</td>
+<td style="width: 46.5733%;">子游戏游戏开关控制（关闭后将不显示该子游戏入口）</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">展示给主播</td>
+<td style="width: 46.5733%;">开启后, 将在客户端展示此游戏, 仅限主播账号玩家</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">算有效投注</td>
+<td style="width: 46.5733%;">开启后该游戏注单将会计入有效投注</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">功能开关</span></td>
+</tr>
+<tr style="height: 80.9531px;">
+<td style="width: 12.358%; text-align: center;">风险人工锁</td>
+<td style="width: 46.5733%;">
+<p>状态为【锁定】的平台将不对大厅开放，可通过操作列【申请解锁】入口提交解锁信息，审批通过后，该平台状态变为【已解除】，即该平台在大厅可见</p>
+<p>当平台层级的风险人工锁状态不是「已解除」时，其下所有子游戏的风险人工锁一律显示为「锁定」，且子游戏的「申请解锁」按钮会置灰（不可单独申请）</p>
+<p>即：要先让平台层级解除锁定，子游戏才能恢复正常操作</p>
+</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">独立展示到类型</td>
+<td style="width: 46.5733%;">开启后, 子游戏将在客户端与平台入口并行展示</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">子游戏icon</td>
+<td style="width: 46.5733%;">子游戏图片</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">备注</td>
+<td style="width: 46.5733%;">展示备注内容</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;">常规</td>
+<td style="width: 14.337%; text-align: center;"><span style="text-align: center;">&nbsp;</span></td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">操作人</td>
+<td style="width: 46.5733%;">最后一次进行操作的管理员账号</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;"><span style="text-align: center;">常规</span></td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 12.358%; text-align: center;">操作时间</td>
+<td style="width: 46.5733%;">最后一次进行操作的时间</td>
+<td style="width: 14.8208%; text-align: center;">否</td>
+<td style="width: 11.9182%; text-align: center;"><span style="text-align: center;">常规</span></td>
+<td style="width: 14.337%; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">3. 热门模版一</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（3.1）热门模版一功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对加入热门一的平台和子游戏进行排序（可对平台入口及子游戏一起排序）、移除、修改角标样式<span style="color: #34495e; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&nbsp;(</span><span style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #e03e2d;">热门类别为子游戏才可以修改角标</span><span style="color: #34495e; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">)</span>以及备注</li>
+<li style="font-weight: 400;">热门管理一游戏最多可添加100个</li>
+<li style="font-weight: 400;">业主可自行决定是否启用热门管理一</li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="c3f6553365f872bd52b09e43.png"></p>
+<p><span style="font-weight: bold;">（3.2）热门模版一列表字段说明：<br></span></p>
+<table style="border-collapse: collapse; width: 86.8773%; height: 248px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 47.9843%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 10.128%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 10.4257%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 19.9877%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4744%; height: 36px; text-align: center;">排序</td>
+<td style="width: 47.9843%; height: 36px;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 10.128%; height: 36px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 36px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 36px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 18px; text-align: center;">游戏类型</td>
+<td style="width: 47.9843%; height: 18px;">棋牌、捕鱼、电子、彩票等</td>
+<td style="width: 10.128%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 18px; text-align: center;">热门类别</td>
+<td style="width: 47.9843%; height: 18px;">平台或子游戏</td>
+<td style="width: 10.128%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 18px; text-align: center;">平台名称</td>
+<td style="width: 47.9843%; height: 18px;">平台名称</td>
+<td style="width: 10.128%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; text-align: center; height: 18px;">热门名称</td>
+<td style="width: 47.9843%; height: 18px;">子游戏：子游戏名称；平台：平台名称</td>
+<td style="width: 10.128%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.4257%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9877%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.4744%; text-align: center;">角标名称</td>
+<td style="width: 47.9843%;">无、推荐、新、火爆</td>
+<td style="width: 10.128%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.4257%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9877%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; text-align: center; height: 18px;">币种</td>
+<td style="width: 47.9843%; height: 18px;">该平台或子游戏支持哪些币种</td>
+<td style="width: 10.128%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.4257%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9877%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.4744%; text-align: center;">备注</td>
+<td style="width: 47.9843%;">展示备注内容</td>
+<td style="width: 10.128%; text-align: center;">否</td>
+<td style="width: 10.4257%; text-align: center;">常规</td>
+<td style="width: 19.9877%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4744%; height: 36px; text-align: center;">操作</td>
+<td style="width: 47.9843%; height: 36px;">
+<p>移除：点击后弹出确认框，确定移除后热门模版一列表中将不显示该游戏，且游戏/平台的热门一状态为关。</p>
+<p>修改角标: 点击后弹出修改角标弹窗。<br>备注: 点击后弹出修改备注弹窗。</p>
+</td>
+<td style="width: 10.128%; height: 36px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 36px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 36px; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 23px; text-align: center;">操作人</td>
+<td style="width: 47.9843%; height: 23px;">操作人：最后一次进行操作的管理员账号</td>
+<td style="width: 10.128%; height: 23px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 23px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 23px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4744%; height: 18px; text-align: center;">操作时间</td>
+<td style="width: 47.9843%; height: 18px;">操作时间：最后一次进行操作的时间</td>
+<td style="width: 10.128%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.4257%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9877%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p><span style="font-weight: bold;">4. 热门模版二</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（4.1）热门模版二功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对加入热门二的平台和子游戏进行排序（可对平台入口及子游戏一起排序）、移除、修改角标样式<span style="color: #34495e; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&nbsp;(</span><span style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: #e03e2d;">热门类别为子游戏才可以修改角标</span><span style="color: #34495e; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">)</span>以及备注</li>
+<li style="font-weight: 400;">热门管理二游戏最多可添加100个</li>
+<li style="font-weight: 400;">业主可自行决定是否启用热门管理二</li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="eacf4c3df857c4f14bcbb685.png"></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（4.2）热门模版二列表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 81.2533%; height: 248px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 47.0305%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 10.7532%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 10.752%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 19.9868%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4776%; height: 36px; text-align: center;">排序</td>
+<td style="width: 47.0305%; height: 36px;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 10.7532%; height: 36px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 36px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 36px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 18px; text-align: center;">游戏类型</td>
+<td style="width: 47.0305%; height: 18px;">棋牌、捕鱼、电子、彩票...............</td>
+<td style="width: 10.7532%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 18px; text-align: center;">热门类别</td>
+<td style="width: 47.0305%; height: 18px;">平台或子游戏</td>
+<td style="width: 10.7532%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 18px; text-align: center;">平台名称</td>
+<td style="width: 47.0305%; height: 18px;">平台名称</td>
+<td style="width: 10.7532%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; text-align: center; height: 18px;">热门名称</td>
+<td style="width: 47.0305%; height: 18px;">子游戏：子游戏名称；平台：平台名称</td>
+<td style="width: 10.7532%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.752%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9868%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.4776%; text-align: center;">角标名称</td>
+<td style="width: 47.0305%;">无、推荐、新、火爆</td>
+<td style="width: 10.7532%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.752%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9868%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; text-align: center; height: 18px;">币种</td>
+<td style="width: 47.0305%; height: 18px;">该平台或子游戏支持哪些币种</td>
+<td style="width: 10.7532%; text-align: center; height: 18px;">否</td>
+<td style="width: 10.752%; text-align: center; height: 18px;">常规</td>
+<td style="width: 19.9868%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.4776%; text-align: center;">备注</td>
+<td style="width: 47.0305%;">展示备注内容</td>
+<td style="width: 10.7532%; text-align: center;">否</td>
+<td style="width: 10.752%; text-align: center;">常规</td>
+<td style="width: 19.9868%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4776%; height: 36px; text-align: center;">操作</td>
+<td style="width: 47.0305%; height: 36px;">
+<p>移除：点击后弹出确认框，确定移除后热门模版二列表中将不显示该游戏，且游戏/平台的热门二状态为关。</p>
+<p>修改角标: 点击后弹出修改角标弹窗。<br>备注: 点击后弹出修改备注弹窗。</p>
+</td>
+<td style="width: 10.7532%; height: 36px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 36px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 36px; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 23px; text-align: center;">操作人</td>
+<td style="width: 47.0305%; height: 23px;">操作人：最后一次进行操作的管理员账号</td>
+<td style="width: 10.7532%; height: 23px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 23px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 23px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4776%; height: 18px; text-align: center;">操作时间</td>
+<td style="width: 47.0305%; height: 18px;">操作时间：最后一次进行操作的时间</td>
+<td style="width: 10.7532%; height: 18px; text-align: center;">否</td>
+<td style="width: 10.752%; height: 18px; text-align: center;">常规</td>
+<td style="width: 19.9868%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">5. 特色模版一</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5.1）特色模版一功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对加入特色一的平台和子游戏进行排序（可对平台入口及子游戏一起排序）、移除以及备注</li>
+<li style="font-weight: 400;">特色模版一游戏最多可添加100个</li>
+<li style="font-weight: 400;">特色设置弹窗内可操作特色模版开关、特色名称、展示位置、特色样式
+<ul>
+<li style="box-sizing: border-box; color: #000000;"><span style="box-sizing: border-box; font-size: 16px; color: #000000;">展示位置选择每个类型单独顶部时, 不需配置特色样式</span></li>
+</ul>
+</li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="6427b8b8266a912d1def2c2f.png"></p>
+<p style="font-weight: 400;"><strong><img style="max-width: 100%;" src="93a6c15fd01369c42d8f8aa6.png"></strong></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5.2）特色模版一列表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 79.7536%; height: 488.062px;" border="1">
+<tbody>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 51.2082%; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 10.9558%; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 10.8871%; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 15.3898%; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 58.5625px;">
+<td style="width: 11.4919%; text-align: center;">排序</td>
+<td style="width: 51.2082%;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">游戏类型</td>
+<td style="width: 51.2082%;">棋牌、捕鱼、电子、彩票...</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">特色类别</td>
+<td style="width: 51.2082%;">平台或子游戏</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">平台名称</td>
+<td style="width: 51.2082%;">平台名称</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">特色名称</td>
+<td style="width: 51.2082%;">子游戏：子游戏名称；平台：平台名称</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">币种</td>
+<td style="width: 51.2082%;">该平台或子游戏支持哪些币种</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">备注</td>
+<td style="width: 51.2082%;">展示备注内容</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 103.344px;">
+<td style="width: 11.4919%; text-align: center;">操作</td>
+<td style="width: 51.2082%;">
+<p>移除：点击后弹出确认框，确定移除后特色模版一列表中将不显示该游戏，且游戏/平台的特色一状态为关。</p>
+<p>备注: 点击后弹出修改备注弹窗。</p>
+<p>推荐文案: 点击后弹出推荐文案弹窗(特色样式为样式4时才需配置文案内容)。</p>
+</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 36.7812px;">
+<td style="width: 11.4919%; text-align: center;">操作人</td>
+<td style="width: 51.2082%;">操作人：最后一次进行操作的管理员账号</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36.1719px;">
+<td style="width: 11.4919%; text-align: center;">操作时间</td>
+<td style="width: 51.2082%;">操作时间：最后一次进行操作的时间</td>
+<td style="width: 10.9558%; text-align: center;">否</td>
+<td style="width: 10.8871%; text-align: center;">常规</td>
+<td style="width: 15.3898%; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">6. 特色模版二</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（6.1）特色模版二功能模块说明：</span></p>
+<ol>
+<li style="font-weight: 400;">对加入特色二的平台和子游戏进行排序（可对平台入口及子游戏一起排序）、移除以及备注</li>
+<li style="font-weight: 400;">特色模版二游戏最多可添加100个</li>
+<li>特色设置弹窗内可操作特色模版开关、特色名称、展示位置、特色样式
+<ul>
+<li style="box-sizing: border-box; color: #000000;"><span style="box-sizing: border-box; font-size: 16px; color: #000000;">展示位置选择每个类型单独顶部时, 不需配置特色样式</span></li>
+</ul>
+</li>
+</ol>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="f7f52fd2daaa6c7c34598b19.png"></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5.2）特色模版二列表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 82.4853%; height: 248px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 53.8646%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 9.87806%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 11.566%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 13.2554%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.436%; height: 36px; text-align: center;">排序</td>
+<td style="width: 53.8646%; height: 36px;">拖动按钮/置顶按钮、批量输入数字排序，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 9.87806%; height: 36px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 36px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 36px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 18px; text-align: center;">游戏类型</td>
+<td style="width: 53.8646%; height: 18px;">棋牌、捕鱼、电子、彩票...</td>
+<td style="width: 9.87806%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 18px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 18px; text-align: center;">特色类别</td>
+<td style="width: 53.8646%; height: 18px;">平台或子游戏</td>
+<td style="width: 9.87806%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 18px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 18px; text-align: center;">平台名称</td>
+<td style="width: 53.8646%; height: 18px;">平台名称</td>
+<td style="width: 9.87806%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 18px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; text-align: center; height: 18px;">特色名称</td>
+<td style="width: 53.8646%; height: 18px;">子游戏：子游戏名称；平台：平台名称</td>
+<td style="width: 9.87806%; text-align: center; height: 18px;">否</td>
+<td style="width: 11.566%; text-align: center; height: 18px;">常规</td>
+<td style="width: 13.2554%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; text-align: center; height: 18px;">币种</td>
+<td style="width: 53.8646%; height: 18px;">该平台或子游戏支持哪些币种</td>
+<td style="width: 9.87806%; text-align: center; height: 18px;">否</td>
+<td style="width: 11.566%; text-align: center; height: 18px;">常规</td>
+<td style="width: 13.2554%; text-align: center; height: 18px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.436%; text-align: center;">备注</td>
+<td style="width: 53.8646%;">展示备注内容</td>
+<td style="width: 9.87806%; text-align: center;">否</td>
+<td style="width: 11.566%; text-align: center;">常规</td>
+<td style="width: 13.2554%; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.436%; height: 36px; text-align: center;">操作</td>
+<td style="width: 53.8646%; height: 36px;">
+<p>移除：点击后弹出确认框，确定移除后特色模版二列表中将不显示该游戏，且游戏/平台的特色二状态为关。</p>
+<p>备注: 点击后弹出修改备注弹窗。</p>
+<p>推荐文案: 点击后弹出推荐文案弹窗(特色样式为样式4时才需配置文案内容)。</p>
+</td>
+<td style="width: 9.87806%; height: 36px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 36px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 36px; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 23px; text-align: center;">操作人</td>
+<td style="width: 53.8646%; height: 23px;">操作人：最后一次进行操作的管理员账号</td>
+<td style="width: 9.87806%; height: 23px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 23px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 23px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.436%; height: 18px; text-align: center;">操作时间</td>
+<td style="width: 53.8646%; height: 18px;">操作时间：最后一次进行操作的时间</td>
+<td style="width: 9.87806%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.566%; height: 18px; text-align: center;">常规</td>
+<td style="width: 13.2554%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">5. 类型管理</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5.1）类型管理功能模块说明：</span></p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;1、对游戏平台【热门、棋牌、捕鱼、真人、电子、体育、斗鸡、彩票、俱乐部、朋友局、自定义添加】进行客户端隐藏/展示开关控制；</p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;2、可针对不同类型设置对应的首页显示行数，以及二级页面显示行数；</p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;3、可针对于币种进行区分控制，单个币种单个线路（俱乐部+朋友局只能针对于全部币种控制）</p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;4、游戏数量少的小类型可以通过列表上的「并入到更多」开关合并进「更多」；只有棋牌、捕鱼、真人、体育、电子、斗鸡、区块链、电竞、彩票这 9 类才有这个开关</p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="8848576010b2838bfe0fb61e.png"></p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="4764991e87171b8ae7fa87e8.png"></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（5.2）类型管理表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 85.1098%; height: 248px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 48.2442%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 13.0886%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 11.7717%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 15.4429%; height: 18px; text-align: center;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4525%; height: 36px; text-align: center;">排序</td>
+<td style="width: 48.2442%; height: 36px;">拖动按钮/置顶按钮，直接进行相关排序，可支持隔行跳跃排序</td>
+<td style="width: 13.0886%; height: 36px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 36px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 36px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 18px; text-align: center;"><span style="text-align: center;">币种</span></td>
+<td style="width: 48.2442%; height: 18px;">该类型支持哪些币种</td>
+<td style="width: 13.0886%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 18px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 22px; text-align: center;">类型名称</td>
+<td style="width: 48.2442%; height: 22px;">更多、最近、收藏、棋牌、捕鱼、电子、彩票...............</td>
+<td style="width: 13.0886%; height: 22px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 22px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 22px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 20px; text-align: center;">类型开关</td>
+<td style="width: 48.2442%; height: 20px;">控制客户端展示或者隐藏对应类型</td>
+<td style="width: 13.0886%; height: 20px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 20px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 20px; text-align: center;">功能按钮</td>
+</tr>
+<tr>
+<td style="width: 11.4525%; text-align: center;">并入到更多</td>
+<td style="width: 48.2442%;">可以把数量少的小类型通过该功能合并进「更多」</td>
+<td style="width: 13.0886%; height: 20px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 20px; text-align: center;">常规</td>
+<td style="width: 15.4429%; text-align: center;">功能按钮</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; text-align: center; height: 25px;">首页显示行数</td>
+<td style="width: 48.2442%; height: 25px;">该类型在客户端首页显示几行</td>
+<td style="width: 13.0886%; text-align: center; height: 25px;">否</td>
+<td style="width: 11.7717%; text-align: center; height: 25px;">常规</td>
+<td style="width: 15.4429%; text-align: center; height: 25px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; text-align: center; height: 22px;">二级页面显示行数</td>
+<td style="width: 48.2442%; height: 22px;">该类型在客户端二级页面显示几行</td>
+<td style="width: 13.0886%; text-align: center; height: 22px;">否</td>
+<td style="width: 11.7717%; text-align: center; height: 22px;">常规</td>
+<td style="width: 15.4429%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.4525%; height: 24px; text-align: center;">操作</td>
+<td style="width: 48.2442%; height: 24px;">可设置首页显示行数，二级页面显示行数</td>
+<td style="width: 13.0886%; height: 24px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 24px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 24px; text-align: center;"><span style="text-align: center;">功能按钮</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 23px; text-align: center;">操作人</td>
+<td style="width: 48.2442%; height: 23px;">操作人：最后一次进行操作的管理员账号</td>
+<td style="width: 13.0886%; height: 23px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 23px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 23px; text-align: center;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.4525%; height: 18px; text-align: center;">操作时间</td>
+<td style="width: 48.2442%; height: 18px;">操作时间：最后一次进行操作的时间</td>
+<td style="width: 13.0886%; height: 18px; text-align: center;">否</td>
+<td style="width: 11.7717%; height: 18px; text-align: center;">常规</td>
+<td style="width: 15.4429%; height: 18px; text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p><span style="font-weight: bold;">6. 游戏全网排名</span></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（6.1）游戏全网排名功能模块说明：</span></p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;1、根据子游戏的注单量统计出最受玩家喜爱的子游戏前50排名，并且区分币种、游戏类型、平台;</p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;2、统计子游戏的注单量、总投注、有效投注、损益、杀率等值的具体数值；</p>
+<p style="font-weight: 400;">&nbsp; &nbsp; &nbsp; &nbsp;3、平台下拉选单只会显示有在这前50排名里的平台;</p>
+<p style="font-weight: 400;">&nbsp;<img style="max-width: 100%;" src="edf758be694c41c9b7e5946f.png"></p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">（6.2）游戏全网排名表字段说明：</span></p>
+<table style="border-collapse: collapse; width: 70.3267%; height: 248px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;"><span style="font-weight: bold; text-align: center;">字段名称</span></td>
+<td style="width: 45.9486%; text-align: center; height: 2px;"><span style="font-weight: bold; text-align: center;">说明</span></td>
+<td style="width: 11.902%; text-align: center; height: 2px;"><span style="font-weight: bold; text-align: center;">是否超链接</span></td>
+<td style="width: 10.747%; text-align: center; height: 2px;"><span style="font-weight: bold; text-align: center;">显示规则</span></td>
+<td style="width: 19.8933%; text-align: center; height: 2px;"><span style="font-weight: bold; text-align: center;">备注</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">统计日期</td>
+<td style="width: 45.9486%; height: 2px;">根据当前站点的时区，统计日期为每天统计</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;"><span style="text-align: center;">统计范围</span></td>
+<td style="width: 45.9486%; height: 2px;">一个月的统计时间</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 10px;">币种</td>
+<td style="width: 45.9486%; height: 10px;">该币种支持的子游戏</td>
+<td style="width: 11.902%; text-align: center; height: 10px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 10px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 10px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">游戏类型</td>
+<td style="width: 45.9486%; height: 2px;">棋牌、捕鱼、电子、彩票...</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">平台ID</td>
+<td style="width: 45.9486%; height: 2px;">平台唯一生成ID</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">平台名称</td>
+<td style="width: 45.9486%; height: 2px;">平台名称展示</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">游戏ID</td>
+<td style="width: 45.9486%; height: 2px;">子游戏唯一生成ID</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">子游戏名称</td>
+<td style="width: 45.9486%; height: 2px;">子游戏名称展示</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">注单排名</td>
+<td style="width: 45.9486%; height: 2px;">根据一个月的注单量统计，排名TOP1-100</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 11.5091%; text-align: center; height: 10px;">注单量</td>
+<td style="width: 45.9486%; height: 10px;">根据用户的注单量统计，倒序排名</td>
+<td style="width: 11.902%; text-align: center; height: 10px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 10px;"><span style="text-align: center;">常规</span></td>
+<td style="width: 19.8933%; text-align: center; height: 10px;">&nbsp;</td>
+</tr>
+<tr style="height: 2px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">总投注</td>
+<td style="width: 45.9486%; height: 2px;">根据用户的总投注，倒序排名</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;">常规</td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 2px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">有效投注</td>
+<td style="width: 45.9486%; height: 2px;">根据用户的有效投注统计，倒序排名</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;"><span style="text-align: center;">常规</span></td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 2px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">损益</td>
+<td style="width: 45.9486%; height: 2px;">根据用户的损益统计，倒序排名</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;"><span style="text-align: center;">常规</span></td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr style="height: 2px;">
+<td style="width: 11.5091%; text-align: center; height: 2px;">杀率</td>
+<td style="width: 45.9486%; height: 2px;">根据用户的杀率统计，倒序排名</td>
+<td style="width: 11.902%; text-align: center; height: 2px;">否</td>
+<td style="width: 10.747%; text-align: center; height: 2px;"><span style="text-align: center;">常规</span></td>
+<td style="width: 19.8933%; text-align: center; height: 2px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 11.5091%; text-align: center;">添加热门</td>
+<td style="width: 45.9486%;">可将该游戏添加至热门里</td>
+<td style="width: 11.902%; text-align: center;">否</td>
+<td style="width: 10.747%; text-align: center;"><span style="text-align: center;">常规</span></td>
+<td style="width: 19.8933%; text-align: center;">功能按钮</td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><span style="font-weight: bold;">7. 游戏管理设置：</span>包含游戏相关设置、强制下载APP设置、WG体育赔率设置等内容。</p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><img style="max-width: 100%;" src="02e9528d18980c4215ef1f4c.png"></p>
+<p style="font-weight: 400;">（7.1）字段说明：</p>
+<p style="font-weight: 400;"><span style="color: #e03e2d;">当会员是从渠道注册的并且该渠道的<strong>展示APP下载提示开关</strong>为开启状态时, 会跳过游戏管理这边的公共配置内容。(包含已首充才能进入游戏以及强制下载APP相关设置)</span></p>
+<p style="font-weight: 400;"><strong>【游戏相关设置】</strong></p>
+<ul>
+<li style="font-weight: 400;"><strong>返回大厅按钮</strong><span style="font-weight: bold;">：</span>客户端在游戏内点击返回大厅按钮后是否需要展示二次弹窗确认。默认为展示二次弹窗。</li>
+<li style="font-weight: 400;"><strong>二次弹窗是否展示充值按钮: </strong>当返回大厅按钮勾选展示二次弹窗时, 需设置二次弹窗内是否展示充值按钮。默认为展示。</li>
+<li style="font-weight: 400;"><span style="font-weight: bold;">已首充才能进入游戏（未充值无法进入）：</span>同原本的强制会员首充，会员必须完成首充后才能进入游戏。默认不限制</li>
+<li><strong>游戏名称只显示一行,超过使用省略号展示:&nbsp;</strong>可自主选择大厅游戏名称显示方式, 关闭时为两行展示（默认），开启后统一为单行展示并超出省略。</li>
+</ul>
+<p><strong>【强制下载APP设置】</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: bold;">强制要求下载APP：</span>H5端必须要下载并安装后才能进入游戏游玩，并且开启后会展示以下两项新功能。默认不限制。<span style="background-color: #ffff00;">此功能对历史站点（2024/4/10之前）有开启过强制要求下载APP功能的站点，则以下两个开关皆为关闭。之后的站点则配置的默认项。</span></li>
+<li style="font-weight: 400;"><span style="font-weight: bold;">仅限已首充会员强制下载APP：</span>默认开启，开启的话则仅限制已首充的会员做强制下载APP，未首充的会员则不在此限制。关闭之后，则是全部都限制。<span style="background-color: #ffff00;">此功能对历史站点（2024/4/10之前）有开启过强制要求下载APP功能的站点，则以下两个开关皆为关闭。之后的站点则配置的默认项。</span></li>
+<li style="font-weight: 400;"><span style="font-weight: bold;">仅限Android设备强制下载APP：</span>推荐默认开启，开启的话则仅限制Android的设备强制下载APP，苹果用户则不在此限至。关闭之后，则是全部都限制。<span style="background-color: #ffff00;">此功能对历史站点（2024/4/10之前）有开启过强制要求下载APP功能的站点，则以下两个开关皆为关闭。之后的站点则配置的默认项。</span></li>
+<li style="font-weight: 400;"><strong>APP类型(可多选): </strong>当强制要求下载APP开启时, 可以设置在客户端要展示哪些APP类型下载按钮,选项内容包含: 极速APP、原生APP、PWA快捷APP。默认全部勾选。(PWA快捷APP勾选后只会在安卓设备展示)</li>
+<li style="font-weight: 400;"><strong>弹窗提示语:</strong> 可自定义强制下载APP弹窗文案, 分为系统自带及自定义, 自定义文案字数最大为500字，如果添加参数变量会超过字数限制时,就不给予添加。</li>
+<li><strong>充值次数触发强转原生APP</strong>: 当会员<span style="box-sizing: border-box; font-weight: bold; color: #000000; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff;">充值次数&ge;</span><span style="color: #313c52; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">大于或等于x </span><span style="color: #000000;"><span style="box-sizing: border-box; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, Tahoma, Arial, &#x27;PingFang SC&#x27;, &#x27;Source Han Sans CN&#x27;, &#x27;Source Han Sans&#x27;, &#x27;Source Han Serif&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;WenQuanYi Micro Hei&#x27;, &#x27;Microsoft YaHei&#x27;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff;">次</span></span>时，就强制要求他下载原生APP才能游戏, 默认设置99999次, 最小为0。</li>
+<li style="font-weight: 400;"><strong>转原生提示语 : </strong>可自定义强制下载APP弹窗文案, 分为系统自带及自定义, 自定义文案字数最大为500字，如果添加参数变量会超过字数限制时,就不给予添加。</li>
+</ul>
+<p style="font-weight: 400;"><strong>【WG体育赔率设置】</strong></p>
+<ul>
+<li style="font-weight: 400;"><strong><span style="font-weight: bold;">展示目前所有的赔率方案并支持自由切换</span></strong></li>
+</ul>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><strong>8. 有效投注配置：</strong>针对游戏类型设置有效投注默认比例以及调整不计入有效投注的平台/游戏清单</p>
+<p style="font-weight: 400;"><picture><img style="max-width: 100%;" src="bf6fd4ef829b699daf1b4a5b.png"></picture></p>
+<p>&nbsp;</p>
+<p><strong>（8.1）有效投注配置功能模块说明：</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;1、针对游戏类型设置有效投注设置: 可针对不同游戏类型设置默认比例值, 以及针对体育类型提供计算有效投注的规则设置</p>
+<p><img style="max-width: 100%;" src="14f6cfb7bf2cf7bf97c13d0f.png" width="629" height="740"> &nbsp; &nbsp;</p>
+<p><strong>（8.2）有效投注配置字段说明：</strong></p>
+<ul>
+<li>「按最大倍率计算有效投注」开启时, 需设定最大赔率。</li>
+<li>「低赔率不计算有效投注」开启时, 需设定最小赔率。</li>
+<li>「按最大倍率计算有效投注」及「低赔率不计算有效投注」皆开启时，最大倍率设定值不可小于最小赔率的设定值。</li>
+<li>计入比例: 有效投注计算规则按照现有取有效投注的值*默认比例。
+<ul>
+<li>房间局计入比例区间为0%~2000%, 默认为100%,</li>
+<li>其他游戏类型比例区间为0%~100%, 默认为100%,</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_38.html">← 投注记录</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_480117.html">彩金池管理 →</a></div></body></html>

@@ -1,0 +1,291 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>汇率和银行管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 财务 / 汇率和银行管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 3pt;"><span style="font-size: 24px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">汇率和银行管理</span></p>
+<h1 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 20px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">一、汇率配置</span></h1>
+<p dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <img style="max-width: 100%;" src="322988868a70c18e895d64c7.png"></span></span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明：</span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可查看市场实时汇率及设置平台触发汇率条件。充值或提现时，需要进行汇率换算的订单将会使用此表。可充提共用，也可分开配置。</span></h1>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>　(1) </strong>市场汇率+市场汇率*X(偏差值)=生效汇率。</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>　(2)</strong> 市场汇率-市场汇率*Y(偏差值)=生效汇率。<br><br></span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　注释：X代表正数，Y代表负数，最多取小数后十位。</span></span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h1>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、字段说明</span></h2>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border: none; border-collapse: collapse;"><colgroup><col width="152"><col width="448"></colgroup>
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 20pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">充提汇率设置</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;" rowspan="2">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(1) 分别设置</span></p>
+<p dir="ltr" style="line-height: 1.2; background-color: #fcfdff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　a. 手动配置模式：会分别显示两列生效汇率，即=充值生效汇率和提现生效汇率</span></p>
+<p dir="ltr" style="line-height: 1.2; background-color: #fcfdff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　b. 自动同步模式：自动汇率差规则、汇率差、生效汇率、自动同步规则、同步触发值，则按充值和提现分别展示2列</span></p>
+<p dir="ltr" style="line-height: 1.2; background-color: #fcfdff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(2) 充提共用：汇率差设置、生效汇率、自动同步设置只有1列</span></p>
+<p dir="ltr" style="line-height: 1.2; background-color: #fcfdff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(3) 新增币种时，汇率差和同步触发值默认填充0，单位默认百分比</span></p>
+<p dir="ltr" style="line-height: 1.2; background-color: #fcfdff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(4) 后台汇率自动同步和手动配置模式，设置的新的汇率与当前市场汇率正负偏差不能超过100%</span></p>
+</td>
+</tr>
+<tr style="height: 21pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">更新方式</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">同步频率</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">选择数据的同步频率</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">原币种</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">平台的固有币种</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">兑换币种</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">需要兑换的币种</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">汇率来源</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">选择三方汇率来源</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">市场汇率</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: #fcfdff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">点击可切换汇率左右方向，USDT=CNY,切换成CNY=USDT</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">设置单位</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #081222; background-color: #fcfdff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">可选百分比或固定值</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">设置汇率差</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">自定义偏差设定（正负数）</span></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">同步触发值</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">自定义（对比上次汇率上下浮动的触发条件）</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;"><br><br></strong></span></h1>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、操作</span></h2>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>　(1) 修改：</strong>针对已设置的币种记录进行修改。</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><img style="max-width: 100%;" src="e7321bf5d16a5b9932e1cfee.png"></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4、功能模块</span></h2>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>　(1) 编辑：</strong>进入修改模式页面，可修改配置。</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><img style="max-width: 100%;" src="25d082570c1a1f3f6ff9ab7a.png"></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+<h1 dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">二、银行管理</span></h1>
+<p dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><img style="max-width: 100%;" src="b3fc73eb839fef5f438623e9.png"></p>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1、功能说明：</span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">对应转账充值和提现银行的使用。</span></h2>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2、字段说明：</span><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span></h2>
+<div dir="ltr" style="margin-left: 0pt;" align="left">
+<table style="border-collapse: collapse; width: 100.016%; height: 268.2px; border: medium none currentcolor;"><colgroup><col style="width: 12.2088%;" width="152"><col style="width: 35.9839%;" width="448"></colgroup>
+<tbody>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">字段</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">说明</span></p>
+</td>
+</tr>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">银行排序</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">调整此处银行排序，自动同步前台排序</span></p>
+</td>
+</tr>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">币种</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&ndash;</span></p>
+</td>
+</tr>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">银行名称</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&ndash;</span></p>
+</td>
+</tr>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">前台显示名称</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&ndash;</span></p>
+</td>
+</tr>
+<tr style="height: 33.325px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">银行图标</span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&ndash;</span></p>
+</td>
+</tr>
+<tr style="height: 34.125px;">
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-9193b771-7fff-5847-92f1-68b7e4c5bbb1" style="font-weight: normal;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">是否允许提现</span></strong></span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt 5pt 5pt 5pt; overflow: hidden; overflow-wrap: break-word; border: solid #000000 1pt;">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-555dcb95-7fff-deb5-58b0-d636f2a988ed" style="font-weight: normal;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若关闭，申请提现时，无法选此银行卡提现</span></strong></span></p>
+</td>
+</tr>
+<tr style="height: 34.125px;">
+<td style="vertical-align: top; padding: 5pt; overflow: hidden; overflow-wrap: break-word; border: 1pt solid rgb(0, 0, 0);">
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-9193b771-7fff-5847-92f1-68b7e4c5bbb1" style="font-weight: normal;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong id="docs-internal-guid-1b054709-7fff-8ebc-19b2-8abf9018a411" style="font-weight: normal;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">是否允许添加账号</span></strong></span></strong></span></p>
+</td>
+<td style="vertical-align: top; padding: 5pt; overflow: hidden; overflow-wrap: break-word; border: 1pt solid rgb(0, 0, 0);">
+<p dir="ltr" style="line-height: 1.38; background-color: #ffffff; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px; color: #000000;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">若关闭，大厅会员无法添加此提现方式账号；</span><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">已添加提现账号可提现，修改会受限制。 后台不限制，可修改。</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 dir="ltr" style="line-height: 1.2; margin-top: 18pt; margin-bottom: 6pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3、操作</span></h2>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>　(1) 修改：</strong>点击进入编辑状态，单独修改一行前台名称和图标。</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　● </span>总后台推送的银行不能删除，只能禁用，自己添加的银行可自行删除</span></p>
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　　● 无法删除处于启用状态的银行</span></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><strong style="font-weight: normal;">&nbsp;</strong></span><span style="font-size: 16px; font-family: &#x27;Microsoft YaHei&#x27;; color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4、功能模块</span></h1>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(1) 同步：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">点击后自动同步站点支持币种的银行信息。</span></span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 12pt; margin-bottom: 12pt;"><span style="font-family: &#x27;Microsoft YaHei&#x27;; font-size: 16px;"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">　(2) 编辑：</span><span style="color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">批量修改前台名称及图标。</span></span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><img style="max-width: 100%;" src="c756c99a946561c323609ecd.png"></p>
+<h1 dir="ltr" style="line-height: 1.656; margin-top: 20pt; margin-bottom: 6pt;">&nbsp;</h1>
+        </article><div class="bottom-nav"><a href="turoial_102.html">← 客服代充</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_390104.html">游戏额度丢失 →</a></div></body></html>

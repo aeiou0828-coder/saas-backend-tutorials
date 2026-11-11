@@ -1,0 +1,128 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>短信召回</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 会员 / 短信召回</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="text-align: center;"><span style="font-weight: bold;"><span style="font-size: 24px;">短信召回</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-weight: bold;">短信召回规则</span></span></p>
+<p><span style="font-size: 18px; color: #ff0000;"><span style="font-weight: bold;">使用的前置条件，必须配置短信通道，并且该短信平台必须支持营销短信，不然无法使用，需要注意短信召回，会消耗大批量短信，请根据运营情况合理使用<br>收件人，时间范围选择越长，会员数量越多，会消耗大量的短信费用，假设短信单条价格为0.1，如果召回会员数量为100000&nbsp; 一次召回价格：100000*0.1=10000 请合理使用短信召回功能</span></span></p>
+<p><span style="font-size: 18px; color: #ff0000;"><span style="font-weight: bold;"><span style="color: #ff0000; font-weight: bold;">当前召回，单次召回最大为100W，超出100W不会进行召回，后续会完善该功能</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">新增：</span></p>
+<p><span style="font-size: 16px;">币种：选择一个币种，单选</span></p>
+<p><span style="font-size: 16px;">收件人：</span></p>
+<p><img style="max-width: 100%;" src="4a69032f2726af2d50ba962e.png"></p>
+<p><span style="font-size: 16px;">已1天未登录的会员：例如：如果会员15号登录过，16号未登录，17号可以操作召回16号未登录的会员</span></p>
+<p><span style="font-size: 16px;">已2天未登录的会员:<br><br></span></p>
+<p><span style="font-size: 16px;">每天发送条数：三选1，分别为：1条，2条，3条</span></p>
+<p><span style="font-size: 16px;">发送时间：站点时间24小时内自定义选择</span></p>
+<p><span style="font-size: 16px;">短信发送平台：需要自己配置支持营销短信的平台，至少一个，否则无法使用自动召回短信功能</span></p>
+<p><span style="font-size: 16px;"><span style="color: #ff0000;"><strong>（需要注意1，特定短信平台可能需要审核后才可以使用营销短信功能，使用前请先通过审核，</strong></span></span></p>
+<p><span style="font-size: 16px;"><span style="color: #ff0000;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2，我司已接入的短信平台支持营销短信的有：颂量，雪融，云极速，先客国际，并且需要您自己开户，我司无法给您开户，您也可以提供支持营销短信的平台，我们会为您接入）</strong></span></span></p>
+<p><span style="font-size: 16px;"><span style="color: #ff0000;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3，勾选短信平台，如果短信平台显示模板ID,则需要去短信平台设置并申请审核，通过之后才可以使用，如果短信平台显示短信内容则可以直接输入内容(我司都是根据短信平台的要求接入的)</strong></span></span></p>
+<p><img style="max-width: 100%;" src="b3bb6591ae3c7582d23e24c2.png"></p>
+<p><span style="font-size: 16px;">自动召回开关：<span style="color: #606266; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">开启后会根据配置自动发送短信，会消耗大量短信</span></span></p>
+<p><img style="max-width: 100%;" src="151f13e29625794aefb0e2c7.png"></p>
+<p><span style="font-size: 18px;"><span style="font-weight: bold;">待安全码解密发送</span></span></p>
+<p><span style="font-size: 16px;">当新增短信召回规则成功，待安全码解密发送，会有对应新增的数据，<span style="color: #ff0000;">必须先解密才会按时发送，如果没解密不会发送</span></span></p>
+<p><img style="max-width: 100%;" src="3642c59da9bf38153ee24a57.png"></p>
+<p><span style="font-size: 16px;">需要安全码才可以解密，如下图</span></p>
+<p><span style="font-size: 16px;"><img style="max-width: 100%;" src="a7f56dbee08830176b599716.png"></span></p>
+<p><span style="font-size: 18px; font-weight: bold;">发送中</span></p>
+<p><span style="font-size: 16px;">解密成功状态会变成发送中，等达到设置的发送时间会自动发送，未到时间会一直显示发送中</span></p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="5ba25491bce452b994f239e4.png"></p>
+<p><span style="font-size: 18px;"><strong>当发送时间到达，会进行发送，这个时候发送中的状态会变成已完成或者发送失败</strong></span></p>
+<p><span style="font-size: 18px;"><strong>如果发送失败可以去查看原因，根据原因修改配置，再次尝试</strong></span></p>
+<p><img style="max-width: 100%;" src="104ae15aa6579baa59f06d91.png"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_480120.html">← 未登录智能弹窗</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_480122.html">邮箱召回 →</a></div></body></html>

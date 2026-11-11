@@ -1,0 +1,124 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>推送召回</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 会员 / 推送召回</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p style="text-align: center;"><span style="font-weight: bold;"><span style="font-size: 24px;">推送召回</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-weight: bold;">推送召回规则</span></span></p>
+<p><span style="font-size: 18px; color: #ff0000;"><span style="font-weight: bold;">使用的前置条件，必须开启了极光推送，不然无法使用，需要注意极光推送会根据套餐限制DAU，建议选择不限制DAU的套餐，不然会出现符合召回的情况，但是会员收不到推送的情况，因为套餐限制了DAU，请根据运营情况合理选择套餐，推荐套餐3</span></span></p>
+<p><span style="font-size: 18px; color: #ff0000;"><span style="font-weight: bold;"><span style="color: #ff0000; font-weight: bold;">当前召回，单次召回最大为100W，超出100W不会进行召回，后续会完善该功能</span></span></span></p>
+<p><span style="font-size: 16px;">新增：</span></p>
+<p><span style="font-size: 16px;">币种：选择一个币种，单选</span></p>
+<p><span style="font-size: 16px;">收件人：</span></p>
+<p><span style="font-size: 16px;"><img style="max-width: 100%;" src="044d95ed57a7af0aa1d9922c.png"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">每天发送条数：三选1，分别为：1条，2条，3条</span></p>
+<p><span style="font-size: 16px;">发送时间：站点时间24小时内自定义选择</span></p>
+<p><span style="font-size: 16px;">推送标题：自定义</span></p>
+<p><span style="font-size: 16px;">推送内容：自定义</span></p>
+<p><span style="font-size: 16px;">推送端口：选择APP推送或者WEB推送</span></p>
+<p><span style="font-size: 16px;">自动召回开关：<span style="color: #606266; font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; text-align: justify;">开启后会根据配置自动进行极光推送</span></span></p>
+<p><img style="max-width: 100%;" src="163e5518253d0cfc32309954.png"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; font-size: 18px;">发送中</span></p>
+<p><span style="font-size: 16px;">根据发送时间自动发送，没到发送时间状态会一直持续显示发送中，到了发送时间会进行自动发送</span></p>
+<p><img style="max-width: 100%;" src="f6303a4688dd1155b0c698d7.png"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">根据推送<span style="font-weight: bold; font-size: 18px;">召回规则</span>设置的发送时间会自动发送，成功状态会变为已完成，失败会变成发送失败</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;"><span style="font-weight: bold;">发送失败可以查看原因，根据原因，检查配置，重新操作推送即可</span></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="b3e60c44880c6169a53426c5.png"></p>
+        </article><div class="bottom-nav"><a href="turoial_480122.html">← 邮箱召回</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_570107.html">TG机器人配置 →</a></div></body></html>

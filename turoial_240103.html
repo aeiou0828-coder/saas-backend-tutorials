@@ -1,0 +1,157 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>下载站管理</title><link rel="stylesheet" href="style.css"><script defer src="reader.js"></script></head><body class="reader"><div class="trail">SaaS后台教程 / 运营 / 下载站管理</div><article><style>
+  body::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: #3c4353;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s cubic-bezier(.175,.885,.32,1);
+    transition-property: color,background,transform,opacity;
+  }
+
+  a:focus,a:hover {
+      color: #0c64eb;
+      text-decoration: none
+  }
+
+  a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px
+  }
+
+  a.disabled,a.disabled:focus,a.disabled:hover,a[disabled],a[disabled]:focus,a[disabled]:hover {
+      color: #aaa;
+      text-decoration: none;
+      cursor: default
+  }
+
+  body {
+    padding: 8px;
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  body h2 {
+    font-size: 18px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body p{
+    margin-bottom: 0;
+  }
+
+  body img {
+    margin: 10px 0;
+    margin-top: 0;
+  }
+
+  body a {
+    color: #0c64eb;
+  }
+
+  /* TinyMCE 拖拽/粘贴的表格会带固定 px 宽度，强制自适应为 100%（!important 覆盖行内 style） */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+  }
+  body img { cursor: zoom-in; }</style>
+        <p></p>
+<p></p>
+<p></p>
+<p></p>
+<h3><span style="font-size: 24px;">一、下载站管理</span></h3>
+<p><span style="font-weight: bold;">（1）下载配置：</span></p>
+<p><span style="font-weight: bold;">Android下载地址</span></p>
+<p>1、Android下载地址选择系统默认和自定义后，在前台下载时会进行轮询（首次点击下载使用系统默认地址，再次点击自定义地址，以此轮询）</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">iOS下载地址可以配置20个<span style="font-weight: bold;">（<span style="font-family: &#x27;Segoe UI&#x27;;">IOS超级签、TF签、MDM签、企业签，苹果证书，开发者账号等，外部马甲包定制，Google或Facebook竞技开户，下载站定制，美术定制，底层逆向，WhatsApp群发代发等，可加入WG合作方订阅群<a href="https://t.me/t_t888888" target="_blank" rel="noopener noreferrer" title="外部链接：需要联网">https://t.me/t_t888888</a></span>）</span></span></p>
+<p>1、iOS下载配置：根据勾选判断是否展示在前台，取消勾选后，该下载类型在前台隐藏</p>
+<p>2、iOS描述签：根据域名生成的类型。<span style="font-weight: bold; color: #e03e2d;">特别注意：APP包配置更改图标后，只有后续描述签才会生效该图标</span></p>
+<p>4、选择语言：根据页面语言获取对应下载地址，若没有配置则无法下载</p>
+<p>5、iOS教程选择：在前台下载按钮旁会展示教程入口，点击后展示该安装类型的教程，<span style="font-weight: bold; color: #e03e2d;">特别注意：iOS描述签仅展示iOS描述签教程</span></p>
+<p>6、下载地址：填写iOS文件签名后的地址</p>
+<p><span style="color: #e03e2d;"><strong>注意：</strong></span></p>
+<p><span style="color: #000000;">iOS描述签（不上传证书会使用默认生成的签名，和P12生成的逻辑一致。可以不上传证书）</span></p>
+<p><span style="color: #000000;">web大厅域名：使用web大厅域名生成描述签</span></p>
+<p><span style="color: #000000;">是否允许删除描述签：<span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre-wrap; background-color: #ffffff; float: none; display: inline !important;">不允许删除：玩家只能通过VPN与设备管理移除描述文件删除书签 允许删除：长按图标显示&ldquo;删除书签&rdquo;功能</span></span></p>
+<p><span style="color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre-wrap; background-color: #ffffff; float: none; display: inline !important;">是否上传证书：不上传将使用系统默认生成的签名，业主也可以上传P12证书，使用自己定义的签名</span></span></p>
+<p><span style="color: #000000;"><span style="font-family: &#x27;Helvetica Neue&#x27;, Helvetica, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Microsoft YaHei&#x27;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre-wrap; background-color: #ffffff; float: none; display: inline !important;">生成描述签：更换web大厅域名后，需要重新生成描述签</span></span></p>
+<p><span style="color: #e03e2d;"><strong><img style="max-width: 100%;" src="bb184e6f76376d8f4f2ec1c4.png" alt=""></strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; <img style="max-width: 100%;" src="4e1bcf5f5a972a092764713b.png" width="1492" height="620">&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><strong>iOS安装教程</strong></p>
+<p>1、开关：根据开关判断是否展示在前台展示教程入口</p>
+<p>2、自定义：自定义教程</p>
+<p><img style="max-width: 100%;" src="49f40f7b39a2dd216af773d6.png"></p>
+<p>&nbsp;</p>
+<h3><span style="font-size: 24px;">二、下载页模板</span></h3>
+<p><span style="font-weight: bold;">（1）功能说明：</span>配置下载页模板，为渠道-下载页链接、推广页打开设置 提供模板选择</p>
+<p><span style="font-weight: bold;">（2）操作说明：</span></p>
+<p><span style="font-weight: bold;">1、开关：</span>开启则模板用于推广模板和渠道模板；关闭则不可用</p>
+<p><span style="font-weight: bold;">2、默认：</span>默认为下载站域名打开的模板</p>
+<p><span style="font-weight: bold;">3、复制创建：</span>复制创建当前模板</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><img style="max-width: 100%;" src="bd75db1569223a5d276ee3fe.png"></span></p>
+<p><span style="font-weight: bold;">（3）操作说明：</span></p>
+<p><span style="font-weight: bold;">1、选择样式：</span>选择不同的模板样式</p>
+<p><span style="font-weight: bold;">2、模板名称：</span>自定义当前模板名称</p>
+<p><span style="font-weight: bold;">3、选择语言：</span>语言对应的模板，若选择多个语言，则会多个语言对应同一个模板</p>
+<p><img style="max-width: 100%;" src="e325c7a621c4ec34024bb2d5.png" alt=""></p>
+<p><span style="font-weight: bold;">（4）编辑顶部：</span></p>
+<p><span style="font-weight: bold;">1、顶部：</span>隐藏顶部前台不展示该模块</p>
+<p><span style="font-weight: bold;">2、模板名称：</span>提供三种不同样式选择</p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="3aece12a15405a872b7dd955.png" alt=""></p>
+<p><span style="font-weight: bold;">（5）编辑底部：</span>提供三种不同样式选择，可对底部背景，按钮样式，按钮链接自定义配置</p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="ccbabe21e0608b7086fea54d.png" alt=""></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 18px;">新增/修改内容模块：</span></span></p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="6d44457d66d8d1f486c8f68f.png" alt=""></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><span style="font-size: 18px;">新增/修改图片模块：</span></span></p>
+<p><img style="max-width: 100%;" src="dfec1dd3b2d6f999a7067284.png" alt=""></p>
+<p><span style="font-weight: bold;"><span style="font-size: 18px;">页面设置：</span></span></p>
+<p>&nbsp;</p>
+<p><img style="max-width: 100%;" src="d36687db362cb0ae1ba97fca.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        </article><div class="bottom-nav"><a href="turoial_210103.html">← 域名管理</a><a href="index.html" target="_top">返回教程目录</a><a href="turoial_450112.html">埋点归因 →</a></div></body></html>
